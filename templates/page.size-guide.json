@@ -28,59 +28,176 @@
     "tabs_size_guide_mPNmMd": {
       "type": "tabs-size-guide",
       "blocks": {
-        "tabs_U9UKt3": {
-          "type": "Tabs",
+        "cat_mens": {
+          "type": "category",
           "settings": {
             "heading": "Mens",
-            "tabs1": "Tops",
-            "textarea1": "<table style=\"width:100%; border-collapse: collapse; font-family: Arial, sans-serif; text-align: center;\">\n  <thead>\n    <tr>\n      <th style=\"background-color: #f5f5f5; padding: 10px; border: 1px solid #ddd;\">Tops</th>\n      <th colspan=\"6\" style=\"background-color: #f5f5f5; padding: 10px; border: 1px solid #ddd;\">Size</th>\n    </tr>\n    <tr>\n      <td style=\"background-color: #fff; padding: 10px; border: 1px solid #ddd;\"></td>\n      <td style=\"padding: 10px; border: 1px solid #ddd;\">XS</td>\n      <td style=\"padding: 10px; border: 1px solid #ddd;\">S</td>\n      <td style=\"padding: 10px; border: 1px solid #ddd;\">M</td>\n      <td style=\"padding: 10px; border: 1px solid #ddd;\">L</td>\n      <td style=\"padding: 10px; border: 1px solid #ddd;\">XL</td>\n      <td style=\"padding: 10px; border: 1px solid #ddd;\">XXL</td>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td style=\"padding: 10px; border: 1px solid #ddd;\">Chest (To Fit)</td>\n      <td style=\"padding: 10px; border: 1px solid #ddd;\">32-34</td>\n      <td style=\"padding: 10px; border: 1px solid #ddd;\">35-37</td>\n      <td style=\"padding: 10px; border: 1px solid #ddd;\">38-40</td>\n      <td style=\"padding: 10px; border: 1px solid #ddd;\">41-43</td>\n      <td style=\"padding: 10px; border: 1px solid #ddd;\">44-46</td>\n      <td style=\"padding: 10px; border: 1px solid #ddd;\"></td>\n    </tr>\n  </tbody>\n</table>\n<p>Measurements in inches</p>\n\n<br>\n\n<h2>Measuring advice</h2>\n<p>Take your actual body measurements as they are more accurate than measuring over your clothes.</p>\n<img src=\"https://cdn.shopify.com/s/files/1/1260/8215/files/image.jpg?v=1743384026\">",
-            "tabs2": "Joggers, Shorts & Swimwear",
-            "textarea2": "<table style=\"width:100%; border-collapse: collapse; font-family: Arial, sans-serif; text-align: center;\">\n  <thead>\n    <tr>\n      <th style=\"background-color: #f5f5f5; padding: 10px; border: 1px solid #ddd;\">Joggers, Shorts<br>& Swimwear</th>\n      <th colspan=\"9\" style=\"background-color: #f5f5f5; padding: 10px; border: 1px solid #ddd;\">Size</th>\n    </tr>\n    <tr>\n      <td style=\"background-color: #f5f5f5; padding: 10px; border: 1px solid #ddd;\"></td>\n      <td style=\"padding: 10px; border: 1px solid #ddd;\">XS</td>\n      <td style=\"padding: 10px; border: 1px solid #ddd;\">S</td>\n      <td style=\"padding: 10px; border: 1px solid #ddd;\">M</td>\n      <td style=\"padding: 10px; border: 1px solid #ddd;\">L</td>\n      <td style=\"padding: 10px; border: 1px solid #ddd;\">XL</td>\n      <td style=\"padding: 10px; border: 1px solid #ddd;\">2XL</td>\n      <td style=\"padding: 10px; border: 1px solid #ddd;\">3XL</td>\n      <td style=\"padding: 10px; border: 1px solid #ddd;\">4XL</td>\n      <td style=\"padding: 10px; border: 1px solid #ddd;\">5XL</td>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td style=\"padding: 10px; border: 1px solid #ddd;\">Waist (To Fit)</td>\n      <td style=\"padding: 10px; border: 1px solid #ddd;\">28</td>\n      <td style=\"padding: 10px; border: 1px solid #ddd;\">30-32</td>\n      <td style=\"padding: 10px; border: 1px solid #ddd;\">33-35</td>\n      <td style=\"padding: 10px; border: 1px solid #ddd;\">36-38</td>\n      <td style=\"padding: 10px; border: 1px solid #ddd;\">39-41</td>\n      <td style=\"padding: 10px; border: 1px solid #ddd;\">42-44</td>\n      <td style=\"padding: 10px; border: 1px solid #ddd;\">45-47</td>\n      <td style=\"padding: 10px; border: 1px solid #ddd;\">48-50</td>\n      <td style=\"padding: 10px; border: 1px solid #ddd;\">51-53</td>\n    </tr>\n  </tbody>\n</table>\n<p>Measurements in inches</p>\n\n<br>\n\n\n\n<br>\n<h2>Measuring advice</h2>\n<p>Take your actual body measurements as they are more accurate than measuring over your clothes.</p>\n<img src=\"https://cdn.shopify.com/s/files/1/1260/8215/files/image.jpg?v=1743384026\">",
-            "tabs3": "Jeans & Trousers",
-            "textarea3": "<table style=\"width:100%; border-collapse: collapse; font-family: Arial, sans-serif; text-align: center;\">\n  <thead>\n    <tr>\n      <th style=\"background-color: #f5f5f5; padding: 10px; border: 1px solid #ddd;\">Size</th>\n      <th style=\"background-color: #f5f5f5; padding: 10px; border: 1px solid #ddd;\">XS</th>\n      <th style=\"background-color: #f5f5f5; padding: 10px; border: 1px solid #ddd;\">S</th>\n      <th style=\"background-color: #f5f5f5; padding: 10px; border: 1px solid #ddd;\">M</th>\n      <th style=\"background-color: #f5f5f5; padding: 10px; border: 1px solid #ddd;\">L</th>\n      <th style=\"background-color: #f5f5f5; padding: 10px; border: 1px solid #ddd;\">XL</th>\n      <th style=\"background-color: #f5f5f5; padding: 10px; border: 1px solid #ddd;\">2XL</th>\n      <th style=\"background-color: #f5f5f5; padding: 10px; border: 1px solid #ddd;\">3XL</th>\n      <th style=\"background-color: #f5f5f5; padding: 10px; border: 1px solid #ddd;\">4XL</th>\n      <th style=\"background-color: #f5f5f5; padding: 10px; border: 1px solid #ddd;\">5XL</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td style=\"padding: 10px; border: 1px solid #ddd;\">Waist (to Fit)</td>\n      <td style=\"padding: 10px; border: 1px solid #ddd;\">26 - 28</td>\n      <td style=\"padding: 10px; border: 1px solid #ddd;\">30 - 32</td>\n      <td style=\"padding: 10px; border: 1px solid #ddd;\">33 - 35</td>\n      <td style=\"padding: 10px; border: 1px solid #ddd;\">36 - 38</td>\n      <td style=\"padding: 10px; border: 1px solid #ddd;\">39 - 41</td>\n      <td style=\"padding: 10px; border: 1px solid #ddd;\">42 - 44</td>\n      <td style=\"padding: 10px; border: 1px solid #ddd;\">45 - 47</td>\n      <td style=\"padding: 10px; border: 1px solid #ddd;\">48 - 50</td>\n      <td style=\"padding: 10px; border: 1px solid #ddd;\">51 - 53</td>\n    </tr>\n  </tbody>\n</table>\n<br>\n\n<div style=\"overflow-x: auto; max-width: 100%;\">\n  <table style=\"min-width: 700px; width: 100%; border-collapse: collapse; font-family: Arial, sans-serif; text-align: center;\">\n    <thead>\n      <tr>\n        <th style=\"background-color: #f5f5f5; padding: 10px; border: 1px solid #ddd;\"></th>\n        <th colspan=\"13\" style=\"background-color: #f5f5f5; padding: 10px; border: 1px solid #ddd;\">Single sizes</th>\n      </tr>\n      <tr>\n        <th style=\"background-color: #f5f5f5; padding: 10px; border: 1px solid #ddd;\">Waist (to Fit)</th>\n        <th style=\"background-color: #f5f5f5; padding: 10px; border: 1px solid #ddd;\">28</th>\n        <th style=\"background-color: #f5f5f5; padding: 10px; border: 1px solid #ddd;\">30</th>\n        <th style=\"background-color: #f5f5f5; padding: 10px; border: 1px solid #ddd;\">32</th>\n        <th style=\"background-color: #f5f5f5; padding: 10px; border: 1px solid #ddd;\">34</th>\n        <th style=\"background-color: #f5f5f5; padding: 10px; border: 1px solid #ddd;\">36</th>\n        <th style=\"background-color: #f5f5f5; padding: 10px; border: 1px solid #ddd;\">38</th>\n        <th style=\"background-color: #f5f5f5; padding: 10px; border: 1px solid #ddd;\">40</th>\n        <th style=\"background-color: #f5f5f5; padding: 10px; border: 1px solid #ddd;\">42</th>\n        <th style=\"background-color: #f5f5f5; padding: 10px; border: 1px solid #ddd;\">44</th>\n        <th style=\"background-color: #f5f5f5; padding: 10px; border: 1px solid #ddd;\">46</th>\n        <th style=\"background-color: #f5f5f5; padding: 10px; border: 1px solid #ddd;\">48</th>\n        <th style=\"background-color: #f5f5f5; padding: 10px; border: 1px solid #ddd;\">50</th>\n        <th style=\"background-color: #f5f5f5; padding: 10px; border: 1px solid #ddd;\">52</th>\n      </tr>\n    </thead>\n  </table>\n</div>\n<p style=\"font-size: 12px; font-style: italic; margin-top: 5px;\">Single inches</p>\n\n\n<br>\n<h2>Measuring advice</h2>\n<p>Take your actual body measurements as they are more accurate than measuring over your clothes.</p>\n<img src=\"https://cdn.shopify.com/s/files/1/1260/8215/files/image.jpg?v=1743384026\">",
-            "tabs4": "Boxers",
-            "textarea4": "<table style=\"width:100%; border-collapse: collapse; font-family: Arial, sans-serif; text-align: center;\">\n  <thead>\n    <tr>\n      <th style=\"background-color: #f5f5f5; padding: 10px; border: 1px solid #ddd;\">Waist (to Fit)</th>\n      <th style=\"background-color: #f5f5f5; padding: 10px; border: 1px solid #ddd;\">S</th>\n      <th style=\"background-color: #f5f5f5; padding: 10px; border: 1px solid #ddd;\">M</th>\n      <th style=\"background-color: #f5f5f5; padding: 10px; border: 1px solid #ddd;\">L</th>\n      <th style=\"background-color: #f5f5f5; padding: 10px; border: 1px solid #ddd;\">XL</th>\n      <th style=\"background-color: #f5f5f5; padding: 10px; border: 1px solid #ddd;\">2XL</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td style=\"padding: 10px; border: 1px solid #ddd;\"></td>\n      <td style=\"padding: 10px; border: 1px solid #ddd;\">28\" - 30\"</td>\n      <td style=\"padding: 10px; border: 1px solid #ddd;\">32\" - 34\"</td>\n      <td style=\"padding: 10px; border: 1px solid #ddd;\">36\" - 38\"</td>\n      <td style=\"padding: 10px; border: 1px solid #ddd;\">30\" - 42\"</td>\n      <td style=\"padding: 10px; border: 1px solid #ddd;\">44\" - 46\"</td>\n    </tr>\n  </tbody>\n</table>\n<p>Measurements in inches</p>\n\n<br>\n<h2>Measuring advice</h2>\n<p>Take your actual body measurements as they are more accurate than measuring over your clothes.</p>\n<img src=\"https://cdn.shopify.com/s/files/1/1260/8215/files/image.jpg?v=1743384026\">",
-            "tabs5": "Footwear",
-            "textarea5": "<div style=\"overflow-x: auto; max-width: 100%;\">\n  <table style=\"min-width: 700px; width: 100%; border-collapse: collapse; font-family: Arial, sans-serif; text-align: center;\">\n    <thead>\n      <tr>\n        <th style=\"background-color: #f5f5f5; padding: 10px; border: 1px solid #ddd;\">Shoes</th>\n        <th colspan=\"15\" style=\"background-color: #f5f5f5; padding: 10px; border: 1px solid #ddd;\">Shoe Size</th>\n      </tr>\n    </thead>\n    <tbody>\n      <tr>\n        <td style=\"background-color: #f5f5f5; font-weight: bold; padding: 10px; border: 1px solid #ddd;\">UK Size</td>\n        <td>6</td>\n<td>6.5</td>\n<td>7</td>\n<td>7.5</td>\n<td>8</td>\n<td>8.5</td>\n        <td>9</td>\n<td>9.5</td>\n<td>10</td>\n<td>10.5</td>\n<td>11</td>\n<td>11.5</td>\n        <td>12</td>\n<td>13</td>\n<td>14</td>\n      </tr>\n      <tr>\n        <td style=\"background-color: #f5f5f5; font-weight: bold; padding: 10px; border: 1px solid #ddd;\">European Size</td>\n        <td>39.5</td>\n<td>40</td>\n<td>40.5</td>\n<td>41</td>\n<td>42</td>\n<td>42.5</td>\n        <td>43</td>\n<td>43.5</td>\n<td>44.5</td>\n<td>45</td>\n<td>46</td>\n<td>46.5</td>\n        <td>47</td>\n<td>48.5</td>\n<td>-</td>\n      </tr>\n      <tr>\n        <td style=\"background-color: #f5f5f5; font-weight: bold; padding: 10px; border: 1px solid #ddd;\">American Size</td>\n        <td>7</td>\n<td>7.5</td>\n<td>8</td>\n<td>8.5</td>\n<td>9</td>\n<td>9.5</td>\n        <td>10</td>\n<td>10.5</td>\n<td>11</td>\n<td>11.5</td>\n<td>12</td>\n<td>12.5</td>\n        <td>13</td>\n<td>13.5</td>\n<td>14</td>\n      </tr>\n      <tr>\n        <td style=\"background-color: #f5f5f5; font-weight: bold; padding: 10px; border: 1px solid #ddd;\">Canadian Size</td>\n        <td>7</td>\n<td>7.5</td>\n<td>8</td>\n<td>8.5</td>\n<td>9</td>\n<td>9.5</td>\n        <td>10</td>\n<td>10.5</td>\n<td>11</td>\n<td>11.5</td>\n<td>12</td>\n<td>12.5</td>\n        <td>13</td>\n<td>14</td>\n<td>-</td>\n      </tr>\n      <tr>\n        <td style=\"background-color: #f5f5f5; font-weight: bold; padding: 10px; border: 1px solid #ddd;\">Japanese Size</td>\n        <td>24.5</td>\n<td>25</td>\n<td>25.5</td>\n<td>26</td>\n<td>26.5</td>\n<td>27</td>\n        <td>27.5</td>\n<td>28</td>\n<td>28.5</td>\n<td>29</td>\n<td>29.5</td>\n<td>30</td>\n        <td>30.5</td>\n<td>32</td>\n<td>-</td>\n      </tr>\n    </tbody>\n  </table>\n</div>\n\n\n\n\n<br>\n<h2>Measuring advice</h2>\n<p>Take your actual body measurements as they are more accurate than measuring over your clothes.</p>\n<img src=\"https://cdn.shopify.com/s/files/1/1260/8215/files/image.jpg?v=1743384026\">"
+            "measuring_image_url": "https://cdn.shopify.com/s/files/1/1260/8215/files/image.jpg?v=1743384026"
           }
         },
-        "tabs_V7f3pN": {
-          "type": "Tabs",
+        "tbl_mens_tops": {
+          "type": "table",
+          "settings": {
+            "tab_name": "Tops",
+            "is_sub_table": false,
+            "heading": "",
+            "columns": ", XS, S, M, L, XL, XXL, XXXL, 4XL",
+            "rows_data": "Chest (To Fit) Inches, 32-34, 35-37, 38-40, 41-43, 44-46, 47-49, 50-52, 52-54\nChest (To Fit) Cm, 81-86, 89-94, 97-102, 104-109, 112-117, 119-124, 127-132, 132-137",
+            "note": ""
+          }
+        },
+        "tbl_mens_joggers": {
+          "type": "table",
+          "settings": {
+            "tab_name": "Joggers, Shorts & Swimwear",
+            "is_sub_table": false,
+            "heading": "",
+            "columns": ", XS, S, M, L, XL, 2XL, 3XL, 4XL, 5XL",
+            "rows_data": "Waist (To Fit) Inches, 28, 30-32, 33-35, 36-38, 39-41, 42-44, 45-47, 48-50, 51-53\nWaist (To Fit) Cm, 71, 76-81, 84-89, 91-97, 99-104, 107-112, 114-119, 122-127, 130-135",
+            "note": ""
+          }
+        },
+        "tbl_mens_jeans": {
+          "type": "table",
+          "settings": {
+            "tab_name": "Jeans & Trousers",
+            "is_sub_table": false,
+            "heading": "",
+            "columns": "Size, XS, S, M, L, XL, 2XL, 3XL, 4XL, 5XL",
+            "rows_data": "Waist (to Fit) Inches, 26 - 28, 30 - 32, 33 - 35, 36 - 38, 39 - 41, 42 - 44, 45 - 47, 48 - 50, 51 - 53\nWaist (To Fit) Cm, 66-71, 76-81, 84-89, 91-97, 99-104, 107-112, 114-119, 122-127, 130-135",
+            "note": ""
+          }
+        },
+        "tbl_mens_jeans_single": {
+          "type": "table",
+          "settings": {
+            "tab_name": "",
+            "is_sub_table": true,
+            "heading": "Leg Length",
+            "columns": ", S (Short), R (Regular), L (Long)",
+            "rows_data": "Length (To Fit) Inches, 30, 32, 34\nLength (To Fit) Cm, 76, 81, 86",
+            "note": ""
+          }
+        },
+        "table_eA3Aia": {
+          "type": "table",
+          "settings": {
+            "tab_name": "",
+            "is_sub_table": true,
+            "heading": "Single sizes",
+            "columns": "Waist (to Fit) Inches, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52",
+            "rows_data": "Waist (To Fit) Cm, 71, 76, 81, 86, 91, 97, 102, 107, 112, 117, 122, 127, 132",
+            "note": ""
+          }
+        },
+        "tbl_mens_boxers": {
+          "type": "table",
+          "settings": {
+            "tab_name": "Boxers",
+            "is_sub_table": false,
+            "heading": "",
+            "columns": ", S, M, L, XL, 2XL",
+            "rows_data": "Waist (to Fit) Inches , 28\" - 30\", 32\" - 34\", 36\" - 38\", 30\" - 42\", 44\" - 46\"\nWaist (To Fit) Cm, 71-76, 81-86, 91-97, 76-107, 112-117",
+            "note": ""
+          }
+        },
+        "tbl_mens_footwear": {
+          "type": "table",
+          "settings": {
+            "tab_name": "Footwear",
+            "is_sub_table": false,
+            "heading": "",
+            "columns": ", 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 13, 14",
+            "rows_data": "UK Size, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 13, 14\nEuropean Size, 39.5, 40, 40.5, 41, 42, 42.5, 43, 43.5, 44.5, 45, 46, 46.5, 47, 48.5, -\nAmerican Size, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14\nCanadian Size, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 14, -\nJapanese Size, 24.5, 25, 25.5, 26, 26.5, 27, 27.5, 28, 28.5, 29, 29.5, 30, 30.5, 32, -",
+            "note": ""
+          }
+        },
+        "cat_womens": {
+          "type": "category",
           "settings": {
             "heading": "Womens",
-            "tabs1": "Clothing",
-            "textarea1": "<div style=\"overflow-x: auto; max-width: 100%;\">\n  <table style=\"min-width: 700px; width: 100%; border-collapse: collapse; font-family: Arial, sans-serif; text-align: center;\">\n    <thead>\n      <tr>\n        <th style=\"background-color: #f5f5f5; padding: 10px; border: 1px solid #ddd;\">Clothing Size Guide</th>\n        <th style=\"background-color: #f5f5f5; padding: 10px; border: 1px solid #ddd;\">XS</th>\n        <th style=\"background-color: #f5f5f5; padding: 10px; border: 1px solid #ddd;\">S</th>\n        <th style=\"background-color: #f5f5f5; padding: 10px; border: 1px solid #ddd;\">M</th>\n        <th style=\"background-color: #f5f5f5; padding: 10px; border: 1px solid #ddd;\">L</th>\n        <th style=\"background-color: #f5f5f5; padding: 10px; border: 1px solid #ddd;\">XL</th>\n      </tr>\n    </thead>\n    <tbody>\n      <tr style=\"background-color: #fff;\">\n        <td style=\"padding: 10px; border: 1px solid #ddd;\">Dress Size</td>\n        <td style=\"padding: 10px; border: 1px solid #ddd;\">8</td>\n        <td style=\"padding: 10px; border: 1px solid #ddd;\">10</td>\n        <td style=\"padding: 10px; border: 1px solid #ddd;\">12</td>\n        <td style=\"padding: 10px; border: 1px solid #ddd;\">14</td>\n        <td style=\"padding: 10px; border: 1px solid #ddd;\">16</td>\n      </tr>\n      <tr style=\"background-color: #f9f9f9;\">\n        <td style=\"padding: 10px; border: 1px solid #ddd;\">To fit Bust (inches)</td>\n        <td style=\"padding: 10px; border: 1px solid #ddd;\">32</td>\n        <td style=\"padding: 10px; border: 1px solid #ddd;\">34</td>\n        <td style=\"padding: 10px; border: 1px solid #ddd;\">36</td>\n        <td style=\"padding: 10px; border: 1px solid #ddd;\">38</td>\n        <td style=\"padding: 10px; border: 1px solid #ddd;\">40</td>\n      </tr>\n      <tr style=\"background-color: #fff;\">\n        <td style=\"padding: 10px; border: 1px solid #ddd;\">To fit Waist (inches)</td>\n        <td style=\"padding: 10px; border: 1px solid #ddd;\">25</td>\n        <td style=\"padding: 10px; border: 1px solid #ddd;\">27</td>\n        <td style=\"padding: 10px; border: 1px solid #ddd;\">29</td>\n        <td style=\"padding: 10px; border: 1px solid #ddd;\">31</td>\n        <td style=\"padding: 10px; border: 1px solid #ddd;\">33</td>\n      </tr>\n      <tr style=\"background-color: #f9f9f9;\">\n        <td style=\"padding: 10px; border: 1px solid #ddd;\">To fit Hips (inches)</td>\n        <td style=\"padding: 10px; border: 1px solid #ddd;\">35</td>\n        <td style=\"padding: 10px; border: 1px solid #ddd;\">37</td>\n        <td style=\"padding: 10px; border: 1px solid #ddd;\">39</td>\n        <td style=\"padding: 10px; border: 1px solid #ddd;\">41</td>\n        <td style=\"padding: 10px; border: 1px solid #ddd;\">43</td>\n      </tr>\n    </tbody>\n  </table>\n</div>\n<p style=\"font-size: 12px; font-style: italic; margin-top: 5px;\">.</p>\n\n\n<br>\n\n<h2>Measuring advice</h2>\n<p>Take your actual body measurements as they are more accurate than measuring over your clothes.</p>\n<img src=\"https://cdn.shopify.com/s/files/1/2006/2579/files/Womens-Measuring-Chart.jpg?v=1743422349\">",
-            "tabs2": "Footwear",
-            "textarea2": "<div style=\"overflow-x: auto; max-width: 100%;\">\n  <table style=\"min-width: 800px; width: 100%; border-collapse: collapse; font-family: Arial, sans-serif; text-align: center;\">\n    <thead>\n      <tr>\n        <th rowspan=\"2\" style=\"background-color: #f5f5f5; padding: 10px; border: 1px solid #ddd;\">UK</th>\n        <th rowspan=\"2\" style=\"background-color: #f5f5f5; padding: 10px; border: 1px solid #ddd;\">Europe</th>\n        <th rowspan=\"2\" style=\"background-color: #f5f5f5; padding: 10px; border: 1px solid #ddd;\">Length (mm)</th>\n        <th style=\"background-color: #fce4ec; padding: 10px; border: 1px solid #ddd;\">Standard (D)<br>Width (mm)</th>\n        <th style=\"background-color: #e8f5e9; padding: 10px; border: 1px solid #ddd;\">Wide Fit (EE)<br>Width (mm)</th>\n      </tr>\n    </thead>\n    <tbody>\n      <tr style=\"background-color: #fff;\">\n        <td>3</td>\n<td>35.5</td>\n<td>220</td>\n<td style=\"background-color:#fce4ec;\">222</td>\n<td style=\"background-color:#e8f5e9;\">231</td>\n      </tr>\n      <tr style=\"background-color: #f9f9f9;\">\n        <td>3.5</td>\n<td>36</td>\n<td>224</td>\n<td style=\"background-color:#fce4ec;\">225</td>\n<td style=\"background-color:#e8f5e9;\">234</td>\n      </tr>\n      <tr style=\"background-color: #fff;\">\n        <td>4</td>\n<td>37</td>\n<td>229</td>\n<td style=\"background-color:#fce4ec;\">228</td>\n<td style=\"background-color:#e8f5e9;\">237</td>\n      </tr>\n      <tr style=\"background-color: #f9f9f9;\">\n        <td>4.5</td>\n<td>37.5</td>\n<td>233</td>\n<td style=\"background-color:#fce4ec;\">231</td>\n<td style=\"background-color:#e8f5e9;\">240</td>\n      </tr>\n      <tr style=\"background-color: #fff;\">\n        <td>5</td>\n<td>38</td>\n<td>237</td>\n<td style=\"background-color:#fce4ec;\">235</td>\n<td style=\"background-color:#e8f5e9;\">244</td>\n      </tr>\n      <tr style=\"background-color: #f9f9f9;\">\n        <td>5.5</td>\n<td>39</td>\n<td>241</td>\n<td style=\"background-color:#fce4ec;\">237</td>\n<td style=\"background-color:#e8f5e9;\">246</td>\n      </tr>\n      <tr style=\"background-color: #fff;\">\n        <td>6</td>\n<td>39.5</td>\n<td>246</td>\n<td style=\"background-color:#fce4ec;\">242</td>\n<td style=\"background-color:#e8f5e9;\">251</td>\n      </tr>\n      <tr style=\"background-color: #f9f9f9;\">\n        <td>6.5</td>\n<td>40</td>\n<td>251</td>\n<td style=\"background-color:#fce4ec;\">243</td>\n<td style=\"background-color:#e8f5e9;\">252</td>\n      </tr>\n      <tr style=\"background-color: #fff;\">\n        <td>7</td>\n<td>40.5</td>\n<td>254</td>\n<td style=\"background-color:#fce4ec;\">248</td>\n<td style=\"background-color:#e8f5e9;\">257</td>\n      </tr>\n      <tr style=\"background-color: #f9f9f9;\">\n        <td>7.5</td>\n<td>41</td>\n<td>258</td>\n<td style=\"background-color:#fce4ec;\">249</td>\n<td style=\"background-color:#e8f5e9;\">258</td>\n      </tr>\n      <tr style=\"background-color: #fff;\">\n        <td>8</td>\n<td>42</td>\n<td>262</td>\n<td style=\"background-color:#fce4ec;\">256</td>\n<td style=\"background-color:#e8f5e9;\">265</td>\n      </tr>\n      <tr style=\"background-color: #f9f9f9;\">\n        <td>9</td>\n<td>43</td>\n<td>272</td>\n<td style=\"background-color:#fce4ec;\">262</td>\n<td style=\"background-color:#e8f5e9;\">272</td>\n      </tr>\n    </tbody>\n  </table>\n</div>\n\n\n\n<br>\n\n<h2>Measuring advice</h2>\n<p>Take your actual body measurements as they are more accurate than measuring over your clothes.</p>\n<img src=\"https://cdn.shopify.com/s/files/1/2006/2579/files/Womens-Measuring-Chart.jpg?v=1743422349\">",
-            "tabs3": "Underwear",
-            "textarea3": "<div style=\"overflow-x: auto; max-width: 100%;\">\n  <table style=\"min-width: 600px; width: 100%; border-collapse: collapse; font-family: Arial, sans-serif; text-align: center;\">\n    <thead>\n      <tr>\n        <th style=\"background-color: #f5f5f5; padding: 10px; border: 1px solid #ddd;\">Underwear Size Guide</th>\n        <th style=\"background-color: #f5f5f5; padding: 10px; border: 1px solid #ddd;\">XS</th>\n        <th style=\"background-color: #f5f5f5; padding: 10px; border: 1px solid #ddd;\">S</th>\n        <th style=\"background-color: #f5f5f5; padding: 10px; border: 1px solid #ddd;\">M</th>\n        <th style=\"background-color: #f5f5f5; padding: 10px; border: 1px solid #ddd;\">L</th>\n        <th style=\"background-color: #f5f5f5; padding: 10px; border: 1px solid #ddd;\">XL</th>\n        <th style=\"background-color: #f5f5f5; padding: 10px; border: 1px solid #ddd;\">XXL</th>\n      </tr>\n    </thead>\n    <tbody>\n      <tr style=\"background-color: #fff;\">\n        <td style=\"padding: 10px; border: 1px solid #ddd;\">UK</td>\n        <td style=\"padding: 10px; border: 1px solid #ddd;\">6</td>\n        <td style=\"padding: 10px; border: 1px solid #ddd;\">8</td>\n        <td style=\"padding: 10px; border: 1px solid #ddd;\">10</td>\n        <td style=\"padding: 10px; border: 1px solid #ddd;\">12</td>\n        <td style=\"padding: 10px; border: 1px solid #ddd;\">14</td>\n        <td style=\"padding: 10px; border: 1px solid #ddd;\">16</td>\n      </tr>\n      <tr style=\"background-color: #f9f9f9;\">\n        <td style=\"padding: 10px; border: 1px solid #ddd;\">EUR</td>\n        <td style=\"padding: 10px; border: 1px solid #ddd;\">32</td>\n        <td style=\"padding: 10px; border: 1px solid #ddd;\">34</td>\n        <td style=\"padding: 10px; border: 1px solid #ddd;\">36</td>\n        <td style=\"padding: 10px; border: 1px solid #ddd;\">38</td>\n        <td style=\"padding: 10px; border: 1px solid #ddd;\">40</td>\n        <td style=\"padding: 10px; border: 1px solid #ddd;\">42</td>\n      </tr>\n    </tbody>\n  </table>\n</div>\n\n\n<br>\n\n<h2>Measuring advice</h2>\n<p>Take your actual body measurements as they are more accurate than measuring over your clothes.</p>\n<img src=\"https://cdn.shopify.com/s/files/1/2006/2579/files/Womens-Measuring-Chart.jpg?v=1743422349\">",
-            "tabs4": "",
-            "textarea4": "",
-            "tabs5": "",
-            "textarea5": ""
+            "measuring_image_url": "https://cdn.shopify.com/s/files/1/2006/2579/files/Womens-Measuring-Chart.jpg?v=1743422349"
           }
         },
-        "tabs_yDVQbG": {
-          "type": "Tabs",
+        "tbl_womens_clothing": {
+          "type": "table",
+          "settings": {
+            "tab_name": "Clothing",
+            "is_sub_table": false,
+            "heading": "",
+            "columns": "Clothing Size Guide, XS, S, M, L, XL",
+            "rows_data": "Dress Size, 8, 10, 12, 14, 16\nTo fit Bust (inches), 32, 34, 36, 38, 40\nTo fit Waist (inches), 25, 27, 29, 31, 33\nTo fit Hips (inches), 35, 37, 39, 41, 43",
+            "note": ""
+          }
+        },
+        "tbl_womens_footwear": {
+          "type": "table",
+          "settings": {
+            "tab_name": "Footwear",
+            "is_sub_table": false,
+            "heading": "",
+            "columns": "UK, Europe, Length (mm), Standard (D) Width (mm), Wide Fit (EE) Width (mm)",
+            "rows_data": "3, 35.5, 220, 222, 231\n3.5, 36, 224, 225, 234\n4, 37, 229, 228, 237\n4.5, 37.5, 233, 231, 240\n5, 38, 237, 235, 244\n5.5, 39, 241, 237, 246\n6, 39.5, 246, 242, 251\n6.5, 40, 251, 243, 252\n7, 40.5, 254, 248, 257\n7.5, 41, 258, 249, 258\n8, 42, 262, 256, 265\n9, 43, 272, 262, 272",
+            "note": ""
+          }
+        },
+        "tbl_womens_underwear": {
+          "type": "table",
+          "settings": {
+            "tab_name": "Underwear",
+            "is_sub_table": false,
+            "heading": "",
+            "columns": "Underwear Size Guide, XS, S, M, L, XL, XXL",
+            "rows_data": "UK, 6, 8, 10, 12, 14, 16\nEUR, 32, 34, 36, 38, 40, 42",
+            "note": ""
+          }
+        },
+        "cat_kids": {
+          "type": "category",
           "settings": {
             "heading": "Kids",
-            "tabs1": "Clothing",
-            "textarea1": "<div style=\"overflow-x: auto; max-width: 100%;\">\n  <table style=\"min-width: 600px; width: 100%; border-collapse: collapse; font-family: Arial, sans-serif; text-align: center;\">\n    <thead>\n      <tr>\n        <th style=\"background-color: #f5f5f5; padding: 10px; border: 1px solid #ddd;\">Age</th>\n        <th style=\"background-color: #f5f5f5; padding: 10px; border: 1px solid #ddd;\">XSB<br>(5–6 YRS)</th>\n        <th style=\"background-color: #f5f5f5; padding: 10px; border: 1px solid #ddd;\">SB<br>(7–8 YRS)</th>\n        <th style=\"background-color: #f5f5f5; padding: 10px; border: 1px solid #ddd;\">MB<br>(9–10 YRS)</th>\n        <th style=\"background-color: #f5f5f5; padding: 10px; border: 1px solid #ddd;\">LB<br>(11–12 YRS)</th>\n        <th style=\"background-color: #f5f5f5; padding: 10px; border: 1px solid #ddd;\">XLB<br>(13–14 YRS)</th>\n      </tr>\n    </thead>\n    <tbody>\n      <tr style=\"background-color: #fff;\">\n        <td style=\"padding: 10px; border: 1px solid #ddd;\">Height</td>\n        <td style=\"padding: 10px; border: 1px solid #ddd;\">45¾in</td>\n        <td style=\"padding: 10px; border: 1px solid #ddd;\">50in</td>\n        <td style=\"padding: 10px; border: 1px solid #ddd;\">55in</td>\n        <td style=\"padding: 10px; border: 1px solid #ddd;\">59¾in</td>\n        <td style=\"padding: 10px; border: 1px solid #ddd;\">64¼in</td>\n      </tr>\n      <tr style=\"background-color: #f9f9f9;\">\n        <td style=\"padding: 10px; border: 1px solid #ddd;\">Chest</td>\n        <td style=\"padding: 10px; border: 1px solid #ddd;\">24in</td>\n        <td style=\"padding: 10px; border: 1px solid #ddd;\">26in</td>\n        <td style=\"padding: 10px; border: 1px solid #ddd;\">28¼in</td>\n        <td style=\"padding: 10px; border: 1px solid #ddd;\">30¾in</td>\n        <td style=\"padding: 10px; border: 1px solid #ddd;\">33¼in</td>\n      </tr>\n      <tr style=\"background-color: #fff;\">\n        <td style=\"padding: 10px; border: 1px solid #ddd;\">Waist</td>\n        <td style=\"padding: 10px; border: 1px solid #ddd;\">22in</td>\n        <td style=\"padding: 10px; border: 1px solid #ddd;\">23¼in</td>\n        <td style=\"padding: 10px; border: 1px solid #ddd;\">25in</td>\n        <td style=\"padding: 10px; border: 1px solid #ddd;\">26in</td>\n        <td style=\"padding: 10px; border: 1px solid #ddd;\">28¾in</td>\n      </tr>\n    </tbody>\n  </table>\n</div>\n\n\n<br>\n\n<h2>Measuring advice</h2>\n<p>Take your actual body measurements as they are more accurate than measuring over your clothes.</p>\n<img src=\"https://cdn.shopify.com/s/files/1/2006/2579/files/Kids-Measuring-Chart.jpg?v=17434223489\">",
-            "tabs2": "Footwear",
-            "textarea2": "<div style=\"overflow-x: auto; max-width: 100%;\">\n  <table style=\"min-width: 1000px; width: 100%; border-collapse: collapse; font-family: Arial, sans-serif; text-align: center;\">\n    <thead>\n      <tr>\n        <th rowspan=\"2\" style=\"background-color: #f5f5f5; padding: 10px; border: 1px solid #ddd;\">UK Size</th>\n        <th rowspan=\"2\" style=\"background-color: #f5f5f5; padding: 10px; border: 1px solid #ddd;\">Europe</th>\n        <th rowspan=\"2\" style=\"background-color: #f5f5f5; padding: 10px; border: 1px solid #ddd;\">Length (mm)</th>\n        <th colspan=\"3\" style=\"background-color: #f5f5f5; padding: 10px; border: 1px solid #ddd;\">Width (mm)</th>\n      </tr>\n      <tr>\n        <th style=\"background-color: #fce4ec; padding: 10px; border: 1px solid #ddd;\">Narrow</th>\n        <th style=\"background-color: #e8f5e9; padding: 10px; border: 1px solid #ddd;\">Standard</th>\n        <th style=\"background-color: #c8e6c9; padding: 10px; border: 1px solid #ddd;\">Wide</th>\n      </tr>\n    </thead>\n    <tbody>\n      <tr>\n<td>4</td>\n<td>20.5</td>\n<td>123</td>\n<td style=\"background-color:#fce4ec;\">130</td>\n<td style=\"background-color:#e8f5e9;\">136</td>\n<td style=\"background-color:#c8e6c9;\">142</td>\n</tr>\n      <tr>\n<td>4.5</td>\n<td>21</td>\n<td>126</td>\n<td style=\"background-color:#fce4ec;\">133</td>\n<td style=\"background-color:#e8f5e9;\">139</td>\n<td style=\"background-color:#c8e6c9;\">145</td>\n</tr>\n      <tr>\n<td>5</td>\n<td>21.5</td>\n<td>130</td>\n<td style=\"background-color:#fce4ec;\">136</td>\n<td style=\"background-color:#e8f5e9;\">142</td>\n<td style=\"background-color:#c8e6c9;\">148</td>\n</tr>\n      <tr>\n<td>5.5</td>\n<td>22</td>\n<td>134</td>\n<td style=\"background-color:#fce4ec;\">139</td>\n<td style=\"background-color:#e8f5e9;\">145</td>\n<td style=\"background-color:#c8e6c9;\">151</td>\n</tr>\n      <tr>\n<td>6</td>\n<td>23</td>\n<td>138</td>\n<td style=\"background-color:#fce4ec;\">142</td>\n<td style=\"background-color:#e8f5e9;\">148</td>\n<td style=\"background-color:#c8e6c9;\">154</td>\n</tr>\n      <tr>\n<td>6.5</td>\n<td>23.5</td>\n<td>142</td>\n<td style=\"background-color:#fce4ec;\">145</td>\n<td style=\"background-color:#e8f5e9;\">151</td>\n<td style=\"background-color:#c8e6c9;\">157</td>\n</tr>\n      <tr>\n<td>7</td>\n<td>24</td>\n<td>146</td>\n<td style=\"background-color:#fce4ec;\">148</td>\n<td style=\"background-color:#e8f5e9;\">154</td>\n<td style=\"background-color:#c8e6c9;\">160</td>\n</tr>\n      <tr>\n<td>7.5</td>\n<td>25</td>\n<td>149</td>\n<td style=\"background-color:#fce4ec;\">151</td>\n<td style=\"background-color:#e8f5e9;\">157</td>\n<td style=\"background-color:#c8e6c9;\">163</td>\n</tr>\n      <tr>\n<td>8</td>\n<td>25.5</td>\n<td>153</td>\n<td style=\"background-color:#fce4ec;\">154</td>\n<td style=\"background-color:#e8f5e9;\">160</td>\n<td style=\"background-color:#c8e6c9;\">166</td>\n</tr>\n      <tr>\n<td>8.5</td>\n<td>26</td>\n<td>157</td>\n<td style=\"background-color:#fce4ec;\">156</td>\n<td style=\"background-color:#e8f5e9;\">162</td>\n<td style=\"background-color:#c8e6c9;\">168</td>\n</tr>\n      <tr>\n<td>9</td>\n<td>26.5</td>\n<td>161</td>\n<td style=\"background-color:#fce4ec;\">159</td>\n<td style=\"background-color:#e8f5e9;\">165</td>\n<td style=\"background-color:#c8e6c9;\">171</td>\n</tr>\n      <tr>\n<td>9.5</td>\n<td>27.5</td>\n<td>165</td>\n<td style=\"background-color:#fce4ec;\">162</td>\n<td style=\"background-color:#e8f5e9;\">168</td>\n<td style=\"background-color:#c8e6c9;\">174</td>\n</tr>\n      <tr>\n<td>10</td>\n<td>28</td>\n<td>169</td>\n<td style=\"background-color:#fce4ec;\">165</td>\n<td style=\"background-color:#e8f5e9;\">171</td>\n<td style=\"background-color:#c8e6c9;\">177</td>\n</tr>\n      <tr>\n<td>10.5</td>\n<td>28.5</td>\n<td>172</td>\n<td style=\"background-color:#fce4ec;\">168</td>\n<td style=\"background-color:#e8f5e9;\">174</td>\n<td style=\"background-color:#c8e6c9;\">180</td>\n</tr>\n      <tr>\n<td>11</td>\n<td>29</td>\n<td>176</td>\n<td style=\"background-color:#fce4ec;\">171</td>\n<td style=\"background-color:#e8f5e9;\">177</td>\n<td style=\"background-color:#c8e6c9;\">183</td>\n</tr>\n      <tr>\n<td>11.5</td>\n<td>30</td>\n<td>180</td>\n<td style=\"background-color:#fce4ec;\">174</td>\n<td style=\"background-color:#e8f5e9;\">180</td>\n<td style=\"background-color:#c8e6c9;\">186</td>\n</tr>\n      <tr>\n<td>12</td>\n<td>30.5</td>\n<td>184</td>\n<td style=\"background-color:#fce4ec;\">177</td>\n<td style=\"background-color:#e8f5e9;\">183</td>\n<td style=\"background-color:#c8e6c9;\">189</td>\n</tr>\n      <tr>\n<td>12.5</td>\n<td>31</td>\n<td>188</td>\n<td style=\"background-color:#fce4ec;\">180</td>\n<td style=\"background-color:#e8f5e9;\">186</td>\n<td style=\"background-color:#c8e6c9;\">192</td>\n</tr>\n      <tr>\n<td>13</td>\n<td>32</td>\n<td>192</td>\n<td style=\"background-color:#fce4ec;\">183</td>\n<td style=\"background-color:#e8f5e9;\">189</td>\n<td style=\"background-color:#c8e6c9;\">195</td>\n</tr>\n      <tr>\n<td>13.5</td>\n<td>32.5</td>\n<td>196</td>\n<td style=\"background-color:#fce4ec;\">186</td>\n<td style=\"background-color:#e8f5e9;\">192</td>\n<td style=\"background-color:#c8e6c9;\">198</td>\n</tr>\n      <tr>\n<td>1</td>\n<td>33</td>\n<td>200</td>\n<td style=\"background-color:#fce4ec;\">190</td>\n<td style=\"background-color:#e8f5e9;\">196</td>\n<td style=\"background-color:#c8e6c9;\">202</td>\n</tr>\n      <tr>\n<td>1.5</td>\n<td>33.5</td>\n<td>205</td>\n<td style=\"background-color:#fce4ec;\">193</td>\n<td style=\"background-color:#e8f5e9;\">199</td>\n<td style=\"background-color:#c8e6c9;\">205</td>\n</tr>\n      <tr>\n<td>2</td>\n<td>34.5</td>\n<td>209</td>\n<td style=\"background-color:#fce4ec;\">197</td>\n<td style=\"background-color:#e8f5e9;\">203</td>\n<td style=\"background-color:#c8e6c9;\">209</td>\n</tr>\n      <tr>\n<td>2.5</td>\n<td>35</td>\n<td>213</td>\n<td style=\"background-color:#fce4ec;\">199</td>\n<td style=\"background-color:#e8f5e9;\">205</td>\n<td style=\"background-color:#c8e6c9;\">211</td>\n</tr>\n      <tr>\n<td>3</td>\n<td>35.5</td>\n<td>217</td>\n<td style=\"background-color:#fce4ec;\">202</td>\n<td style=\"background-color:#e8f5e9;\">208</td>\n<td style=\"background-color:#c8e6c9;\">214</td>\n</tr>\n      <tr>\n<td>3.5</td>\n<td>36</td>\n<td>222</td>\n<td style=\"background-color:#fce4ec;\">205</td>\n<td style=\"background-color:#e8f5e9;\">211</td>\n<td style=\"background-color:#c8e6c9;\">217</td>\n</tr>\n      <tr>\n<td>4</td>\n<td>37</td>\n<td>226</td>\n<td style=\"background-color:#fce4ec;\">209</td>\n<td style=\"background-color:#e8f5e9;\">215</td>\n<td style=\"background-color:#c8e6c9;\">221</td>\n</tr>\n      <tr>\n<td>4.5</td>\n<td>37.5</td>\n<td>230</td>\n<td style=\"background-color:#fce4ec;\">213</td>\n<td style=\"background-color:#e8f5e9;\">219</td>\n<td style=\"background-color:#c8e6c9;\">225</td>\n</tr>\n      <tr>\n<td>5</td>\n<td>38</td>\n<td>234</td>\n<td style=\"background-color:#fce4ec;\">218</td>\n<td style=\"background-color:#e8f5e9;\">224</td>\n<td style=\"background-color:#c8e6c9;\">230</td>\n</tr>\n      <tr>\n<td>5.5</td>\n<td>39</td>\n<td>238</td>\n<td style=\"background-color:#fce4ec;\">222</td>\n<td style=\"background-color:#e8f5e9;\">228</td>\n<td style=\"background-color:#c8e6c9;\">234</td>\n</tr>\n      <tr>\n<td>6</td>\n<td>39.5</td>\n<td>242</td>\n<td style=\"background-color:#fce4ec;\">226</td>\n<td style=\"background-color:#e8f5e9;\">232</td>\n<td style=\"background-color:#c8e6c9;\">238</td>\n</tr>\n      <tr>\n<td>6.5</td>\n<td>40</td>\n<td>247</td>\n<td style=\"background-color:#fce4ec;\">230</td>\n<td style=\"background-color:#e8f5e9;\">236</td>\n<td style=\"background-color:#c8e6c9;\">242</td>\n</tr>\n      <tr>\n<td>7</td>\n<td>40.5</td>\n<td>251</td>\n<td style=\"background-color:#fce4ec;\">235</td>\n<td style=\"background-color:#e8f5e9;\">241</td>\n<td style=\"background-color:#c8e6c9;\">247</td>\n</tr>\n      <tr>\n<td>7.5</td>\n<td>41.5</td>\n<td>255</td>\n<td style=\"background-color:#fce4ec;\">239</td>\n<td style=\"background-color:#e8f5e9;\">245</td>\n<td style=\"background-color:#c8e6c9;\">251</td>\n</tr>\n    </tbody>\n  </table>\n</div>\n\n\n\n<br>\n\n<h2>Measuring advice</h2>\n<p>Take your actual body measurements as they are more accurate than measuring over your clothes.</p>\n<img src=\"https://cdn.shopify.com/s/files/1/2006/2579/files/Kids-Measuring-Chart.jpg?v=1743422348\">",
-            "tabs3": "",
-            "textarea3": "",
-            "tabs4": "",
-            "textarea4": "",
-            "tabs5": "",
-            "textarea5": ""
+            "measuring_image_url": "https://cdn.shopify.com/s/files/1/2006/2579/files/Kids-Measuring-Chart.jpg?v=1743422348"
+          }
+        },
+        "tbl_kids_clothing": {
+          "type": "table",
+          "settings": {
+            "tab_name": "Clothing",
+            "is_sub_table": false,
+            "heading": "",
+            "columns": "Age, XSB (5-6 YRS), SB (7-8 YRS), MB (9-10 YRS), LB (11-12 YRS), XLB (13-14 YRS)",
+            "rows_data": "Height, 45¾in, 50in, 55in, 59¾in, 64¼in\nChest, 24in, 26in, 28¼in, 30¾in, 33¼in\nWaist, 22in, 23¼in, 25in, 26in, 28¾in",
+            "note": ""
+          }
+        },
+        "tbl_kids_footwear": {
+          "type": "table",
+          "settings": {
+            "tab_name": "Footwear",
+            "is_sub_table": false,
+            "heading": "",
+            "columns": "UK Size, Europe, Length (mm), Narrow, Standard, Wide",
+            "rows_data": "4, 20.5, 123, 130, 136, 142\n4.5, 21, 126, 133, 139, 145\n5, 21.5, 130, 136, 142, 148\n5.5, 22, 134, 139, 145, 151\n6, 23, 138, 142, 148, 154\n6.5, 23.5, 142, 145, 151, 157\n7, 24, 146, 148, 154, 160\n7.5, 25, 149, 151, 157, 163\n8, 25.5, 153, 154, 160, 166\n8.5, 26, 157, 156, 162, 168\n9, 26.5, 161, 159, 165, 171\n9.5, 27.5, 165, 162, 168, 174\n10, 28, 169, 165, 171, 177\n10.5, 28.5, 172, 168, 174, 180\n11, 29, 176, 171, 177, 183\n11.5, 30, 180, 174, 180, 186\n12, 30.5, 184, 177, 183, 189\n12.5, 31, 188, 180, 186, 192\n13, 32, 192, 183, 189, 195\n13.5, 32.5, 196, 186, 192, 198\n1, 33, 200, 190, 196, 202\n1.5, 33.5, 205, 193, 199, 205\n2, 34.5, 209, 197, 203, 209\n2.5, 35, 213, 199, 205, 211\n3, 35.5, 217, 202, 208, 214\n3.5, 36, 222, 205, 211, 217\n4, 37, 226, 209, 215, 221\n4.5, 37.5, 230, 213, 219, 225\n5, 38, 234, 218, 224, 230\n5.5, 39, 238, 222, 228, 234\n6, 39.5, 242, 226, 232, 238\n6.5, 40, 247, 230, 236, 242\n7, 40.5, 251, 235, 241, 247\n7.5, 41.5, 255, 239, 245, 251",
+            "note": ""
           }
         }
       },
       "block_order": [
-        "tabs_U9UKt3",
-        "tabs_V7f3pN",
-        "tabs_yDVQbG"
+        "cat_mens",
+        "tbl_mens_tops",
+        "tbl_mens_joggers",
+        "tbl_mens_jeans",
+        "tbl_mens_jeans_single",
+        "table_eA3Aia",
+        "tbl_mens_boxers",
+        "tbl_mens_footwear",
+        "cat_womens",
+        "tbl_womens_clothing",
+        "tbl_womens_footwear",
+        "tbl_womens_underwear",
+        "cat_kids",
+        "tbl_kids_clothing",
+        "tbl_kids_footwear"
       ],
       "custom_css": [
         ".tabs-size-guid {padding-top: 20px;}"
