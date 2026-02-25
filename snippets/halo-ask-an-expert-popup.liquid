@@ -1,0 +1,66 @@
+{%- if settings.ask_an_expert_show == 'all_page' -%}
+	{{ 'component-ask-an-expert.css' | asset_url | stylesheet_tag }}
+{%- else -%}
+	<link rel="stylesheet" href="{{ 'component-ask-an-expert.css' | asset_url }}" media="print" onload="this.media='all'">
+	<noscript>{{ 'component-ask-an-expert.css' | asset_url | stylesheet_tag }}</noscript>
+{%- endif -%}
+{%- if settings.ask_an_expert_show == 'all_page' -%}
+	<custom-modal-opener class="halo-ask-an-expert-banner">
+	    <button {% if settings.ask_an_expert_banner != blank %} class="link"{% endif %} role="button">
+		    {%- if settings.ask_an_expert_banner != blank -%}
+		        {% assign image = settings.ask_an_expert_banner %}
+		        <img srcset="{{ image | img_url: 'master' }} 1x, {{ image | img_url: 'master', scale: 2 }} 2x"
+	                src="{{ image | img_url: 'master' }}"
+	                loading="lazy"
+	                alt="{{ image.alt | default: shop.name | escape }}"
+	                width="{{ image.width | replace: 'px', '' }}"
+	                height="{{ image.height | replace: 'px', '' }}"
+	            >
+		    {%- else -%}
+		    	{{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+		    {%- endif -%}
+		    <span class="wrap">
+			    {%- if settings.ask_an_expert_icon_1 != blank -%}
+                    {{ settings.ask_an_expert_icon_1 }}
+                {%- elsif settings.ask_an_expert_icon_2 != blank -%}
+                    {{ settings.ask_an_expert_icon_2 }}
+			    {%- else -%}
+			    	{% render 'icon-question' %}
+			    {%- endif -%}
+		    </span>
+	    </button>
+	</custom-modal-opener>
+{%- endif -%}
+{%- liquid
+    assign page_type = request.page_type | replace: 'customers/', ''
+    if page_type == 'product'
+    	assign dataUrl = product.url | append: '?view=ajax_ask_an_expert'
+    else
+    	assign dataUrl = '/search?view=ajax_ask_an_expert'
+    endif
+-%} 
+<ask-an-expert-modal class="halo-modal halo-modal__topDown" id="Modal-AskAnExpert" data-url="{{ dataUrl }}">
+    <div class="halo-modal__dialog"
+      	role="dialog"
+      	aria-label="Dialog"
+      	aria-modal="true"
+      	tabindex="-1"
+    >
+    	<div class="halo-modal-header">
+            <button class="halo-modal-close clearfix" role="button" id="ModalClose-AskAnExpert" aria-label="{{ 'general.common.close' | t }}">
+		        {% render 'icon-close' %}
+		    </button>
+            <h5 class="halo-modal-title text-center">
+            	{%- if settings.ask_an_expert_header != blank -%}
+                	{{ settings.ask_an_expert_header | escape }}
+                {%- else -%}
+                	{{ shop.name | escape }}
+	        	{%- endif -%}
+            </h5>
+    	</div>
+        <div class="halo-modal-content halo-popup-scroll custom-scrollbar" id="ModalWrapper-AskAnExpert">
+    		<div class="halo-block-loader"></div>
+    		<div id="ModalContent-AskAnExpert"></div>
+        </div>
+    </div>
+</ask-an-expert-modal>

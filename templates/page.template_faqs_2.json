@@ -1,0 +1,173 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-faqs-2-page",
+      "blocks": {
+        "35b6efac-3cb5-46b8-851d-a0c2c5b3cdbd": {
+          "type": "paragraph",
+          "settings": {
+            "title": "DELIVERIES",
+            "question_1": "WHEN WILL MY ORDER BE DESPATCHED?",
+            "answer_1": "<p>We aim to get any orders made before 12 pm despatched the same day, however during busy periods the turnaround could be slightly longer. If an order is made after 12 pm it will usually be sent out the following day, and on a Friday, this will be sent out the following Monday (unless a bank holiday when it will be sent on a Tuesday).\n\nStandard delivery can take between 2-5 working days (weekends do not count as working days).</p>",
+            "question_2": "DO YOU DESPATCH ON BANK HOLIDAYS AND WEEKENDS?",
+            "answer_2": "<p>No, we do not despatch on either bank holidays or weekends.</p>",
+            "question_3": "DO YOU OFFER INTERNATIONAL DELIVERIES?",
+            "answer_3": "<p>Yes, we do ship internationally and the price to ship overseas will vary. \n<br><br>\nThe shipping cost will be calculated based on the destination and volumetrics of the order at checkout.  \n<br><br>\nAny import taxes and fees are payable locally on delivery. </p>",
+            "question_4": "",
+            "answer_4": "",
+            "question_5": "",
+            "answer_5": "",
+            "question_6": "",
+            "answer_6": "",
+            "question_7": "",
+            "answer_7": "",
+            "question_8": "",
+            "answer_8": "",
+            "question_9": "",
+            "answer_9": "",
+            "question_10": "",
+            "answer_10": ""
+          }
+        },
+        "2ae2f788-37c6-4cb5-ae8c-fd60994659be": {
+          "type": "paragraph",
+          "settings": {
+            "title": "CHANGES AND CANCELLATIONS",
+            "question_1": "CAN I CANCEL MY ORDER?",
+            "answer_1": "<p>Orders are turned around very quickly and generally, once they have been picked and packed, they will be ready to despatch – which means it won’t be possible to cancel. However, if you contact the Customer Services team, they may be able to help and stop the order if it is in its early stages. Their contact details can be found at the bottom of these FAQs.</p>",
+            "question_2": "CAN I CHANGE OR MODIFY MY ORDER?",
+            "answer_2": "<p>If you want to change or update the shipping address this can be done if the order is in its early stages. If the order has been picked and packed and is ready to be shipped this may be more difficult and may mean you are unable to do it. This also applies to changing the size or colour of an item on your order. Please contact the Customer Service team to see if they can help. Their contact details can be found at the bottom of these FAQs.\n\nPlease note, if you wish to change an item on an order the new one would need to be the same value as the original, and any changes like this will also be dependent on stock availability.</p>",
+            "question_3": "",
+            "answer_3": "",
+            "question_4": "",
+            "answer_4": "",
+            "question_5": "",
+            "answer_5": "",
+            "question_6": "",
+            "answer_6": "",
+            "question_7": "",
+            "answer_7": "",
+            "question_8": "",
+            "answer_8": "",
+            "question_9": "",
+            "answer_9": "",
+            "question_10": "",
+            "answer_10": ""
+          }
+        },
+        "b7c236da-38ab-4125-8f69-034becfa468c": {
+          "type": "paragraph",
+          "settings": {
+            "title": "ORDER TRACKING",
+            "question_1": "WHERE IS MY TRACKING NUMBER?",
+            "answer_1": "Your tracking number will be sent to you by email after our team has processed your order. Once you have this you will be able to enter this on the Royal Mail website to check the progress of your order.",
+            "question_2": "MY TRACKING NUMBER DOESN’T GIVE ME ANY INFORMATION YET.",
+            "answer_2": "<p>The tracking info might only be updated once the parcel has been successfully delivered – either to the specified address or a safe place - or when delivery has been attempted. If there is no one in, the parcel may be returned to the sorting office, meaning you will need to collect it from there, or you may be able to arrange a redelivery online. The postman should leave a calling card, but we find this is not always the case.</p>",
+            "question_3": "MY PARCEL HASN’T ARRIVED YET.",
+            "answer_3": "<p>Deliveries can take between 2-5 working days to arrive, however, it is important to wait a full 10 working days before contacting us to declare the parcel missing. After this time, you should contact Customer Services who will raise an investigation with Royal Mail. Their contact details can be found at the bottom of these FAQs.</p>",
+            "question_4": "MY PARCEL SAYS DELIVERED BUT I HAVEN’T RECEIVED IT.",
+            "answer_4": "<p>Royal Mail advises checking with neighbours and any household members who may have taken the parcel in. It is also worth checking any safe places where the parcel may have been left. If you still cannot find the parcel, then please contact the Customer Services team who will raise an investigation with Royal Mail.</p>",
+            "question_5": "",
+            "answer_5": "",
+            "question_6": "",
+            "answer_6": "",
+            "question_7": "",
+            "answer_7": "",
+            "question_8": "",
+            "answer_8": "",
+            "question_9": "",
+            "answer_9": "",
+            "question_10": "",
+            "answer_10": ""
+          }
+        },
+        "ff82b0a4-c049-45c9-b529-dedd5d0bf370": {
+          "type": "paragraph",
+          "settings": {
+            "title": "RETURNS AND EXCHANGES",
+            "question_1": "HOW DO I RETURN MY ORDER?",
+            "answer_1": "<p>Unwanted items can be returned within 28 days of purchase for a refund or exchange. All items should be returned in their original condition, unworn and unused, with tags attached. Underwear cannot be returned due to hygiene reasons.\n\nYou can download a returns form from the website or simply use the delivery note that came with your order. The returns form/delivery note should be included with any items you are returning. Please indicate clearly your customer reference number, what you are returning and why, and if you are looking for a refund or an exchange. All exchanges are subject to stock availability. If we cannot process an exchange due to a lack of stock, we will arrange a refund or contact you to offer an alternative.\n\nIt is recommended that you use a tracked delivery service to return items. Please note, we do not pay the return postage.</p>",
+            "question_2": "WHY DO YOU CHARGE FOR RETURNS?",
+            "answer_2": "<p>As a business, our priority is to keep our costs down so that we can keep prices as low as possible for our customers. Fortunately, our sizing guide on the website is very comprehensive so you can be sure you are ordering the right size for yourself. If an item is received which is outside of the advertised guidelines, then we would cover the cost of returning the defective product for a replacement or refund.</p>",
+            "question_3": "I’VE RECEIVED MY ITEM AND THERE IS A FAULT, WHAT DO I DO?",
+            "answer_3": "<p>As soon as you notice the fault, please contact our Customer Services team by email who will be happy to help sort this out. You will need to send a photograph of the fault along with your customer reference number. Their email can be found at the bottom of these FAQs.\n\nThis must be done within 14 days of ordering.</p>",
+            "question_4": "MY ITEM HAS DEVELOPED A FAULT AND I AM WITHIN 6 MONTHS OF THE PURCHASE DATE.",
+            "answer_4": "<p>If one of our products develops a fault, please contact our Customer Services team by email who will be happy to help sort this out. You will need to send a photograph of the fault along with your customer reference number. Their email can be found at the bottom of these FAQs.\n\nAn item that was ordered more than 6 months before will not be eligible for a refund or exchange if it develops a fault as this would usually be due to expected wear and tear.</p>",
+            "question_5": "I’VE RECEIVED THE WRONG ITEM.",
+            "answer_5": "<p>As soon as you notice that you have been sent an incorrect item, please contact our Customer Services team who will be happy to help sort this out. Their contact details can be found at the bottom of these FAQs.\n\nThis must be done within 14 days of ordering.</p>",
+            "question_6": "I AM MISSING AN ITEM. WHAT DO I DO?",
+            "answer_6": "<p>As soon as you notice that an item is missing from your order, please contact our Customer Services team who will be happy to help sort this out. Their contact details can be found at the bottom of these FAQs.\n\nThis must be done within 30 days of ordering.</p>",
+            "question_7": "HAVE YOU RECEIVED MY RETURNS BACK?",
+            "answer_7": "<p>If you have used a tracking service to send your returns back, then it is a good idea to check this first. We aim to process a return within 2-3 working days of receiving them although this may be longer during very busy periods. We will then issue a refund or arrange an exchange as per the request noted on the paperwork included with the return.</p>",
+            "question_8": "WHEN WILL I GET MY REFUND?",
+            "answer_8": "<p>Once we receive your return, any refund due will be issued to the payment method you used to place your original order. This typically takes up to 7 working days depending on your payment provider.</p>",
+            "question_9": "",
+            "answer_9": "",
+            "question_10": "",
+            "answer_10": ""
+          }
+        },
+        "76f10370-1ed5-4a0d-9193-6e37c847b411": {
+          "type": "paragraph",
+          "settings": {
+            "title": "PROMOS & DISCOUNT CODES",
+            "question_1": "MY DISCOUNT CODE DOESN’T WORK.",
+            "answer_1": "<p>f you’re having trouble with your discount code, make sure you’ve typed the code correctly and that the expiry date hasn’t passed. All our discount codes apply to full-priced products only and cannot be used in conjunction with any offer discounts.</p>",
+            "question_2": "",
+            "answer_2": "",
+            "question_3": "",
+            "answer_3": "",
+            "question_4": "",
+            "answer_4": "",
+            "question_5": "",
+            "answer_5": "",
+            "question_6": "",
+            "answer_6": "",
+            "question_7": "",
+            "answer_7": "",
+            "question_8": "",
+            "answer_8": "",
+            "question_9": "",
+            "answer_9": "",
+            "question_10": "",
+            "answer_10": ""
+          }
+        }
+      },
+      "block_order": [
+        "35b6efac-3cb5-46b8-851d-a0c2c5b3cdbd",
+        "2ae2f788-37c6-4cb5-ae8c-fd60994659be",
+        "b7c236da-38ab-4125-8f69-034becfa468c",
+        "ff82b0a4-c049-45c9-b529-dedd5d0bf370",
+        "76f10370-1ed5-4a0d-9193-6e37c847b411"
+      ],
+      "settings": {
+        "show_breadcrumb": false,
+        "breadcrumb_alignment": "left",
+        "show_page_title": true,
+        "page_title_alignment": "left",
+        "container": "1370",
+        "padding_top": 0,
+        "padding_bottom": 90,
+        "padding_top_tablet": 0,
+        "padding_bottom_tablet": 70,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 60,
+        "show_faqs_filter": false,
+        "faqs_text": "BELOW ARE SOME OF OUR FAQS & CONCERNS. IF YOU HAVE OTHER QUESTIONS, PLEASE JUST SEND IT TO ASK@DUCKANDCOVER.CO.UK"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

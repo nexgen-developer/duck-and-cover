@@ -1,0 +1,343 @@
+{%- if section.settings.show_newsletter -%}
+    {%- liquid
+        assign padding_top = section.settings.padding_top | append: 'px'
+        assign padding_bottom = section.settings.padding_bottom | append: 'px'
+        assign padding_top_tablet = section.settings.padding_top_tablet | append: 'px'
+        assign padding_bottom_tablet = section.settings.padding_bottom_tablet | append: 'px'
+        assign padding_top_mobile = section.settings.padding_top_mobile | append: 'px'
+        assign padding_bottom_mobile = section.settings.padding_bottom_mobile | append: 'px'
+        assign show_newsletter_bg_img = section.settings.show_newsletter_bg_img
+        if show_newsletter_bg_img
+            assign newsletter_bg_img = section.settings.newsletter_bg_img
+            assign newsletter_bg_position_x = section.settings.newsletter_bg_position_x
+            assign newsletter_bg_position_y = section.settings.newsletter_bg_position_y
+            assign newsletter_bg_repeat = section.settings.newsletter_bg_repeat
+            assign newsletter_bg_attachment = section.settings.newsletter_bg_attachment
+            assign newsletter_bg_size = section.settings.newsletter_bg_size
+        endif
+        assign newsletter_heading = section.settings.newsletter_heading
+        assign newsletter_text = section.settings.newsletter_text
+        assign newsletter_text_2 = section.settings.newsletter_text_2
+        assign block_bg = section.settings.block_bg
+        assign newsletter_color = section.settings.newsletter_color
+        assign newsletter_border = section.settings.newsletter_border
+        assign newsletter_input_bg = section.settings.newsletter_input_bg
+        assign newsletter_input_color = section.settings.newsletter_input_color
+
+        if settings.show_dark_mode
+            assign dark_mode = false
+            unless block_bg == blank or block_bg == '#fff' or block_bg == '#FFF' or block_bg == '#ffffff' or block_bg == '#FFFFFF' or block_bg == 'rgb(255,255,255)' or block_bg == 'rgba(255,255,255,1)' or block_bg == 'rgba(0,0,0,0)' or block_bg == 'rgb(0,0,0,0)'
+                assign dark_mode = true
+                assign dark_mode_background_color = section.settings.block_bg
+            endunless
+        endif
+    -%}
+    <div class="halo-block halo-banner halo-newsletter halo-block-padding{% if show_newsletter_bg_img %} newsletter__wrapper-bg{% endif %}{% unless dark_mode %} dark-mode{% endunless %}" id="halo-newsletter-{{ section.id }}"
+        style="--padding-top: {{ padding_top }};
+            --padding-bottom: {{ padding_bottom }};
+            --padding-top-tablet: {{ padding_top_tablet }};
+            --padding-bottom-tablet: {{ padding_bottom_tablet }};
+            --padding-top-mobile: {{ padding_top_mobile }};
+            --padding-bottom-mobile: {{ padding_bottom_mobile }};
+        {% if show_newsletter_bg_img %}
+            --newsletter-bg-img: url({{ newsletter_bg_img | img_url: 'master' }});
+            --newsletter-bg-position: {{ newsletter_bg_position_x }} {{ newsletter_bg_position_y }};
+            --newsletter-bg-repeat: {{ newsletter_bg_repeat }};
+            --newsletter-bg-attachment: {{ newsletter_bg_attachment }};
+            --newsletter-bg-size: {{ newsletter_bg_size }};
+        {% endif %}
+            --newsletter-color: {{ newsletter_color }};
+            --newsletter-border: {{ newsletter_border }};
+            --newsletter-input-bg: {{ newsletter_input_bg }};
+            --newsletter-input-color: {{ newsletter_input_color.red }}, {{ newsletter_input_color.green }}, {{ newsletter_input_color.blue }};
+            --bg-color: {{ block_bg }};
+        {% if dark_mode %}
+            --dark-mode-bg-color: {{ dark_mode_background_color }};
+        {% endif %}"
+    >
+        <div class="container">
+            <div class="newsletter-block clearfix text-center">
+                {%- if newsletter_heading != blank or newsletter_text != blank -%}
+                    <div class="newsletter-block__item halo-block-header">
+                        {%- if newsletter_heading != blank -%}
+                            <h2 class="title">
+                                <span class="text">{{ newsletter_heading | escape }}</span>
+                            </h2>
+                        {%- endif -%}
+                        {%- if newsletter_text != blank -%}
+                            <div class="desc rte">
+                                {{ newsletter_text }}
+                            </div>
+                        {%- endif -%}
+                    </div>
+                {%- endif -%}
+                <div class="newsletter-block__item newsletter-block__form">
+                    {% render 'newsletter-form'%}
+                </div>
+                {%- if newsletter_text_2 != blank -%}
+                    <div class="newsletter-block__subheading bottom-text rte">
+                        {{ newsletter_text_2 }}
+                    </div>
+                {%- endif -%}
+            </div>
+        </div>
+    </div>
+{%- endif -%}
+
+{% schema %}
+{
+    "name": "t:sections.newsletter.name",
+    "settings": [
+        {
+            "type": "header",
+            "content": "t:sections.footer.settings.header__4.content"
+        },
+        {
+            "type": "checkbox",
+            "id": "show_newsletter",
+            "label": "t:sections.footer.settings.newsletter.label__1",
+            "default": true
+        },
+        {
+            "type": "paragraph",
+            "content": "t:sections.general.settings.padding.paragraph__1.content"
+        },
+        {
+            "type": "range",
+            "id": "padding_top",
+            "label": "t:sections.general.settings.padding.label__1",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "t:sections.general.settings.padding.unit",
+            "default": 0
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "label": "t:sections.general.settings.padding.label__2",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "t:sections.general.settings.padding.unit",
+            "default": 0
+        },
+        {
+            "type": "paragraph",
+            "content": "t:sections.general.settings.padding.paragraph__2.content"
+        },
+        {
+            "type": "range",
+            "id": "padding_top_tablet",
+            "label": "t:sections.general.settings.padding.label__1",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "t:sections.general.settings.padding.unit",
+            "default": 40
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom_tablet",
+            "label": "t:sections.general.settings.padding.label__2",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "t:sections.general.settings.padding.unit",
+            "default": 40
+        },
+        {
+            "type": "paragraph",
+            "content": "t:sections.general.settings.padding.paragraph__3.content"
+        },
+        {
+            "type": "range",
+            "id": "padding_top_mobile",
+            "label": "t:sections.general.settings.padding.label__1",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "t:sections.general.settings.padding.unit",
+            "default": 30
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom_mobile",
+            "label": "t:sections.general.settings.padding.label__2",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "t:sections.general.settings.padding.unit",
+            "default": 30
+        },
+        {
+            "type": "paragraph",
+            "content": "t:sections.general.settings.background-image.paragraph__1.content"
+        },
+        {
+            "type": "checkbox",
+            "id": "show_newsletter_bg_img",
+            "label": "t:sections.general.settings.background-image.label__1",
+            "default": false
+        },
+        {
+            "type": "image_picker",
+            "id": "newsletter_bg_img",
+            "label": "t:sections.general.settings.background-image.label__2"
+        },
+        {
+            "type": "select",
+            "id": "newsletter_bg_position_x",
+            "label": "t:sections.general.settings.background-image.label__3",
+            "default": "center",
+            "options": [
+            {
+                "value": "left",
+                "label": "t:sections.general.settings.background-image.options__1"
+            },
+            {
+                "value": "center",
+                "label": "t:sections.general.settings.background-image.options__2"
+            },
+            {
+                "value": "right",
+                "label": "t:sections.general.settings.background-image.options__3"
+            }]
+        },
+        {
+            "type": "select",
+            "id": "newsletter_bg_position_y",
+            "label": "t:sections.general.settings.background-image.label__4",
+            "default": "center",
+            "options": [
+            {
+                "value": "top",
+                "label": "t:sections.general.settings.background-image.options__4"
+            },
+            {
+                "value": "center",
+                "label": "t:sections.general.settings.background-image.options__2"
+            },
+            {
+                "value": "bottom",
+                "label": "t:sections.general.settings.background-image.options__5"
+            }]
+        },
+        {
+            "type": "select",
+            "id": "newsletter_bg_repeat",
+            "label": "t:sections.general.settings.background-image.label__5",
+            "default": "no-repeat",
+            "options": [
+            {
+                "value": "repeat",
+                "label": "t:sections.general.settings.background-image.options__6"
+            },
+            {
+                "value": "repeat-x",
+                "label": "t:sections.general.settings.background-image.options__7"
+            },
+            {
+                "value": "repeat-y",
+                "label": "t:sections.general.settings.background-image.options__8"
+            },
+            {
+                "value": "no-repeat",
+                "label": "t:sections.general.settings.background-image.options__9"
+            }]
+        },
+        {
+            "type": "select",
+            "id": "newsletter_bg_attachment",
+            "label": "t:sections.general.settings.background-image.label__6",
+            "default": "scroll",
+            "options": [
+            {
+                "value": "scroll",
+                "label": "t:sections.general.settings.background-image.options__10"
+            },
+            {
+                "value": "fixed",
+                "label": "t:sections.general.settings.background-image.options__11"
+            }]
+        },
+        {
+            "type": "select",
+            "id": "newsletter_bg_size",
+            "label": "t:sections.general.settings.background-image.label__7",
+            "default": "cover",
+            "options": [
+            {
+                "value": "contain",
+                "label": "t:sections.general.settings.background-image.options__12"
+            },
+            {
+                "value": "auto",
+                "label": "t:sections.general.settings.background-image.options__13"
+            },
+            {
+                "value": "cover",
+                "label": "t:sections.general.settings.background-image.options__14"
+            }]
+        },
+        {
+            "type": "header",
+            "content": "t:sections.footer.settings.header__1.content",
+            "info": "t:sections.footer.settings.header__1.info"
+        },
+        {
+            "type": "text",
+            "id": "newsletter_heading",
+            "label": "t:sections.footer.settings.newsletter.label__2",
+            "default": "Love HALO? Subscribe now!"
+        },
+        {
+            "type": "richtext",
+            "id": "newsletter_text",
+            "label": "t:sections.footer.settings.newsletter.label__3",
+            "default": "<p>Receive early access, wishlist on discount and more. Your privacy is our policy.</p>"
+        },
+        {
+            "type": "richtext",
+            "id": "newsletter_text_2",
+            "label": "t:sections.footer.settings.newsletter.label__4",
+            "default": "<p>By subscribing, I accept the privacy terms and I give my consent to receive HALO newsletter.</p>"
+        },
+        {
+            "type": "color_background",
+            "id": "block_bg",
+            "label": "t:sections.general.settings.color.label__1",
+            "default": "#C7C7C7"
+        },
+        {
+            "type": "color",
+            "id": "newsletter_color",
+            "label": "t:sections.general.settings.color.label__2",
+            "default": "#FFFFFF"
+        },
+        {
+            "id": "newsletter_border",
+            "type": "color",
+            "label": "t:sections.general.settings.color.label__5",
+            "default": "#C7C7C7"
+        },
+        {
+            "type": "color_background",
+            "id": "newsletter_input_bg",
+            "label": "t:sections.general.settings.color.label__13",
+            "default": "#FFFFFF"
+        },
+        {
+            "type": "color",
+            "id": "newsletter_input_color",
+            "label": "t:sections.general.settings.color.label__14",
+            "default": "#202020"
+        }
+    ],
+    "presets": [
+        {
+            "name": "t:sections.newsletter.name"
+        }
+    ]
+}
+{% endschema %}

@@ -1,0 +1,193 @@
+{% assign IdSection =  section.id | remove:'-' %}
+{% assign IdSection1 =  IdSection | remove:'__' %}
+<div class="section-product-code">
+  <div class="container container-1170">
+    <div class="section-custom" id="section-{{ section.id }}">
+    <div class="product-wapper " >
+      <div class="product-image">
+        <img src="{{section.settings.image | img_url:'master' }}" />
+      </div>
+      <div class="product-info">
+         <h2><a href="{{ section.settings.url }}"> {{ section.settings.title }}</a></h2>
+         <div class="card-price">
+             {{ section.settings.CustomPrice }}
+          </div>
+        <div class="button-wapper desktops">
+          <a href="{{ section.settings.url }}">{{ section.settings.button1 }} <img src="{{ 'share.png' | asset_url }}" alt="" /></a>
+          <div class="clipboard">
+            <input onclick="copyCode()" class="copy-input" value="{{ section.settings.CustomCode }}" id="copyClipboard-{{ section.id }}" readonly>
+            <button class="copy-btn" id="copyButton-{{ section.id }}" onclick="copyCode{{- IdSection1 -}}()">   <img src="{{ 'copy.png' | asset_url }}" alt="" /></button>
+            <div id="copied-success-{{ section.id }}" class="copied desktops">
+                <span>Code copied</span>
+              </div>
+          </div>
+        </div>
+        <div class="pdp-description desktops" >{{ section.settings.description }}</div>
+      </div>
+    </div>
+      <div class="mobiles pdp-description-mobiles">
+        <div class="pdp-description mobiles">{{ section.settings.description | truncatewords: 20 }} <a  href="#" onclick="showDescription{{- IdSection1 -}}()">show more </a></div>
+        <div class="showMore pdp-description" id="showMore-{{ section.id }}">{{ section.settings.description }}</div>
+      </div>
+     <div class="button-wapper mobiles">
+     
+        <div class="clipboard">
+          <input onclick="copyCodeMobile()" class="copy-input" value="{{ section.settings.CustomCode }}" id="copyClipboardMobile-{{ section.id }}" readonly>
+          <button class="copy-btn"  onclick="copyCodeMobile{{- IdSection1 -}}()">   <img src="{{ 'copy.png' | asset_url }}" alt="" /></button>
+           <div id="copied-successMobiles-{{ section.id }}" class="copied mobiles">
+                <span>Code copied</span>
+              </div>
+        </div>
+        <a href="{{ section.settings.url }}">{{ section.settings.button1 }} <img src="{{ 'share.png' | asset_url }}" alt="" /></a>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  function showDescription{{- IdSection1 -}}() {
+    var a = document.getElementById("section-{{ section.id }}");
+    a.classList.add("show-all");
+  }
+  function copyCode{{- IdSection1 -}}() {
+    let copyText = document.getElementById("copyClipboard-{{ section.id }}");
+    let copySuccess = document.getElementById("copied-success-{{ section.id }}");
+    
+    copyText.select();
+    copyText.setSelectionRange(0, 99999); 
+    navigator.clipboard.writeText(copyText.value);
+   copySuccess.style.opacity = "1";
+   setTimeout(function(){ copySuccess.style.opacity = "0" }, 500);
+  }
+  function copyCodeMobile{{- IdSection1 -}}() {
+    let copyText = document.getElementById("copyClipboardMobile-{{ section.id }}");
+    let copySuccess = document.getElementById("copied-successMobiles-{{ section.id }}");
+    copyText.select();
+    copyText.setSelectionRange(0, 99999); 
+    navigator.clipboard.writeText(copyText.value);
+   copySuccess.style.opacity = "1";
+   setTimeout(function(){ copySuccess.style.opacity = "0" }, 500);
+  }
+</script>
+<style>
+  .pdp-description-mobiles{padding:15px 0}
+  .copied {
+    font-size: 16px;
+    max-width: 120px;
+    opacity: 0;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    text-align: center;
+    right: 0;
+    white-space: nowrap;
+    margin: auto;
+    color: #fff;
+    padding: 3px 15px;
+    background-color: #000;
+    border-radius: 5px;
+    transition: .4s opacity;
+}
+  .section-product-code {background: #fff;padding:15px 0;}
+  .card-price .price{gap:10px;font-size:18px;}
+  .card-price .price-item,
+  .card-price .price-item.price-item--regular{font-size:18px!important;font-weight:600!important;}
+  .product-wapper{display:flex;gap:30px;}
+  .section-custom{ background: #e9eaed;    padding: 15px;
+    border-radius: 15px;   align-items: center;}
+  .section-product-code .product-image img{max-width:100%; border-radius: 10px;}
+  .section-product-code .product-image{max-width:30%;    min-width: 101px;}
+  .section-product-code .product-info{max-width:70%;    padding-bottom: 15px;}
+
+  .button-wapper > *{position:relative;}
+  .button-wapper a{padding:10px;text-align:center;font-weight:bold;font-size:16px;border:1px solid #b63830; border-radius:30px;background:#b63830;color:#fff;}
+  .clipboard input{ border: 1px dashed;height:46px;width:100%;text-align:center;padding-right:40px;border-radius:30px;font-size:16px;font-weight:bold;}
+  .copy-btn{position:absolute;right:10px;top:10px;}
+  .card-price{display:flex;align-items:center;gap:10px;font-size:18px;font-weight:600;padding-bottom:15px;flex-wrap: wrap;}
+  .card-price .price dd .price-item{display:block;font-size:18px!important;font-weight:600;}
+  .card-price .price dd .price-item .text{display:none;}
+  .card-price .price dd.price__last{order:-1;padding-right:10px;}
+  .card-price label{font-size:18px;font-weight:600;}
+  .product-info h2 a{font-size:25px;font-weight:600;margin-bottom:0px;}
+  .product-info h2{margin-bottom:5px;}
+  .pdp-description{font-size:15px;padding-top:15px;}
+  .button-wapper img{max-width:20px}
+  .button-wapper a{display: flex;justify-content: center;gap: 10px;align-items: center;}
+  .button-wapper a img{filter: invert(1);}
+  .button-wapper .copy-btn{border:none;background:none;  padding-top:2px;padding-right:10px;  cursor: pointer;}
+  @media (min-width:768px) {
+    .mobiles{display:none!important}
+    .button-wapper{display:flex;gap:10px;}
+    .button-wapper > *{width:50%;position:relative;}
+  }
+   @media (max-width:768px) {
+    .desktops{display:none!important}
+     body .product-wapper{gap:15px;}
+     body .product-info h2 a{font-size:17px;line-height:normal;}
+     body .clipboard{padding-bottom:5px;}
+     body .pdp-description{padding-top:0;    font-size: 13px;}
+     body .card-price label,
+     body .card-price .price-item, body .card-price .price-item.price-item--regular{font-size:14px!important}
+     body .card-price{padding-bottom:6px;}
+     .showMore.pdp-description,
+    .show-all .pdp-description.mobiles{display:none;}
+    .show-all .showMore.pdp-description{display:block;}
+     body .pdp-description a{    text-decoration: underline;}
+  }
+</style>
+{% schema %}
+  {
+    "name": "Section Product Code",
+    "settings": [
+      {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:sections.general.settings.image.label__1"
+      },
+      {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Graphic hoodies now reduced with code"
+      },
+      {
+          "type": "textarea",
+          "id": "CustomPrice",
+          "label": "Custom Price"
+          
+      },
+      {
+          "type": "text",
+          "id": "button1",
+          "label": "Button Link",
+          "default": "Get deal*"
+      },
+      {
+          "type": "url",
+          "id": "url",
+          "label": "Url Link"
+      },
+      {
+          "type": "text",
+          "id": "CustomCode",
+          "label": "Code Copy",
+          "default": "GRAPHICHOODIE"
+      },
+      {
+          "type": "textarea",
+          "id": "description",
+          "label": "Custom Content",
+          "default": "Sed risus neque, sagittis sed pellentesque at, pharetra ut nunc. Phasellus id enim eget ante pellentesque pharetra. Phasellus et nisl urna. Integer nisl dui, efficitur in volutpat sodales, tempor sed orci. Donec et euismod ipsum...."
+      }
+    ],
+    "presets": [
+    {
+        "name": "Section Product Code"
+    }]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

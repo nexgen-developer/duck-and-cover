@@ -1,0 +1,617 @@
+{% comment %}
+  Otto Grid Section
+{% endcomment %}
+
+{% comment %}
+Check for the existence of a visible placements. In some cases the full grid should be hidden if no items are currently live.
+{% endcomment %}
+
+{% assign section_is_visible = false %}
+
+{% for block in section.blocks %}
+  {% capture image_name %}{{ block.settings.image_name | handle }}{% endcapture %}
+  {% assign image_metafield = shop.metafields.otto-components[image_name].value %}
+  {% if image_metafield != blank %}
+    {% if image_metafield.visible == true or image_metafield.visible == null %}
+      {% assign section_is_visible = true %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+
+{% if section_is_visible %}
+  <div class="otto-grid otto-grid--{{ section.id }}">
+    {% for block in section.blocks %}
+      {% comment %}Image Data{% endcomment %}
+      {% capture image_name %}{{ block.settings.image_name | handle }}{% endcapture %}
+      {% assign image_metafield = shop.metafields.otto-components[image_name].value %}
+      
+      {% comment %}Image Files{% endcomment %}
+      {% assign image_file = shop.metafields.otto-files[image_name].value %}
+      {% capture mobile_image_file_name %}{{ image_name }}-mobile{% endcapture %}
+      {% assign mobile_image_file = shop.metafields.otto-files[mobile_image_file_name].value %}
+
+      {% if image_metafield != blank %}
+        {% if image_metafield.visible == true or image_metafield.visible == null %}
+          <div class="otto-grid-item otto-grid-item--{{ block.id }}" {{ block.shopify_attributes }}>
+            {% comment %}Image{% endcomment %}
+            {% if image_metafield.link != blank %}
+              <a href="{{ image_metafield.link }}">
+            {% endif %}
+              <img src="{{ image_file | image_url }}" alt="{{ alt }}" class="otto-image {% if image_metafield.has_mobile_image and mobile_image_file != blank %}otto-image--desktop{% endif %}">
+              {% if image_metafield.has_mobile_image and mobile_image_file != blank %}
+                <img src="{{ mobile_image_file | image_url }}" alt="{{ image_metafield.alt }}" class="otto-image otto-image--mobile">
+              {%  endif %}
+            {% if image_metafield.link != blank %}
+              </a>
+            {% endif %}
+        
+            {% comment %}Content{% endcomment %}
+            {% if block.settings.show_content %}
+              <div class="otto-grid-item__content otto-grid-item__content--{{ section.settings.content_alignment }}">
+                {% if image_metafield.header_text != blank %}
+                  <{{ section.settings.header_font_tag }} class="otto-grid-item__header">{{ image_metafield.header_text }}</{{ section.settings.header_font_tag }}>
+                {% endif %}
+      
+                {% if image_metafield.subheader_text != blank %}
+                  <{{ section.settings.subheader_font_tag }} class="otto-grid-item__subheader">{{ image_metafield.subheader_text }}</{{ section.settings.subheader_font_tag }}>
+                {% endif %}
+      
+                {% if image_metafield.body_text != blank %}
+                  <{{ section.settings.body_font_tag }} class="otto-grid-item__body">{{ image_metafield.body_text }}</{{ section.settings.body_font_tag }}>
+                {% endif %}
+      
+                {% if image_metafield.button_text != blank or image_metafield.secondary_button_text != blank %}
+                  <div class="otto-grid-item__btn-group">
+                    {% if image_metafield.button_text != blank and image_metafield.link != blank %}
+                      <a class="otto-grid-item__btn" href="{{ image_metafield.link }}">{{ image_metafield.button_text }}</a>
+                    {% endif %}
+                    {% if image_metafield.secondary_button_text != blank and image_metafield.secondary_button_link != blank %}
+                      <a class="otto-grid-item__btn" href="{{ image_metafield.secondary_button_link }}">{{ image_metafield.secondary_button_text }}</a>
+                    {% endif %}
+                  </div>
+                {% endif %}
+              </div>
+            {% endif %}
+          </div>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  <style>
+  /* Grid */
+  .otto-grid--{{ section.id }} {
+    display: grid;
+    grid-template-columns: repeat({{ section.settings.columns }}, 1fr);
+    grid-gap: {{ section.settings.item_spacing_desktop }}px;
+    width: {{ section.settings.grid_width_desktop }}%;
+    margin: {{ section.settings.grid_margin_top }}px auto {{ section.settings.grid_margin_bottom }}px; 
+  }
+
+  /* Items */
+  .otto-grid--{{ section.id }} .otto-grid-item__content {
+    background: {% if section.settings.content_background_color != blank %}{{ section.settings.content_background_color }}{% else %}transparent{% endif %};
+    color: {{ section.settings.content_text_color }};
+    padding: {{ section.settings.content_padding_desktop }}px;
+    text-align: {{ section.settings.content_alignment }};
+  }
+
+  .otto-grid--{{ section.id }} .otto-grid-item h1, 
+  .otto-grid--{{ section.id }} .otto-grid-item h2, 
+  .otto-grid--{{ section.id }} .otto-grid-item h3,
+  .otto-grid--{{ section.id }} .otto-grid-item h4,
+  .otto-grid--{{ section.id }} .otto-grid-item h5,
+  .otto-grid--{{ section.id }} .otto-grid-item p {
+    color: {{ section.settings.content_text_color }};
+  }
+
+  .otto-grid--{{ section.id }} .otto-grid-item__header {
+    font-size: {{ section.settings.header_font_size }}em;
+    margin: 0 0 10px;
+    line-height: 1.3;
+  }
+
+  .otto-grid--{{ section.id }} .otto-grid-item__subheader {
+    font-size: {{ section.settings.subheader_font_size }}em;
+    margin: 0 0 10px;
+    line-height: 1.3;
+  }
+
+  .otto-grid--{{ section.id }} .otto-grid-item__body {
+    font-size: {{ section.settings.body_font_size }}em;
+    margin: 0 0 10px;
+    line-height: 1.3;
+  }
+
+  .otto-grid--{{ section.id }} .otto-grid-item__btn {
+    background: {{ section.settings.button_background_color }};
+    color: {{ section.settings.button_text_color }};
+    padding: 10px;
+    display: inline-block;
+    transition: all .3s ease-in-out;
+    margin-top: 20px;
+    text-decoration: none;
+  }
+
+  .otto-grid--{{ section.id }} .otto-grid-item__btn:nth-child(2) {
+    margin-left: 5px;
+  }
+
+  .otto-grid--{{ section.id }} .otto-grid-item__btn:hover {
+    background: {{ section.settings.button_background_hover_color }};
+    color: {{ section.settings.button_text_hover_color }};
+  }
+
+  /* Image */
+  .otto-image {
+    display: block;
+    width: 100%;
+  }
+
+  .otto-image--desktop {
+    display: block;
+  }
+
+  .otto-image--mobile {
+    display: none;
+  }
+  
+  /* Responsive */
+  @media all and (max-width: 1024px) {
+    /* Grid */
+    {% if section.settings.mobile_format == 'scroll' %}
+      .otto-grid--{{ section.id }} {
+        width: {{ section.settings.grid_width_mobile }}%;
+        grid-template-columns: unset;
+        grid-gap: {{ section.settings.item_spacing_mobile }}px;
+        grid-auto-columns: {{ section.settings.mobile_scroll_box_width }}%;
+        grid-auto-flow: column;
+        overflow: auto;
+      } 
+    {% else %}
+      .otto-grid--{{ section.id }} {
+        width: {{ section.settings.grid_width_mobile }}%;
+        grid-template-columns: repeat({{ section.settings.columns_mobile }}, 1fr);
+        grid-gap: {{ section.settings.item_spacing_mobile }}px;
+      } 
+    {% endif %}
+
+    /* Items */
+    .otto-grid--{{ section.id }} .otto-grid-item__content {
+      background: {% if section.settings.mobile_content_background_color != blank %}{{ section.settings.mobile_content_background_color }}{% else %}transparent{% endif %};
+      color: {{ section.settings.mobile_content_text_color }};
+      padding: {{ section.settings.content_padding_mobile }}px;
+    }
+    
+    .otto-grid--{{ section.id }} .otto-grid-item h1, 
+    .otto-grid--{{ section.id }} .otto-grid-item h2, 
+    .otto-grid--{{ section.id }} .otto-grid-item h3,
+    .otto-grid--{{ section.id }} .otto-grid-item h4,
+    .otto-grid--{{ section.id }} .otto-grid-item h5,
+    .otto-grid--{{ section.id }} .otto-grid-item p {
+      color: {{ section.settings.mobile_content_text_color }};
+    }
+
+    .otto-grid--{{ section.id }} .otto-grid-item__header {
+      font-size: {{ section.settings.header_font_size_mobile }}em;
+    }
+
+    .otto-grid--{{ section.id }} .otto-grid-item__subheader {
+      font-size: {{ section.settings.subheader_font_size_mobile }}em;
+    }
+
+    .otto-grid--{{ section.id }} .otto-grid-item__body {
+      font-size: {{ section.settings.body_font_size_mobile }}em;
+    }
+
+    /* Image */
+    .otto-image--desktop {
+      display: none;
+    }
+  
+    .otto-image--mobile {
+      display: block;
+    }
+  }
+</style>
+{% endif %}
+
+{% schema %}
+  {
+    "name": "Otto Grid",
+    "settings": [
+	  {
+        "type": "header",
+        "content": "Instructions"
+      },
+      {
+        "type": "paragraph",
+        "content": "Start by going to the Otto app and creating Otto placements for each of your grid items. i.e Grid Item #1, Grid Item #2, etc. Once created then add each placement as a block to this section using the 'Add Placement' button in the previous screen."
+      },
+      {
+        "type": "header",
+        "content": "Support"
+      },
+      {
+        "type": "paragraph",
+        "content": "If you need assistance with any customizations to this section please email support@ottoscheduler.com."
+      },
+      {
+        "type": "header",
+        "content": "Section Style"
+      },
+      {
+        "type": "range",
+        "id": "grid_width_desktop",
+        "min": 10,
+        "max": 100,
+        "step": 10,
+        "unit": "%",
+        "label": "Desktop Width",
+        "default": 100
+      },
+      {
+        "type": "range",
+        "id": "grid_width_mobile",
+        "min": 10,
+        "max": 100,
+        "step": 10,
+        "unit": "%",
+        "label": "Mobile Width",
+        "default": 100
+      },
+	  {
+        "type": "number",
+        "id": "grid_margin_top",
+        "label": "Margin Top (px)",
+        "default": 0
+      },
+      {
+        "type": "number",
+        "id": "grid_margin_bottom",
+        "label": "Margin Bottom (px)",
+        "default": 20
+      },
+	  {
+        "type": "header",
+        "content": "Grid Style"
+      },
+      {
+        "type": "select",
+        "id": "mobile_format",
+        "label": "Mobile Format",
+        "options": [
+          {
+            "value": "grid",
+            "label": "Grid"
+          },
+          {
+            "value": "scroll",
+            "label": "Scroll"
+          }
+        ],
+        "default": "grid"
+      },
+      {
+        "type": "range",
+        "id": "columns",
+        "min": 1,
+        "max": 4,
+        "step": 1,
+        "label": "Columns",
+        "default": 3
+      },
+      {
+        "type": "range",
+        "id": "columns_mobile",
+        "min": 1,
+        "max": 3,
+        "step": 1,
+        "label": "Mobile Columns",
+        "default": 2
+      },
+      {
+        "type": "range",
+        "id": "mobile_scroll_box_width",
+        "min": 10,
+        "max": 100,
+        "step": 10,
+        "unit": "%",
+        "label": "Mobile Scroll Box Width",
+        "default": 40
+      },
+      {
+        "type": "range",
+        "id": "item_spacing_desktop",
+        "min": 0,
+        "max": 30,
+        "step": 5,
+        "unit": "px",
+        "label": "Desktop Item Spacing",
+        "default": 10
+      },
+      {
+        "type": "range",
+        "id": "item_spacing_mobile",
+        "min": 0,
+        "max": 20,
+        "step": 5,
+        "unit": "px",
+        "label": "Mobile Item Spacing",
+        "default": 10
+      },
+      {
+        "type": "header",
+        "content": "Item Style"
+      },
+      {
+        "type": "range",
+        "id": "content_padding_desktop",
+        "min": 0,
+        "max": 20,
+        "step": 5,
+        "unit": "px",
+        "label": "Desktop Content Padding",
+        "default": 10
+      },
+      {
+        "type": "range",
+        "id": "content_padding_mobile",
+        "min": 0,
+        "max": 20,
+        "step": 5,
+        "unit": "px",
+        "label": "Mobile Content Padding",
+        "default": 10
+      },
+      {
+        "type": "color",
+        "id": "content_background_color",
+        "label": "Content Background Color"
+      },
+      {
+        "type": "color",
+        "id": "content_text_color",
+        "label": "Content Text Color",
+        "default": "#000000"
+      },
+      {
+        "type": "color",
+        "id": "mobile_content_background_color",
+        "label": "Mobile Content Background Color"
+      },
+      {
+        "type": "color",
+        "id": "mobile_content_text_color",
+        "label": "Mobile Content Text Color",
+        "default": "#000000"
+      },
+      {
+        "type": "select",
+        "id": "content_alignment",
+        "label": "Content Alignment",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "center",
+            "label": "Center"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ],
+        "default": "center"
+      },
+      {
+        "type": "header",
+        "content": "Header Font"
+      },
+      {
+        "type": "select",
+        "id": "header_font_tag",
+        "label": "Tag",
+        "options": [
+          {
+            "value": "h1",
+            "label": "h1"
+          },
+          {
+            "value": "h2",
+            "label": "h2"
+          },
+          {
+            "value": "h3",
+            "label": "h3"
+          },
+          {
+            "value": "h4",
+            "label": "h4"
+          },
+          {
+            "value": "h5",
+            "label": "h5"
+          },
+          {
+            "value": "p",
+            "label": "p"
+          }
+        ],
+        "default": "h1"
+      },
+      {
+        "type": "number",
+        "id": "header_font_size",
+        "label": "Font Size (em)",
+        "default": 2
+      },
+      {
+        "type": "number",
+        "id": "header_font_size_mobile",
+        "label": "Mobile Font Size (em)",
+        "default": 2
+      },
+      {
+        "type": "header",
+        "content": "Subheader Font"
+      },
+      {
+        "type": "select",
+        "id": "subheader_font_tag",
+        "label": "Tag",
+        "options": [
+          {
+            "value": "h1",
+            "label": "h1"
+          },
+          {
+            "value": "h2",
+            "label": "h2"
+          },
+          {
+            "value": "h3",
+            "label": "h3"
+          },
+          {
+            "value": "h4",
+            "label": "h4"
+          },
+          {
+            "value": "h5",
+            "label": "h5"
+          },
+          {
+            "value": "p",
+            "label": "p"
+          }
+        ],
+        "default": "h2"
+      },
+      {
+        "type": "number",
+        "id": "subheader_font_size",
+        "label": "Font Size (em)",
+        "default": 1
+      },
+      {
+        "type": "number",
+        "id": "subheader_font_size_mobile",
+        "label": "Mobile Font Size (em)",
+        "default": 1
+      },
+      {
+        "type": "header",
+        "content": "Body Font"
+      },
+      {
+        "type": "select",
+        "id": "body_font_tag",
+        "label": "Tag",
+        "options": [
+          {
+            "value": "h1",
+            "label": "h1"
+          },
+          {
+            "value": "h2",
+            "label": "h2"
+          },
+          {
+            "value": "h3",
+            "label": "h3"
+          },
+          {
+            "value": "h4",
+            "label": "h4"
+          },
+          {
+            "value": "h5",
+            "label": "h5"
+          },
+          {
+            "value": "p",
+            "label": "p"
+          }
+        ],
+        "default": "p"
+      },
+      {
+        "type": "number",
+        "id": "body_font_size",
+        "label": "Font Size (em)",
+        "default": 1
+      },
+      {
+        "type": "number",
+        "id": "body_font_size_mobile",
+        "label": "Mobile Font Size (em)",
+        "default": 1
+      },
+      {
+        "type": "header",
+        "content": "Button"
+      },
+      {
+        "type": "color",
+        "id": "button_background_color",
+        "label": "Button Background Color",
+        "default": "#000000"
+      },
+      {
+        "type": "color",
+        "id": "button_background_hover_color",
+        "label": "Button Background Hover Color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "button_text_color",
+        "label": "Button Text Color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "button_text_hover_color",
+        "label": "Button Text Hover Color",
+        "default": "#000000"
+      }
+    ],
+    "blocks" : [
+      {
+        "type": "image",
+        "name": "Placement",
+        "settings": [
+          {
+            "type": "text",
+            "id": "image_name",
+            "label": "Placement Name",
+			"info": "The placement name is the name provided in the Otto app. Once entered then Otto will automatically pull the scheduled image and content."
+          },
+          {
+            "type": "header",
+            "content": "Content"
+          },
+          {
+            "type": "paragraph",
+            "content": "All content is added directly in the Otto app. If a specific piece of content isn't set on a scheduled image then it won't display."
+          },
+          {
+            "type": "checkbox",
+            "id": "show_content",
+            "label": "Show Content",
+            "default": false
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Otto Grid",
+        "category": "Image"
+      }
+    ]
+  }
+{% endschema %}

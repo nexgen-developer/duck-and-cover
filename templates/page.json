@@ -1,0 +1,285 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "show_breadcrumb": true,
+        "breadcrumb_alignment": "left",
+        "show_page_title": false,
+        "page_title_alignment": "center",
+        "container": "1370",
+        "padding_top": 0,
+        "padding_bottom": 70,
+        "padding_top_tablet": 0,
+        "padding_bottom_tablet": 50,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 40
+      }
+    },
+    "halo_slideshow_cHBpEa": {
+      "type": "halo-slideshow",
+      "blocks": {
+        "image_4Wp8iz": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/PAGE_-_Weekly_Deals_Desktop.jpg",
+            "mobile_image": "shopify://shop_images/PAGE_-_Weekly_Deals_Mobile.jpg",
+            "title": "",
+            "subtitle": "",
+            "text": "",
+            "btn": "2",
+            "btn_text": "",
+            "link": "shopify://pages/black-friday",
+            "container_content": "1570",
+            "position": "left",
+            "alignment": "left",
+            "lookbook": false,
+            "product_1": "",
+            "point_x_1": 10,
+            "point_y_1": 10,
+            "product_2": "",
+            "point_x_2": 10,
+            "point_y_2": 10,
+            "product_3": "",
+            "point_x_3": 10,
+            "point_y_3": 10,
+            "product_4": "",
+            "point_x_4": 10,
+            "point_y_4": 10,
+            "product_5": "",
+            "point_x_5": 10,
+            "point_y_5": 10,
+            "show_background_overlay": false,
+            "transparent_button": false,
+            "background_color": "",
+            "background_overlay": "#000000",
+            "text_color": "#ffffff",
+            "title_color": "#ffffff",
+            "title_font": "font_2",
+            "title_font_size": 26,
+            "title_mobile_font_size": 20,
+            "title_font_weight": "700",
+            "title_text_transform": "none",
+            "text_font_size": 14,
+            "text_font_weight": "600",
+            "text_text_transform": "uppercase"
+          }
+        }
+      },
+      "block_order": [
+        "image_4Wp8iz"
+      ],
+      "disabled": true,
+      "name": "WEEKLY DEALS",
+      "settings": {
+        "show_slideshow": true,
+        "container": "full",
+        "padding_top": 30,
+        "padding_bottom": 30,
+        "padding_top_tablet": 0,
+        "padding_bottom_tablet": 0,
+        "padding_top_mobile": 30,
+        "padding_bottom_mobile": 0,
+        "block_title": "WEEKLY DEALS",
+        "block_text": "",
+        "block_title_align": "center",
+        "block_layout": "1",
+        "block_content": "absolute",
+        "block_content_style": "1",
+        "block_fade": true,
+        "block_autoplay": true,
+        "block_autoplay_time": 5,
+        "block_dots": false,
+        "block_dots_bg": "",
+        "block_dots_color": "",
+        "block_dots_border": "",
+        "block_arrows": true,
+        "block_arrows_bg": "",
+        "block_arrows_color": "",
+        "block_arrows_border": "",
+        "lookbook_style": "1"
+      }
+    },
+    "weekly_deal_aQGQCR": {
+      "type": "weekly-deal",
+      "disabled": true,
+      "settings": {
+        "image": "shopify://shop_images/DAC-MERCHELL-TILE.jpg",
+        "title": "Merchell Tracksuits £24.50",
+        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">£24.50</div>\n   <div class=\"price-item price-item--regular\">£75</div>\n</div>\n<label></label>",
+        "button1": "Get Deal",
+        "url": "https://www.duckandcover.co.uk/collections/merchell-jog-set",
+        "CustomCode": "JOGSET",
+        "description": "Perfect for staying warm and stylish as the temperature drops. Use code JOGSET at checkout - grab yours before they’re gone! (Available in 3 different colourways.)"
+      }
+    },
+    "weekly_deal_gkJcx4": {
+      "type": "weekly-deal",
+      "disabled": true,
+      "settings": {
+        "image": "shopify://shop_images/DAC-POTENZA-TILE.jpg",
+        "title": "Potenza 1/4 Zip Knit",
+        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">£17.20</div>\n   <div class=\"price-item price-item--regular\">£60</div>\n</div>\n<label></label>",
+        "button1": "Get Deal",
+        "url": "shopify://collections/potenza-knit",
+        "CustomCode": "ZIPKNIT",
+        "description": "Upgrade your wardrobe with the Potenza Quarter Zip Knit for just £17.20! Smart, comfortable, and perfect for the season. Just use code ZIPKNIT at checkout."
+      }
+    },
+    "weekly_deal_qawUjM": {
+      "type": "weekly-deal",
+      "disabled": true,
+      "settings": {
+        "image": "shopify://shop_images/DAC-KREMES-TILE.gif",
+        "title": "Kremes Trainers £16",
+        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">£16</div>\n   <div class=\"price-item price-item--regular\">£55</div>\n</div>\n<label></label>",
+        "button1": "Get Deal",
+        "url": "shopify://collections/kremes",
+        "CustomCode": "KREMES",
+        "description": "Grab some fresh trainers for £16! Perfect for a gift idea or a treat for yourself this Black Friday!"
+      }
+    },
+    "weekly_deal_m7LzbQ": {
+      "type": "weekly-deal",
+      "disabled": true,
+      "settings": {
+        "image": "shopify://shop_images/DAC-HOODIE-TILE.jpg",
+        "title": "60% OFF Selected Hoodies",
+        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\"></div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
+        "button1": "Get Deal",
+        "url": "shopify://collections/hoodie-deal",
+        "CustomCode": "HOODIE60",
+        "description": "Perfect for layering up in style. Use code HOODIE60 at checkout - don’t miss this limited-time offer!"
+      }
+    },
+    "weekly_deal_aEwEMa": {
+      "type": "weekly-deal",
+      "disabled": true,
+      "settings": {
+        "image": "shopify://shop_images/DAC-CONSENZA-TILE.gif",
+        "title": "Consenza Knit £13.34",
+        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">£13.34</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
+        "button1": "Get Deal",
+        "url": "https://www.duckandcover.co.uk/collections/consenza-knit",
+        "CustomCode": "KNITDEAL",
+        "description": "Keep it smart and stylish with the Consenza Knit for just £13.34! Perfect for any occasion. Use code KNITDEAL at checkout - grab yours while stocks last!"
+      }
+    },
+    "weekly_deal_AFdiDm": {
+      "type": "weekly-deal",
+      "disabled": true,
+      "settings": {
+        "image": "shopify://shop_images/DAC-ANVILLI-TILE.gif",
+        "title": "Anvilli 7PK Boxers £17.55",
+        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">£17.55</div>\n   <div class=\"price-item price-item--regular\">£59</div>\n</div>\n<label></label>",
+        "button1": "Get Deal",
+        "url": "shopify://collections/duck-and-cover-7pk-boxers",
+        "CustomCode": "ANVILLI7PK",
+        "description": "Stock up and save with 7PK Anvilli Boxers for just £17.55! Comfortable and great value for the week ahead. Use code ANVILLI7PK at checkout - don’t miss out!"
+      }
+    },
+    "halo_slideshow_nhULRq": {
+      "type": "halo-slideshow",
+      "blocks": {
+        "image_aFMzkT": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/DAC-CLEARANCE-DESKTOP_2656e479-4060-40f2-8165-4d7ea922d0b9.jpg",
+            "mobile_image": "shopify://shop_images/DAC-CLEARANCE-MOBILE_dd4798da-ccee-41c1-ae41-6ee2cc51d7e8.jpg",
+            "title": "",
+            "subtitle": "",
+            "text": "",
+            "btn": "2",
+            "btn_text": "",
+            "link": "shopify://collections/clearance",
+            "container_content": "1570",
+            "position": "left",
+            "alignment": "left",
+            "lookbook": false,
+            "product_1": "",
+            "point_x_1": 10,
+            "point_y_1": 10,
+            "product_2": "",
+            "point_x_2": 10,
+            "point_y_2": 10,
+            "product_3": "",
+            "point_x_3": 10,
+            "point_y_3": 10,
+            "product_4": "",
+            "point_x_4": 10,
+            "point_y_4": 10,
+            "product_5": "",
+            "point_x_5": 10,
+            "point_y_5": 10,
+            "show_background_overlay": false,
+            "transparent_button": false,
+            "background_color": "",
+            "background_overlay": "#000000",
+            "text_color": "#ffffff",
+            "title_color": "#ffffff",
+            "title_font": "font_2",
+            "title_font_size": 26,
+            "title_mobile_font_size": 20,
+            "title_font_weight": "700",
+            "title_text_transform": "none",
+            "text_font_size": 14,
+            "text_font_weight": "600",
+            "text_text_transform": "uppercase"
+          }
+        }
+      },
+      "block_order": [
+        "image_aFMzkT"
+      ],
+      "name": "Clearance",
+      "settings": {
+        "show_slideshow": true,
+        "container": "full",
+        "padding_top": 30,
+        "padding_bottom": 0,
+        "padding_top_tablet": 0,
+        "padding_bottom_tablet": 0,
+        "padding_top_mobile": 30,
+        "padding_bottom_mobile": 0,
+        "block_title": "",
+        "block_text": "",
+        "block_title_align": "center",
+        "block_layout": "1",
+        "block_content": "absolute",
+        "block_content_style": "1",
+        "block_fade": true,
+        "block_autoplay": true,
+        "block_autoplay_time": 5,
+        "block_dots": false,
+        "block_dots_bg": "",
+        "block_dots_color": "",
+        "block_dots_border": "",
+        "block_arrows": true,
+        "block_arrows_bg": "",
+        "block_arrows_color": "",
+        "block_arrows_border": "",
+        "lookbook_style": "1"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "halo_slideshow_cHBpEa",
+    "weekly_deal_aQGQCR",
+    "weekly_deal_gkJcx4",
+    "weekly_deal_qawUjM",
+    "weekly_deal_m7LzbQ",
+    "weekly_deal_aEwEMa",
+    "weekly_deal_AFdiDm",
+    "halo_slideshow_nhULRq"
+  ]
+}

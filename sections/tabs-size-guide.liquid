@@ -1,0 +1,238 @@
+<div class="tabs-size-guid">
+  <div class="page-width" style="max-width:1400px;margin:auto;padding:0 15px;">
+     <div class="block-tabs">
+   {%- for block in section.blocks -%}
+     {% assign index = forloop.first %}
+     <div class="block-tab">
+     {% if block.settings.heading != blank %}
+       <h3 {% if index %}class="active"{% endif %}>{{ block.settings.heading }} </h3>
+       {% endif %}
+     <ul id="tabs-nav" {% if index %}style="display:block;"{% endif %}>
+       {% for i in (1..5) %}
+         {% capture tabs %}tabs{{-i}}{% endcapture %}
+         {% if block.settings[tabs] != blank %}
+         <li {% if index and forloop.first %}class="active"{% endif %}><a href="#tab{{ block.id }}{{-i}}">{{ block.settings[tabs] }}</a></li>
+           {% endif %}
+      {% endfor %}
+     </ul> 
+     </div>
+  {% endfor %}
+       
+     </div>
+     <div id="tabs-content">
+   {%- for block in section.blocks -%}
+     {% assign index = forloop.first %}
+     
+     {% for i in (1..5) %}
+       {% capture textarea %}textarea{{-i}}{% endcapture %}
+       {% if block.settings[textarea] != blank %}
+         <div id="tab{{ block.id }}{{-i}}" class="tab-content" {% if index and forloop.first %}style="display:block;"{% endif %}>{{ block.settings[textarea] }}</div>
+         {% endif %}
+    {% endfor %}
+  {% endfor %}
+      </div>
+</div>
+</div>
+<style>
+  .tabs-size-guid{padding: 50px 0}
+  .tabs-size-guid ul{list-style:none;padding-left:0;}
+  .tabs-size-guid #tabs-content{padding: 0px;}
+  .tabs-size-guid .block-tabs{margin-bottom:30px;}
+  @media only screen and (min-width: 800px) {
+body .tabs-size-guid .block-tabs{width:30%;border-top:2px solid}
+body .tabs-size-guid .page-width{display:flex;}
+body .tabs-size-guid #tabs-content{max-width:70%;padding-left:30px;}
+  }
+  @media only screen and (max-width: 800px) {
+    body .tabs-size-guid .block-tab{padding-bottom:10px;}
+  .tabs-size-guid .tab-content{    overflow-x: overlay;}
+  }
+  .tabs-size-guid .tab-content img{max-width:100%}
+.tabs-size-guid .block-tab{border-bottom:1px solid;padding-left:30px;padding-right:10px; padding-top:15px;}
+.tabs-size-guid .block-tabs h3{margin-top:0; font-size:18px; position:relative;cursor: pointer;}
+.tabs-size-guid .block-tabs h3:before{
+    width: 0;content:'';
+  height: 0;position:absolute;left:-20px; top:9px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #000;
+}
+.tabs-size-guid .block-tab ul{display:none;}
+.tabs-size-guid .tab-content{display:none;}
+.tabs-size-guid .block-tab ul li a{   cursor: pointer; text-decoration: none;color:#000;}
+.tabs-size-guid .block-tab ul li.active a{font-weight:bold;}
+
+
+
+
+.tabs-size-guid  td {
+    text-align: center
+}
+
+.tabs-size-guid table.size-information td {
+    color: #333;
+    padding: .7em .1em;
+    width: 4.5em;min-width: 3em;
+    font-size: 1.1em;
+    font-family: mns-london,arial,helvetica,sans-serif;
+    border: 0;
+    border-left: 1px solid #c7c7c7;
+    border-right: 1px solid #c7c7c7
+}
+.tabs-size-guid td{min-width: 4.5em;}
+.tabs-size-guid table.size-information td.table-header, .tabs-size-guid table.size-information td.table-title {
+    padding-right: 5.5em;
+    text-align: left;
+    padding-left: .9em;
+    width: 6em
+}
+
+.tabs-size-guid table.size-information td.table-header {
+    font-family: mns-london-bold,arial,helvetica,sans-serif;
+    font-size: 1.2em
+}
+
+.tabs-size-guid table.size-information td.table-title {
+    font-size: 1em;    white-space: nowrap;
+}
+
+.tabs-size-guid table.size-information tbody tr:nth-child(odd),.tabs-size-guid table.international_sizes_table tr:nth-child(odd) {
+    background: #f4f4f4
+}
+
+.tabs-size-guid table.size-information td a {
+    font-size: .7em
+}
+
+.tabs-size-guid table.size-information tr {
+    border: 0
+}
+
+.tabs-size-guid table.size-information {
+    width: auto;
+    margin: 0 0 2em;   
+    border: 1px solid #c7c7c7
+}
+
+.tabs-size-guid table{ border-spacing: 0;
+    border-collapse: collapse;width:100%; border: 1px solid #c7c7c7}
+  .tabs-size-guid .block-tabs h3.active:before{  transform: rotate(-90deg);}
+
+
+
+
+
+
+
+
+
+
+</style>
+<script>
+  // Show the first tab and hide the rest
+// $('#tabs-nav li:first-child').addClass('active');
+// $('.tab-content').hide();
+// $('.tab-content:first').show();
+$(".block-tabs h3").click(function(){
+          $(this).next().slideToggle(150);
+  $(this).toggleClass('active');
+    });
+// Click function
+$('.tabs-size-guid li').click(function(){
+  $('.tabs-size-guid li').removeClass('active');
+  $(this).addClass('active');
+  $('.tab-content').hide();
+  
+  var activeTab = $(this).find('a').attr('href');
+  $(activeTab).fadeIn();
+  return false;
+});
+</script>
+{% schema %}
+  {
+    "name": "Section Tabs Side Guide",
+    "settings": [
+      
+    ],
+     "blocks": [
+      {
+        "type": "Tabs",
+        "name": "Tabs",
+        "settings": [
+          {
+            "type": "text",
+            "id": "heading",
+            "default": "Heading",
+            "label": "Heading"
+          },
+          {
+            "type": "text",
+            "id": "tabs1",
+            "default": "Tabs",
+            "label": "Tabs 1"
+          },
+          {
+            "type": "textarea",
+            "id": "textarea1",
+            "default": "Content",
+            "label": "Content 1"
+          },
+          {
+            "type": "text",
+            "id": "tabs2",
+            "default": "Tabs",
+            "label": "Tabs 2"
+          },
+          {
+            "type": "textarea",
+            "id": "textarea2",
+            "default": "Content",
+            "label": "Content 2"
+          },
+          {
+            "type": "text",
+            "id": "tabs3",
+            "default": "Tabs",
+            "label": "Tabs 3"
+          },
+          {
+            "type": "textarea",
+            "id": "textarea3",
+            "default": "Content",
+            "label": "Content 3"
+          },
+          {
+            "type": "text",
+            "id": "tabs4",
+            "default": "Tabs",
+            "label": "Tabs 4"
+          },
+          {
+            "type": "textarea",
+            "id": "textarea4",
+            "default": "Content",
+            "label": "Content 4"
+          },
+          {
+            "type": "text",
+            "id": "tabs5",
+            "default": "Tabs",
+            "label": "Tabs 5"
+          },
+          {
+            "type": "textarea",
+            "id": "textarea5",
+            "default": "Content",
+            "label": "Content 5"
+          }
+          
+        ]
+      }
+     ],
+    "presets": [
+      {
+        "name": "Section Tabs Side Guide"
+      }
+    ]
+  }
+{% endschema %}

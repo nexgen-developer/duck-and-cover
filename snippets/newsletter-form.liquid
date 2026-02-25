@@ -1,0 +1,92 @@
+{%- liquid
+    assign formId = 'ContactFooter'
+    if form_id != blank
+        assign formId = 'ContactForm-' | append: form_id
+    endif
+-%}
+{%- form 'customer', id: formId, class: 'footer__newsletter newsletter-form' -%}
+    <input type="hidden" name="contact[tags]" value="newsletter">
+    <div class="newsletter-form__field-wrapper">
+        <div class="field">
+            <label class="field__label hiddenLabels" for="NewsletterForm--{{ section.id }}">
+                {{ 'newsletter.label' | t }}
+            </label>
+            <input id="NewsletterForm--{{ section.id }}" type="email" name="contact[email]" class="field__input form-input-placeholder" value="{{ form.email }}" aria-required="true" autocorrect="off" autocapitalize="off" autocomplete="off" {% if form.errors %} autofocus aria-invalid="true" aria-describedby="ContactFooter-error" {% elsif form.posted_successfully? %} aria-describedby="ContactFooter-success" {% endif %} placeholder="{{ 'newsletter.placeholder' | t }}">
+            {%- if show_newsletter_text and newsletter_text != blank -%}
+                <div class="footer-block__subheading rte text-left">
+                    {{ newsletter_text }}
+                </div>
+            {%- endif -%}
+        </div>
+        <button type="submit" class="button button--secondary newsletter-form__button" name="commit" id="Subscribe-{{ section.id }}">
+            {%- if settings.footer_layout == '3' -%}
+                <span class="visually-hidden">{{ 'newsletter.button_label' | t }}</span>
+                {% render 'icon-plane' %}
+            {%- elsif settings.footer_layout == '8' -%}
+                <span class="visually-hidden">{{ 'newsletter.button_label' | t }}</span>
+                {% render 'icon-search',
+                    icon_search: '3'
+                %}
+            {%- elsif settings.footer_layout == '9' -%}
+                <span class="visually-hidden">{{ 'newsletter.button_label' | t }}</span>
+                {% render 'icon-arrow',
+                    icon_arrow: '1'
+                %}
+            {%- else -%}
+                {{ 'newsletter.button_label' | t }}
+            {%- endif -%}
+            {%- if settings.footer_layout == '7' -%}
+                <toggle-button class="overlay-button" data-target=".footer-block__newsletter"></toggle-button>
+            {%- endif -%}
+        </button>
+    </div>
+    {%- if form.posted_successfully? -%}
+        <script>
+            $(document).ready(function() {
+                var newsletterMessagePopup = (function(){
+                    var popup = document.getElementById('halo-newsletter-message-popup'),
+                        message = popup.getElementsByClassName('newsletter-message')[0],
+                        messageText = "{{ 'newsletter.success' | t }}";
+                        messageIcon = '<svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-success" viewBox="0 0 13 13"><path d="M6.5 12.35C9.73087 12.35 12.35 9.73086 12.35 6.5C12.35 3.26913 9.73087 0.65 6.5 0.65C3.26913 0.65 0.65 3.26913 0.65 6.5C0.65 9.73086 3.26913 12.35 6.5 12.35Z" stroke="white" stroke-width="0.7"/><path d="M5.53271 8.66357L9.25213 4.68197" stroke="white"/><path d="M4.10645 6.7688L6.13766 8.62553" stroke="white"></svg>';
+
+                    message.innerHTML = '<div class="alertBox alertBox--success">\
+                        '+ messageIcon +'\
+                        <span class="text alertBox-message">'+ messageText +'</span>\
+                    </div>';
+
+                    document.body.classList.add('newsletter-message-show');
+
+                    setCookie('emailSubcribeModal', 'closed', 1);
+                })();
+
+                var newURL = location.href.split("?")[0];
+                window.history.pushState('object', document.title, newURL);
+            });
+        </script>
+    {%- else -%}
+        <script>
+            $(document).ready(function() {
+                if (window.location.href.indexOf('newsletter&form_type=customer') > -1) {
+                    var newsletterMessagePopup = (function(){
+                        var popup = document.getElementById('halo-newsletter-message-popup'),
+                            message = popup.getElementsByClassName('newsletter-message')[0],
+                            messageText = "{% if form.errors %}{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}{% else %}{{ 'newsletter.error' | t }}{% endif %}";
+                            messageIcon = '<svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-error" viewBox="0 0 13 13"><circle cx="6.5" cy="6.50049" r="5.5" stroke="white" stroke-width="2"/><circle cx="6.5" cy="6.5" r="5.5" stroke-width="0.7"/><path d="M5.87413 3.52832L5.97439 7.57216H7.02713L7.12739 3.52832H5.87413ZM6.50076 9.66091C6.88091 9.66091 7.18169 9.37267 7.18169 9.00504C7.18169 8.63742 6.88091 8.34917 6.50076 8.34917C6.12061 8.34917 5.81982 8.63742 5.81982 9.00504C5.81982 9.37267 6.12061 9.66091 6.50076 9.66091Z" fill="white"/><path d="M5.87413 3.17832H5.51535L5.52424 3.537L5.6245 7.58083L5.63296 7.92216H5.97439H7.02713H7.36856L7.37702 7.58083L7.47728 3.537L7.48617 3.17832H7.12739H5.87413ZM6.50076 10.0109C7.06121 10.0109 7.5317 9.57872 7.5317 9.00504C7.5317 8.43137 7.06121 7.99918 6.50076 7.99918C5.94031 7.99918 5.46982 8.43137 5.46982 9.00504C5.46982 9.57872 5.94031 10.0109 6.50076 10.0109Z" fill="white" stroke-width="0.7"></svg>';
+
+                        message.innerHTML = '<div class="alertBox alertBox--error">\
+                            '+ messageIcon +'\
+                            <span class="text alertBox-message">'+ messageText +'</span>\
+                        </div>';
+
+                        document.body.classList.add('newsletter-message-show');
+
+                        setCookie('emailSubcribeModal', 'closed', 1);
+                    })();
+
+                    var newURL = location.href.split("?")[0];
+                    window.history.pushState('object', document.title, newURL);
+                }
+            });
+        </script>
+    {%- endif -%}
+{%- endform -%}

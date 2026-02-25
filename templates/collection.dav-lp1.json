@@ -1,0 +1,321 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "db7096be-e358-4fc3-8c65-d810472d5c81": {
+      "type": "halo-slideshow",
+      "blocks": {
+        "template--16937253372154__db7096be-e358-4fc3-8c65-d810472d5c81-image-1": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/DAC-CYBER-WEEK-desktop-collection-1.gif",
+            "mobile_image": "shopify://shop_images/DAC-CYBER-WEEK-mobile-collection-1.gif",
+            "title": "",
+            "subtitle": "",
+            "text": "",
+            "btn": "2",
+            "btn_text": "",
+            "link": "",
+            "container_content": "1570",
+            "position": "left",
+            "alignment": "left",
+            "lookbook": false,
+            "product_1": "",
+            "point_x_1": 10,
+            "point_y_1": 10,
+            "product_2": "",
+            "point_x_2": 10,
+            "point_y_2": 10,
+            "product_3": "",
+            "point_x_3": 10,
+            "point_y_3": 10,
+            "product_4": "",
+            "point_x_4": 10,
+            "point_y_4": 10,
+            "product_5": "",
+            "point_x_5": 10,
+            "point_y_5": 10,
+            "show_background_overlay": false,
+            "transparent_button": false,
+            "background_color": "",
+            "background_overlay": "#000000",
+            "text_color": "#ffffff",
+            "title_color": "#ffffff",
+            "title_font": "font_2",
+            "title_font_size": 26,
+            "title_mobile_font_size": 20,
+            "title_font_weight": "700",
+            "title_text_transform": "none",
+            "text_font_size": 14,
+            "text_font_weight": "600",
+            "text_text_transform": "uppercase"
+          }
+        }
+      },
+      "block_order": [
+        "template--16937253372154__db7096be-e358-4fc3-8c65-d810472d5c81-image-1"
+      ],
+      "settings": {
+        "show_slideshow": true,
+        "container": "full",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_top_tablet": 0,
+        "padding_bottom_tablet": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0,
+        "block_title": "",
+        "block_text": "",
+        "block_title_align": "center",
+        "block_layout": "1",
+        "block_content": "absolute",
+        "block_content_style": "1",
+        "block_fade": true,
+        "block_autoplay": true,
+        "block_autoplay_time": 5,
+        "block_dots": false,
+        "block_dots_bg": "",
+        "block_dots_color": "",
+        "block_dots_border": "",
+        "block_arrows": true,
+        "block_arrows_bg": "",
+        "block_arrows_color": "",
+        "block_arrows_border": "",
+        "lookbook_style": "1"
+      }
+    },
+    "header-collection": {
+      "type": "main-header-collection",
+      "blocks": {
+        "153bbcd1-5557-468c-997d-04056c777019": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "type": "custom",
+            "show_image_parallax": false,
+            "show_bg_overlay": false,
+            "bg_overlay": "#000000"
+          }
+        },
+        "dfb8da8e-9cca-44b9-b775-f178efdb8688": {
+          "type": "description",
+          "settings": {
+            "show_collection_description": true,
+            "show_read_more_read_less": false,
+            "collection_description_position": "relative",
+            "collection_description_align": "center",
+            "show_sub_collection": true,
+            "sub_collection_type": "all"
+          }
+        }
+      },
+      "block_order": [
+        "153bbcd1-5557-468c-997d-04056c777019",
+        "dfb8da8e-9cca-44b9-b775-f178efdb8688"
+      ],
+      "custom_css": [
+        ".collection-title {font-size: 16px;}"
+      ],
+      "settings": {
+        "show_breadcrumb": false,
+        "breadcrumb_alignment": "left",
+        "show_page_title": true,
+        "page_title_alignment": "center",
+        "container": "1770",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_top_tablet": 0,
+        "padding_bottom_tablet": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0,
+        "layout": "1"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "blocks": {
+        "a47741f5-41c4-4241-b319-75f7803ff5d0": {
+          "type": "category",
+          "disabled": true,
+          "settings": {
+            "show_block": true,
+            "heading": "Categories",
+            "type": "1_level",
+            "link_list": "main-menu"
+          }
+        },
+        "c152bca6-8d1e-4f26-bd77-9b2b90d3a93a": {
+          "type": "image",
+          "settings": {
+            "show_block": true,
+            "heading": "",
+            "image": "shopify://shop_images/6-10-23-emails-dac-mob.jpg",
+            "link": ""
+          }
+        },
+        "249cec36-83b6-461a-ae21-e8d89156b0eb": {
+          "type": "text",
+          "settings": {
+            "show_block": true,
+            "heading": "Custom Block",
+            "text": "<p>Custom CMS block displayed at the left sidebar on the Catalog Page. Put your own content here: text, html, images, media... whatever you like.</p>\n<p>There are many similar sample content placeholders across the store. All editable from admin panel.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "a47741f5-41c4-4241-b319-75f7803ff5d0",
+        "c152bca6-8d1e-4f26-bd77-9b2b90d3a93a",
+        "249cec36-83b6-461a-ae21-e8d89156b0eb"
+      ],
+      "custom_css": [],
+      "settings": {
+        "colors_bg": "",
+        "container": "1770",
+        "padding_top": 25,
+        "padding_bottom": 0,
+        "padding_top_tablet": 0,
+        "padding_bottom_tablet": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0,
+        "show_infinite_scrolling": true,
+        "show_sidebar": true,
+        "sidebar_type": "horizontal",
+        "show_sidebar_collapse": true,
+        "sidebar_collapse_default": "close",
+        "sidebar_position": "left",
+        "sidebar_heading_font": "font_1",
+        "sidebar_heading_font_size": 16,
+        "sidebar_heading_font_weight": "600",
+        "sidebar_heading_text_transform": "capitalize",
+        "show_filter": false,
+        "filter_hidden_tag_list": "",
+        "filter_swatch": "",
+        "show_filter_swatch_name": false,
+        "filter_swatch_type": "png",
+        "filter_rectangle": "",
+        "price_range_show": "box",
+        "show_toolbar": false,
+        "show_sorting": false,
+        "show_item_per_page": false,
+        "show_view_as": false,
+        "products_per_page": "40",
+        "layout": "4",
+        "col": "narrow",
+        "image_ratio": "portrait",
+        "portrait_aspect_ratio": 148,
+        "show_add_to_cart": false
+      }
+    },
+    "footer-collection": {
+      "type": "main-footer-collection",
+      "settings": {
+        "show_bottom_content": false,
+        "container": "1770",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_top_tablet": 0,
+        "padding_bottom_tablet": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
+      }
+    },
+    "16312811859a8f1f68": {
+      "type": "halo-image-gallery",
+      "blocks": {
+        "16312811859a8f1f68-0": {
+          "type": "image",
+          "settings": {
+            "btn_text": "Shop This Look",
+            "link": ""
+          }
+        },
+        "16312811859a8f1f68-1": {
+          "type": "image",
+          "settings": {
+            "btn_text": "Shop This Look",
+            "link": ""
+          }
+        },
+        "16312811859a8f1f68-2": {
+          "type": "image",
+          "settings": {
+            "btn_text": "Shop This Look",
+            "link": ""
+          }
+        },
+        "16312811859a8f1f68-3": {
+          "type": "image",
+          "settings": {
+            "btn_text": "Shop This Look",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "16312811859a8f1f68-0",
+        "16312811859a8f1f68-1",
+        "16312811859a8f1f68-2",
+        "16312811859a8f1f68-3"
+      ],
+      "disabled": true,
+      "settings": {
+        "show_image_gallery": true,
+        "container": "1770",
+        "padding_top": 72,
+        "padding_bottom": 40,
+        "padding_top_tablet": 52,
+        "padding_bottom_tablet": 40,
+        "padding_top_mobile": 42,
+        "padding_bottom_mobile": 40,
+        "block_title": "Sample Static Block",
+        "block_text": "Mauris ultricies aliquet mauris, eget vehicula mi pharetra et. Vestibulum et pharetra est.",
+        "block_title_align": "center",
+        "block_layout": "grid",
+        "block_mobile_layout": "swipe",
+        "col": "wide",
+        "col_border": 0,
+        "block_action": "popup",
+        "block_btn": "2",
+        "block_view_btn": "1",
+        "block_view_btn_text": "",
+        "block_view_btn_link": "",
+        "block_per_row": "4",
+        "block_show": "4",
+        "block_dots": false,
+        "block_arrows": true
+      }
+    },
+    "170911681040097187": {
+      "type": "apps",
+      "blocks": {
+        "flair_product_labels_badges_banners_mWbx8T": {
+          "type": "shopify://apps/flair-product-badges-labels/blocks/banners/51d5ae10-f90f-4540-9ec6-f09f14107bf4",
+          "settings": {
+            "heading": "Flair banners",
+            "layout": "Product Card Bottom"
+          }
+        }
+      },
+      "block_order": [
+        "flair_product_labels_badges_banners_mWbx8T"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "db7096be-e358-4fc3-8c65-d810472d5c81",
+    "header-collection",
+    "product-grid",
+    "footer-collection",
+    "16312811859a8f1f68",
+    "170911681040097187"
+  ]
+}

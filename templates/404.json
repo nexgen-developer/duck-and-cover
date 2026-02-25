@@ -1,0 +1,117 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "halo_custom_text_gMRAMc": {
+      "type": "halo-custom-text",
+      "settings": {
+        "show_custom_text": true,
+        "container": "1770",
+        "padding_top": 40,
+        "padding_bottom": 0,
+        "padding_top_tablet": 40,
+        "padding_bottom_tablet": 40,
+        "padding_top_mobile": 30,
+        "padding_bottom_mobile": 30,
+        "block_title": "OPPPS! THAT PAGE IS MISSING...",
+        "block_text": "But we did find a few items you can browse through before retyping the URL, hitting the back button, or selecting one of the navigation buttons above.",
+        "block_title_align": "center",
+        "layout_style": "1",
+        "show_customize_width": false,
+        "customize_width": 940,
+        "block_content": "",
+        "block_align": "center",
+        "show_custom_text_style": true,
+        "background_color": "",
+        "text_color": "#5A5A5A",
+        "title_color": "#000000",
+        "text_font": "font_1",
+        "text_font_size": 16,
+        "text_font_weight": "400",
+        "text_font_style": "normal",
+        "text_text_transform": "none"
+      }
+    },
+    "main": {
+      "type": "main-404",
+      "disabled": true,
+      "settings": {
+        "show_breadcrumb": false,
+        "breadcrumb_alignment": "left",
+        "show_page_title": true,
+        "page_title_alignment": "center",
+        "container": "1770",
+        "padding_top": 50,
+        "padding_bottom": 80,
+        "padding_top_tablet": 30,
+        "padding_bottom_tablet": 60,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 50,
+        "show_product_block": true,
+        "block_layout": "grid",
+        "block_collection": "all",
+        "block_limit": 10,
+        "block_image_ratio": "adapt",
+        "portrait_aspect_ratio": 112,
+        "show_add_to_cart": true,
+        "block_per_row": "5",
+        "block_show": "5",
+        "block_dots": false,
+        "block_arrows": true
+      }
+    },
+    "1710172651ec637abd": {
+      "type": "apps",
+      "blocks": {
+        "wiser_product_recommendations_wiser_trending_AEyhgD": {
+          "type": "shopify://apps/wiser-product-recommendations/blocks/wiser_trending/3f966edc-9a4a-465c-a4df-436d2a39160d",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "wiser_product_recommendations_wiser_trending_AEyhgD"
+      ],
+      "settings": {}
+    },
+    "1710172732a543468a": {
+      "type": "apps",
+      "blocks": {
+        "wiser_product_recommendations_wiser_newarrivals_Md9qN6": {
+          "type": "shopify://apps/wiser-product-recommendations/blocks/wiser_newarrivals/3f966edc-9a4a-465c-a4df-436d2a39160d",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "wiser_product_recommendations_wiser_newarrivals_Md9qN6"
+      ],
+      "settings": {}
+    },
+    "1710173068a2ffd474": {
+      "type": "apps",
+      "blocks": {
+        "wiser_product_recommendations_wiser_topselling_8EAkaB": {
+          "type": "shopify://apps/wiser-product-recommendations/blocks/wiser_topselling/3f966edc-9a4a-465c-a4df-436d2a39160d",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "wiser_product_recommendations_wiser_topselling_8EAkaB"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "halo_custom_text_gMRAMc",
+    "main",
+    "1710172651ec637abd",
+    "1710172732a543468a",
+    "1710173068a2ffd474"
+  ]
+}

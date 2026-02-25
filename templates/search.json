@@ -1,0 +1,58 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-search",
+      "settings": {
+        "show_breadcrumb": true,
+        "breadcrumb_alignment": "left",
+        "show_page_title": true,
+        "page_title_alignment": "center",
+        "container": "1770",
+        "padding_top": 0,
+        "padding_bottom": 80,
+        "padding_top_tablet": 0,
+        "padding_bottom_tablet": 60,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 50,
+        "show_infinite_scrolling": false,
+        "show_sidebar": true,
+        "show_sidebar_collapse": true,
+        "sidebar_collapse_default": "expand",
+        "sidebar_type": "horizontal",
+        "sidebar_position": "left",
+        "sidebar_heading_font": "font_1",
+        "sidebar_heading_font_size": 18,
+        "sidebar_heading_font_weight": "700",
+        "sidebar_heading_text_transform": "capitalize",
+        "show_filter": false,
+        "filter_hidden_tag_list": "",
+        "filter_swatch": "Color",
+        "show_filter_swatch_name": false,
+        "filter_swatch_type": "color",
+        "filter_rectangle": "",
+        "price_range_show": "both",
+        "show_toolbar": true,
+        "show_sorting": false,
+        "show_view_as": false,
+        "products_per_page": "15",
+        "layout": "4",
+        "col": "narrow",
+        "image_ratio": "portrait",
+        "portrait_aspect_ratio": 148,
+        "show_add_to_cart": false
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

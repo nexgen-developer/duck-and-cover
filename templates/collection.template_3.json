@@ -1,0 +1,217 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "header-collection": {
+      "type": "main-header-collection",
+      "blocks": {
+        "153bbcd1-5557-468c-997d-04056c777019": {
+          "type": "image",
+          "settings": {
+            "type": "custom",
+            "image": "shopify://shop_images/home-6-category-banner.jpg",
+            "show_image_parallax": false,
+            "show_bg_overlay": false,
+            "bg_overlay": "#000000"
+          }
+        },
+        "dfb8da8e-9cca-44b9-b775-f178efdb8688": {
+          "type": "description",
+          "settings": {
+            "show_collection_description": true,
+            "show_read_more_read_less": false,
+            "collection_description_position": "relative",
+            "collection_description_align": "center",
+            "show_sub_collection": true,
+            "sub_collection_type": "all"
+          }
+        }
+      },
+      "block_order": [
+        "153bbcd1-5557-468c-997d-04056c777019",
+        "dfb8da8e-9cca-44b9-b775-f178efdb8688"
+      ],
+      "settings": {
+        "show_breadcrumb": false,
+        "breadcrumb_alignment": "left",
+        "show_page_title": true,
+        "page_title_alignment": "center",
+        "container": "1370",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_top_tablet": 0,
+        "padding_bottom_tablet": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0,
+        "layout": "3"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid-3",
+      "blocks": {
+        "a47741f5-41c4-4241-b319-75f7803ff5d0": {
+          "type": "category",
+          "settings": {
+            "show_block": true,
+            "heading": "Categories",
+            "type": "1_level",
+            "link_list": "main-menu"
+          }
+        },
+        "c152bca6-8d1e-4f26-bd77-9b2b90d3a93a": {
+          "type": "image",
+          "settings": {
+            "show_block": true,
+            "heading": "",
+            "image": "shopify://shop_images/custom-banner-3-2.jpg",
+            "link": ""
+          }
+        },
+        "249cec36-83b6-461a-ae21-e8d89156b0eb": {
+          "type": "text",
+          "settings": {
+            "show_block": true,
+            "heading": "Custom Block",
+            "text": "<p>Custom CMS block displayed at the left sidebar on the Catalog Page. Put your own content here: text, html, images, media... whatever you like.</p>\n<p>There are many similar sample content placeholders across the store. All editable from admin panel.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "a47741f5-41c4-4241-b319-75f7803ff5d0",
+        "c152bca6-8d1e-4f26-bd77-9b2b90d3a93a",
+        "249cec36-83b6-461a-ae21-e8d89156b0eb"
+      ],
+      "settings": {
+        "colors_bg": "",
+        "container": "1370",
+        "padding_top": 25,
+        "padding_bottom": 0,
+        "padding_top_tablet": 25,
+        "padding_bottom_tablet": 0,
+        "padding_top_mobile": 25,
+        "padding_bottom_mobile": 0,
+        "show_infinite_scrolling": true,
+        "show_sidebar": true,
+        "sidebar_type": "vertical",
+        "show_sidebar_collapse": false,
+        "sidebar_collapse_default": "expand",
+        "sidebar_position": "left",
+        "sidebar_heading_font": "font_1",
+        "sidebar_heading_font_size": 18,
+        "sidebar_heading_font_weight": "700",
+        "sidebar_heading_text_transform": "uppercase",
+        "show_filter": true,
+        "filter_hidden_tag_list": "",
+        "filter_swatch": "Color",
+        "filter_swatch_type": "color",
+        "filter_rectangle": "",
+        "price_range_show": "both",
+        "show_toolbar": true,
+        "show_sorting": true,
+        "show_item_per_page": true,
+        "show_view_as": true,
+        "products_per_page": "20",
+        "layout": "3",
+        "col": "wide",
+        "image_ratio": "portrait",
+        "portrait_aspect_ratio": 127,
+        "show_add_to_cart": true
+      }
+    },
+    "footer-collection": {
+      "type": "main-footer-collection",
+      "settings": {
+        "show_bottom_content": false,
+        "container": "1770",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_top_tablet": 0,
+        "padding_bottom_tablet": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
+      }
+    },
+    "16312811859a8f1f68": {
+      "type": "halo-image-gallery",
+      "blocks": {
+        "16312811859a8f1f68-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/banner-2_691b7297-f08d-4901-ae64-2aa010e10a68.jpg",
+            "btn_text": "",
+            "link": ""
+          }
+        },
+        "16312811859a8f1f68-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/banner-3_98a92ddf-a9e8-46fa-a74d-aa06ffcaefb9.jpg",
+            "btn_text": "",
+            "link": ""
+          }
+        },
+        "16312811859a8f1f68-2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/banner-5_b68907a9-ac10-41c3-ac09-2df17b9b7375.jpg",
+            "btn_text": "",
+            "link": ""
+          }
+        },
+        "16312811859a8f1f68-3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/banner-4_eb9166b4-a38b-44fa-98a8-7f1d04cfe578.jpg",
+            "btn_text": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "16312811859a8f1f68-0",
+        "16312811859a8f1f68-1",
+        "16312811859a8f1f68-2",
+        "16312811859a8f1f68-3"
+      ],
+      "settings": {
+        "show_image_gallery": true,
+        "container": "1370",
+        "padding_top": 72,
+        "padding_bottom": 40,
+        "padding_top_tablet": 52,
+        "padding_bottom_tablet": 40,
+        "padding_top_mobile": 42,
+        "padding_bottom_mobile": 40,
+        "block_title": "Sample Static Block",
+        "block_text": "Mauris ultricies aliquet mauris, eget vehicula mi pharetra et. Vestibulum et pharetra est.",
+        "block_title_align": "center",
+        "block_layout": "grid",
+        "block_mobile_layout": "swipe",
+        "col": "wide",
+        "col_border": 0,
+        "block_action": "popup",
+        "block_btn": "2",
+        "block_view_btn": "1",
+        "block_view_btn_text": "",
+        "block_view_btn_link": "",
+        "block_per_row": "4",
+        "block_show": "4",
+        "block_dots": false,
+        "block_arrows": true
+      }
+    }
+  },
+  "order": [
+    "header-collection",
+    "product-grid",
+    "footer-collection",
+    "16312811859a8f1f68"
+  ]
+}

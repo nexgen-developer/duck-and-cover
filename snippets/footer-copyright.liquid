@@ -1,0 +1,6 @@
+<small class="copyright__content">&copy; {{ 'now' | date: "%Y" }}, {% if section.settings.copyright_link != blank %}<a href="{{section.settings.copyright_link}}" title="{{shop.name}}">{{shop.name}}</a>{% else %}{{ shop.name | link_to: routes.root_url }}{% endif %}.</small>
+<small class="copyright__content">{{ powered_by_link }}. </small>
+{%- if settings.footer_layout == '9' -%}
+	<br/>
+{%- endif -%}
+<small class="copyright__content">{{ section.settings.copyright }}</small>

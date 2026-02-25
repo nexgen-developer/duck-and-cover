@@ -1,0 +1,749 @@
+{% comment %}
+  Otto Slideshow Section
+{% endcomment %}
+
+{% comment %}
+Check for the existence of a visible slide. In some cases the full slider should be hidden if no slides are currently live.
+{% endcomment %}
+
+{% assign slideshow_is_visible = false %}
+{% assign slide_count = 0 %}
+
+{% for block in section.blocks %}
+  {% capture image_name %}{{ block.settings.image_name | handle }}{% endcapture %}
+  {% assign image_metafield = shop.metafields.otto-components[image_name].value %}
+  {% if image_metafield != blank %}
+    {% if image_metafield.visible == true or image_metafield.visible == null %}
+      {% assign slideshow_is_visible = true %}
+      {% assign slide_count = slide_count | plus: 1 %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+
+{% if slideshow_is_visible %}
+  <div 
+  class="otto-slider otto-slider--{{ section.id }} {% if slide_count <= 1 %}otto-slider--is-single{% endif %}"
+  data-autoplay="{{ section.settings.autoplay }}"
+  data-autoplay-speed="{{ section.settings.autoplay_speed }}">
+    {% for block in section.blocks %}
+      {% comment %}Image Data{% endcomment %}
+      {% capture image_name %}{{ block.settings.image_name | handle }}{% endcapture %}
+      {% assign image_metafield = shop.metafields.otto-components[image_name].value %}
+      {% assign has_mobile_image = image_metafield.has_mobile_image %}
+      
+      {% comment %}Image Files{% endcomment %}
+      {% assign image_file = shop.metafields.otto-files[image_name].value %}
+      {% capture mobile_image_file_name %}{{ image_name }}-mobile{% endcapture %}
+      {% assign mobile_image_file = shop.metafields.otto-files[mobile_image_file_name].value %}
+
+      {% if image_metafield != blank %}
+        {% if image_metafield.visible == true or image_metafield.visible == null %}
+          <div class="otto-slide otto-slide--{{ block.id }}" {{ block.shopify_attributes }}>
+            {% comment %}Image{% endcomment %}
+            {% if image_metafield.link != blank %}
+              <a href="{{ image_metafield.link }}">
+            {% endif %}
+              <img src="{{ image_file | image_url }}" alt="{{ image_metafield.alt }}" class="otto-image {% if has_mobile_image and mobile_image_file != blank %}otto-image--desktop{% endif %}">
+              {% if has_mobile_image and mobile_image_file != blank %}
+                <img src="{{ mobile_image_file | image_url }}" alt="{{ image_metafield.alt }}" class="otto-image otto-image--mobile">
+              {%  endif %}
+            {% if image_metafield.link != blank %}
+              </a>
+            {% endif %}
+        
+            {% comment %}Content{% endcomment %}
+            {% if block.settings.show_content %}
+              <div class="otto-slide-content otto-slide-content-horizontal--{{ block.settings.content_horizontal_alignment }} otto-slide-content-vertical--{{ block.settings.content_vertical_alignment }}">
+                {% if image_metafield.header_text != blank %}
+                  <{{ block.settings.header_font_tag }} class="otto-slide-content__header">{{ image_metafield.header_text }}</{{ block.settings.header_font_tag }}>
+                {% endif %}
+      
+                {% if image_metafield.subheader_text != blank %}
+                  <{{ block.settings.subheader_font_tag }} class="otto-slide-content__subheader">{{ image_metafield.subheader_text }}</{{ block.settings.subheader_font_tag }}>
+                {% endif %}
+      
+                {% if image_metafield.body_text != blank %}
+                  <{{ block.settings.body_font_tag }} class="otto-slide-content__body">{{ image_metafield.body_text }}</{{ block.settings.body_font_tag }}>
+                {% endif %}
+      
+                {% if image_metafield.button_text != blank or image_metafield.secondary_button_text != blank %}
+                  <div class="otto-slide-btn-group">
+                    {% if image_metafield.button_text != blank and image_metafield.link != blank %}
+                      <a class="otto-slide-btn" href="{{ image_metafield.link }}">{{ image_metafield.button_text }}</a>
+                    {% endif %}
+                    {% if image_metafield.secondary_button_text != blank and image_metafield.secondary_button_link != blank %}
+                      <a class="otto-slide-btn" href="{{ image_metafield.secondary_button_link }}">{{ image_metafield.secondary_button_text }}</a>
+                    {% endif %}
+                  </div>
+                {% endif %}
+              </div>
+            {% endif %}
+          </div>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  <style>
+  /* General */
+  .flickity-enabled:focus {
+    outline: 0;
+    box-shadow: none;
+  }
+
+  .otto-slide {
+    position: relative;
+    width: 100%;
+  }
+
+  /* Image */
+  .otto-image {
+    display: block;
+    width: 100%;
+  }
+
+  .otto-image.otto-image--desktop {
+    display: block;
+  }
+
+  .otto-image.otto-image--mobile {
+    display: none;
+  }
+
+  /* Content */
+  .otto-slide-content {
+    padding: 30px;
+    position: absolute;
+  }
+
+  .otto-slide-content-horizontal--center {
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+  }
+
+  .otto-slide-content-horizontal--left {
+    left: 0;
+  }
+
+  .otto-slide-content-horizontal--right {
+    right: 0;
+  }
+
+  .otto-slide-content-vertical--center {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .otto-slide-content-vertical--top {
+    top: 0;
+  }
+
+  .otto-slide-content-vertical--bottom {
+    bottom: 0;
+  }
+
+  .otto-slide-content-horizontal--center.otto-slide-content-vertical--center {
+    transform: translate(-50%, -50%); 
+  }
+
+  .otto-slide-content__header {
+    margin: 0 0 10px;
+    line-height: 1.3;
+  }
+
+  .otto-slide-content__subheader {
+    margin: 0 0 10px;
+    line-height: 1.3;
+  }
+
+  .otto-slide-content__body {
+    margin: 0 0 10px;
+    line-height: 1.3;
+  }
+
+  .otto-slide-btn {
+    padding: 10px;
+    display: inline-block;
+    transition: all .3s ease-in-out;
+    margin-top: 20px;
+    text-decoration: none;
+  }
+
+  .otto-slide-btn:nth-child(2) {
+    margin-left: 5px;
+  }
+  
+  /* Section */
+  .otto-slider--{{ section.id }} {
+    width: {{ section.settings.slideshow_width_desktop }}%;
+    margin: {{ section.settings.slideshow_margin_top }}px auto {{ section.settings.slideshow_margin_bottom }}px; 
+    opacity: 0;
+    transition: opacity .5s ease-in;
+  }
+  
+  .otto-slider--{{ section.id }}.loaded {
+    opacity: 1;
+  }
+  
+  .otto-slider--{{ section.id }} .flickity-page-dots {
+    {% if section.settings.show_dot_nav == false %}
+    	display: none;
+    {% endif %}
+  }
+
+  .otto-slider--{{ section.id }}.otto-slider--is-single .flickity-page-dots {
+    display: none;
+  }
+  
+  .otto-slider--{{ section.id }} .flickity-prev-next-button {
+    {% if section.settings.show_arrow_nav == false %}
+    	display: none;
+    {% endif %}
+  }
+
+  .otto-slider--{{ section.id }}.otto-slider--is-single .flickity-prev-next-button {
+    display: none;
+  }
+  
+  .otto-slider--{{ section.id }} .flickity-button-icon {
+    fill: {{ section.settings.arrow_navigation_color }};
+  }
+  
+  .otto-slider--{{ section.id }} .flickity-page-dots .dot {
+    background: {{ section.settings.dot_navigation_color }};
+  }
+  
+  /* Responsive */
+  @media all and (max-width: 1024px) {
+    .otto-slider--{{ section.id }} {
+      width: {{ section.settings.slideshow_width_mobile }}%;
+    }  
+
+    .otto-image.otto-image--desktop {
+      display: none;
+    }
+  
+    .otto-image.otto-image--mobile {
+      display: block;
+    }
+  }
+  
+  /* Blocks */
+  {% for block in section.blocks %}      
+  	/* Content */
+    .otto-slide--{{ block.id }} .otto-slide-content {
+      background: {% if block.settings.content_background_color != blank %}{{ block.settings.content_background_color }}{% else %}transparent{% endif %};
+      color: {{ block.settings.content_text_color }};
+      width: {{ block.settings.content_width }}%;
+    }
+
+    .otto-slide--{{ block.id }} .otto-slide-content h1, 
+    .otto-slide--{{ block.id }} .otto-slide-content h2, 
+    .otto-slide--{{ block.id }} .otto-slide-content h3,
+    .otto-slide--{{ block.id }} .otto-slide-content h4,
+    .otto-slide--{{ block.id }} .otto-slide-content h5,
+    .otto-slide--{{ block.id }} .otto-slide-content p {
+      color: {{ block.settings.content_text_color }};
+    }
+
+    .otto-slide--{{ block.id }} .otto-slide-content__header {
+      font-size: {{ block.settings.header_font_size }}em;
+    }
+
+    .otto-slide--{{ block.id }} .otto-slide-content__subheader {
+      font-size: {{ block.settings.subheader_font_size }}em;
+    }
+
+    .otto-slide--{{ block.id }} .otto-slide-content__body {
+      font-size: {{ block.settings.body_font_size }}em;
+    }
+
+    .otto-slide--{{ block.id }} .otto-slide-btn {
+      background: {{ block.settings.button_background_color }};
+      color: {{ block.settings.button_text_color }};
+    }
+
+    .otto-slide--{{ block.id }} .otto-slide-btn:hover {
+      background: {{ block.settings.button_background_hover_color }};
+      color: {{ block.settings.button_text_hover_color }};
+    }
+
+    /* Responsive */
+    @media all and (max-width: 1024px) {
+      .otto-slide--{{ block.id }} .otto-slide-content, .otto-slide--{{ block.id }} .otto-slide-content-horizontal--center {
+        position: relative;
+        transform: translate(0) !important;
+        left: 0;
+        top: 0;
+        width: 100%;
+        text-align: center;
+      }
+
+      .otto-slide--{{ block.id }} .otto-slide-content {
+        background: {% if block.settings.mobile_content_background_color != blank %}{{ block.settings.mobile_content_background_color }}{% else %}transparent{% endif %};
+        color: {{ block.settings.mobile_content_text_color }};
+      }
+      
+      .otto-slide--{{ block.id }} .otto-slide-content h1, 
+      .otto-slide--{{ block.id }} .otto-slide-content h2, 
+      .otto-slide--{{ block.id }} .otto-slide-content h3,
+      .otto-slide--{{ block.id }} .otto-slide-content h4,
+      .otto-slide--{{ block.id }} .otto-slide-content h5,
+      .otto-slide--{{ block.id }} .otto-slide-content p {
+        color: {{ block.settings.mobile_content_text_color }};
+      }
+
+      .otto-slide--{{ block.id }} .otto-slide-content__header {
+        font-size: {{ block.settings.header_font_size_mobile }}em;
+      }
+  
+      .otto-slide--{{ block.id }} .otto-slide-content__subheader {
+        font-size: {{ block.settings.subheader_font_size_mobile }}em;
+      }
+  
+      .otto-slide--{{ block.id }} .otto-slide-content__body {
+        font-size: {{ block.settings.body_font_size_mobile }}em;
+      }
+    }
+  {% endfor %}
+</style>
+
+<script>
+  	function flickityScriptIsLoaded() {
+      return document.querySelectorAll('[src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"]').length > 0
+    }
+  
+  	if(!flickityScriptIsLoaded()) {
+      // Flickity Script
+      const flickityScript = document.createElement('script');
+      flickityScript.setAttribute('src','https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js');
+      document.head.appendChild(flickityScript);
+
+      // Flickity Init
+      function ottoFlickityInit() {
+        var ottoFlickityElems = document.querySelectorAll('.otto-slider');
+
+        for ( var i=0, len = ottoFlickityElems.length; i < len; i++ ) {
+          var ottoFlickityElem = ottoFlickityElems[i];
+          var autoplay = (ottoFlickityElem.dataset.autoplay === 'true');
+          var autoplaySpeed = Number(ottoFlickityElem.dataset.autoplaySpeed) * 1000;
+          const flkty = new Flickity(ottoFlickityElem, {
+            wrapAround: true,
+            autoPlay: autoplay ? autoplaySpeed : false
+          });
+          // Show the slider
+          ottoFlickityElem.classList.add('loaded');
+          // Trigger a resize in case the image load delayed.
+          window.setTimeout(function() {
+            flkty.resize();
+          }, 2000);
+        }
+      }
+      
+      // Window Load (Images Are Ready)
+      window.addEventListener('load', (event) => {
+        ottoFlickityInit();
+      });
+	  
+      // Flickity Section Load
+      document.addEventListener("shopify:section:load", function(event) {
+        ottoFlickityInit();
+      });
+      
+      // Flickity Styles
+      const link = document.createElement( "link" );
+      link.href = "https://unpkg.com/flickity@2/dist/flickity.min.css";
+      link.type = "text/css";
+      link.rel = "stylesheet";
+      link.media = "screen,print";
+      document.getElementsByTagName( "head" )[0].appendChild( link );
+    }
+</script>
+{% endif %}
+
+{% schema %}
+  {
+    "name": "Otto Slideshow",
+    "settings": [
+	  {
+        "type": "header",
+        "content": "Instructions"
+      },
+      {
+        "type": "paragraph",
+        "content": "Start by going to the Otto app and creating Otto placements for each of your slides. i.e Slide #1, Slide #2, etc. Once created then add each placement as a block to this section using the 'Add Placement' button in the previous screen. Press 'Save' in the upper right corner to see the functioning slider."
+      },
+      {
+        "type": "header",
+        "content": "Support"
+      },
+      {
+        "type": "paragraph",
+        "content": "If you need assistance with any customizations to this section please email support@ottoscheduler.com."
+      },
+	  {
+        "type": "header",
+        "content": "Settings"
+      },
+      {
+        "type": "checkbox",
+        "id": "autoplay",
+        "label": "Autoplay",
+        "default": true
+      },
+      {
+        "type": "range",
+        "id": "autoplay_speed",
+        "min": 1,
+        "max": 10,
+        "step": 1,
+        "unit": "s",
+        "label": "Autoplay Speed",
+        "default": 3
+      },
+	  {
+        "type": "header",
+        "content": "Style"
+      },
+	  {
+        "type": "range",
+        "id": "slideshow_width_desktop",
+        "min": 10,
+        "max": 100,
+        "step": 10,
+        "unit": "%",
+        "label": "Slideshow Desktop Width",
+        "default": 100
+      },
+      {
+        "type": "range",
+        "id": "slideshow_width_mobile",
+        "min": 10,
+        "max": 100,
+        "step": 10,
+        "unit": "%",
+        "label": "Slideshow Mobile Width",
+        "default": 100
+      },
+	  {
+        "type": "number",
+        "id": "slideshow_margin_top",
+        "label": "Margin Top (px)",
+        "default": 0
+      },
+      {
+        "type": "number",
+        "id": "slideshow_margin_bottom",
+        "label": "Margin Bottom (px)",
+        "default": 20
+      },
+	  {
+        "type": "header",
+        "content": "Navigation"
+      },
+	  {
+        "type": "checkbox",
+        "id": "show_arrow_nav",
+        "label": "Show Arrow Nav",
+        "default": true
+      },
+	  {
+        "type": "color",
+        "id": "arrow_navigation_color",
+        "label": "Arrow Navigation Color",
+        "default": "#000000"
+      },
+	  {
+        "type": "checkbox",
+        "id": "show_dot_nav",
+        "label": "Show Dot Nav",
+        "default": true
+      },
+	  {
+        "type": "color",
+        "id": "dot_navigation_color",
+        "label": "Dot Navigation Color",
+        "default": "#000000"
+      }
+    ],
+    "blocks" : [
+      {
+        "type": "image",
+        "name": "Placement",
+        "settings": [
+          {
+            "type": "text",
+            "id": "image_name",
+            "label": "Placement Name",
+			      "info": "The placement name is the name provided in the Otto app. Once entered then Otto will automatically pull the scheduled image and content."
+          },
+          {
+            "type": "header",
+            "content": "Content"
+          },
+          {
+            "type": "paragraph",
+            "content": "All content is added directly in the Otto app. If a specific piece of content isn't set on a scheduled image then it won't display."
+          },
+          {
+            "type": "checkbox",
+            "id": "show_content",
+            "label": "Show Content",
+            "default": false
+          },
+          {
+            "type": "range",
+            "id": "content_width",
+            "min": 10,
+            "max": 100,
+            "step": 10,
+            "unit": "%",
+            "label": "Content Width",
+            "default": 60
+          },
+          {
+            "type": "color",
+            "id": "content_background_color",
+            "label": "Content Background Color"
+          },
+          {
+            "type": "color",
+            "id": "content_text_color",
+            "label": "Content Text Color",
+            "default": "#000000"
+          },
+          {
+            "type": "color",
+            "id": "mobile_content_background_color",
+            "label": "Mobile Content Background Color"
+          },
+          {
+            "type": "color",
+            "id": "mobile_content_text_color",
+            "label": "Mobile Content Text Color",
+            "default": "#000000"
+          },
+          {
+            "type": "select",
+            "id": "content_horizontal_alignment",
+            "label": "Content Horizontal Alignment",
+            "options": [
+              {
+                "value": "left",
+                "label": "Left"
+              },
+              {
+                "value": "center",
+                "label": "Center"
+              },
+              {
+                "value": "right",
+                "label": "Right"
+              }
+            ],
+            "default": "center"
+          },
+          {
+            "type": "select",
+            "id": "content_vertical_alignment",
+            "label": "Content Vertical Alignment",
+            "options": [
+              {
+                "value": "top",
+                "label": "Top"
+              },
+              {
+                "value": "center",
+                "label": "Center"
+              },
+              {
+                "value": "bottom",
+                "label": "Bottom"
+              }
+            ],
+            "default": "center"
+          },
+          {
+            "type": "header",
+            "content": "Header Font"
+          },
+          {
+            "type": "select",
+            "id": "header_font_tag",
+            "label": "Tag",
+            "options": [
+              {
+                "value": "h1",
+                "label": "h1"
+              },
+              {
+                "value": "h2",
+                "label": "h2"
+              },
+              {
+                "value": "h3",
+                "label": "h3"
+              },
+              {
+                "value": "h4",
+                "label": "h4"
+              },
+              {
+                "value": "h5",
+                "label": "h5"
+              },
+              {
+                "value": "p",
+                "label": "p"
+              }
+            ],
+            "default": "h1"
+          },
+          {
+            "type": "number",
+            "id": "header_font_size",
+            "label": "Font Size (em)",
+            "default": 2
+          },
+          {
+            "type": "number",
+            "id": "header_font_size_mobile",
+            "label": "Mobile Font Size (em)",
+            "default": 2
+          },
+          {
+            "type": "header",
+            "content": "Subheader Font"
+          },
+          {
+            "type": "select",
+            "id": "subheader_font_tag",
+            "label": "Tag",
+            "options": [
+              {
+                "value": "h1",
+                "label": "h1"
+              },
+              {
+                "value": "h2",
+                "label": "h2"
+              },
+              {
+                "value": "h3",
+                "label": "h3"
+              },
+              {
+                "value": "h4",
+                "label": "h4"
+              },
+              {
+                "value": "h5",
+                "label": "h5"
+              },
+              {
+                "value": "p",
+                "label": "p"
+              }
+            ],
+            "default": "h2"
+          },
+          {
+            "type": "number",
+            "id": "subheader_font_size",
+            "label": "Font Size (em)",
+            "default": 1
+          },
+          {
+            "type": "number",
+            "id": "subheader_font_size_mobile",
+            "label": "Mobile Font Size (em)",
+            "default": 1
+          },
+          {
+            "type": "header",
+            "content": "Body Font"
+          },
+          {
+            "type": "select",
+            "id": "body_font_tag",
+            "label": "Tag",
+            "options": [
+              {
+                "value": "h1",
+                "label": "h1"
+              },
+              {
+                "value": "h2",
+                "label": "h2"
+              },
+              {
+                "value": "h3",
+                "label": "h3"
+              },
+              {
+                "value": "h4",
+                "label": "h4"
+              },
+              {
+                "value": "h5",
+                "label": "h5"
+              },
+              {
+                "value": "p",
+                "label": "p"
+              }
+            ],
+            "default": "p"
+          },
+          {
+            "type": "number",
+            "id": "body_font_size",
+            "label": "Font Size (em)",
+            "default": 1
+          },
+          {
+            "type": "number",
+            "id": "body_font_size_mobile",
+            "label": "Mobile Font Size (em)",
+            "default": 1
+          },
+          {
+            "type": "header",
+            "content": "Button"
+          },
+          {
+            "type": "color",
+            "id": "button_background_color",
+            "label": "Button Background Color",
+            "default": "#000000"
+          },
+          {
+            "type": "color",
+            "id": "button_background_hover_color",
+            "label": "Button Background Hover Color",
+            "default": "#ffffff"
+          },
+          {
+            "type": "color",
+            "id": "button_text_color",
+            "label": "Button Text Color",
+            "default": "#ffffff"
+          },
+          {
+            "type": "color",
+            "id": "button_text_hover_color",
+            "label": "Button Text Hover Color",
+            "default": "#000000"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Otto Slideshow",
+        "category": "Image"
+      }
+    ]
+  }
+{% endschema %}

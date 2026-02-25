@@ -1,0 +1,832 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-lookbook-3-page",
+      "settings": {
+        "show_breadcrumb": false,
+        "breadcrumb_alignment": "left",
+        "show_page_title": false,
+        "page_title_alignment": "left",
+        "container": "1370",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_top_tablet": 0,
+        "padding_bottom_tablet": 40,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 30
+      }
+    },
+    "halo_lookbook_image_product_bfr76N": {
+      "type": "halo-lookbook-image-product",
+      "blocks": {
+        "image_XB9iVz": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Duck_Cover_AW25_Lookbook_Cover.jpg",
+            "mobile_image": "shopify://shop_images/Duck_Cover_AW25_Lookbook_Cover.jpg",
+            "lookbook": false,
+            "product_1": "",
+            "point_x_1": 10,
+            "point_y_1": 10,
+            "product_2": "",
+            "point_x_2": 10,
+            "point_y_2": 10,
+            "product_3": "",
+            "point_x_3": 10,
+            "point_y_3": 10,
+            "product_4": "",
+            "point_x_4": 10,
+            "point_y_4": 10,
+            "product_5": "",
+            "point_x_5": 10,
+            "point_y_5": 10
+          }
+        }
+      },
+      "block_order": [
+        "image_XB9iVz"
+      ],
+      "settings": {
+        "show_lookbook_image_product": true,
+        "container": "full",
+        "padding_top": 20,
+        "padding_bottom": 5,
+        "padding_top_tablet": 0,
+        "padding_bottom_tablet": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 5,
+        "block_title": "",
+        "block_text": "",
+        "block_title_align": "center",
+        "show_bg_image": false,
+        "bg_bottom": 0,
+        "lookbook_style": "1",
+        "show_price_lookbook": false,
+        "colors_lookbook_button": "#D8D8D8"
+      }
+    },
+    "halo_lookbook_image_product_fkNXeN": {
+      "type": "halo-lookbook-image-product",
+      "blocks": {
+        "image_dDM9Jg": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Duck_Cover_AW25_Lookbook_Page_1.jpg",
+            "mobile_image": "shopify://shop_images/Duck_Cover_AW25_Lookbook_Page_1.jpg",
+            "lookbook": false,
+            "product_1": "",
+            "point_x_1": 10,
+            "point_y_1": 10,
+            "product_2": "",
+            "point_x_2": 10,
+            "point_y_2": 10,
+            "product_3": "",
+            "point_x_3": 10,
+            "point_y_3": 10,
+            "product_4": "",
+            "point_x_4": 10,
+            "point_y_4": 10,
+            "product_5": "",
+            "point_x_5": 10,
+            "point_y_5": 10
+          }
+        }
+      },
+      "block_order": [
+        "image_dDM9Jg"
+      ],
+      "settings": {
+        "show_lookbook_image_product": true,
+        "container": "full",
+        "padding_top": 0,
+        "padding_bottom": 5,
+        "padding_top_tablet": 0,
+        "padding_bottom_tablet": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 5,
+        "block_title": "",
+        "block_text": "",
+        "block_title_align": "center",
+        "show_bg_image": false,
+        "bg_bottom": 0,
+        "lookbook_style": "1",
+        "show_price_lookbook": false,
+        "colors_lookbook_button": "#D8D8D8"
+      }
+    },
+    "halo_lookbook_image_product_8fLnMY": {
+      "type": "halo-lookbook-image-product",
+      "blocks": {
+        "image_8jXmYK": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Duck_Cover_AW25_Lookbook_Page_2.jpg",
+            "mobile_image": "shopify://shop_images/Duck_Cover_AW25_Lookbook_Page_2.jpg",
+            "lookbook": false,
+            "product_1": "",
+            "point_x_1": 10,
+            "point_y_1": 10,
+            "product_2": "",
+            "point_x_2": 10,
+            "point_y_2": 10,
+            "product_3": "",
+            "point_x_3": 10,
+            "point_y_3": 10,
+            "product_4": "",
+            "point_x_4": 10,
+            "point_y_4": 10,
+            "product_5": "",
+            "point_x_5": 10,
+            "point_y_5": 10
+          }
+        }
+      },
+      "block_order": [
+        "image_8jXmYK"
+      ],
+      "settings": {
+        "show_lookbook_image_product": true,
+        "container": "full",
+        "padding_top": 0,
+        "padding_bottom": 5,
+        "padding_top_tablet": 0,
+        "padding_bottom_tablet": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 5,
+        "block_title": "",
+        "block_text": "",
+        "block_title_align": "center",
+        "show_bg_image": false,
+        "bg_bottom": 0,
+        "lookbook_style": "1",
+        "show_price_lookbook": false,
+        "colors_lookbook_button": "#D8D8D8"
+      }
+    },
+    "halo_lookbook_image_product_cmDXPL": {
+      "type": "halo-lookbook-image-product",
+      "blocks": {
+        "image_A86Cww": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Duck_Cover_AW25_Lookbook_Page_3.jpg",
+            "mobile_image": "shopify://shop_images/Duck_Cover_AW25_Lookbook_Page_3.jpg",
+            "lookbook": false,
+            "product_1": "",
+            "point_x_1": 10,
+            "point_y_1": 10,
+            "product_2": "",
+            "point_x_2": 10,
+            "point_y_2": 10,
+            "product_3": "",
+            "point_x_3": 10,
+            "point_y_3": 10,
+            "product_4": "",
+            "point_x_4": 10,
+            "point_y_4": 10,
+            "product_5": "",
+            "point_x_5": 10,
+            "point_y_5": 10
+          }
+        }
+      },
+      "block_order": [
+        "image_A86Cww"
+      ],
+      "settings": {
+        "show_lookbook_image_product": true,
+        "container": "full",
+        "padding_top": 0,
+        "padding_bottom": 5,
+        "padding_top_tablet": 0,
+        "padding_bottom_tablet": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 5,
+        "block_title": "",
+        "block_text": "",
+        "block_title_align": "center",
+        "show_bg_image": false,
+        "bg_bottom": 0,
+        "lookbook_style": "1",
+        "show_price_lookbook": false,
+        "colors_lookbook_button": "#D8D8D8"
+      }
+    },
+    "halo_lookbook_image_product_mK3ye4": {
+      "type": "halo-lookbook-image-product",
+      "blocks": {
+        "image_9NakjQ": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Duck_Cover_AW25_Lookbook_Page_4.jpg",
+            "mobile_image": "shopify://shop_images/Duck_Cover_AW25_Lookbook_Page_4.jpg",
+            "lookbook": false,
+            "product_1": "",
+            "point_x_1": 10,
+            "point_y_1": 10,
+            "product_2": "",
+            "point_x_2": 10,
+            "point_y_2": 10,
+            "product_3": "",
+            "point_x_3": 10,
+            "point_y_3": 10,
+            "product_4": "",
+            "point_x_4": 10,
+            "point_y_4": 10,
+            "product_5": "",
+            "point_x_5": 10,
+            "point_y_5": 10
+          }
+        }
+      },
+      "block_order": [
+        "image_9NakjQ"
+      ],
+      "settings": {
+        "show_lookbook_image_product": true,
+        "container": "full",
+        "padding_top": 0,
+        "padding_bottom": 5,
+        "padding_top_tablet": 0,
+        "padding_bottom_tablet": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 5,
+        "block_title": "",
+        "block_text": "",
+        "block_title_align": "center",
+        "show_bg_image": false,
+        "bg_bottom": 0,
+        "lookbook_style": "1",
+        "show_price_lookbook": false,
+        "colors_lookbook_button": "#D8D8D8"
+      }
+    },
+    "halo_lookbook_image_product_FKcD3K": {
+      "type": "halo-lookbook-image-product",
+      "blocks": {
+        "image_8MM9c8": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Duck_Cover_AW25_Lookbook_Page_5.jpg",
+            "mobile_image": "shopify://shop_images/Duck_Cover_AW25_Lookbook_Page_5.jpg",
+            "lookbook": false,
+            "product_1": "",
+            "point_x_1": 10,
+            "point_y_1": 10,
+            "product_2": "",
+            "point_x_2": 10,
+            "point_y_2": 10,
+            "product_3": "",
+            "point_x_3": 10,
+            "point_y_3": 10,
+            "product_4": "",
+            "point_x_4": 10,
+            "point_y_4": 10,
+            "product_5": "",
+            "point_x_5": 10,
+            "point_y_5": 10
+          }
+        }
+      },
+      "block_order": [
+        "image_8MM9c8"
+      ],
+      "settings": {
+        "show_lookbook_image_product": true,
+        "container": "full",
+        "padding_top": 0,
+        "padding_bottom": 5,
+        "padding_top_tablet": 0,
+        "padding_bottom_tablet": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 5,
+        "block_title": "",
+        "block_text": "",
+        "block_title_align": "center",
+        "show_bg_image": false,
+        "bg_bottom": 0,
+        "lookbook_style": "1",
+        "show_price_lookbook": false,
+        "colors_lookbook_button": "#D8D8D8"
+      }
+    },
+    "halo_lookbook_image_product_TJpLdF": {
+      "type": "halo-lookbook-image-product",
+      "blocks": {
+        "image_i3JUxW": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Duck_Cover_AW25_Lookbook_Page_6.jpg",
+            "mobile_image": "shopify://shop_images/Duck_Cover_AW25_Lookbook_Page_6.jpg",
+            "lookbook": false,
+            "product_1": "",
+            "point_x_1": 10,
+            "point_y_1": 10,
+            "product_2": "",
+            "point_x_2": 10,
+            "point_y_2": 10,
+            "product_3": "",
+            "point_x_3": 10,
+            "point_y_3": 10,
+            "product_4": "",
+            "point_x_4": 10,
+            "point_y_4": 10,
+            "product_5": "",
+            "point_x_5": 10,
+            "point_y_5": 10
+          }
+        }
+      },
+      "block_order": [
+        "image_i3JUxW"
+      ],
+      "settings": {
+        "show_lookbook_image_product": true,
+        "container": "full",
+        "padding_top": 0,
+        "padding_bottom": 5,
+        "padding_top_tablet": 0,
+        "padding_bottom_tablet": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 5,
+        "block_title": "",
+        "block_text": "",
+        "block_title_align": "center",
+        "show_bg_image": false,
+        "bg_bottom": 0,
+        "lookbook_style": "1",
+        "show_price_lookbook": false,
+        "colors_lookbook_button": "#D8D8D8"
+      }
+    },
+    "halo_lookbook_image_product_HjxX4d": {
+      "type": "halo-lookbook-image-product",
+      "blocks": {
+        "image_fp6DM9": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Duck_Cover_AW25_Lookbook_Page_7.jpg",
+            "mobile_image": "shopify://shop_images/Duck_Cover_AW25_Lookbook_Page_7.jpg",
+            "lookbook": false,
+            "product_1": "",
+            "point_x_1": 10,
+            "point_y_1": 10,
+            "product_2": "",
+            "point_x_2": 10,
+            "point_y_2": 10,
+            "product_3": "",
+            "point_x_3": 10,
+            "point_y_3": 10,
+            "product_4": "",
+            "point_x_4": 10,
+            "point_y_4": 10,
+            "product_5": "",
+            "point_x_5": 10,
+            "point_y_5": 10
+          }
+        }
+      },
+      "block_order": [
+        "image_fp6DM9"
+      ],
+      "settings": {
+        "show_lookbook_image_product": true,
+        "container": "full",
+        "padding_top": 0,
+        "padding_bottom": 5,
+        "padding_top_tablet": 0,
+        "padding_bottom_tablet": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 5,
+        "block_title": "",
+        "block_text": "",
+        "block_title_align": "center",
+        "show_bg_image": false,
+        "bg_bottom": 0,
+        "lookbook_style": "1",
+        "show_price_lookbook": false,
+        "colors_lookbook_button": "#D8D8D8"
+      }
+    },
+    "halo_lookbook_image_product_3KBPX9": {
+      "type": "halo-lookbook-image-product",
+      "blocks": {
+        "image_Mfjkfk": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Duck_Cover_AW25_Lookbook_Page_8.jpg",
+            "mobile_image": "shopify://shop_images/Duck_Cover_AW25_Lookbook_Page_8.jpg",
+            "lookbook": false,
+            "product_1": "",
+            "point_x_1": 10,
+            "point_y_1": 10,
+            "product_2": "",
+            "point_x_2": 10,
+            "point_y_2": 10,
+            "product_3": "",
+            "point_x_3": 10,
+            "point_y_3": 10,
+            "product_4": "",
+            "point_x_4": 10,
+            "point_y_4": 10,
+            "product_5": "",
+            "point_x_5": 10,
+            "point_y_5": 10
+          }
+        }
+      },
+      "block_order": [
+        "image_Mfjkfk"
+      ],
+      "settings": {
+        "show_lookbook_image_product": true,
+        "container": "full",
+        "padding_top": 0,
+        "padding_bottom": 5,
+        "padding_top_tablet": 0,
+        "padding_bottom_tablet": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 5,
+        "block_title": "",
+        "block_text": "",
+        "block_title_align": "center",
+        "show_bg_image": false,
+        "bg_bottom": 0,
+        "lookbook_style": "1",
+        "show_price_lookbook": false,
+        "colors_lookbook_button": "#D8D8D8"
+      }
+    },
+    "halo_lookbook_image_product_Te9dkJ": {
+      "type": "halo-lookbook-image-product",
+      "blocks": {
+        "image_k9EV3K": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Duck_Cover_AW25_Lookbook_Page_9.jpg",
+            "mobile_image": "shopify://shop_images/Duck_Cover_AW25_Lookbook_Page_9.jpg",
+            "lookbook": false,
+            "product_1": "",
+            "point_x_1": 10,
+            "point_y_1": 10,
+            "product_2": "",
+            "point_x_2": 10,
+            "point_y_2": 10,
+            "product_3": "",
+            "point_x_3": 10,
+            "point_y_3": 10,
+            "product_4": "",
+            "point_x_4": 10,
+            "point_y_4": 10,
+            "product_5": "",
+            "point_x_5": 10,
+            "point_y_5": 10
+          }
+        }
+      },
+      "block_order": [
+        "image_k9EV3K"
+      ],
+      "settings": {
+        "show_lookbook_image_product": true,
+        "container": "full",
+        "padding_top": 0,
+        "padding_bottom": 5,
+        "padding_top_tablet": 0,
+        "padding_bottom_tablet": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 5,
+        "block_title": "",
+        "block_text": "",
+        "block_title_align": "center",
+        "show_bg_image": false,
+        "bg_bottom": 0,
+        "lookbook_style": "1",
+        "show_price_lookbook": false,
+        "colors_lookbook_button": "#D8D8D8"
+      }
+    },
+    "halo_lookbook_image_product_EJrLLp": {
+      "type": "halo-lookbook-image-product",
+      "blocks": {
+        "image_zzigin": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Duck_Cover_AW25_Lookbook_Page_10.jpg",
+            "mobile_image": "shopify://shop_images/Duck_Cover_AW25_Lookbook_Page_10.jpg",
+            "lookbook": false,
+            "product_1": "",
+            "point_x_1": 10,
+            "point_y_1": 10,
+            "product_2": "",
+            "point_x_2": 10,
+            "point_y_2": 10,
+            "product_3": "",
+            "point_x_3": 10,
+            "point_y_3": 10,
+            "product_4": "",
+            "point_x_4": 10,
+            "point_y_4": 10,
+            "product_5": "",
+            "point_x_5": 10,
+            "point_y_5": 10
+          }
+        }
+      },
+      "block_order": [
+        "image_zzigin"
+      ],
+      "settings": {
+        "show_lookbook_image_product": true,
+        "container": "full",
+        "padding_top": 0,
+        "padding_bottom": 5,
+        "padding_top_tablet": 0,
+        "padding_bottom_tablet": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 5,
+        "block_title": "",
+        "block_text": "",
+        "block_title_align": "center",
+        "show_bg_image": false,
+        "bg_bottom": 0,
+        "lookbook_style": "1",
+        "show_price_lookbook": false,
+        "colors_lookbook_button": "#D8D8D8"
+      }
+    },
+    "halo_lookbook_image_product_j88MCW": {
+      "type": "halo-lookbook-image-product",
+      "blocks": {
+        "image_Jc4K4J": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Duck_Cover_AW25_Lookbook_Page_11.jpg",
+            "mobile_image": "shopify://shop_images/Duck_Cover_AW25_Lookbook_Page_11.jpg",
+            "lookbook": false,
+            "product_1": "",
+            "point_x_1": 10,
+            "point_y_1": 10,
+            "product_2": "",
+            "point_x_2": 10,
+            "point_y_2": 10,
+            "product_3": "",
+            "point_x_3": 10,
+            "point_y_3": 10,
+            "product_4": "",
+            "point_x_4": 10,
+            "point_y_4": 10,
+            "product_5": "",
+            "point_x_5": 10,
+            "point_y_5": 10
+          }
+        }
+      },
+      "block_order": [
+        "image_Jc4K4J"
+      ],
+      "settings": {
+        "show_lookbook_image_product": true,
+        "container": "full",
+        "padding_top": 0,
+        "padding_bottom": 5,
+        "padding_top_tablet": 0,
+        "padding_bottom_tablet": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 5,
+        "block_title": "",
+        "block_text": "",
+        "block_title_align": "center",
+        "show_bg_image": false,
+        "bg_bottom": 0,
+        "lookbook_style": "1",
+        "show_price_lookbook": false,
+        "colors_lookbook_button": "#D8D8D8"
+      }
+    },
+    "halo_lookbook_image_product_fYMpHt": {
+      "type": "halo-lookbook-image-product",
+      "blocks": {
+        "image_e6MV7r": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Duck_Cover_AW25_Lookbook_Page_12.jpg",
+            "mobile_image": "shopify://shop_images/Duck_Cover_AW25_Lookbook_Page_12.jpg",
+            "lookbook": false,
+            "product_1": "",
+            "point_x_1": 10,
+            "point_y_1": 10,
+            "product_2": "",
+            "point_x_2": 10,
+            "point_y_2": 10,
+            "product_3": "",
+            "point_x_3": 10,
+            "point_y_3": 10,
+            "product_4": "",
+            "point_x_4": 10,
+            "point_y_4": 10,
+            "product_5": "",
+            "point_x_5": 10,
+            "point_y_5": 10
+          }
+        }
+      },
+      "block_order": [
+        "image_e6MV7r"
+      ],
+      "settings": {
+        "show_lookbook_image_product": true,
+        "container": "full",
+        "padding_top": 0,
+        "padding_bottom": 5,
+        "padding_top_tablet": 0,
+        "padding_bottom_tablet": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 5,
+        "block_title": "",
+        "block_text": "",
+        "block_title_align": "center",
+        "show_bg_image": false,
+        "bg_bottom": 0,
+        "lookbook_style": "1",
+        "show_price_lookbook": false,
+        "colors_lookbook_button": "#D8D8D8"
+      }
+    },
+    "halo_lookbook_image_product_HwPbjR": {
+      "type": "halo-lookbook-image-product",
+      "blocks": {
+        "image_dCMVbK": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Duck_Cover_AW25_Lookbook_Page_13.jpg",
+            "mobile_image": "shopify://shop_images/Duck_Cover_AW25_Lookbook_Page_13.jpg",
+            "lookbook": false,
+            "product_1": "",
+            "point_x_1": 10,
+            "point_y_1": 10,
+            "product_2": "",
+            "point_x_2": 10,
+            "point_y_2": 10,
+            "product_3": "",
+            "point_x_3": 10,
+            "point_y_3": 10,
+            "product_4": "",
+            "point_x_4": 10,
+            "point_y_4": 10,
+            "product_5": "",
+            "point_x_5": 10,
+            "point_y_5": 10
+          }
+        }
+      },
+      "block_order": [
+        "image_dCMVbK"
+      ],
+      "settings": {
+        "show_lookbook_image_product": true,
+        "container": "full",
+        "padding_top": 0,
+        "padding_bottom": 5,
+        "padding_top_tablet": 0,
+        "padding_bottom_tablet": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 5,
+        "block_title": "",
+        "block_text": "",
+        "block_title_align": "center",
+        "show_bg_image": false,
+        "bg_bottom": 0,
+        "lookbook_style": "1",
+        "show_price_lookbook": false,
+        "colors_lookbook_button": "#D8D8D8"
+      }
+    },
+    "halo_lookbook_image_product_fV3AR4": {
+      "type": "halo-lookbook-image-product",
+      "blocks": {
+        "image_jHyNGy": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Duck_Cover_AW25_Lookbook_Page_14.jpg",
+            "mobile_image": "shopify://shop_images/Duck_Cover_AW25_Lookbook_Page_14.jpg",
+            "lookbook": false,
+            "product_1": "",
+            "point_x_1": 10,
+            "point_y_1": 10,
+            "product_2": "",
+            "point_x_2": 10,
+            "point_y_2": 10,
+            "product_3": "",
+            "point_x_3": 10,
+            "point_y_3": 10,
+            "product_4": "",
+            "point_x_4": 10,
+            "point_y_4": 10,
+            "product_5": "",
+            "point_x_5": 10,
+            "point_y_5": 10
+          }
+        }
+      },
+      "block_order": [
+        "image_jHyNGy"
+      ],
+      "settings": {
+        "show_lookbook_image_product": true,
+        "container": "full",
+        "padding_top": 0,
+        "padding_bottom": 5,
+        "padding_top_tablet": 0,
+        "padding_bottom_tablet": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 5,
+        "block_title": "",
+        "block_text": "",
+        "block_title_align": "center",
+        "show_bg_image": false,
+        "bg_bottom": 0,
+        "lookbook_style": "1",
+        "show_price_lookbook": false,
+        "colors_lookbook_button": "#D8D8D8"
+      }
+    },
+    "halo_lookbook_image_product_4QVQbb": {
+      "type": "halo-lookbook-image-product",
+      "blocks": {
+        "image_aHj3bK": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Duck_Cover_AW25_Lookbook_Page_15.jpg",
+            "mobile_image": "shopify://shop_images/Duck_Cover_AW25_Lookbook_Page_15.jpg",
+            "lookbook": false,
+            "product_1": "",
+            "point_x_1": 10,
+            "point_y_1": 10,
+            "product_2": "",
+            "point_x_2": 10,
+            "point_y_2": 10,
+            "product_3": "",
+            "point_x_3": 10,
+            "point_y_3": 10,
+            "product_4": "",
+            "point_x_4": 10,
+            "point_y_4": 10,
+            "product_5": "",
+            "point_x_5": 10,
+            "point_y_5": 10
+          }
+        }
+      },
+      "block_order": [
+        "image_aHj3bK"
+      ],
+      "settings": {
+        "show_lookbook_image_product": true,
+        "container": "full",
+        "padding_top": 0,
+        "padding_bottom": 5,
+        "padding_top_tablet": 0,
+        "padding_bottom_tablet": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0,
+        "block_title": "",
+        "block_text": "",
+        "block_title_align": "center",
+        "show_bg_image": false,
+        "bg_bottom": 0,
+        "lookbook_style": "1",
+        "show_price_lookbook": false,
+        "colors_lookbook_button": "#D8D8D8"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "halo_lookbook_image_product_bfr76N",
+    "halo_lookbook_image_product_fkNXeN",
+    "halo_lookbook_image_product_8fLnMY",
+    "halo_lookbook_image_product_cmDXPL",
+    "halo_lookbook_image_product_mK3ye4",
+    "halo_lookbook_image_product_FKcD3K",
+    "halo_lookbook_image_product_TJpLdF",
+    "halo_lookbook_image_product_HjxX4d",
+    "halo_lookbook_image_product_3KBPX9",
+    "halo_lookbook_image_product_Te9dkJ",
+    "halo_lookbook_image_product_EJrLLp",
+    "halo_lookbook_image_product_j88MCW",
+    "halo_lookbook_image_product_fYMpHt",
+    "halo_lookbook_image_product_HwPbjR",
+    "halo_lookbook_image_product_fV3AR4",
+    "halo_lookbook_image_product_4QVQbb"
+  ]
+}

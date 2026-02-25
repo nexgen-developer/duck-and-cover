@@ -1,0 +1,57 @@
+<div class="halo-sidebar halo-sidebar-left halo-sidebar-menu" id="navigation-mobile">
+    <a href="javascript:void(0)" class="halo-sidebar-close" data-menu-close-sidebar role="button">
+    	<span class="visually-hidden">{{ 'general.common.close' | t }}</span>
+        {% render 'icon-close' %}
+    </a>
+    <div class="halo-sidebar-wrapper custom-scrollbar">
+    	{%- if settings.mobile_menu == 'default' -%}
+    		<div class="site-nav-mobile nav-menu-tab"></div>
+    	{%- else -%}
+    		<div class="site-nav-mobile nav-menu-tab nav-mobile-menu-tab" data-navigation-tab-mobile></div>
+    	{%- endif -%}
+    	<div class="site-nav-mobile nav 1231" data-navigation-mobile></div>
+    	{%- if settings.mobile_menu == 'default' -%}
+	    	<div class="site-nav-mobile nav-acc" data-navigation-list-mobile>
+	    		{%- if shop.customer_accounts_enabled or settings.show_wishlist -%}
+		    		<ul class="list-menu list-menu--inline list-unstyled">
+						{%- if shop.customer_accounts_enabled -%}
+							<li class="menu-lv-item menu-lv-1 text-left no-megamenu">
+								<a href="{% if customer %}{{ routes.account_url }}{% else %}{{ routes.account_login_url }}{% endif %}" class="menu-lv-1__action list-menu__item list-menu__item--end link focus-inset">
+									<span class="custom-icon">
+								        {% render 'icon-account',
+					                        icon_account: '3'
+					                    %}
+					                </span>
+							        <span class="text">
+							            {%- liquid
+							                if customer
+							                    echo 'customer.account_fallback' | t
+							                else
+							                    echo 'customer.log_in' | t
+							                endif
+							            -%}
+							        </span>
+							    </a>
+							</li>
+						{%- endif -%}
+						{%- if settings.show_wishlist -%}
+							<li class="menu-lv-item menu-lv-1 text-left no-megamenu">
+							    <a href="{{ pages['wish-list'].url }}" class="menu-lv-1__action list-menu__item list-menu__item--end link focus-inset">
+							    	<span class="custom-icon">
+								        {% render 'icon-heart',
+								        	icon_heart: '4'
+								        %}
+								    </span>
+							        <span class="text">
+							            {{ 'wishlist.general.title' | t }}
+							        </span>
+							    </a>
+							</li>
+						{%- endif -%}
+		    		</ul>
+				{%- endif -%}
+	    	</div>
+	    {%- endif -%}
+    	<div class="site-nav-mobile nav-currency-language"></div>
+    </div>
+</div>

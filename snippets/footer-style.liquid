@@ -1,0 +1,519 @@
+<style type="text/css" media="screen">
+	{%- liquid
+		assign footer_top_bg = section.settings.footer_top_bg
+        assign footer_top_color = section.settings.footer_top_color
+        assign footer_top_title_color = section.settings.footer_top_title_color
+        if section.settings.show_footer_top_bg_img
+            assign footer_top_bg_img = section.settings.footer_top_bg_img
+            assign footer_top_bg_position_x = section.settings.footer_top_bg_position_x
+            assign footer_top_bg_position_y = section.settings.footer_top_bg_position_y
+            assign footer_top_bg_repeat = section.settings.footer_top_bg_repeat
+            assign footer_top_bg_attachment = section.settings.footer_top_bg_attachment
+            assign footer_top_bg_size = section.settings.footer_top_bg_size
+        endif
+
+        assign footer_middle_bg = section.settings.footer_middle_bg
+        if section.settings.show_footer_middle_bg_img
+            assign footer_middle_bg_img = section.settings.footer_middle_bg_img
+            assign footer_middle_bg_position_x = section.settings.footer_middle_bg_position_x
+            assign footer_middle_bg_position_y = section.settings.footer_middle_bg_position_y
+            assign footer_middle_bg_repeat = section.settings.footer_middle_bg_repeat
+            assign footer_middle_bg_attachment = section.settings.footer_middle_bg_attachment
+            assign footer_middle_bg_size = section.settings.footer_middle_bg_size
+        endif
+
+        assign footer_bottom_bg = section.settings.footer_bottom_bg
+        assign footer_bottom_color = section.settings.footer_bottom_color
+        assign footer_bottom_des_color = section.settings.footer_bottom_des_color
+
+        assign heading_font = section.settings.heading_font
+        assign heading_font_size = section.settings.heading_font_size
+        assign heading_font_weight = section.settings.heading_font_weight
+        assign heading_text_transform = section.settings.heading_text_transform
+        assign heading_color = section.settings.heading_color
+
+        assign link_font = section.settings.link_font
+        assign link_font_size = section.settings.link_font_size
+        assign link_font_weight = section.settings.link_font_weight
+        assign link_text_transform = section.settings.link_text_transform
+        assign link_color = section.settings.link_color
+        assign link_color_hover = section.settings.link_color_hover
+
+        assign show_separate_line = section.settings.show_separate_line
+        assign separate_line_color = section.settings.separate_line_color
+
+        assign newsletter_bg = section.settings.newsletter_bg
+        assign newsletter_color = section.settings.newsletter_color
+        assign newsletter_border = section.settings.newsletter_border
+        assign newsletter_input_bg = section.settings.newsletter_input_bg
+        assign newsletter_input_color = section.settings.newsletter_input_color
+        assign newsletter_btn_bg =  section.settings.newsletter_btn_bg
+        assign newsletter_btn_color =  section.settings.newsletter_btn_color
+        assign newsletter_btn_border =  section.settings.newsletter_btn_border
+
+        assign social_bg = section.settings.social_bg
+        assign social_color = section.settings.social_color
+        assign social_bg_hover = section.settings.social_bg_hover
+        assign social_color_hover = section.settings.social_color_hover
+
+        assign heading_text_transform_bottom = section.settings.heading_text_transform_bottom
+        assign heading_font_weight_bottom = section.settings.heading_font_weight_bottom
+        assign heading_font_size_bottom = section.settings.heading_font_size_bottom
+        assign heading_mobile_font_size_bottom = section.settings.heading_mobile_font_size_bottom
+	-%}
+
+    :root {
+        {% if heading_font == 'font_1' %}
+            --footer-heading-font: var(--font-1-family);
+        {% elsif heading_font == 'font_2' %}
+            --footer-heading-font: var(--font-2-family);
+        {% elsif heading_font == 'font_3' %}
+            --footer-heading-font: var(--font-3-family);
+        {% endif %}
+        {% if link_font == 'font_1' %}
+            --footer-link-font: var(--font-1-family);
+        {% elsif link_font == 'font_2' %}
+            --footer-link-font: var(--font-2-family);
+        {% elsif link_font == 'font_3' %}
+            --footer-link-font: var(--font-3-family);
+        {% endif %}
+    }
+
+	{% if footer_top_bg != 'rgba(0,0,0,0)' and footer_top_bg != blank %}
+		.footer__content-top{
+            background: {{ footer_top_bg }};
+		}
+    {% endif %}
+
+    {% if settings.footer_layout == '4' %}
+        .footer-icon-text .item-content .title,
+        .footer-icon-text .item-content .subtitle,
+        .footer-icon-text .item-content .link{
+            color: {{ footer_top_color }};
+        }
+
+        .footer-icon-text .item-icon svg{
+            fill: {{ footer_top_color }};
+        }
+    {% elsif settings.footer_layout == '5' %}
+        {% if newsletter_border != 'rgba(0,0,0,0)' and newsletter_border != blank %}
+            .footer__content-top .footer-block__top{
+                border: 1px solid {{ newsletter_border }};
+                margin-left: 0;
+                margin-right: 0;
+            }
+        {% else %}
+            .footer__content-top .footer-block__top{
+                padding-left: 0;
+                padding-right: 0;
+            }
+        {% endif %}
+    {% elsif settings.footer_layout == '8' %}
+        .footer-icon-text .item-content .title,
+        .footer-icon-text .item-content .subtitle,
+        .footer-icon-text .item-content .link{
+            color: {{ footer_top_color }};
+        }
+
+        .footer-icon-text .item-icon svg{
+            fill: {{ footer_top_color }};
+        }
+    {% endif %}
+
+    {% if section.settings.show_footer_top_bg_img %}
+        {% if footer_top_bg_img != blank %}
+            .footer__content-top.footer__content-bg{
+                background-color: {{ footer_top_bg }};
+                background: url({{ footer_top_bg_img | img_url: 'master' }});
+                background-position: {{ footer_top_bg_position_x }} {{ footer_top_bg_position_y }};
+                background-repeat: {{ footer_top_bg_repeat }};
+                background-attachment: unset;
+                background-size: {{ footer_top_bg_size }};
+            }
+        {% endif %}
+    {% endif %}
+
+    {% if footer_middle_bg != 'rgba(0,0,0,0)' and footer_middle_bg != blank %}
+    	.footer__content-middle{
+    		background: {{ footer_middle_bg }};
+    	}
+    {% endif %}
+
+    {% if section.settings.show_footer_middle_bg_img %}
+        {% if footer_middle_bg_img != blank %}
+        	.footer__content-middle.footer__content-bg{
+                background-color: {{ footer_middle_bg }};
+        		background: url({{ footer_middle_bg_img | img_url: 'master' }});
+    		    background-position: {{ footer_middle_bg_position_x }} {{ footer_middle_bg_position_y }};
+    		    background-repeat: {{ footer_middle_bg_repeat }};
+    		    background-attachment: unset;
+    		    background-size: {{ footer_middle_bg_size }};
+        	}
+        {% endif %}
+    {% else %}
+        {% if settings.footer_layout == '11' %}
+            {%- liquid
+                assign footer_middle_bg_left = section.settings.footer_middle_bg_left
+                assign footer_middle_bg_right = section.settings.footer_middle_bg_right
+            -%}
+            .footer:before {
+                background: {{ footer_middle_bg_left }};
+            }
+
+            .footer:after,
+            .footer__content-middle {
+                background: {{ footer_middle_bg_right }};
+            }
+        {% endif %}
+    {% endif %}
+
+    {% if show_separate_line %}
+        .footer-block__bottom.separate-line{
+            border-color: {{ separate_line_color }};
+        }
+
+        {% if settings.footer_layout == '2' %}
+            .footer__content-middle {
+                border-top: 1px solid {{ separate_line_color }};
+            }
+        {% elsif settings.footer_layout == '4' %}
+            .footer__content-middle .footer-block__middle-wrapper{
+                border-top: 1px solid {{ separate_line_color }};
+                border-bottom: 1px solid {{ separate_line_color }};
+            }
+            {% unless section.settings.show_footer_top %}
+                .footer__content-middle .footer-block__middle-wrapper{
+                    border-top: none;
+                }
+            {% endunless %}
+        {% endif %}
+    {% endif %}
+
+    {% if footer_bottom_bg != 'rgba(0,0,0,0)' and footer_bottom_bg != blank %}
+    	.footer__content-bottom{
+    		background: {{ footer_bottom_bg }};
+    	}
+
+        .copyright__content{
+            color: {{ footer_bottom_color }};
+        }
+
+    	{% if footer_bottom_color != 'rgba(0,0,0,0)' and footer_bottom_des_color != blank %}
+	    	.copyright__content{
+	    		color: {{ footer_bottom_des_color }};
+	    	}
+	    {% endif %}
+    {% endif %}
+
+    .footer-block__column .footer-block__heading{
+        font-family: var(--footer-heading-font);
+        font-size: {{ heading_font_size | append: 'px' }};
+        font-weight: {{ heading_font_weight }};
+        text-transform: {{ heading_text_transform }};
+        color: {{ heading_color }};
+    }
+
+    {% if settings.footer_layout == '1' and section.settings.style == '2' %}
+        .footer-1.style-2 .footer__content-bottom {
+            border-top: 1px solid {{ heading_color }};
+        }
+    {% endif %}
+
+    {% if settings.footer_layout == '2' %}
+        .footer-block__column .footer-block__subheading{
+            color: {{ heading_color }};
+        }
+    {% elsif settings.footer_layout == '4' %}
+        .footer-block__column .footer-block__subheading{
+            color: {{ heading_color }};
+        }
+    {% endif %}
+
+    .list-menu__item--link,
+    .footer-block__details{
+        font-family: var(--footer-link-font);
+        font-size: {{ link_font_size | append: 'px' }};
+        font-weight: {{ link_font_weight }};
+        color: {{ link_color }};
+        text-transform: {{ link_text_transform }};
+    }
+
+    .footer-block__newsletter .newsletter-form__field-wrapper{
+        border-color: {{ newsletter_bg }};
+        background: {{ newsletter_bg }};
+    }
+
+    .footer-block__newsletter .field__input{
+        color: {{ newsletter_color }};
+    }
+
+    .footer-block__newsletter .newsletter-form__button{
+        color: {{ newsletter_bg }}!important;
+        background: {{ newsletter_border }}!important;
+    }
+
+    {% if settings.footer_layout == '1' %}
+        .footer-block__newsletter .footer-block__heading,
+        .footer-block__newsletter .footer-block__subheading{
+            color: {{ footer_top_color }};
+        }
+
+        .footer-block__newsletter .newsletter-form__button{
+            color: {{ footer_top_color }}!important;
+        }
+
+        {% if section.settings.style == '2' %}
+            .footer-1.style-2 .footer-block__newsletter .newsletter-form__field-wrapper {
+                border-color: transparent;
+                background: transparent;
+            }
+
+            .footer-1.style-2 .footer-block__newsletter .field {
+                border-color: {{ newsletter_bg }};
+                background: {{ newsletter_bg }};
+            }
+
+            .footer-1.style-2 .footer-block__newsletter .newsletter-form__button {
+                background: transparent !important;
+                border-color: {{ newsletter_border }}!important;
+            }
+        {% endif %}
+    {% elsif settings.footer_layout == '2' %}
+        .footer-block__newsletter .newsletter-form__field-wrapper{
+            border-color: {{ newsletter_border }};
+        }
+
+        .footer-block__newsletter .newsletter-form__button{
+            color: {{ newsletter_color }}!important;
+            background: {{ newsletter_bg }}!important;
+        }
+    {% elsif settings.footer_layout == '3' %}
+        .footer-block__newsletter .newsletter-form__field-wrapper{
+            border-color: {{ newsletter_border }};
+        }
+
+        .footer-block__newsletter .newsletter-form__button{
+            color: {{ newsletter_color }}!important;
+            background: {{ newsletter_bg }}!important;
+        }
+
+        .footer-block__newsletter .footer-block__heading,
+        .footer-block__newsletter .footer-block__subheading{
+            color: {{ footer_top_title_color }};
+        }
+
+        .footer-block__newsletter .footer-block__subheading.bottom-text{
+            color: {{ footer_top_color }};
+        }
+    {% elsif settings.footer_layout == '4' %}
+        .footer.style-2 .footer-block__newsletter .field__input{
+            background: {{ newsletter_bg }};
+        }
+    {% elsif settings.footer_layout == '5' %}
+        .footer-block__newsletter .footer-block__heading,
+        .footer-block__newsletter .footer-block__subheading{
+            color: {{ newsletter_color }};
+        }
+
+        .footer-block__newsletter .newsletter-form__field-wrapper{
+            border-color: {{ newsletter_input_bg }};
+            background: {{ newsletter_input_bg }};
+        }
+
+        .footer-block__newsletter .newsletter-form__button{
+            color: {{ newsletter_color }}!important;
+            background: transparent!important;
+        }
+
+        .footer-block__newsletter .field__input{
+            color: {{ newsletter_input_color }};
+        }
+    {% elsif settings.footer_layout == '6' %}
+        .footer-block__newsletter .footer-block__subheading{
+            color: {{ link_color }};
+        }
+
+        .footer-block__newsletter .newsletter-form__button{
+            background: {{ newsletter_btn_bg }}!important;
+            border-color: {{ newsletter_btn_border }}!important;
+            color: {{ newsletter_btn_color }}!important;
+        }
+
+        .footer-block__newsletter .field__input{
+            color: {{ newsletter_color }};
+            background: {{ newsletter_bg }};
+        }
+    {% elsif settings.footer_layout == '7' %}
+        .footer-block__newsletter .footer-block__heading,
+        .footer-block__newsletter .footer-block__subheading{
+            color: {{ footer_top_color }};
+        }
+
+        .footer-block__newsletter .newsletter-form__button{
+            color: {{ newsletter_color }}!important;
+            background-color: {{ newsletter_bg }}!important;
+        }
+
+        .footer-block__newsletter .field__input{
+            color: {{ footer_top_color }};
+            border-color: {{ newsletter_bg }};
+        }
+    {% elsif settings.footer_layout == '8' %}
+        .footer-block__newsletter .footer-block__heading,
+        .footer-block__newsletter .footer-block__subheading{
+            color: {{ footer_top_color }};
+        }
+
+        .footer-block__newsletter .newsletter-form__button{
+            background: {{ newsletter_btn_bg }}!important;
+            border-color: {{ newsletter_btn_bg }}!important;
+        }
+
+        .footer-block__newsletter .newsletter-form__button svg{
+            fill: {{ newsletter_btn_color }}!important;
+            stroke: transparent;
+        }
+    {% elsif settings.footer_layout == '9' %}
+        .footer-block__newsletter .footer-block__subheading{
+            color: {{ footer_top_color }};
+        }
+
+        .footer-block__newsletter .newsletter-form__button{
+            background: {{ newsletter_btn_bg }}!important;
+            color: {{ newsletter_btn_color }}!important;
+        }
+    {% elsif settings.footer_layout == '10' %}
+        .footer-block__newsletter .footer-block__subheading{
+            color: {{ link_color }};
+        }
+
+        .footer-block__newsletter .field__input{
+            border-color: {{ newsletter_border }};
+        }
+
+        .footer-block__newsletter .newsletter-form__button{
+            color: {{ newsletter_color }}!important;
+            border-color: {{ newsletter_border }}!important;
+            background: transparent!important;
+        }
+    {% elsif settings.footer_layout == '11' %}
+        .footer_newsletter-form .field__input{
+            background: {{ newsletter_bg }};
+            border-color: {{ newsletter_border }};
+            color: {{ newsletter_color }};
+        }
+
+        .footer_newsletter-form .newsletter-form__button{
+            color: {{ newsletter_btn_color }}!important;
+            border-color: {{ newsletter_btn_border }}!important;
+            background: {{ newsletter_btn_border }}!important;
+        }
+
+        .footer__content-middle .footer-block__column .footer-block__heading,
+        .footer__content-middle .footer-block__column .footer-block__details{
+            color: {{ newsletter_color }}!important;
+        }
+    {% endif %}
+
+    .footer .list-social__link{
+        background: {{ social_bg }}!important;
+    }
+
+    .footer .list-social--label{
+        color: {{ social_color }};
+    }
+
+    .list-social__link .icon{
+        fill: {{ social_color }}!important;
+    }
+
+    .footer__content-bottom .wrapper-footer-block .footer-block__left .title{
+        font-size: {{ heading_font_size_bottom | append: 'px' }};
+        font-weight: {{ heading_font_weight_bottom }};
+        text-transform: {{ heading_text_transform_bottom }};
+        color: {{ footer_bottom_color }};
+    }
+
+    .footer-block__bottom .top-language-currency .dropdown-icon svg{
+        fill: {{ footer_bottom_color }};
+        color: {{ footer_bottom_color }};
+    }
+
+    @media (max-width: 550px){
+    	.footer-block__mobile .footer-block__heading{
+            border-color: {{ heading_color }};
+        }
+
+        .footer-block__mobile .footer-block__heading:before,
+        .footer-block__mobile .footer-block__heading:after{
+            background-color: {{ heading_color }};
+        }
+
+        .footer__content-bottom .wrapper-footer-block .footer-block__left .title{
+            font-size: {{ heading_mobile_font_size_bottom | append: 'px' }};
+        }
+    }
+
+    @media (min-width: 1025px){
+        {% if section.settings.show_footer_top_bg_img %}
+            {% if footer_top_bg_img != blank %}
+                .footer__content-top.footer__content-bg{
+                    background-attachment: {{ footer_top_bg_attachment }};
+                }
+            {% endif %}
+        {% endif %}
+
+        {% if section.settings.show_footer_middle_bg_img %}
+        	{% if footer_middle_bg_img != blank %}
+        		.footer__content-middle.footer__content-bg{
+        			background-attachment: {{ footer_middle_bg_attachment }};
+        		}
+        	{% endif %}
+        {% endif %}
+
+        {% if settings.footer_layout == '1'%}
+            .footer .list-social__link:before{
+                box-shadow: 0 0 0 2px {{ social_bg_hover }}!important;
+            }
+
+            {% if section.settings.style == '2' %}
+                .footer-1.style-2 .list-social__link,
+                .footer-1.style-2 .list-social__link:hover {
+                    background: transparent !important;
+                }
+
+                .footer-1.style-2 .list-social__link:before {
+                    box-shadow: none;
+                    background: {{ social_bg_hover }};
+                }
+            {% endif %}
+        {% endif %}
+
+        .footer .list-social__link:hover{
+            background: {{ social_bg_hover }}!important;
+        }
+
+        .footer .list-social__link:hover .icon{
+            fill: {{ social_color_hover }}!important;
+        }
+
+        .list-menu__item--link:hover{
+            color: {{ link_color_hover }};
+        }
+
+        {% if show_separate_line %}
+            .footer-2 .footer-block__middle .footer-block__column.separate-line:after,
+            .footer-2 .footer-block__middle .footer-block__column.separate-line:before,
+            .footer-3 .footer-block__middle .footer-block__column.separate-line:before{
+                background-color: {{ separate_line_color }};
+            }
+        {% endif %}
+
+        {% if settings.footer_layout == '9' %}
+            .footer-block__newsletter .newsletter-form__button:hover{
+                box-shadow: inset 6.5em 0 0 0 {{ newsletter_btn_color }}!important;
+                color: {{ newsletter_btn_bg }}!important;
+            }
+        {% endif %}
+    }
+</style>

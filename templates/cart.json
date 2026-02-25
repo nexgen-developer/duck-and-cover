@@ -1,0 +1,104 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "cart-items": {
+      "type": "main-cart-items",
+      "blocks": {
+        "163b7126-b7e5-4428-a5d0-ce3b21e2e494": {
+          "type": "gift_wrapper",
+          "disabled": true,
+          "settings": {
+            "padding_top": 0,
+            "padding_bottom": 35,
+            "product": "gift-wrapping",
+            "content": "<p>Do you want a gift wrap? Only for $10.00</p>"
+          }
+        },
+        "c1337e87-e492-4590-8c68-f02cc92d8a94": {
+          "type": "cart_note",
+          "settings": {
+            "padding_top": 0,
+            "padding_bottom": 0
+          }
+        },
+        "a39bbb6a-7e3a-456f-bc3a-83f3459223db": {
+          "type": "trust_badge",
+          "disabled": true,
+          "settings": {
+            "padding_top": 0,
+            "padding_bottom": 0
+          }
+        }
+      },
+      "block_order": [
+        "163b7126-b7e5-4428-a5d0-ce3b21e2e494",
+        "c1337e87-e492-4590-8c68-f02cc92d8a94",
+        "a39bbb6a-7e3a-456f-bc3a-83f3459223db"
+      ],
+      "settings": {
+        "show_breadcrumb": true,
+        "breadcrumb_alignment": "left",
+        "show_page_title": true,
+        "page_title_alignment": "left",
+        "container": "1770",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_top_tablet": 0,
+        "padding_bottom_tablet": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0,
+        "show_vendor": true,
+        "image_ratio": "portrait",
+        "portrait_aspect_ratio": 148,
+        "show_cart_countdown": false,
+        "cart_countdown_time": 30,
+        "show_coupon_code": true,
+        "show_shipping_rate_calculator": false,
+        "shipping_rate_calculator_default_country": "United Kingdom",
+        "btn_1": "1",
+        "btn_2": "5"
+      }
+    },
+    "1630227596aec64413": {
+      "type": "halo-product-block",
+      "settings": {
+        "display_product_block": true,
+        "container": "1770",
+        "boxed_container": false,
+        "padding_top": 65,
+        "padding_bottom": 80,
+        "padding_top_tablet": 45,
+        "padding_bottom_tablet": 60,
+        "padding_top_mobile": 35,
+        "padding_bottom_mobile": 55,
+        "block_title": "Related Products",
+        "block_text": "",
+        "block_title_align": "center",
+        "block_layout": "slider",
+        "col": "narrow",
+        "block_collection": "new-in",
+        "block_limit": 10,
+        "block_image_ratio": "adapt",
+        "portrait_aspect_ratio": 133,
+        "show_add_to_cart": false,
+        "block_per_row": "5",
+        "block_infinite_scroll": true,
+        "block_show": "5",
+        "block_dots": false,
+        "block_arrows": true
+      }
+    }
+  },
+  "order": [
+    "cart-items",
+    "1630227596aec64413"
+  ]
+}

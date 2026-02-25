@@ -1,0 +1,714 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "1d860dd6-f939-49ad-b78c-d9ca851b4724": {
+      "type": "otto-image",
+      "disabled": true,
+      "settings": {
+        "image_name": "Xmas",
+        "image_width_desktop": 100,
+        "image_width_mobile": 100,
+        "image_margin_bottom": 20,
+        "show_content": false,
+        "content_width": 60,
+        "content_background_color": "",
+        "content_text_color": "#000000",
+        "mobile_content_background_color": "",
+        "mobile_content_text_color": "#000000",
+        "content_horizontal_alignment": "center",
+        "content_vertical_alignment": "center",
+        "header_font_tag": "h1",
+        "header_font_size": 2,
+        "header_font_size_mobile": 2,
+        "subheader_font_tag": "h2",
+        "subheader_font_size": 1,
+        "subheader_font_size_mobile": 1,
+        "body_font_tag": "p",
+        "body_font_size": 1,
+        "body_font_size_mobile": 1,
+        "button_background_color": "#000000",
+        "button_background_hover_color": "#ffffff",
+        "button_text_color": "#ffffff",
+        "button_text_hover_color": "#000000"
+      }
+    },
+    "205c4f7a-d208-44ad-9a74-a5715aff1348": {
+      "type": "halo-slideshow",
+      "blocks": {
+        "image_Nhe8D8": {
+          "type": "image",
+          "name": "Base",
+          "settings": {
+            "image": "shopify://shop_images/SCROLLER_-_Desktop_Base.jpg",
+            "mobile_image": "shopify://shop_images/SCROLLER_-_Mobile_Base.jpg",
+            "title": "",
+            "subtitle": "",
+            "text": "",
+            "btn": "2",
+            "btn_text": "",
+            "link": "shopify://collections/new-in",
+            "container_content": "1570",
+            "position": "left",
+            "alignment": "left",
+            "lookbook": false,
+            "product_1": "",
+            "point_x_1": 10,
+            "point_y_1": 10,
+            "product_2": "",
+            "point_x_2": 10,
+            "point_y_2": 10,
+            "product_3": "",
+            "point_x_3": 10,
+            "point_y_3": 10,
+            "product_4": "",
+            "point_x_4": 10,
+            "point_y_4": 10,
+            "product_5": "",
+            "point_x_5": 10,
+            "point_y_5": 10,
+            "show_background_overlay": false,
+            "transparent_button": false,
+            "background_color": "",
+            "background_overlay": "#000000",
+            "text_color": "#ffffff",
+            "title_color": "#ffffff",
+            "title_font": "font_2",
+            "title_font_size": 26,
+            "title_mobile_font_size": 20,
+            "title_font_weight": "700",
+            "title_text_transform": "none",
+            "text_font_size": 14,
+            "text_font_weight": "600",
+            "text_text_transform": "uppercase"
+          }
+        },
+        "image_yUcgG3": {
+          "type": "image",
+          "name": "27th Feb - Pay Day",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/SCROLLER_-_Desktop_Pay_Day_copy.jpg",
+            "mobile_image": "shopify://shop_images/SCROLLER_-_Mobile_Pay_Day_copy.jpg",
+            "title": "",
+            "subtitle": "",
+            "text": "",
+            "btn": "2",
+            "btn_text": "",
+            "link": "shopify://collections/new-in",
+            "container_content": "1570",
+            "position": "right",
+            "alignment": "left",
+            "lookbook": false,
+            "product_1": "",
+            "point_x_1": 10,
+            "point_y_1": 10,
+            "product_2": "",
+            "point_x_2": 10,
+            "point_y_2": 10,
+            "product_3": "",
+            "point_x_3": 10,
+            "point_y_3": 10,
+            "product_4": "",
+            "point_x_4": 10,
+            "point_y_4": 10,
+            "product_5": "",
+            "point_x_5": 10,
+            "point_y_5": 10,
+            "show_background_overlay": false,
+            "transparent_button": false,
+            "background_color": "",
+            "background_overlay": "#000000",
+            "text_color": "#ffffff",
+            "title_color": "#ffffff",
+            "title_font": "font_2",
+            "title_font_size": 26,
+            "title_mobile_font_size": 20,
+            "title_font_weight": "700",
+            "title_text_transform": "none",
+            "text_font_size": 14,
+            "text_font_weight": "600",
+            "text_text_transform": "uppercase"
+          }
+        }
+      },
+      "block_order": [
+        "image_Nhe8D8",
+        "image_yUcgG3"
+      ],
+      "custom_css": [
+        ".heroCarousel-title {display: none;}"
+      ],
+      "name": "Main Scroller",
+      "settings": {
+        "show_slideshow": true,
+        "container": "full",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_top_tablet": 0,
+        "padding_bottom_tablet": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0,
+        "block_title": "",
+        "block_text": "",
+        "block_title_align": "center",
+        "block_layout": "1",
+        "block_content": "absolute",
+        "block_content_style": "1",
+        "block_fade": true,
+        "block_autoplay": true,
+        "block_autoplay_time": 5,
+        "block_dots": false,
+        "block_dots_bg": "linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1) 100%)",
+        "block_dots_color": "",
+        "block_dots_border": "#000000",
+        "block_arrows": true,
+        "block_arrows_bg": "linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1) 100%)",
+        "block_arrows_color": "",
+        "block_arrows_border": "#000000",
+        "lookbook_style": "1"
+      }
+    },
+    "1627285730d8d5e449": {
+      "type": "halo-product-block",
+      "disabled": true,
+      "settings": {
+        "display_product_block": true,
+        "container": "1770",
+        "boxed_container": false,
+        "padding_top": 30,
+        "padding_bottom": 40,
+        "padding_top_tablet": 30,
+        "padding_bottom_tablet": 40,
+        "padding_top_mobile": 30,
+        "padding_bottom_mobile": 40,
+        "block_title": "Trending Now",
+        "block_text": "",
+        "block_title_align": "center",
+        "block_layout": "slider",
+        "col": "narrow",
+        "block_collection": "all",
+        "block_limit": 6,
+        "block_image_ratio": "adapt",
+        "portrait_aspect_ratio": 133,
+        "show_add_to_cart": true,
+        "block_per_row": "5",
+        "block_infinite_scroll": true,
+        "block_show": "5",
+        "block_dots": false,
+        "block_arrows": true
+      }
+    },
+    "f0a1f009-f7e3-4ad1-9307-9fcf06cf17a4": {
+      "type": "halo-image-gallery",
+      "blocks": {
+        "template--16937253765370__f0a1f009-f7e3-4ad1-9307-9fcf06cf17a4-image-1": {
+          "type": "image",
+          "name": "Weekly Deals",
+          "settings": {
+            "image": "shopify://shop_images/QUICK_LINK_-_Weekly_Deals_84915531-972e-4c3b-b2ad-0b1206adcdf9.jpg",
+            "btn_text": "",
+            "link": "shopify://pages/weekly-deals"
+          }
+        },
+        "template--16937253765370__f0a1f009-f7e3-4ad1-9307-9fcf06cf17a4-image-2": {
+          "type": "image",
+          "name": "T-Shirts",
+          "settings": {
+            "image": "shopify://shop_images/DAC-BF-TEES-QL.jpg",
+            "btn_text": "",
+            "link": "shopify://collections/all-t-shirts"
+          }
+        },
+        "template--16937253765370__f0a1f009-f7e3-4ad1-9307-9fcf06cf17a4-image-3": {
+          "type": "image",
+          "name": "Hoodies",
+          "settings": {
+            "image": "shopify://shop_images/DAC-BF-HOODIES-QL.jpg",
+            "btn_text": "",
+            "link": "shopify://collections/all-hoodies"
+          }
+        },
+        "template--16937253765370__f0a1f009-f7e3-4ad1-9307-9fcf06cf17a4-image-4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/DAC-BF-JACKETS-QL.jpg",
+            "btn_text": "",
+            "link": "shopify://collections/all-outerwear"
+          }
+        }
+      },
+      "block_order": [
+        "template--16937253765370__f0a1f009-f7e3-4ad1-9307-9fcf06cf17a4-image-1",
+        "template--16937253765370__f0a1f009-f7e3-4ad1-9307-9fcf06cf17a4-image-2",
+        "template--16937253765370__f0a1f009-f7e3-4ad1-9307-9fcf06cf17a4-image-3",
+        "template--16937253765370__f0a1f009-f7e3-4ad1-9307-9fcf06cf17a4-image-4"
+      ],
+      "name": "Quick Links",
+      "settings": {
+        "show_image_gallery": true,
+        "container": "1770",
+        "padding_top": 65,
+        "padding_bottom": 0,
+        "padding_top_tablet": 50,
+        "padding_bottom_tablet": 0,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 0,
+        "block_title": "",
+        "block_text": "",
+        "block_title_align": "center",
+        "block_layout": "grid",
+        "block_mobile_layout": "swipe",
+        "col": "wide",
+        "col_border": 0,
+        "block_action": "link",
+        "block_btn": "2",
+        "block_view_btn": "1",
+        "block_view_btn_text": "",
+        "block_view_btn_link": "",
+        "block_per_row": "4",
+        "block_show": "4",
+        "block_dots": false,
+        "block_arrows": true
+      }
+    },
+    "16294683908255d2eb": {
+      "type": "halo-fullwidth-banner",
+      "blocks": {
+        "16294683908255d2eb-0": {
+          "type": "image",
+          "settings": {
+            "enable_parallax": false,
+            "title": "",
+            "text": "",
+            "subtitle": "",
+            "btn": "2",
+            "btn_text": "",
+            "link": "https://demo-default.myshopify.com/pages/new-arrivals",
+            "position": "left",
+            "align": "left",
+            "show_video": false,
+            "video_style": "1",
+            "video_id": "video_youtube",
+            "video_link": "_9VUPq3SxOc",
+            "video_mp4_link": "",
+            "transparent_button": false,
+            "background_color": "",
+            "text_color": "#ffffff",
+            "title_color": "#ffffff",
+            "title_font": "font_2",
+            "title_font_size": 26,
+            "title_mobile_font_size": 20,
+            "title_font_weight": "700",
+            "title_text_transform": "none",
+            "text_font_size": 14,
+            "text_font_weight": "600",
+            "text_text_transform": "uppercase"
+          }
+        }
+      },
+      "block_order": [
+        "16294683908255d2eb-0"
+      ],
+      "disabled": true,
+      "settings": {
+        "show_fullwidth_banner": true,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_top_tablet": 0,
+        "padding_bottom_tablet": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0,
+        "padding_top_section": 20,
+        "show_hoverImage": false
+      }
+    },
+    "9e2400a3-bdb2-4ec4-a76b-5ea5ae61cfdf": {
+      "type": "halo-custom-text-button",
+      "custom_css": [
+        ".custom-text-content {font-size: 11px;}"
+      ],
+      "settings": {
+        "show_custom_text": true,
+        "container": "1770",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_top_tablet": 0,
+        "padding_bottom_tablet": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0,
+        "style": "1",
+        "block_title": "",
+        "block_content": "Founded in 1996, Duck and Cover take established styles and give them a contemporary twist in design and fabrication. Inspired by technical materials and finished with workwear detailing, sport and utility are inextricably woven into Duck and Cover’s DNA.",
+        "block_align": "center",
+        "btn": "1",
+        "btn_text": "",
+        "btn_link": "",
+        "background_color": "#fff",
+        "text_color": "#000000"
+      }
+    },
+    "c5e2553f-2344-4dbb-af98-d66eeadaef27": {
+      "type": "halo-newsletter",
+      "disabled": true,
+      "custom_css": [
+        ".halo-block-header .desc {color: white;}",
+        ".halo-block-header {position: relative; margin: 0 0 1px;}"
+      ],
+      "settings": {
+        "show_newsletter": true,
+        "padding_top": 1,
+        "padding_bottom": 0,
+        "padding_top_tablet": 0,
+        "padding_bottom_tablet": 0,
+        "padding_top_mobile": 1,
+        "padding_bottom_mobile": 0,
+        "show_newsletter_bg_img": false,
+        "newsletter_bg_position_x": "center",
+        "newsletter_bg_position_y": "center",
+        "newsletter_bg_repeat": "no-repeat",
+        "newsletter_bg_attachment": "scroll",
+        "newsletter_bg_size": "cover",
+        "newsletter_heading": "",
+        "newsletter_text": "<p>Subscriber Exclusive. Sign up for an extra 10% off.</p>",
+        "newsletter_text_2": "",
+        "block_bg": "#000",
+        "newsletter_color": "#ffffff",
+        "newsletter_border": "#000000",
+        "newsletter_input_bg": "#FFFFFF",
+        "newsletter_input_color": "#000000"
+      }
+    },
+    "halo_newsletter_wbbCq3": {
+      "type": "halo-newsletter",
+      "custom_css": [
+        ".halo-block-header .desc {color: white;}",
+        ".halo-block-header {position: relative; margin: 0 0 1px;}"
+      ],
+      "settings": {
+        "show_newsletter": true,
+        "padding_top": 1,
+        "padding_bottom": 0,
+        "padding_top_tablet": 0,
+        "padding_bottom_tablet": 0,
+        "padding_top_mobile": 1,
+        "padding_bottom_mobile": 0,
+        "show_newsletter_bg_img": false,
+        "newsletter_bg_position_x": "center",
+        "newsletter_bg_position_y": "center",
+        "newsletter_bg_repeat": "no-repeat",
+        "newsletter_bg_attachment": "scroll",
+        "newsletter_bg_size": "cover",
+        "newsletter_heading": "",
+        "newsletter_text": "<p>Subscriber Exclusive. Sign up for an extra 10% off.</p>",
+        "newsletter_text_2": "",
+        "block_bg": "#000",
+        "newsletter_color": "#ffffff",
+        "newsletter_border": "#000000",
+        "newsletter_input_bg": "#FFFFFF",
+        "newsletter_input_color": "#000000"
+      }
+    },
+    "746fe2ac-65b1-46bd-a19d-8fd87d2490da": {
+      "type": "halo-slideshow",
+      "blocks": {
+        "cd1a71d2-14e8-44ae-9f0f-679b93902e39": {
+          "type": "video",
+          "settings": {
+            "image": "shopify://shop_images/Screenshot_2025-04-24_at_15.46.13.png",
+            "mobile_image": "shopify://shop_images/Screenshot_2025-04-24_at_15.46.13_a629dc11-7531-4776-858c-271789e87bba.png",
+            "title": "",
+            "subtitle": "",
+            "text": "",
+            "btn": "2",
+            "btn_text": "",
+            "link": "",
+            "position": "left",
+            "alignment": "left",
+            "video_type": "mp4",
+            "video_youtube": "",
+            "video_mp4": "https://cdn.shopify.com/videos/c/o/v/31981574930647b3b38f0d1e489f60a8.mp4",
+            "video_vimeo": "",
+            "video_height": 41,
+            "show_background_overlay": false,
+            "transparent_button": false,
+            "background_color": "",
+            "background_overlay": "#000000",
+            "text_color": "#ffffff",
+            "title_color": "#ffffff",
+            "title_font": "font_2",
+            "title_font_size": 26,
+            "title_mobile_font_size": 20,
+            "title_font_weight": "700",
+            "title_text_transform": "none",
+            "text_font_size": 14,
+            "text_font_weight": "600",
+            "text_text_transform": "uppercase"
+          }
+        }
+      },
+      "block_order": [
+        "cd1a71d2-14e8-44ae-9f0f-679b93902e39"
+      ],
+      "custom_css": [
+        ".video {object-fit: none;}"
+      ],
+      "settings": {
+        "show_slideshow": true,
+        "container": "full",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_top_tablet": 5,
+        "padding_bottom_tablet": 0,
+        "padding_top_mobile": 5,
+        "padding_bottom_mobile": 30,
+        "block_title": "",
+        "block_text": "",
+        "block_title_align": "center",
+        "block_layout": "1",
+        "block_content": "absolute",
+        "block_content_style": "1",
+        "block_fade": true,
+        "block_autoplay": true,
+        "block_autoplay_time": 5,
+        "block_dots": false,
+        "block_dots_bg": "",
+        "block_dots_color": "",
+        "block_dots_border": "",
+        "block_arrows": true,
+        "block_arrows_bg": "",
+        "block_arrows_color": "",
+        "block_arrows_border": "",
+        "lookbook_style": "1"
+      }
+    },
+    "6a2d9346-e7f0-4e21-a77f-79eeac908797": {
+      "type": "halo-product-block",
+      "custom_css": [
+        ".text {font-size: 14px;}",
+        ".price-item {font-size: 14px;}",
+        ".card-title {margin: 0 0 0px;}"
+      ],
+      "settings": {
+        "display_product_block": true,
+        "container": "1770",
+        "boxed_container": false,
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "padding_top_tablet": 40,
+        "padding_bottom_tablet": 40,
+        "padding_top_mobile": 12,
+        "padding_bottom_mobile": 30,
+        "block_title": "NEW AW25 ARRIVALS",
+        "block_text": "",
+        "block_title_align": "center",
+        "block_layout": "slider",
+        "col": "slim",
+        "block_collection": "new-in",
+        "block_limit": 4,
+        "block_image_ratio": "adapt",
+        "portrait_aspect_ratio": 133,
+        "show_add_to_cart": false,
+        "block_per_row": "4",
+        "block_infinite_scroll": false,
+        "block_show": "4",
+        "block_dots": false,
+        "block_arrows": true
+      }
+    },
+    "c87b5a9e-f50e-48d4-93f2-38aa2d4f1d29": {
+      "type": "halo-custom-text-button",
+      "custom_css": [
+        ".custom-text-content {font-size: 10px;}",
+        ".title {font-weight: 500;}",
+        ".custom-text-button .halo-content .title {font-size: 17px;}"
+      ],
+      "settings": {
+        "show_custom_text": true,
+        "container": "1770",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_top_tablet": 0,
+        "padding_bottom_tablet": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0,
+        "style": "1",
+        "block_title": "EXPLORE OUR DENIM GUIDE",
+        "block_content": "DUCK & COVER CLASSIC FITS AND WASHES",
+        "block_align": "center",
+        "btn": "2",
+        "btn_text": "DENIM GUIDE",
+        "btn_link": "shopify://pages/denim-guide",
+        "background_color": "#000",
+        "text_color": "#ffffff"
+      }
+    },
+    "2cde94e6-7c54-4581-93d6-47725c101409": {
+      "type": "halo-product-block",
+      "custom_css": [
+        ".text {font-size: 14px;}",
+        ".price-item {font-size: 14px;}",
+        ".card-title {margin: 0 0 0px;}"
+      ],
+      "settings": {
+        "display_product_block": true,
+        "container": "1770",
+        "boxed_container": false,
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "padding_top_tablet": 40,
+        "padding_bottom_tablet": 40,
+        "padding_top_mobile": 30,
+        "padding_bottom_mobile": 30,
+        "block_title": "",
+        "block_text": "",
+        "block_title_align": "center",
+        "block_layout": "slider",
+        "col": "slim",
+        "block_collection": "all-jeans",
+        "block_limit": 4,
+        "block_image_ratio": "adapt",
+        "portrait_aspect_ratio": 130,
+        "show_add_to_cart": false,
+        "block_per_row": "4",
+        "block_infinite_scroll": false,
+        "block_show": "4",
+        "block_dots": false,
+        "block_arrows": true
+      }
+    },
+    "7b086cbe-21cf-4ad3-b53f-f90c6529e0f1": {
+      "type": "halo-custom-text-button",
+      "custom_css": [
+        ".custom-text-content {font-size: 10px;}",
+        ".title {font-weight: 500;}",
+        ".custom-text-button .halo-content .title {font-size: 17px;}"
+      ],
+      "settings": {
+        "show_custom_text": true,
+        "container": "1770",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_top_tablet": 0,
+        "padding_bottom_tablet": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0,
+        "style": "1",
+        "block_title": "UP TO 70% OFF CLEARANCE",
+        "block_content": "SHOP NOW & GRAB YOURSELF A BARGAIN",
+        "block_align": "center",
+        "btn": "2",
+        "btn_text": "CLEARANCE",
+        "btn_link": "shopify://collections/clearance",
+        "background_color": "#c62828",
+        "text_color": "#ffffff"
+      }
+    },
+    "e0946f9f-e0fa-47e1-908b-4866f10b1c81": {
+      "type": "halo-fullwidth-banner",
+      "blocks": {
+        "template--16746689888506__e0946f9f-e0fa-47e1-908b-4866f10b1c81-16781156832b7b81be-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/FOOTER_-_Desktop.jpg",
+            "mobile_image": "shopify://shop_images/FOOTER_-_Mobile.jpg",
+            "enable_parallax": false,
+            "title": "",
+            "text": "",
+            "subtitle": "",
+            "btn": "2",
+            "btn_text": "",
+            "link": "",
+            "position": "left",
+            "align": "left",
+            "show_video": false,
+            "video_style": "1",
+            "video_id": "video_youtube",
+            "video_link": "_9VUPq3SxOc",
+            "video_mp4_link": "",
+            "transparent_button": false,
+            "background_color": "",
+            "text_color": "#ffffff",
+            "title_color": "#ffffff",
+            "title_font": "font_2",
+            "title_font_size": 26,
+            "title_mobile_font_size": 20,
+            "title_font_weight": "700",
+            "title_text_transform": "none",
+            "text_font_size": 14,
+            "text_font_weight": "600",
+            "text_text_transform": "uppercase"
+          }
+        }
+      },
+      "block_order": [
+        "template--16746689888506__e0946f9f-e0fa-47e1-908b-4866f10b1c81-16781156832b7b81be-0"
+      ],
+      "name": "Footer",
+      "settings": {
+        "show_fullwidth_banner": true,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_top_tablet": 0,
+        "padding_bottom_tablet": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0,
+        "padding_top_section": 20,
+        "show_hoverImage": false
+      }
+    },
+    "169381588532bf4d05": {
+      "type": "apps",
+      "blocks": {
+        "adb716b0-f6ce-4dac-b39e-48cfaf6bd1b5": {
+          "type": "shopify://apps/wiser-ai-upsell-cross-sell/blocks/wiser_browsing/3f966edc-9a4a-465c-a4df-436d2a39160d",
+          "settings": {}
+        },
+        "97b2dfad-59ed-45b7-9549-1d2ceeb83560": {
+          "type": "shopify://apps/wiser-ai-upsell-cross-sell/blocks/wiser_newarrivals/3f966edc-9a4a-465c-a4df-436d2a39160d",
+          "settings": {}
+        },
+        "5857a8f4-96de-4d4f-b7e9-ace36a9f269e": {
+          "type": "shopify://apps/wiser-ai-upsell-cross-sell/blocks/wiser_recent/3f966edc-9a4a-465c-a4df-436d2a39160d",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "adb716b0-f6ce-4dac-b39e-48cfaf6bd1b5",
+        "97b2dfad-59ed-45b7-9549-1d2ceeb83560",
+        "5857a8f4-96de-4d4f-b7e9-ace36a9f269e"
+      ],
+      "disabled": true,
+      "settings": {}
+    },
+    "17709773469d00b853": {
+      "type": "_blocks",
+      "settings": {}
+    }
+  },
+  "order": [
+    "1d860dd6-f939-49ad-b78c-d9ca851b4724",
+    "205c4f7a-d208-44ad-9a74-a5715aff1348",
+    "1627285730d8d5e449",
+    "f0a1f009-f7e3-4ad1-9307-9fcf06cf17a4",
+    "16294683908255d2eb",
+    "9e2400a3-bdb2-4ec4-a76b-5ea5ae61cfdf",
+    "c5e2553f-2344-4dbb-af98-d66eeadaef27",
+    "halo_newsletter_wbbCq3",
+    "746fe2ac-65b1-46bd-a19d-8fd87d2490da",
+    "6a2d9346-e7f0-4e21-a77f-79eeac908797",
+    "c87b5a9e-f50e-48d4-93f2-38aa2d4f1d29",
+    "2cde94e6-7c54-4581-93d6-47725c101409",
+    "7b086cbe-21cf-4ad3-b53f-f90c6529e0f1",
+    "e0946f9f-e0fa-47e1-908b-4866f10b1c81",
+    "169381588532bf4d05",
+    "17709773469d00b853"
+  ]
+}

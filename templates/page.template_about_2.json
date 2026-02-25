@@ -1,0 +1,85 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-about-2-page",
+      "blocks": {
+        "c81eda09-15c8-42fb-8183-726c74e49b52": {
+          "type": "content",
+          "settings": {
+            "title": "Duck and Cover X Macclesfield Football Club",
+            "content": "<span> As proud sponsors of Macclesfield Football Club, we’re delighted to see the team reach the fourth round of the FA Cup. To celebrate, anyone who signs up to our mailing list will receive an exclusive 25% discount and be entered into a draw to win a £100 Duck and Cover gift card. Follow us on Instagram @duckandcover.co.uk to see who takes the prize. Sign up below. </span>",
+            "align": "center"
+          }
+        }
+      },
+      "block_order": [
+        "c81eda09-15c8-42fb-8183-726c74e49b52"
+      ],
+      "custom_css": [],
+      "settings": {
+        "show_breadcrumb": false,
+        "breadcrumb_alignment": "center",
+        "show_page_title": false,
+        "page_title_alignment": "center",
+        "container": "1370",
+        "padding_top": 28,
+        "padding_bottom": 30,
+        "padding_top_tablet": 31,
+        "padding_bottom_tablet": 25,
+        "padding_top_mobile": 26,
+        "padding_bottom_mobile": 29
+      }
+    },
+    "custom_liquid_JkVxpH": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div class=\"om-embedded-campaign\" data-campaign-id=\"40\"></div>"
+      }
+    },
+    "halo_product_block_7_tLx9Wk": {
+      "type": "halo-product-block-7",
+      "name": "t:sections.product-block.presets.name__9",
+      "settings": {
+        "display_product_block": true,
+        "style": "1",
+        "container": "1770",
+        "padding_top": 44,
+        "padding_bottom": 42,
+        "padding_top_tablet": 40,
+        "padding_bottom_tablet": 40,
+        "padding_top_mobile": 42,
+        "padding_bottom_mobile": 43,
+        "block_title": "New In",
+        "block_text": "",
+        "block_title_align": "left",
+        "col": "wide",
+        "block_collection": "new-in",
+        "block_limit": 10,
+        "block_image_ratio": "adapt",
+        "portrait_aspect_ratio": 133,
+        "show_add_to_cart": true,
+        "show_view_all": true,
+        "view_all_text": "View All",
+        "button_style": "link",
+        "block_show": "3.5",
+        "block_dots": false,
+        "block_arrows": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "custom_liquid_JkVxpH",
+    "halo_product_block_7_tLx9Wk"
+  ]
+}

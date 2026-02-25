@@ -1,0 +1,20 @@
+<div class="halo-sidebar halo-sidebar-left halo-sidebar-search" id="search-form-mobile">
+    {%- if settings.quick_search_sidebar_style == '1' -%}
+        <a href="#" class="halo-sidebar-close" data-search-close-sidebar role="button">
+        	<span class="visually-hidden">{{ 'general.common.close' | t }}</span>
+            {% render 'icon-close' %}
+        </a>
+    {%- endif -%}
+    <div class="halo-sidebar-header style-{{ settings.quick_search_sidebar_style }}{% if settings.quick_search_sidebar_style == '1' %} text-left{% else %} text-center{% endif %}">
+		<span class="title">
+			{{ 'general.search.title' | t }}
+		</span>
+        {%- if settings.quick_search_sidebar_style == '2' -%}
+            <a href="#" class="close" data-search-close-sidebar role="button">
+                <span class="visually-hidden">{{ 'general.common.close' | t }}</span>
+                {% render 'icon-close' %}
+            </a>
+        {%- endif -%}
+	</div>
+    <div class="halo-sidebar-wrapper custom-scrollbar disable-scrollbar"></div>
+</div>
