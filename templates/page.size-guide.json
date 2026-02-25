@@ -114,6 +114,7 @@
         },
         "cat_womens": {
           "type": "category",
+          "disabled": true,
           "settings": {
             "heading": "Womens",
             "measuring_image_url": "https://cdn.shopify.com/s/files/1/2006/2579/files/Womens-Measuring-Chart.jpg?v=1743422349"
@@ -154,6 +155,7 @@
         },
         "cat_kids": {
           "type": "category",
+          "disabled": true,
           "settings": {
             "heading": "Kids",
             "measuring_image_url": "https://cdn.shopify.com/s/files/1/2006/2579/files/Kids-Measuring-Chart.jpg?v=1743422348"
