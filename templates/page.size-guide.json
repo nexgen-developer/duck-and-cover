@@ -122,6 +122,7 @@
         },
         "tbl_womens_clothing": {
           "type": "table",
+          "disabled": true,
           "settings": {
             "tab_name": "Clothing",
             "is_sub_table": false,
@@ -133,6 +134,7 @@
         },
         "tbl_womens_footwear": {
           "type": "table",
+          "disabled": true,
           "settings": {
             "tab_name": "Footwear",
             "is_sub_table": false,
@@ -144,6 +146,7 @@
         },
         "tbl_womens_underwear": {
           "type": "table",
+          "disabled": true,
           "settings": {
             "tab_name": "Underwear",
             "is_sub_table": false,
@@ -163,6 +166,7 @@
         },
         "tbl_kids_clothing": {
           "type": "table",
+          "disabled": true,
           "settings": {
             "tab_name": "Clothing",
             "is_sub_table": false,
@@ -174,6 +178,7 @@
         },
         "tbl_kids_footwear": {
           "type": "table",
+          "disabled": true,
           "settings": {
             "tab_name": "Footwear",
             "is_sub_table": false,
