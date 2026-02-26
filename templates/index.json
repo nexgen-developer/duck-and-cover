@@ -46,6 +46,7 @@
         "image_Nhe8D8": {
           "type": "image",
           "name": "Base",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/SCROLLER_-_Desktop_Base.jpg",
             "mobile_image": "shopify://shop_images/SCROLLER_-_Mobile_Base.jpg",
@@ -93,7 +94,6 @@
         "image_yUcgG3": {
           "type": "image",
           "name": "27th Feb - Pay Day",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/SCROLLER_-_Desktop_Pay_Day_copy.jpg",
             "mobile_image": "shopify://shop_images/SCROLLER_-_Mobile_Pay_Day_copy.jpg",
