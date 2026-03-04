@@ -389,6 +389,7 @@
     },
     "weekly_deal_xXUL6k": {
       "type": "weekly-deal",
+      "disabled": true,
       "name": "20th Jan (Merchell Tracksuit)",
       "settings": {
         "image": "shopify://shop_images/WEEKLY-DEALS-TILE---MERCHELL-TRACKSUIT.gif",
@@ -402,6 +403,7 @@
     },
     "weekly_deal_8mNUCp": {
       "type": "weekly-deal",
+      "disabled": true,
       "name": "13th January (Nesta)",
       "settings": {
         "image": "shopify://shop_images/WEEKLY-DEALS-TILE---Nesta.gif",
@@ -415,6 +417,7 @@
     },
     "weekly_deal_eFrfNw": {
       "type": "weekly-deal",
+      "disabled": true,
       "name": "22nd December (Juble)",
       "settings": {
         "image": "shopify://shop_images/WEEKLY_DEALS_TILE_-_Juble.jpg",
@@ -456,6 +459,7 @@
     },
     "weekly_deal_kFzmiE": {
       "type": "weekly-deal",
+      "disabled": true,
       "settings": {
         "image": "shopify://shop_images/DAC-POTENZA-TILE.jpg",
         "title": "Potenza 1/4 Zip Knit",
@@ -481,6 +485,7 @@
     },
     "weekly_deal_WH6yRF": {
       "type": "weekly-deal",
+      "disabled": true,
       "settings": {
         "image": "shopify://shop_images/DAC-CONSENZA-TILE.gif",
         "title": "Consenza Knit £13.34",
