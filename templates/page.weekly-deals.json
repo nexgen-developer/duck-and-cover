@@ -111,6 +111,20 @@
         "lookbook_style": "1"
       }
     },
+    "weekly_deal_xXUL6k": {
+      "type": "weekly-deal",
+      "disabled": true,
+      "name": "5PK Tees",
+      "settings": {
+        "image": "shopify://shop_images/WEEKLY-DEALS-TILE---5PK-Tees.gif",
+        "title": "5PK TEES",
+        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">£19.99</div>\n   <div class=\"price-item price-item--regular\">£29.99</div>\n</div>\n<label></label>",
+        "button1": "Get Deal",
+        "url": "shopify://collections/5pk-t-shirts",
+        "CustomCode": "5PKTEES",
+        "description": "Upgrade your basics with a Duck & Cover 5-pack of T-shirts. Available in assorted Demtare, Caplaz, Corsure and Frankinz styles. Now £19.99, reduced from £29.99."
+      }
+    },
     "halo_slideshow_FtAeWB": {
       "type": "halo-slideshow",
       "blocks": {
@@ -374,33 +388,6 @@
         "lookbook_style": "1"
       }
     },
-    "weekly_deal_Rq3fkd": {
-      "type": "weekly-deal",
-      "disabled": true,
-      "name": "Section Product Code",
-      "settings": {
-        "title": "Graphic hoodies now reduced with code",
-        "CustomPrice": "",
-        "button1": "Get deal*",
-        "url": "",
-        "CustomCode": "GRAPHICHOODIE",
-        "description": "Sed risus neque, sagittis sed pellentesque at, pharetra ut nunc. Phasellus id enim eget ante pellentesque pharetra. Phasellus et nisl urna. Integer nisl dui, efficitur in volutpat sodales, tempor sed orci. Donec et euismod ipsum...."
-      }
-    },
-    "weekly_deal_xXUL6k": {
-      "type": "weekly-deal",
-      "disabled": true,
-      "name": "20th Jan (Merchell Tracksuit)",
-      "settings": {
-        "image": "shopify://shop_images/WEEKLY-DEALS-TILE---MERCHELL-TRACKSUIT.gif",
-        "title": "Merchell Tracksuits",
-        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">£23.75</div>\n   <div class=\"price-item price-item--regular\">£75</div>\n</div>\n<label></label>",
-        "button1": "Get Deal",
-        "url": "https://www.duckandcover.co.uk/collections/merchell-jog-set",
-        "CustomCode": "5OFF",
-        "description": "A relaxed Hoodie and Jogger set in soft fleece, complete with adjustable drawstrings, elasticated cuffs, and a subtle logo print. Now just £23.75 with code 50FF. Available in Black / Charcoal Marl / Navy."
-      }
-    },
     "weekly_deal_8mNUCp": {
       "type": "weekly-deal",
       "disabled": true,
@@ -496,6 +483,19 @@
         "description": "Keep it smart and stylish with the Consenza Knit for just £13.34! Perfect for any occasion. Use code KNITDEAL at checkout - grab yours while stocks last!"
       }
     },
+    "weekly_deal_Rq3fkd": {
+      "type": "weekly-deal",
+      "disabled": true,
+      "name": "Section Product Code",
+      "settings": {
+        "title": "Graphic hoodies now reduced with code",
+        "CustomPrice": "",
+        "button1": "Get deal*",
+        "url": "",
+        "CustomCode": "GRAPHICHOODIE",
+        "description": "Sed risus neque, sagittis sed pellentesque at, pharetra ut nunc. Phasellus id enim eget ante pellentesque pharetra. Phasellus et nisl urna. Integer nisl dui, efficitur in volutpat sodales, tempor sed orci. Donec et euismod ipsum...."
+      }
+    },
     "halo_slideshow_ECKMHA": {
       "type": "halo-slideshow",
       "blocks": {
@@ -583,10 +583,9 @@
   "order": [
     "main",
     "25bcb4cf-3aa4-4cb5-b78f-4074368db4a6",
+    "weekly_deal_xXUL6k",
     "halo_slideshow_FtAeWB",
     "7c7325b7-36f5-4b92-b68d-b75e26234dee",
-    "weekly_deal_Rq3fkd",
-    "weekly_deal_xXUL6k",
     "weekly_deal_8mNUCp",
     "weekly_deal_eFrfNw",
     "weekly_deal_8TnA9V",
@@ -594,6 +593,7 @@
     "weekly_deal_kFzmiE",
     "weekly_deal_VLEwga",
     "weekly_deal_WH6yRF",
+    "weekly_deal_Rq3fkd",
     "halo_slideshow_ECKMHA"
   ]
 }
