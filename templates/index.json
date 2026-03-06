@@ -94,6 +94,7 @@
         "image_yUcgG3": {
           "type": "image",
           "name": "27th Feb - Pay Day",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/SCROLLER_-_Desktop_Pay_Day_copy.jpg",
             "mobile_image": "shopify://shop_images/SCROLLER_-_Mobile_Pay_Day_copy.jpg",
@@ -141,7 +142,6 @@
         "image_7wXyh6": {
           "type": "image",
           "name": "6th March - Drop 1",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/SCROLLER_-_Desktop_Drop_1.jpg",
             "mobile_image": "shopify://shop_images/SCROLLER_-_Mobile_Drop_1.jpg",
