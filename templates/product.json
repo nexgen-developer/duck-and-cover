@@ -274,6 +274,12 @@
             "content": "<p><strong>BLACK FRIDAY & CHRISTMAS<br/><br/>DELIVERY<br/></strong>Orders will be dispatched up until <strong>12 PM on December 24th</strong>.<br/>For delivery before Christmas, we recommend placing your orders by:</p><ul><li><strong>12 PM on December 19th</strong> for <strong>Tracked 48</strong> services<br/></li><li><strong>12 PM on December 22nd</strong> for <strong>Tracked 24</strong> services</li></ul><p>While we do our best to ensure timely delivery, please note that <strong>exact delivery dates cannot be guaranteed</strong>. Please note that orders will <strong>not </strong>be despatched on Weekends & Bank Holidays.<strong><br/><br/>EXTENDED RETURNS<br/></strong>Orders placed from 1st November to 31st December can be returned up to the following 31st January.<br/><br/><strong>PLEASE NOTE<br/></strong>During peak times like Black Friday and Christmas, there may be short delays in processing and delivery due to high demand. While we work hard to ensure timely fulfilment, we appreciate your patience if your order takes a bit longer to arrive.<br/><br/>To see our delivery options <a href=\"/pages/delivery\" title=\"Delivery\"><strong>click here.</strong></a></p><p>To see our returns information <a href=\"/pages/returns\" title=\"Returns\"><strong>click here</strong></a><strong>.<br/><br/>PLEASE NOTE:</strong> There may be circumstances beyond our control where the box containing these boxers becomes dented/squashed in transit. This will not affect the goods inside and we cannot accept returns.</p>",
             "content_html": ""
           }
+        },
+        "linkify_product_colors_app_block_XFnmcx": {
+          "type": "shopify://apps/linkify-product-colors/blocks/app-block/1fdc741b-f4ed-4b8c-aee7-aa5e4ad76aa8",
+          "settings": {
+            "product": "{{product}}"
+          }
         }
       },
       "block_order": [
@@ -293,7 +299,8 @@
         "b0534fe3-982e-4e69-bba0-5899590c3bce",
         "custom_y9x34K",
         "b78c32a0-5928-41b3-86e9-6b65d0532902",
-        "custom_HBKTtm"
+        "custom_HBKTtm",
+        "linkify_product_colors_app_block_XFnmcx"
       ],
       "custom_css": [
         ".webyzeProductColorsLabel {margin-top: 25px !important;}"
