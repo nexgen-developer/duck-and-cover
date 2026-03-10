@@ -94,17 +94,6 @@
     "header-collection": {
       "type": "main-header-collection",
       "blocks": {
-        "153bbcd1-5557-468c-997d-04056c777019": {
-          "type": "image",
-          "settings": {
-            "type": "full",
-            "image": "shopify://shop_images/DAC-BF-WEEK-COLLECTION-DESKTOP-1.gif",
-            "image_mobile": "shopify://shop_images/DAC-BF-WEEK-COLLECTION-MOBILE-2.gif",
-            "show_image_parallax": false,
-            "show_bg_overlay": false,
-            "bg_overlay": "#000000"
-          }
-        },
         "dfb8da8e-9cca-44b9-b775-f178efdb8688": {
           "type": "description",
           "settings": {
@@ -118,10 +107,8 @@
         }
       },
       "block_order": [
-        "153bbcd1-5557-468c-997d-04056c777019",
         "dfb8da8e-9cca-44b9-b775-f178efdb8688"
       ],
-      "disabled": true,
       "custom_css": [
         ".collection-title {font-size: 16px;}"
       ],
