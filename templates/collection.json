@@ -140,6 +140,23 @@
         "layout": "1"
       }
     },
+    "170911681040097187": {
+      "type": "apps",
+      "blocks": {
+        "flair_product_labels_badges_banners_mWbx8T": {
+          "type": "shopify://apps/flair/blocks/banners/51d5ae10-f90f-4540-9ec6-f09f14107bf4",
+          "settings": {
+            "heading": "Flair banners",
+            "layout": "Product Card Bottom",
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "flair_product_labels_badges_banners_mWbx8T"
+      ],
+      "settings": {}
+    },
     "product-grid": {
       "type": "main-collection-product-grid",
       "blocks": {
@@ -181,11 +198,11 @@
         "colors_bg": "",
         "container": "1770",
         "padding_top": 25,
-        "padding_bottom": 0,
-        "padding_top_tablet": 0,
-        "padding_bottom_tablet": 0,
-        "padding_top_mobile": 0,
-        "padding_bottom_mobile": 0,
+        "padding_bottom": 15,
+        "padding_top_tablet": 15,
+        "padding_bottom_tablet": 15,
+        "padding_top_mobile": 15,
+        "padding_bottom_mobile": 15,
         "show_infinite_scrolling": false,
         "show_sidebar": true,
         "sidebar_type": "horizontal",
@@ -293,31 +310,14 @@
         "block_dots": false,
         "block_arrows": true
       }
-    },
-    "170911681040097187": {
-      "type": "apps",
-      "blocks": {
-        "flair_product_labels_badges_banners_mWbx8T": {
-          "type": "shopify://apps/flair/blocks/banners/51d5ae10-f90f-4540-9ec6-f09f14107bf4",
-          "settings": {
-            "heading": "Flair banners",
-            "layout": "Product Card Bottom",
-            "product": ""
-          }
-        }
-      },
-      "block_order": [
-        "flair_product_labels_badges_banners_mWbx8T"
-      ],
-      "settings": {}
     }
   },
   "order": [
     "db7096be-e358-4fc3-8c65-d810472d5c81",
     "header-collection",
+    "170911681040097187",
     "product-grid",
     "footer-collection",
-    "16312811859a8f1f68",
-    "170911681040097187"
+    "16312811859a8f1f68"
   ]
 }
