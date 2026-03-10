@@ -113,14 +113,13 @@
     },
     "weekly_deal_xXUL6k": {
       "type": "weekly-deal",
-      "disabled": true,
       "name": "5PK Tees",
       "settings": {
         "image": "shopify://shop_images/WEEKLY-DEALS-TILE---5PK-Tees.gif",
         "title": "5PK TEES",
         "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">£19.99</div>\n   <div class=\"price-item price-item--regular\">£29.99</div>\n</div>\n<label></label>",
         "button1": "Get Deal",
-        "url": "shopify://collections/5pk-t-shirts",
+        "url": "shopify://collections/5pk-t-shirt-deal",
         "CustomCode": "5PKTEES",
         "description": "Upgrade your basics with a Duck & Cover 5-pack of T-shirts. Available in assorted Demtare, Caplaz, Corsure and Frankinz styles. Now £19.99, reduced from £29.99."
       }
