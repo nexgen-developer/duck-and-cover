@@ -113,14 +113,13 @@
     },
     "weekly_deal_8mNUCp": {
       "type": "weekly-deal",
-      "disabled": true,
       "name": "Samtrase Polo",
       "settings": {
         "image": "shopify://shop_images/WEEKLY_DEALS_TILE_-_Samtrase_Polo.jpg",
         "title": "SAMTRASE POLO",
         "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">£8.99</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
         "button1": "Get Deal",
-        "url": "shopify://products/samtrase-polo-off-white",
+        "url": "shopify://collections/samtrase-polo",
         "CustomCode": "POLODEAL",
         "description": "It’s your lucky day this St Patrick’s Day. Pick up the Duck & Cover Samtrase Polo for just £8.99 when you use code POLODEAL."
       }
