@@ -506,6 +506,7 @@
       "block_order": [
         "cd1a71d2-14e8-44ae-9f0f-679b93902e39"
       ],
+      "disabled": true,
       "custom_css": [
         ".video {object-fit: none;}"
       ],
