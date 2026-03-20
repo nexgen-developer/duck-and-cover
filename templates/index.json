@@ -94,7 +94,6 @@
         "image_7wXyh6": {
           "type": "image",
           "name": "20th March - Drop 2",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/SCROLLER_-_Desktop_Drop_2.jpg",
             "mobile_image": "shopify://shop_images/SCROLLER_-_Mobile_Drop_2.jpg",
@@ -142,6 +141,7 @@
         "image_yUcgG3": {
           "type": "image",
           "name": "13th March - Chino",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/SCROLLER_-_Desktop_Chino.jpg",
             "mobile_image": "shopify://shop_images/SCROLLER_-_Mobile_Chino.jpg",
