@@ -93,11 +93,11 @@
         },
         "image_7wXyh6": {
           "type": "image",
-          "name": "6th March - Drop 1",
+          "name": "20th March - Drop 2",
           "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/SCROLLER_-_Desktop_Drop_1_277bbd8e-b0d6-4de4-9bf5-d0f2945c5561.jpg",
-            "mobile_image": "shopify://shop_images/SCROLLER_-_Mobile_Drop_1_03b330d1-81ca-4026-a4b8-52dad4a66d7c.jpg",
+            "image": "shopify://shop_images/SCROLLER_-_Desktop_Drop_2.jpg",
+            "mobile_image": "shopify://shop_images/SCROLLER_-_Mobile_Drop_2.jpg",
             "title": "",
             "subtitle": "",
             "text": "",
