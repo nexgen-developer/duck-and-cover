@@ -113,16 +113,28 @@
     },
     "weekly_deal_eFrfNw": {
       "type": "weekly-deal",
-      "disabled": true,
-      "name": "Hannings",
+      "name": "Hannings - Jog Shorts & Hoodie",
       "settings": {
         "image": "shopify://shop_images/TILE.gif",
-        "title": "JUBLE SPORTS SOCKS",
-        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">£10.50 / £24.99</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
+        "title": "HANNINGS JOG SHORTS + HOODIE",
+        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">£24.99</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
         "button1": "Get Deal",
-        "url": "shopify://collections/hannings-range",
-        "CustomCode": "JOGSHORTDEAL / SETDEAL",
-        "description": "Choose your deal with Duck & Cover Hannings styles – grab jog shorts for £10.50 with code JOGSHORTDEAL, or upgrade to the jog shorts and hoodie set for £24.99 with code SETDEAL."
+        "url": "https://www.duckandcover.co.uk/collections/hannings-jog-shorts-hoodie",
+        "CustomCode": "SETDEAL",
+        "description": "Duck & Cover Hannings – Grab a hoodie and a pair of jog shorts for £24.99 with code SETDEAL."
+      }
+    },
+    "weekly_deal_jVU9G6": {
+      "type": "weekly-deal",
+      "name": "Hannings - Jog Shorts",
+      "settings": {
+        "image": "shopify://shop_images/TILE_-_Jog_Shorts.jpg",
+        "title": "HANNINGS JOG SHORTS",
+        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">£10.50</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
+        "button1": "Get Deal",
+        "url": "https://www.duckandcover.co.uk/collections/hannings-jog-shorts",
+        "CustomCode": "JOGSHORTDEAL",
+        "description": "Duck & Cover Hannings – Grab a pair of jog shorts for £10.50 with code JOGSHORTDEAL."
       }
     },
     "weekly_deal_8mNUCp": {
@@ -569,6 +581,7 @@
     "main",
     "25bcb4cf-3aa4-4cb5-b78f-4074368db4a6",
     "weekly_deal_eFrfNw",
+    "weekly_deal_jVU9G6",
     "weekly_deal_8mNUCp",
     "halo_slideshow_FtAeWB",
     "7c7325b7-36f5-4b92-b68d-b75e26234dee",
