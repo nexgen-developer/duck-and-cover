@@ -138,19 +138,6 @@
         "description": "It’s your lucky day this St Patrick’s Day. Pick up the Duck & Cover Samtrase Polo for just £8.99 when you use code POLODEAL."
       }
     },
-    "weekly_deal_xXUL6k": {
-      "type": "weekly-deal",
-      "name": "5PK Tees",
-      "settings": {
-        "image": "shopify://shop_images/WEEKLY-DEALS-TILE---5PK-Tees.gif",
-        "title": "5PK TEES",
-        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">£19.99</div>\n   <div class=\"price-item price-item--regular\">£29.99</div>\n</div>\n<label></label>",
-        "button1": "Get Deal",
-        "url": "shopify://collections/5pk-t-shirt-deal",
-        "CustomCode": "5PKTEES",
-        "description": "Upgrade your basics with a Duck & Cover 5-pack of T-shirts. Available in assorted Demtare, Caplaz, Corsure and Frankinz styles. Now £19.99, reduced from £29.99."
-      }
-    },
     "halo_slideshow_FtAeWB": {
       "type": "halo-slideshow",
       "blocks": {
@@ -583,7 +570,6 @@
     "25bcb4cf-3aa4-4cb5-b78f-4074368db4a6",
     "weekly_deal_eFrfNw",
     "weekly_deal_8mNUCp",
-    "weekly_deal_xXUL6k",
     "halo_slideshow_FtAeWB",
     "7c7325b7-36f5-4b92-b68d-b75e26234dee",
     "weekly_deal_8TnA9V",
