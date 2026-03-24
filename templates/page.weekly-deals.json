@@ -111,6 +111,20 @@
         "lookbook_style": "1"
       }
     },
+    "weekly_deal_eFrfNw": {
+      "type": "weekly-deal",
+      "disabled": true,
+      "name": "Hannings",
+      "settings": {
+        "image": "shopify://shop_images/TILE.gif",
+        "title": "JUBLE SPORTS SOCKS",
+        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">£10.50 / £24.99</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
+        "button1": "Get Deal",
+        "url": "shopify://collections/hannings-range",
+        "CustomCode": "JOGSHORTDEAL / SETDEAL",
+        "description": "Choose your deal with Duck & Cover Hannings styles – grab jog shorts for £10.50 with code JOGSHORTDEAL, or upgrade to the jog shorts and hoodie set for £24.99 with code SETDEAL."
+      }
+    },
     "weekly_deal_8mNUCp": {
       "type": "weekly-deal",
       "name": "Samtrase Polo",
@@ -400,20 +414,6 @@
         "lookbook_style": "1"
       }
     },
-    "weekly_deal_eFrfNw": {
-      "type": "weekly-deal",
-      "disabled": true,
-      "name": "22nd December (Juble)",
-      "settings": {
-        "image": "shopify://shop_images/WEEKLY_DEALS_TILE_-_Juble.jpg",
-        "title": "JUBLE SPORTS SOCKS",
-        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">£7.00</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
-        "button1": "Get Deal",
-        "url": "shopify://products/juble-sports-socks-5pk-assorted",
-        "CustomCode": "SOCKSAVING",
-        "description": "Designed for comfort and durability, they’re ideal for training days or off-duty wear.\nUse code SOCKSAVING"
-      }
-    },
     "weekly_deal_8TnA9V": {
       "type": "weekly-deal",
       "disabled": true,
@@ -581,11 +581,11 @@
   "order": [
     "main",
     "25bcb4cf-3aa4-4cb5-b78f-4074368db4a6",
+    "weekly_deal_eFrfNw",
     "weekly_deal_8mNUCp",
     "weekly_deal_xXUL6k",
     "halo_slideshow_FtAeWB",
     "7c7325b7-36f5-4b92-b68d-b75e26234dee",
-    "weekly_deal_eFrfNw",
     "weekly_deal_8TnA9V",
     "weekly_deal_xxNDXn",
     "weekly_deal_kFzmiE",
