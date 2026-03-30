@@ -113,14 +113,13 @@
     },
     "weekly_deal_8TnA9V": {
       "type": "weekly-deal",
-      "disabled": true,
       "name": "Moretor Chinos",
       "settings": {
         "image": "shopify://shop_images/TILE_8f9123cf-b94f-4908-b7ab-c9d25b955c73.gif",
         "title": "BUY ONE GET ONE FREE CHINO",
         "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">£30.99 FOR 2</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
         "button1": "Get Deal",
-        "url": "shopify://collections/duck-and-cover-chinos",
+        "url": "shopify://collections/moretor",
         "CustomCode": "CHINOBOGOF",
         "description": "Double up with Duck & Cover Chinos – 2 for £30.99. Use code CHINOBOGOF at checkout."
       }
