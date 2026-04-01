@@ -150,19 +150,6 @@
         "description": "Duck & Cover Hannings – Grab a pair of jog shorts for £10.50 with code JOGSHORTDEAL."
       }
     },
-    "weekly_deal_8mNUCp": {
-      "type": "weekly-deal",
-      "name": "Samtrase Polo",
-      "settings": {
-        "image": "shopify://shop_images/WEEKLY_DEALS_TILE_-_Samtrase_Polo.jpg",
-        "title": "SAMTRASE POLO",
-        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">£8.99</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
-        "button1": "Get Deal",
-        "url": "shopify://collections/samtrase-polo",
-        "CustomCode": "POLODEAL",
-        "description": "It’s your lucky day this St Patrick’s Day. Pick up the Duck & Cover Samtrase Polo for just £8.99 when you use code POLODEAL."
-      }
-    },
     "halo_slideshow_FtAeWB": {
       "type": "halo-slideshow",
       "blocks": {
@@ -582,7 +569,6 @@
     "weekly_deal_8TnA9V",
     "weekly_deal_eFrfNw",
     "weekly_deal_jVU9G6",
-    "weekly_deal_8mNUCp",
     "halo_slideshow_FtAeWB",
     "7c7325b7-36f5-4b92-b68d-b75e26234dee",
     "weekly_deal_xxNDXn",
