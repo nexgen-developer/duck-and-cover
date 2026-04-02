@@ -111,6 +111,20 @@
         "lookbook_style": "1"
       }
     },
+    "weekly_deal_xxNDXn": {
+      "type": "weekly-deal",
+      "disabled": true,
+      "name": "2 X T-Shirt",
+      "settings": {
+        "image": "shopify://shop_images/WEEKLY-DEALS---Tile.gif",
+        "title": "2 X T-SHIRTS",
+        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">For £16.00</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
+        "button1": "Get Deal",
+        "url": "shopify://collections/2-for-1-t-shirt-deal",
+        "CustomCode": "2FOR1",
+        "description": ""
+      }
+    },
     "weekly_deal_8TnA9V": {
       "type": "weekly-deal",
       "name": "Moretor Chinos",
@@ -413,20 +427,6 @@
         "lookbook_style": "1"
       }
     },
-    "weekly_deal_xxNDXn": {
-      "type": "weekly-deal",
-      "disabled": true,
-      "name": "12th December (Outerwear)",
-      "settings": {
-        "image": "shopify://shop_images/WEEKLY_DEAL_TILE_-_Outerwear.jpg",
-        "title": "Extra 20% Off Select Outerwear",
-        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">From £23.20</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
-        "button1": "Get Deal",
-        "url": "https://www.duckandcover.co.uk/collections/outerwear-offer",
-        "CustomCode": "OUTERWEAR20",
-        "description": "Enjoy an extra 20% off select outerwear, with prices starting from £23.20 when you use code OUTERWEAR20.\nFeaturing the Sheemy Two, Fletchley, Mantrax, Raymax Jacket and Raymax Gilet."
-      }
-    },
     "weekly_deal_kFzmiE": {
       "type": "weekly-deal",
       "disabled": true,
@@ -566,12 +566,12 @@
   "order": [
     "main",
     "25bcb4cf-3aa4-4cb5-b78f-4074368db4a6",
+    "weekly_deal_xxNDXn",
     "weekly_deal_8TnA9V",
     "weekly_deal_eFrfNw",
     "weekly_deal_jVU9G6",
     "halo_slideshow_FtAeWB",
     "7c7325b7-36f5-4b92-b68d-b75e26234dee",
-    "weekly_deal_xxNDXn",
     "weekly_deal_kFzmiE",
     "weekly_deal_VLEwga",
     "weekly_deal_WH6yRF",
