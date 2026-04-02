@@ -94,7 +94,6 @@
         "image_7wXyh6": {
           "type": "image",
           "name": "Easter Bank Holiday",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/SCROLLER_-_Desktop_Pay_Day_e88da914-2e42-4394-a7e9-fe9e5de1efe3.jpg",
             "mobile_image": "shopify://shop_images/SCROLLER_-_Mobile_Pay_Day_134d25cb-400c-4ddb-bdd8-518581dbcad7.jpg",
@@ -142,6 +141,7 @@
         "image_yUcgG3": {
           "type": "image",
           "name": "Pay Day",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/SCROLLER_-_Desktop_Pay_Day_5fbfed90-4466-48cc-a922-64828068019e.jpg",
             "mobile_image": "shopify://shop_images/SCROLLER_-_Mobile_Pay_Day_dd297ed0-0021-4949-884c-ffbe015baebb.jpg",
