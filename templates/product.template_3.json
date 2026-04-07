@@ -148,15 +148,6 @@
             "content": "<p>Use the custom tab to tell customers about your product. List product features, technical specifications, and visual attributes. A detailed description will help us show your product to the right customers.</p>",
             "content_html": "dg"
           }
-        },
-        "b78c32a0-5928-41b3-86e9-6b65d0532902": {
-          "type": "shopify://apps/klarna-on-site-messaging/blocks/app-block/b95936a9-74b6-4a95-8103-6a1b6459c25e",
-          "settings": {
-            "data_key": "credit-promotion-badge",
-            "theme": "light",
-            "topPadding": "0",
-            "bottomPadding": "0"
-          }
         }
       },
       "block_order": [
@@ -171,8 +162,7 @@
         "adb9f066-3863-4c08-a27c-1423d2fba790",
         "dd9d0d91-cab8-458c-aad9-b1c04f439926",
         "f90628c9-aa78-4d7a-ad3c-0d1358636d90",
-        "b0534fe3-982e-4e69-bba0-5899590c3bce",
-        "b78c32a0-5928-41b3-86e9-6b65d0532902"
+        "b0534fe3-982e-4e69-bba0-5899590c3bce"
       ],
       "settings": {
         "colors_bg": "",
