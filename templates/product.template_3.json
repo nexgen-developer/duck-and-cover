@@ -153,8 +153,6 @@
           "type": "shopify://apps/klarna-on-site-messaging/blocks/app-block/b95936a9-74b6-4a95-8103-6a1b6459c25e",
           "settings": {
             "data_key": "credit-promotion-badge",
-            "locale_option": "geolocation",
-            "locale_fallback": "",
             "theme": "light",
             "topPadding": "0",
             "bottomPadding": "0"

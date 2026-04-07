@@ -297,7 +297,7 @@
       "type": "apps",
       "blocks": {
         "flair_product_labels_badges_banners_mWbx8T": {
-          "type": "shopify://apps/flair-product-badges-labels/blocks/banners/51d5ae10-f90f-4540-9ec6-f09f14107bf4",
+          "type": "shopify://apps/flair/blocks/banners/51d5ae10-f90f-4540-9ec6-f09f14107bf4",
           "settings": {
             "heading": "Flair banners",
             "layout": "Product Card Bottom"

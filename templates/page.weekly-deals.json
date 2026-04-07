@@ -32,8 +32,8 @@
         "template--16854807609594__25bcb4cf-3aa4-4cb5-b78f-4074368db4a6-image-1": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/PAGE_-_Weekly_Deals_Desktop.jpg",
-            "mobile_image": "shopify://shop_images/PAGE_-_Weekly_Deals_Mobile.jpg",
+            "image": "shopify://shop_images/PAGE_-_Weekly_Deals_Desktop_23d552fb-0432-41e4-ba5d-dceb7ae29cd7.jpg",
+            "mobile_image": "shopify://shop_images/PAGE_-_Weekly_Deals_Mobile_6c862242-ea76-4bd5-a4d9-71ad80275664.jpg",
             "title": "",
             "subtitle": "",
             "text": "",
@@ -111,27 +111,26 @@
         "lookbook_style": "1"
       }
     },
-    "weekly_deal_xxNDXn": {
+    "weekly_deal_8mNUCp": {
       "type": "weekly-deal",
-      "disabled": true,
-      "name": "2 X T-Shirt",
+      "name": "2 FOR 1 T-SHIRTS",
       "settings": {
         "image": "shopify://shop_images/WEEKLY-DEALS---Tile.gif",
-        "title": "2 X T-SHIRTS",
-        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">For £16.00</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
+        "title": "2 FOR 1 ON T-SHIRTS",
+        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">\n£16 for 2</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
         "button1": "Get Deal",
         "url": "shopify://collections/2-for-1-t-shirt-deal",
         "CustomCode": "2FOR1",
-        "description": ""
+        "description": "2 T-Shirts for £16 from Duck and Cover — just use code 2FOR1. That’s only £8 per tee. Time to refresh your T-shirt rotation."
       }
     },
-    "weekly_deal_8TnA9V": {
+    "weekly_deal_6tPR9e": {
       "type": "weekly-deal",
-      "name": "Moretor Chinos",
+      "name": " BUY ONE GET ONE FREE CHINO",
       "settings": {
         "image": "shopify://shop_images/TILE_8f9123cf-b94f-4908-b7ab-c9d25b955c73.gif",
         "title": "BUY ONE GET ONE FREE CHINO",
-        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">£30.99 FOR 2</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
+        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">\n£30.99 for 2</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
         "button1": "Get Deal",
         "url": "shopify://collections/moretor",
         "CustomCode": "CHINOBOGOF",
@@ -427,6 +426,34 @@
         "lookbook_style": "1"
       }
     },
+    "weekly_deal_8TnA9V": {
+      "type": "weekly-deal",
+      "disabled": true,
+      "name": "16th December (Polo)",
+      "settings": {
+        "image": "shopify://shop_images/1.gif",
+        "title": "MELPORTS 3PK POLO",
+        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">£24.50</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
+        "button1": "Get Deal",
+        "url": "shopify://products/melports-polo-3pk-assorted",
+        "CustomCode": "3PKPOLO",
+        "description": "Melports 3 Pack Polos. Clean, versatile and easy to wear, now just £24.50 for all three.\nUse code 3PKPOLO"
+      }
+    },
+    "weekly_deal_xxNDXn": {
+      "type": "weekly-deal",
+      "disabled": true,
+      "name": "12th December (Outerwear)",
+      "settings": {
+        "image": "shopify://shop_images/WEEKLY_DEAL_TILE_-_Outerwear.jpg",
+        "title": "Extra 20% Off Select Outerwear",
+        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">From £23.20</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
+        "button1": "Get Deal",
+        "url": "https://www.duckandcover.co.uk/collections/outerwear-offer",
+        "CustomCode": "OUTERWEAR20",
+        "description": "Enjoy an extra 20% off select outerwear, with prices starting from £23.20 when you use code OUTERWEAR20.\nFeaturing the Sheemy Two, Fletchley, Mantrax, Raymax Jacket and Raymax Gilet."
+      }
+    },
     "weekly_deal_kFzmiE": {
       "type": "weekly-deal",
       "disabled": true,
@@ -566,12 +593,14 @@
   "order": [
     "main",
     "25bcb4cf-3aa4-4cb5-b78f-4074368db4a6",
-    "weekly_deal_xxNDXn",
-    "weekly_deal_8TnA9V",
+    "weekly_deal_8mNUCp",
+    "weekly_deal_6tPR9e",
     "weekly_deal_eFrfNw",
     "weekly_deal_jVU9G6",
     "halo_slideshow_FtAeWB",
     "7c7325b7-36f5-4b92-b68d-b75e26234dee",
+    "weekly_deal_8TnA9V",
+    "weekly_deal_xxNDXn",
     "weekly_deal_kFzmiE",
     "weekly_deal_VLEwga",
     "weekly_deal_WH6yRF",

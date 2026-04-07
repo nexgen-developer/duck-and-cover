@@ -71,7 +71,7 @@
       "type": "apps",
       "blocks": {
         "wiser_product_recommendations_wiser_trending_AEyhgD": {
-          "type": "shopify://apps/wiser-product-recommendations/blocks/wiser_trending/3f966edc-9a4a-465c-a4df-436d2a39160d",
+          "type": "shopify://apps/wiser-ai-upsell-cross-sell/blocks/wiser_trending/3f966edc-9a4a-465c-a4df-436d2a39160d",
           "settings": {}
         }
       },
@@ -84,7 +84,7 @@
       "type": "apps",
       "blocks": {
         "wiser_product_recommendations_wiser_newarrivals_Md9qN6": {
-          "type": "shopify://apps/wiser-product-recommendations/blocks/wiser_newarrivals/3f966edc-9a4a-465c-a4df-436d2a39160d",
+          "type": "shopify://apps/wiser-ai-upsell-cross-sell/blocks/wiser_newarrivals/3f966edc-9a4a-465c-a4df-436d2a39160d",
           "settings": {}
         }
       },
@@ -97,7 +97,7 @@
       "type": "apps",
       "blocks": {
         "wiser_product_recommendations_wiser_topselling_8EAkaB": {
-          "type": "shopify://apps/wiser-product-recommendations/blocks/wiser_topselling/3f966edc-9a4a-465c-a4df-436d2a39160d",
+          "type": "shopify://apps/wiser-ai-upsell-cross-sell/blocks/wiser_topselling/3f966edc-9a4a-465c-a4df-436d2a39160d",
           "settings": {}
         }
       },
