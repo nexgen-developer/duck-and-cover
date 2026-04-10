@@ -46,6 +46,7 @@
         "image_Nhe8D8": {
           "type": "image",
           "name": "Base",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/SCROLLER_-_Desktop.jpg",
             "mobile_image": "shopify://shop_images/SCROLLER_-_Mobile.jpg",
@@ -93,7 +94,6 @@
         "image_7wXyh6": {
           "type": "image",
           "name": "Lookbook 20% Off",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/SCROLLER_-_Desktop_ecc4ac0b-3ff1-40ff-b29f-2a8e5ddbe3dc.jpg",
             "mobile_image": "shopify://shop_images/SCROLLER_-_Mobile_70c80976-38e4-427b-8343-0530ffbc4856.jpg",
