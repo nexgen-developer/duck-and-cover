@@ -111,6 +111,20 @@
         "lookbook_style": "1"
       }
     },
+    "weekly_deal_8TnA9V": {
+      "type": "weekly-deal",
+      "disabled": true,
+      "name": "Jeans",
+      "settings": {
+        "image": "shopify://shop_images/Tile.jpg",
+        "title": "Jeans",
+        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">£16.50</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
+        "button1": "Get Deal",
+        "url": "shopify://collections/tranfold",
+        "CustomCode": "JEANSAVING",
+        "description": "Upgrade your everyday denim with Duck & Cover jeans, now just £16.50 when you use code JEANSAVING."
+      }
+    },
     "weekly_deal_8mNUCp": {
       "type": "weekly-deal",
       "name": "2 FOR 1 T-SHIRTS",
@@ -401,20 +415,6 @@
         "lookbook_style": "1"
       }
     },
-    "weekly_deal_8TnA9V": {
-      "type": "weekly-deal",
-      "disabled": true,
-      "name": "16th December (Polo)",
-      "settings": {
-        "image": "shopify://shop_images/1.gif",
-        "title": "MELPORTS 3PK POLO",
-        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">£24.50</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
-        "button1": "Get Deal",
-        "url": "shopify://products/melports-polo-3pk-assorted",
-        "CustomCode": "3PKPOLO",
-        "description": "Melports 3 Pack Polos. Clean, versatile and easy to wear, now just £24.50 for all three.\nUse code 3PKPOLO"
-      }
-    },
     "weekly_deal_xxNDXn": {
       "type": "weekly-deal",
       "disabled": true,
@@ -568,11 +568,11 @@
   "order": [
     "main",
     "25bcb4cf-3aa4-4cb5-b78f-4074368db4a6",
+    "weekly_deal_8TnA9V",
     "weekly_deal_8mNUCp",
     "weekly_deal_6tPR9e",
     "halo_slideshow_FtAeWB",
     "7c7325b7-36f5-4b92-b68d-b75e26234dee",
-    "weekly_deal_8TnA9V",
     "weekly_deal_xxNDXn",
     "weekly_deal_kFzmiE",
     "weekly_deal_VLEwga",
