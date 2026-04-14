@@ -126,6 +126,7 @@
     },
     "weekly_deal_6tPR9e": {
       "type": "weekly-deal",
+      "disabled": true,
       "name": " BUY ONE GET ONE FREE CHINO",
       "settings": {
         "image": "shopify://shop_images/TILE_8f9123cf-b94f-4908-b7ab-c9d25b955c73.gif",
