@@ -113,12 +113,11 @@
     },
     "weekly_deal_8TnA9V": {
       "type": "weekly-deal",
-      "disabled": true,
       "name": "Jeans",
       "settings": {
         "image": "shopify://shop_images/Tile.jpg",
-        "title": "Jeans",
-        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">£16.50</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
+        "title": "JEANS SAVING DEAL",
+        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">£16.50 WITH CODE</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
         "button1": "Get Deal",
         "url": "shopify://collections/tranfold",
         "CustomCode": "JEANSAVING",
