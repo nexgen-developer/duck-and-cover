@@ -113,6 +113,20 @@
     },
     "weekly_deal_8TnA9V": {
       "type": "weekly-deal",
+      "disabled": true,
+      "name": "Tames Joggers",
+      "settings": {
+        "image": "shopify://shop_images/Tile_cfb97a84-623f-4cd6-87c6-daea790f8114.gif",
+        "title": "TAMES JOGGERS",
+        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">£13.50 WITH CODE</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
+        "button1": "Get Deal",
+        "url": "shopify://collections/tames-jogger",
+        "CustomCode": "TAMESJOGGER",
+        "description": "Upgrade your everyday denim with Duck & Cover jeans, now just £16.50 when you use code JEANSAVING."
+      }
+    },
+    "weekly_deal_EVKQ7T": {
+      "type": "weekly-deal",
       "name": "Jeans",
       "settings": {
         "image": "shopify://shop_images/Tile.jpg",
@@ -568,6 +582,7 @@
     "main",
     "25bcb4cf-3aa4-4cb5-b78f-4074368db4a6",
     "weekly_deal_8TnA9V",
+    "weekly_deal_EVKQ7T",
     "weekly_deal_8mNUCp",
     "weekly_deal_6tPR9e",
     "halo_slideshow_FtAeWB",
