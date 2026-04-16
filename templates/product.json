@@ -216,6 +216,14 @@
             "qty_style": "2"
           }
         },
+        "mailchimp_email_sms_mailchimp_for_shopify_bis_6aGWKH": {
+          "type": "shopify://apps/mailchimp-email-sms/blocks/mailchimp_for_shopify_bis/e3b67dce-fd41-4b61-b3cf-961c12344cde",
+          "settings": {
+            "button_text": "Notify me when available",
+            "button_bg_color": "#000000",
+            "button_text_color": "#ffffff"
+          }
+        },
         "adb9f066-3863-4c08-a27c-1423d2fba790": {
           "type": "notify_form",
           "settings": {
@@ -262,16 +270,6 @@
             "content_html": ""
           }
         },
-        "b78c32a0-5928-41b3-86e9-6b65d0532902": {
-          "type": "shopify://apps/klarna-on-site-messaging/blocks/app-block/b95936a9-74b6-4a95-8103-6a1b6459c25e",
-          "settings": {
-            "data_key": "credit-promotion-badge",
-            "theme": "light",
-            "topPadding": "0",
-            "bottomPadding": "0",
-            "messagePrefix": ""
-          }
-        },
         "custom_HBKTtm": {
           "type": "custom",
           "disabled": true,
@@ -294,12 +292,12 @@
         "790a590f-6499-4b50-990d-b9029bf8c92a",
         "f561bc6c-d4e8-467c-9d46-59708996af90",
         "a8c08486-8d67-4a1f-ba39-87ed8d16f407",
+        "mailchimp_email_sms_mailchimp_for_shopify_bis_6aGWKH",
         "adb9f066-3863-4c08-a27c-1423d2fba790",
         "dd9d0d91-cab8-458c-aad9-b1c04f439926",
         "f90628c9-aa78-4d7a-ad3c-0d1358636d90",
         "b0534fe3-982e-4e69-bba0-5899590c3bce",
         "custom_y9x34K",
-        "b78c32a0-5928-41b3-86e9-6b65d0532902",
         "custom_HBKTtm"
       ],
       "custom_css": [
