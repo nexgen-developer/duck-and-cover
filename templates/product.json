@@ -216,6 +216,14 @@
             "qty_style": "2"
           }
         },
+        "mailchimp_email_sms_mailchimp_for_shopify_bis_CtyTjQ": {
+          "type": "shopify://apps/mailchimp-email-sms/blocks/mailchimp_for_shopify_bis/e3b67dce-fd41-4b61-b3cf-961c12344cde",
+          "settings": {
+            "button_text": "Notify me when available",
+            "button_bg_color": "#222222",
+            "button_text_color": "#ffffff"
+          }
+        },
         "adb9f066-3863-4c08-a27c-1423d2fba790": {
           "type": "notify_form",
           "settings": {
@@ -284,6 +292,7 @@
         "790a590f-6499-4b50-990d-b9029bf8c92a",
         "f561bc6c-d4e8-467c-9d46-59708996af90",
         "a8c08486-8d67-4a1f-ba39-87ed8d16f407",
+        "mailchimp_email_sms_mailchimp_for_shopify_bis_CtyTjQ",
         "adb9f066-3863-4c08-a27c-1423d2fba790",
         "dd9d0d91-cab8-458c-aad9-b1c04f439926",
         "f90628c9-aa78-4d7a-ad3c-0d1358636d90",
