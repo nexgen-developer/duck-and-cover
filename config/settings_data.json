@@ -1868,6 +1868,11 @@
         "type": "shopify://apps/wiser-ai-upsell-cross-sell/blocks/wiser-block/3f966edc-9a4a-465c-a4df-436d2a39160d",
         "disabled": false,
         "settings": {}
+      },
+      "18131037017812181619": {
+        "type": "shopify://apps/mailchimp-email-sms/blocks/mailchimp_for_shopify_script/e3b67dce-fd41-4b61-b3cf-961c12344cde",
+        "disabled": false,
+        "settings": {}
       }
     }
   }
