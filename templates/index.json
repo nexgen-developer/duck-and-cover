@@ -94,6 +94,7 @@
         "image_hGKh8D": {
           "type": "image",
           "name": "Lookbook 20% Off",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/SCROLLER_-_Desktop_ecc4ac0b-3ff1-40ff-b29f-2a8e5ddbe3dc.jpg",
             "mobile_image": "shopify://shop_images/SCROLLER_-_Mobile_70c80976-38e4-427b-8343-0530ffbc4856.jpg",
@@ -141,7 +142,6 @@
         "image_yUcgG3": {
           "type": "image",
           "name": "Jeans",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/SCROLLER_-_Desktop_dac87c45-b765-48b6-866f-6d7d39a37ae9.jpg",
             "mobile_image": "shopify://shop_images/SCROLLER_-_Mobile_f38cbfc7-e297-408b-8037-75ddc2fc2676.jpg",
