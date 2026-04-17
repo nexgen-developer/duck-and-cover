@@ -240,6 +240,7 @@
       "block_order": [
         "image_aFMzkT"
       ],
+      "disabled": true,
       "name": "Clearance",
       "settings": {
         "show_slideshow": true,
