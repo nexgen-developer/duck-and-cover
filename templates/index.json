@@ -142,6 +142,7 @@
         "image_yUcgG3": {
           "type": "image",
           "name": "Jeans",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/SCROLLER_-_Desktop_dac87c45-b765-48b6-866f-6d7d39a37ae9.jpg",
             "mobile_image": "shopify://shop_images/SCROLLER_-_Mobile_f38cbfc7-e297-408b-8037-75ddc2fc2676.jpg",
@@ -189,7 +190,6 @@
         "image_7wXyh6": {
           "type": "image",
           "name": "Pay Day",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/SCROLLER_-_Desktop_aad72850-aac5-4f81-99f0-5fbc5a2183ad.jpg",
             "mobile_image": "shopify://shop_images/SCROLLER_-_Mobile_2f3c8b24-1ce3-4fc5-91bd-bfc238bed205.jpg",
