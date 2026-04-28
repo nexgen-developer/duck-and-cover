@@ -671,10 +671,6 @@
           "type": "shopify://apps/wiser-ai-upsell-cross-sell/blocks/wiser_browsing/3f966edc-9a4a-465c-a4df-436d2a39160d",
           "settings": {}
         },
-        "0fd04a8a-ec83-4867-8b1f-3dbf667ccea7": {
-          "type": "shopify://apps/wiser-ai-upsell-cross-sell/blocks/wiser_newarrivals/3f966edc-9a4a-465c-a4df-436d2a39160d",
-          "settings": {}
-        },
         "e4c9a6e2-5d3b-4326-9d94-8b8247716c16": {
           "type": "shopify://apps/wiser-ai-upsell-cross-sell/blocks/wiser_recent/3f966edc-9a4a-465c-a4df-436d2a39160d",
           "settings": {}
@@ -682,7 +678,6 @@
       },
       "block_order": [
         "e06bafef-81ed-4483-839c-eed1ab32b2b2",
-        "0fd04a8a-ec83-4867-8b1f-3dbf667ccea7",
         "e4c9a6e2-5d3b-4326-9d94-8b8247716c16"
       ],
       "settings": {}
