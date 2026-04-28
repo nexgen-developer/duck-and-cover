@@ -113,12 +113,11 @@
     },
     "weekly_deal_xxNDXn": {
       "type": "weekly-deal",
-      "disabled": true,
       "name": "Denim Shorts",
       "settings": {
         "image": "shopify://shop_images/Tile_2ea7ec1a-c9e3-43e8-8bf7-4656028aa215.gif",
         "title": "DENIM SHORTS",
-        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">From £13.75</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
+        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">£13.75 WITH CODE</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
         "button1": "Get Deal",
         "url": "shopify://collections/zeki-denim-shorts",
         "CustomCode": "SHORTSAVING",
@@ -140,6 +139,7 @@
     },
     "weekly_deal_EVKQ7T": {
       "type": "weekly-deal",
+      "disabled": true,
       "name": "Jeans",
       "settings": {
         "image": "shopify://shop_images/Tile.jpg",
