@@ -43,6 +43,54 @@
     "205c4f7a-d208-44ad-9a74-a5715aff1348": {
       "type": "halo-slideshow",
       "blocks": {
+        "image_7wXyh6": {
+          "type": "image",
+          "name": "20% CO-ORDS",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/DAC-CO-ORD-DESKTOP.jpg",
+            "mobile_image": "shopify://shop_images/DAC-CO-ORD-MOB.jpg",
+            "title": "",
+            "subtitle": "",
+            "text": "",
+            "btn": "2",
+            "btn_text": "",
+            "link": "shopify://collections/all-tracksuits",
+            "container_content": "1570",
+            "position": "right",
+            "alignment": "left",
+            "lookbook": false,
+            "product_1": "",
+            "point_x_1": 10,
+            "point_y_1": 10,
+            "product_2": "",
+            "point_x_2": 10,
+            "point_y_2": 10,
+            "product_3": "",
+            "point_x_3": 10,
+            "point_y_3": 10,
+            "product_4": "",
+            "point_x_4": 10,
+            "point_y_4": 10,
+            "product_5": "",
+            "point_x_5": 10,
+            "point_y_5": 10,
+            "show_background_overlay": false,
+            "transparent_button": false,
+            "background_color": "",
+            "background_overlay": "#000000",
+            "text_color": "#ffffff",
+            "title_color": "#ffffff",
+            "title_font": "font_2",
+            "title_font_size": 26,
+            "title_mobile_font_size": 20,
+            "title_font_weight": "700",
+            "title_text_transform": "none",
+            "text_font_size": 14,
+            "text_font_weight": "600",
+            "text_text_transform": "uppercase"
+          }
+        },
         "image_Nhe8D8": {
           "type": "image",
           "name": "Base",
@@ -139,7 +187,7 @@
             "text_text_transform": "uppercase"
           }
         },
-        "image_7wXyh6": {
+        "image_jPj3DA": {
           "type": "image",
           "name": "Pay Day",
           "settings": {
@@ -236,9 +284,10 @@
         }
       },
       "block_order": [
+        "image_7wXyh6",
         "image_Nhe8D8",
         "image_yUcgG3",
-        "image_7wXyh6",
+        "image_jPj3DA",
         "image_hGKh8D"
       ],
       "custom_css": [
