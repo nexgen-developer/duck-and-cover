@@ -111,6 +111,20 @@
         "lookbook_style": "1"
       }
     },
+    "weekly_deal_CnQjac": {
+      "type": "weekly-deal",
+      "disabled": true,
+      "name": "Denim Shorts",
+      "settings": {
+        "image": "shopify://shop_images/DAC-2PK-BOXER-TILE.gif",
+        "title": "2PK BOXERS",
+        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">£5 WITH CODE</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
+        "button1": "Get Deal",
+        "url": "shopify://collections/2pk-boxers",
+        "CustomCode": "2PKBOXER",
+        "description": "Stock up on essentials with 2PK boxers for just £5! Everyday comfort at an unbeatable price. Use code 2PKBOXER at checkout."
+      }
+    },
     "weekly_deal_xxNDXn": {
       "type": "weekly-deal",
       "name": "Denim Shorts",
@@ -531,6 +545,7 @@
   "order": [
     "main",
     "25bcb4cf-3aa4-4cb5-b78f-4074368db4a6",
+    "weekly_deal_CnQjac",
     "weekly_deal_xxNDXn",
     "weekly_deal_8TnA9V",
     "weekly_deal_EVKQ7T",
