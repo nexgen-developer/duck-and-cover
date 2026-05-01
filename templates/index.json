@@ -190,6 +190,7 @@
         "image_jPj3DA": {
           "type": "image",
           "name": "Pay Day",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/SCROLLER_-_Desktop_aad72850-aac5-4f81-99f0-5fbc5a2183ad.jpg",
             "mobile_image": "shopify://shop_images/SCROLLER_-_Mobile_2f3c8b24-1ce3-4fc5-91bd-bfc238bed205.jpg",
@@ -237,7 +238,6 @@
         "image_hGKh8D": {
           "type": "image",
           "name": "Bank Holiday",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Duck_Cover_-_Desktop.jpg",
             "mobile_image": "shopify://shop_images/Duck_Cover_-_Email.jpg",
