@@ -113,7 +113,6 @@
     },
     "weekly_deal_CnQjac": {
       "type": "weekly-deal",
-      "disabled": true,
       "name": "2PK Boxers",
       "settings": {
         "image": "shopify://shop_images/DAC-2PK-BOXER-TILE.gif",
@@ -140,6 +139,7 @@
     },
     "weekly_deal_8TnA9V": {
       "type": "weekly-deal",
+      "disabled": true,
       "name": "Tames Joggers",
       "settings": {
         "image": "shopify://shop_images/Tile_cfb97a84-623f-4cd6-87c6-daea790f8114.gif",
