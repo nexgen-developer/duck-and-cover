@@ -113,6 +113,20 @@
     },
     "weekly_deal_CnQjac": {
       "type": "weekly-deal",
+      "disabled": true,
+      "name": "Elix Jeans",
+      "settings": {
+        "image": "shopify://shop_images/DAC-ELIX-JEAN-TILE.gif",
+        "title": "ELIX JEANS",
+        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">£19.50 WITH CODE</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
+        "button1": "Get Deal",
+        "url": "shopify://collections/elix-jean",
+        "CustomCode": "ELIX",
+        "description": "Upgrade your denim rotation with Elix straight leg jeans for just £19.50! A timeless fit that works with anything. Use code ELIX at checkout - don’t miss out!"
+      }
+    },
+    "weekly_deal_78RRYA": {
+      "type": "weekly-deal",
       "name": "2PK Boxers",
       "settings": {
         "image": "shopify://shop_images/DAC-2PK-BOXER-TILE.gif",
@@ -546,6 +560,7 @@
     "main",
     "25bcb4cf-3aa4-4cb5-b78f-4074368db4a6",
     "weekly_deal_CnQjac",
+    "weekly_deal_78RRYA",
     "weekly_deal_xxNDXn",
     "weekly_deal_8TnA9V",
     "weekly_deal_EVKQ7T",
