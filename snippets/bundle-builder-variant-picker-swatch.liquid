@@ -1,0 +1,26 @@
+{% assign random_suffix = "now" | date: "%N" | append: forloop.index %}
+{% assign id = 'bundle-option-' | append: option_index | append: '-value-' | append: value_index | append: '-' | append: random_suffix %}
+{% assign value_name = value.name | upcase %}
+{% liquid
+  case value_name
+    when 'XXL'
+      assign value_name = '2X'
+    when 'XXXL'
+      assign value_name = '3X'
+    when 'XXXXL'
+      assign value_name = '4X'
+  endcase
+%}
+<input
+  id="{{ id }}"
+  type="radio"
+  class="bundle-variant-picker__option-value-input"
+  form="{{ form_id }}"
+  name="option{{ option_index }}"
+  value="{{ value.name }}"
+  {% unless value.variant.available %}disabled{% endunless %}
+  {% if value.selected %}checked{% endif %}>
+
+<label class="bundle-variant-picker__option-value" for="{{ id }}">
+  {{ value_name }}
+</label>

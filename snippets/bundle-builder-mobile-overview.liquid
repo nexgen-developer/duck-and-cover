@@ -1,0 +1,17 @@
+<bundle-overview-mobile class="bundle-overview-mobile">
+  <div class="bundle-overview__title">{{ section.settings.overview_title }}</div>
+  <div class="bundle-overview-content-drawer">
+    <div class="bundle-overview-content">
+      {{ overview_content }}
+    </div>
+  </div>
+  <div class="bundle-summary" data-summary-toggle>
+    <div class="bundle-summary__title">
+      <span>Bundle Summary</span>
+      <span>
+        <span data-bundle-final-price>{{ 0 | money }}</span>
+      </span>
+    </div>
+    <div class="bundle-summary__toggle-icon">{% render 'icon-plus' %}</div>
+  </div>
+</bundle-overview-mobile>

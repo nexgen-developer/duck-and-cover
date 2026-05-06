@@ -1,0 +1,12 @@
+<bundle-buy-buttons class="bundle-buy-buttons" form="{{ form_id }}">
+  <button
+    class="bundle-buy-button"
+    type="submit"
+    data-atc-button>
+    <span class="bundle-buy-button__added-text">Added to Bundle</span>
+    <div class="bundle-buy-button__normal-text">
+      <span>{{ atc_text | default: 'Add to Bundle' }}</span>
+      <span class="bundle-buy-button__price">{{ product.price | money }}</span>
+    </div>
+  </button>
+</bundle-buy-buttons>

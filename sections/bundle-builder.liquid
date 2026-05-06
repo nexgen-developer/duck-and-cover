@@ -1,0 +1,291 @@
+{{ 'component-bundle-builder.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'bundle-builder.js' | asset_url }}" defer="defer"></script>
+
+{% liquid
+  assign bundle_id = 'bundle-builder-' | append: product.id
+  assign row_blocks = section.blocks | where: 'type', 'ca_row'
+%}
+
+{% capture overview_content %}
+  <div class="bundle-reset-bundle" data-reset-bundle>Reset Bundle</div>
+  <div class="bundle-chosen-products-grid" data-bundle-chosen-products>
+    {% for row in row_blocks %}
+      {% assign row_index = row.settings.index | minus: 1 %}
+      <div data-row-chosen-product="{{ row_index }}">
+        <div class="bundle-chosen-product">
+          <div
+            data-inner-content
+            class="bundle-chosen-product__inner"
+            data-title="{{ row.settings.title }}">{{ row.settings.title }}</div>
+          <button
+            type="button"
+            class="bundle-remove-product hidden"
+            data-bundle-remove-product="{{ row_index }}">{% render 'icon-close' %}</button>
+        </div>
+        <div data-title-and-options></div>
+      </div>
+    {% endfor %}
+  </div>
+
+  <div class="bundle-total">
+    <div class="bundle-total__row">
+      <span>Total:</span>
+      <span data-bundle-final-price>{{ 0 | money }}</span>
+      <span class="bundle-total__original-price" data-bundle-original-price></span>
+    </div>
+    <button type="button" class="bundle-add-product disabled" data-bundle-add-product>
+      <span class="enabled-text">Add to Cart</span>
+      <span class="disabled-text">Select More Products</span>
+    </button>
+  </div>
+{% endcapture %}
+<div class="bundle-container">
+  <bundle-builder
+    class="bundle-builder container"
+    data-number-of-rows="{{ row_blocks.size }}"
+    data-bundle-variant-id="{{ product.variants.first.id }}"
+    data-bundle-fixed-price="{{ product.metafields.custom.fixed_price_bundle | times: 100 | round: 0 }}"
+    data-bundle-discount-percent="{{ product.metafields.custom.discount_bundle | default: 0 }}"
+    id="{{ bundle_id }}">
+    <div class="bundle-left-column" data-bundle-rows>
+      {% assign row_index = 0 %}
+      {% for block in section.blocks %}
+        {% case block.type %}
+          {% when 'banner' %}
+            <div
+              class="bundle-banner {% if block.settings.full_width_mobile %}full-width-mobile{% endif %} {% if block.settings.rounded_corners_mobile %}rounded-corners-mobile{% endif %}"
+              style="--margin-bottom-desktop: {{ block.settings.margin_bottom_desktop }}px; --margin-bottom-mobile: {{ block.settings.margin_bottom_mobile }}px;"
+              {{ block.shopify_attributes }}>
+              {% if block.settings.background_image %}
+                {{ block.settings.background_image | image_url: width: 1200 | image_tag: class: 'bundle-banner-image' }}
+              {% endif %}
+              <div class="bundle-banner-content items-{{ block.settings.text_alignment }}" style="color: {{ block.settings.text_color }}">
+                {% if block.settings.title != blank %}
+                  <div class="bundle-banner-title">{{ block.settings.title }}</div>
+                {% endif %}
+                {% if block.settings.text != blank %}
+                  <div class="bundle-banner-text">{{ block.settings.text }}</div>
+                {% endif %}
+              </div>
+            </div>
+          {% when 'text' %}
+            <div
+              class="bundle-text-block"
+              style="--margin-bottom-desktop: {{ block.settings.margin_bottom_desktop }}px; --margin-bottom-mobile: {{ block.settings.margin_bottom_mobile }}px;"
+              {{ block.shopify_attributes }}>
+              {{ block.settings.text }}
+            </div>
+          {% when 'ca_row' %}
+            {% render 'bundle-builder-row'
+              , block: block
+              , row_index: row_index %}
+            {% assign row_index = row_index | plus: 1 %}
+        {% endcase %}
+      {% endfor %}
+    </div>
+    <div class="bundle-right-column">
+      <div class="bundle-overview__title">{{ section.settings.overview_title }}</div>
+      {{ overview_content }}
+    </div>
+
+    {% render 'bundle-builder-mobile-overview'
+      , overview_content: overview_content %}
+  </bundle-builder>
+</div>
+
+{% schema %}
+  {
+    "name": "Bundle Builder",
+    "tag": "section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "Build your bundle"
+      }, {
+        "type": "text",
+        "id": "overview_title",
+        "label": "Overview Title",
+        "default": "Overview"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "banner",
+        "name": "Banner",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "background_image",
+            "label": "Background Image"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+          },
+          {
+            "type": "richtext",
+            "id": "text",
+            "label": "Text"
+          },
+          {
+            "type": "select",
+            "id": "text_alignment",
+            "label": "Text Alignment",
+            "options": [
+              {
+                "value": "left",
+                "label": "Left"
+              }, {
+                "value": "center",
+                "label": "Center"
+              }, {
+                "value": "right",
+                "label": "Right"
+              }
+            ],
+            "default": "left"
+          }, {
+            "type": "color",
+            "id": "text_color",
+            "label": "Text Color",
+            "default": "#ffffff"
+          }, {
+            "type": "checkbox",
+            "id": "full_width_mobile",
+            "label": "Full Width on Mobile",
+            "default": false
+          }, {
+            "type": "checkbox",
+            "id": "rounded_corners_mobile",
+            "label": "Rounded Corners on Mobile",
+            "default": false
+          }, {
+            "type": "header",
+            "content": "Margin"
+          }, {
+            "type": "range",
+            "id": "margin_bottom_desktop",
+            "min": 0,
+            "max": 100,
+            "step": 2,
+            "unit": "px",
+            "label": "Bottom Margin (Desktop)",
+            "default": 0
+          }, {
+            "type": "range",
+            "id": "margin_bottom_mobile",
+            "min": 0,
+            "max": 100,
+            "step": 2,
+            "unit": "px",
+            "label": "Bottom Margin (Mobile)",
+            "default": 0
+          }
+        ]
+      }, {
+        "type": "text",
+        "name": "Text Block",
+        "settings": [
+          {
+            "type": "richtext",
+            "id": "text",
+            "label": "Text"
+          }, {
+            "type": "range",
+            "id": "margin_bottom_desktop",
+            "min": 0,
+            "max": 100,
+            "step": 2,
+            "unit": "px",
+            "label": "Bottom Margin (Desktop)",
+            "default": 0
+          }, {
+            "type": "range",
+            "id": "margin_bottom_mobile",
+            "min": 0,
+            "max": 100,
+            "step": 2,
+            "unit": "px",
+            "label": "Bottom Margin (Mobile)",
+            "default": 0
+          }
+        ]
+      }, {
+        "type": "ca_row",
+        "name": "Product Row",
+        "settings": [
+          {
+            "type": "number",
+            "id": "index",
+            "label": "Index",
+            "default": 1
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title",
+            "default": "Step 1: "
+          },
+          {
+            "type": "product_list",
+            "id": "products",
+            "label": "Products"
+          },
+          {
+            "type": "checkbox",
+            "id": "hide_linked_products",
+            "label": "Hide Linked Products",
+            "default": false
+          }, {
+            "type": "number",
+            "id": "desktop_number_of_cols",
+            "label": "Desktop Number of Columns",
+            "default": 4
+          }, {
+            "type": "number",
+            "id": "mobile_number_of_cols",
+            "label": "Mobile Number of Columns",
+            "default": 2
+          }, {
+            "type": "range",
+            "id": "margin_bottom_desktop",
+            "min": 0,
+            "max": 100,
+            "step": 2,
+            "unit": "px",
+            "label": "Bottom Margin (Desktop)",
+            "default": 0
+          }, {
+            "type": "range",
+            "id": "margin_bottom_mobile",
+            "min": 0,
+            "max": 100,
+            "step": 2,
+            "unit": "px",
+            "label": "Bottom Margin (Mobile)",
+            "default": 0
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Bundle Builder",
+        "blocks": [
+          {
+            "type": "banner"
+          }, {
+            "type": "ca_row"
+          }, {
+            "type": "ca_row"
+          }, {
+            "type": "ca_row"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

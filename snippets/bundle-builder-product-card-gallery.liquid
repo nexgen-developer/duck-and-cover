@@ -1,0 +1,19 @@
+{% liquid
+  assign first_image = product.images[0]
+  assign second_image = product.images[1]
+  if first_image.alt contains 'ad-img'
+    assign first_image = product.images[1]
+    assign second_image = product.images[2]
+  endif
+%}
+
+<bundle-product-card-gallery class="bundle-product-card-gallery">
+  <a href="{{ product.url }}" class="bundle-product-card-gallery__image-wrapper" tabindex="-1" aria-hidden="true">
+    {% if first_image != blank %}
+      {{ first_image | image_url: width: 800 | image_tag: class: 'bundle-product-card-gallery__image bundle-product-card-gallery__image--primary', loading: 'lazy' }}
+    {% endif %}
+    {% if second_image != blank %}
+      {{ second_image | image_url: width: 800 | image_tag: class: 'bundle-product-card-gallery__image bundle-product-card-gallery__image--secondary', loading: 'lazy' }}
+    {% endif %}
+  </a>
+</bundle-product-card-gallery>
