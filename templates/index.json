@@ -94,7 +94,6 @@
         "image_X6yqbc": {
           "type": "image",
           "name": "20% Co-ords",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/DAC-CO-ORD-DESKTOP.jpg",
             "mobile_image": "shopify://shop_images/DAC-CO-ORD-MOB.jpg",
@@ -286,6 +285,7 @@
         "image_hGKh8D": {
           "type": "image",
           "name": "Bank Holiday",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Duck_Cover_-_Desktop.jpg",
             "mobile_image": "shopify://shop_images/Duck_Cover_-_Email.jpg",
