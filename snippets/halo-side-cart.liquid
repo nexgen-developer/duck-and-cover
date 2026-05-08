@@ -17,8 +17,37 @@
                 {%- for item in cart.items -%}
                     {%- liquid
                         assign current_variant = item.product.selected_or_first_available_variant
+                        assign has_components = false
+                        assign components_total = 0
+                        assign components_original_total = 0
+                        if item.item_components.size > 0
+                            assign has_components = true
+                            for component in item.item_components
+                                assign components_total = components_total | plus: component.final_line_price
+                                assign comp_original_str = component.properties['_original_price']
+                                if comp_original_str != blank
+                                    assign comp_original_cents = comp_original_str | times: 100 | round: 0
+                                    assign comp_original_line = comp_original_cents | times: component.quantity
+                                    assign components_original_total = components_original_total | plus: comp_original_line
+                                else
+                                    assign components_original_total = components_original_total | plus: component.final_line_price
+                                endif
+                            endfor
+                        endif
+                        assign display_unit_price = item.final_price
+                        if has_components and item.final_price == 0 and item.quantity > 0
+                            assign display_unit_price = components_total | divided_by: item.quantity
+                        endif
+                        assign display_original_unit_price = display_unit_price
+                        if has_components and item.quantity > 0 and components_original_total > components_total
+                            assign display_original_unit_price = components_original_total | divided_by: item.quantity
+                        endif
+                        assign bundle_has_discount = false
+                        if has_components and components_original_total > components_total
+                            assign bundle_has_discount = true
+                        endif
                     -%}
-                    <li class="previewCartItem clearfix" data-cart-item>
+                    <li class="previewCartItem clearfix{% if has_components %} previewCartItem--bundle-parent{% endif %}" data-cart-item>
                         <a href="{{ item.url }}" class="previewCartItem-image">
                             <img srcset="{{ item.image | img_url: '110x' }}" src="{{ item.image | img_url: '110x' }}" alt="{{ item.title | escape }}" sizes="auto" loading="lazy">
                         </a>
@@ -61,7 +90,18 @@
                             {%- endif -%}
                             <div class="previewCartItem-change">
                                 <div class="previewCartItem-price">
-                                    {%- if item.original_price != item.final_price -%}
+                                    {%- if has_components and bundle_has_discount -%}
+                                        <span class="price old-price">
+                                            {{ display_original_unit_price | money }}
+                                        </span>
+                                        <span class="price">
+                                            {{ display_unit_price | money }}
+                                        </span>
+                                    {%- elsif has_components and item.final_price == 0 -%}
+                                        <span class="price">
+                                            {{ display_unit_price | money }}
+                                        </span>
+                                    {%- elsif item.original_price != item.final_price -%}
                                         <span class="price old-price">
                                             {{ item.original_price | money }}
                                         </span>
@@ -91,8 +131,16 @@
                                     {% render 'icon-close' %}
                                 </a>
                             </div>
+                            {%- if has_components -%}
+                                {% render 'bundle-components', parent: item, part: 'summary' %}
+                            {%- endif -%}
                         </div>
                     </li>
+                    {%- if has_components -%}
+                        <li class="previewCartItem-bundle-card" data-bundle-card>
+                            {% render 'bundle-components', parent: item, part: 'list' %}
+                        </li>
+                    {%- endif -%}
                 {%- endfor -%}
             </ul>
         </div>

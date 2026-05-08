@@ -1,0 +1,68 @@
+{%- comment -%}
+  Renders the components of a bundle parent line.
+
+  Reads from the parent line's `item_components` — Shopify exposes the
+  expanded child line items here when the parent was added with the
+  `_components` line property.
+
+  Accepts:
+  - parent: {line_item} parent cart line item
+  - part: {string} 'summary' or 'list' — which portion to render
+{%- endcomment -%}
+
+{%- liquid
+  assign components = parent.item_components
+  assign component_count = components.size
+  assign toggle_id = 'bundle-components-' | append: parent.key | replace: ':', '-'
+-%}
+
+{%- if component_count > 0 -%}
+  {%- if part == 'summary' -%}
+    {{ 'component-bundle-components.css' | asset_url | stylesheet_tag }}
+    <input
+      type="checkbox"
+      id="{{ toggle_id }}"
+      class="bundle-components__toggle">
+    <label for="{{ toggle_id }}" class="bundle-components__summary">
+      <div class="bundle-components__thumbnails" aria-hidden="true">
+        {%- for component in components -%}
+          <img
+            class="bundle-components__thumb"
+            src="{{ component.image | img_url: '60x' }}"
+            alt=""
+            width="28"
+            height="28"
+            loading="lazy">
+        {%- endfor -%}
+      </div>
+      <span class="bundle-components__label">
+        {{ component_count }} item{% if component_count != 1 %}s{% endif %}
+      </span>
+      <span class="bundle-components__chevron" aria-hidden="true">
+        {% render 'icon-caret' %}
+      </span>
+    </label>
+  {%- elsif part == 'list' -%}
+    <ul class="bundle-components__list list-unstyled">
+      {%- for component in components -%}
+        <li class="bundle-components__item">
+          <a href="{{ component.url }}" class="bundle-components__item-image">
+            {{ component.image | image_url: width: 100 | image_tag: class: 'bundle-components__item-image-img' }}
+          </a>
+          <div class="bundle-components__item-content">
+            <a href="{{ component.url }}" class="bundle-components__item-name">
+              {{ component.product.title }}
+            </a>
+            {%- if component.product.variants.size != 0 -%}
+              {%- unless component.variant.title contains 'Default' -%}
+                <div class="bundle-components__item-variant">
+                  {{ component.variant.title }}
+                </div>
+              {%- endunless -%}
+            {%- endif -%}
+          </div>
+        </li>
+      {%- endfor -%}
+    </ul>
+  {%- endif -%}
+{%- endif -%}
