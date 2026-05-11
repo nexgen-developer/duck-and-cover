@@ -1,0 +1,56 @@
+{% liquid
+  for tag in product.tags
+    if tag contains 'color-collection:'
+      assign color_collection_tag = tag | split: ':' | last | strip
+      assign color_collection = collections[color_collection_tag]
+    endif
+  endfor
+
+  for option_with_values in product.options_with_values
+    if option_with_values.name == 'Color'
+      assign color_option = option_with_values
+    endif
+  endfor
+
+  assign total_linked_products = color_collection.products.size
+  assign limit = limit | default: 8
+  assign gap = gap | default: 4
+%}
+
+{% if color_collection and total_linked_products > 0 %}
+  {% if show_label %}
+    <div class="bundle-variant-picker__option-name">
+      <span class="bundle-variant-picker__option-name-label">Color:</span>
+      <span class="bundle-variant-picker__option-name-value">{{ color_option.selected_value.name | capitalize }}</span>
+    </div>
+  {% endif %}
+  <div class="bundle-linked-products" style="gap: {{ gap }}px">
+    {% for color_product in color_collection.products %}
+      {% assign after_limit = false %}
+      {% if forloop.index > limit %}
+        {% assign after_limit = true %}
+      {% endif %}
+      {% if is_bundle_card and color_product.metafields.custom.hide_in_bundle %}
+        {% continue %}
+      {% endif %}
+      {% liquid
+        for option_with_values in color_product.options_with_values
+          if option_with_values.name == 'Color'
+            assign color_option = option_with_values
+          endif
+        endfor
+      %}
+      <div
+        role="button"
+        tabindex="0"
+        title="{{ color_product.title }}&nbsp;{{ color_option.selected_value.name }}"
+        class="bundle-linked-product-swatch {% if color_product.id == product.id %}selected{% endif %} {% if after_limit %}after-limit{% endif %}"
+        data-linked-product-url="{{ color_product.url }}"
+        style="background-image: url('{{ color_option.selected_value.name | handleize | prepend: 'color-' | append: '.png' | file_url }}');"></div>
+    {% endfor %}
+
+    {% if total_linked_products > limit %}
+      <div class="bundle-linked-products__more">+{{ total_linked_products | minus: limit }}</div>
+    {% endif %}
+  </div>
+{% endif %}

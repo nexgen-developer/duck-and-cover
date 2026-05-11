@@ -1,0 +1,50 @@
+{% liquid
+  assign open = false
+  if row_index == 0
+    assign open = true
+  endif
+%}
+
+<div
+  data-bundle-row-index="{{ row_index }}"
+  class="bundle-row"
+  {{ block.shopify_attributes }}
+  style="--margin-bottom-desktop: {{ block.settings.margin_bottom_desktop }}px; --margin-bottom-mobile: {{ block.settings.margin_bottom_mobile }}px;">
+  {% capture title %}
+    {% if block.settings.title != blank and block.settings.title != '' %}
+    <div class="bundle-row-title">
+      <div class="bundle-row-title-left">
+        <span class="bundle-row-title-index">{{ block.settings.index }}</span>
+        <span class="bundle-row-title-text">{{ block.settings.title }}</span>
+      </div>
+      <span class="bundle-row-title-arrow">{% render 'icon-plus' %}</span>
+    </div>
+    {% endif %}
+  {% endcapture %}
+  {% capture content %}
+    <div class="bundle-products-grid" style="--desktop-number-of-cols: {{ block.settings.desktop_number_of_cols }}; --mobile-number-of-cols: {{ block.settings.mobile_number_of_cols }};">
+      {% for product in block.settings.products %}
+        <div class="bundle-product-slot" data-product-index="{{ forloop.index0 }}">
+          {% render 'bundle-builder-product-card'
+            , is_bundle: true
+            , block_id: block.id
+            , product: product
+            , hide_linked_products: block.settings.hide_linked_products
+            , row_index: row_index %}
+        </div>
+      {% endfor %}
+    </div>
+  {% endcapture %}
+  {% if title != blank %}
+    {% render 'bundle-builder-accordion'
+      , open: open
+      , class: 'bundle-row-accordion'
+      , summary: title
+      , content: content
+      , content_class: 'bundle-row-content' %}
+  {% else %}
+    <div class="bundle-row-accordion bundle-row-content">
+      {{ content }}
+    </div>
+  {% endif %}
+</div>

@@ -1,0 +1,44 @@
+<bundle-variant-picker class="bundle-variant-picker">
+  <input
+    type="hidden"
+    name="id"
+    value="{{ product.selected_or_first_available_variant.id }}"
+    form="{{ form_id }}">
+  {% unless hide_linked_products %}
+    {% render 'bundle-builder-linked-products'
+      , product: product
+      , is_bundle_card: is_bundle_card %}
+  {% endunless %}
+
+  {% for option_with_values in product.options_with_values %}
+    {% assign option_index = forloop.index %}
+    <div class="bundle-variant-picker__option {% if option_with_values.values.size == 1 %}hidden{% endif %}">
+      <div class="bundle-variant-picker__option-name">
+        <span class="bundle-variant-picker__option-name-label">{{ option_with_values.name }}:</span>
+        <span class="bundle-variant-picker__option-name-value" data-option-name-value>{{ option_with_values.selected_value.name }}</span>
+      </div>
+      <div class="bundle-variant-picker__option-values">
+        {% for value in option_with_values.values %}
+          {% render 'bundle-builder-variant-picker-swatch'
+            , value: value
+            , option_index: option_index
+            , value_index: forloop.index
+            , form_id: form_id %}
+        {% endfor %}
+      </div>
+    </div>
+  {% endfor %}
+
+  <script data-variants type="application/json">
+    {{ product.variants | json }}
+  </script>
+
+  <script data-product type="application/json">
+    {
+      "id": "{{ product.id }}",
+      "title": {{ product.title | json }},
+      "featured_image": "{{ product.featured_image | image_url: width: 1000 }}",
+      "options": "{{ product.options | join: ',' }}"
+    }
+  </script>
+</bundle-variant-picker>

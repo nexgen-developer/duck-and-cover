@@ -1,0 +1,25 @@
+{% liquid
+  unless form_id
+    assign form_id = 'bundle-form-' | append: block_id | append: '-' | append: product.id
+  endunless
+%}
+
+<bundle-product-form class="bundle-product-form">
+  {% form 'product'
+    , product
+    , id: form_id
+    , class: 'bundle-product-form__form'
+    , data-form-type: form_type %}
+    <div class="bundle-product-title">{{ product.title }}</div>
+    {% render 'bundle-builder-variant-picker'
+      , form_id: form_id
+      , product: product
+      , hide_linked_products: hide_linked_products
+      , is_bundle_card: is_bundle_card %}
+
+    {% render 'bundle-builder-buy-buttons'
+      , form_id: form_id
+      , product: product
+      , atc_text: atc_text %}
+  {% endform %}
+</bundle-product-form>

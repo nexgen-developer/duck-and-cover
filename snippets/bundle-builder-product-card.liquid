@@ -1,0 +1,16 @@
+<bundle-product-card
+  class="bundle-product-card"
+  data-template="bundle-builder-product-card"
+  data-product-id="{{ product.id }}">
+  {% render 'bundle-builder-product-card-gallery'
+    , product: product %}
+
+  {% render 'bundle-builder-product-form'
+    , form_id: form_id
+    , product: product
+    , form_type: 'bundle-card-form'
+    , atc_text: 'Add to Bundle'
+    , is_bundle_card: true
+    , hide_linked_products: hide_linked_products
+    , block_id: block_id %}
+</bundle-product-card>

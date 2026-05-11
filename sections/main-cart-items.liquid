@@ -70,8 +70,41 @@
                                 {%- for item in cart.items -%}
                                     {%- liquid
                                         assign current_variant = item.product.selected_or_first_available_variant
+                                        assign has_components = false
+                                        assign components_total = 0
+                                        assign components_original_total = 0
+                                        if item.item_components.size > 0
+                                            assign has_components = true
+                                            for component in item.item_components
+                                                assign components_total = components_total | plus: component.final_line_price
+                                                assign comp_original_str = component.properties['_original_price']
+                                                if comp_original_str != blank
+                                                    assign comp_original_cents = comp_original_str | times: 100 | round: 0
+                                                    assign comp_original_line = comp_original_cents | times: component.quantity
+                                                    assign components_original_total = components_original_total | plus: comp_original_line
+                                                else
+                                                    assign components_original_total = components_original_total | plus: component.final_line_price
+                                                endif
+                                            endfor
+                                        endif
+                                        assign display_unit_price = item.final_price
+                                        assign display_line_price = item.final_line_price
+                                        if has_components and item.final_price == 0 and item.quantity > 0
+                                            assign display_unit_price = components_total | divided_by: item.quantity
+                                            assign display_line_price = components_total
+                                        endif
+                                        assign display_original_unit_price = display_unit_price
+                                        assign display_original_line_price = display_line_price
+                                        if has_components and item.quantity > 0 and components_original_total > components_total
+                                            assign display_original_unit_price = components_original_total | divided_by: item.quantity
+                                            assign display_original_line_price = components_original_total
+                                        endif
+                                        assign bundle_has_discount = false
+                                        if has_components and components_original_total > components_total
+                                            assign bundle_has_discount = true
+                                        endif
                                     -%}
-                                    <tr class="cart-item" data-item-row data-cart-item {% if item.product.variants.size != 0 %}{% unless item.variant.title contains 'Default' %}data-cart-edit-productItem{% endunless %}{% endif %} data-line="{{ item.key }}">
+                                    <tr class="cart-item{% if has_components %} cart-item--bundle-parent{% endif %}" data-item-row data-cart-item {% if item.product.variants.size != 0 %}{% unless item.variant.title contains 'Default' %}data-cart-edit-productItem{% endunless %}{% endif %} data-line="{{ item.key }}">
                                         <td class="cart-item-block cart-item-info" colspan="2">
                                             <div class="cart-item-wrapper">
                                                 <div class="cart-item-block-left">
@@ -144,7 +177,28 @@
                                                         </ul>
                                                     {%- endif -%}
                                                     <div class="cart-item__price-wrapper cart-item__hidden-desktop">
-                                                        {%- if item.original_price != item.final_price -%}
+                                                        {%- if has_components and bundle_has_discount -%}
+                                                            <dl class="cart-item__discounted-prices">
+                                                                <dt class="visually-hidden">
+                                                                    {{ 'products.product.price.regular_price' | t }}
+                                                                </dt>
+                                                                <dd>
+                                                                    <s class="cart-item__old-price price price--end">
+                                                                        {{ display_original_unit_price | money }}
+                                                                    </s>
+                                                                </dd>
+                                                                <dt class="visually-hidden">
+                                                                    {{ 'products.product.price.sale_price' | t }}
+                                                                </dt>
+                                                                <dd class="price price--end">
+                                                                    {{ display_unit_price | money }}
+                                                                </dd>
+                                                            </dl>
+                                                        {%- elsif has_components and item.final_price == 0 -%}
+                                                            <span class="price price--end">
+                                                                {{ display_unit_price | money }}
+                                                            </span>
+                                                        {%- elsif item.original_price != item.final_price -%}
                                                             <dl class="cart-item__discounted-prices">
                                                                 <dt class="visually-hidden">
                                                                     {{ 'products.product.price.regular_price' | t }}
@@ -201,7 +255,28 @@
                                         </td>
                                         <td class="cart-item-block cart-item-price" colspan="1">
                                             <div class="cart-item__price-wrapper cart-item__hidden-mobile">
-                                                {%- if item.original_price != item.final_price -%}
+                                                {%- if has_components and bundle_has_discount -%}
+                                                    <dl class="cart-item__discounted-prices">
+                                                        <dt class="visually-hidden">
+                                                            {{ 'products.product.price.regular_price' | t }}
+                                                        </dt>
+                                                        <dd>
+                                                            <s class="cart-item__old-price price price--end">
+                                                                {{ display_original_unit_price | money }}
+                                                            </s>
+                                                        </dd>
+                                                        <dt class="visually-hidden">
+                                                            {{ 'products.product.price.sale_price' | t }}
+                                                        </dt>
+                                                        <dd class="price price--end">
+                                                            {{ display_unit_price | money }}
+                                                        </dd>
+                                                    </dl>
+                                                {%- elsif has_components and item.final_price == 0 -%}
+                                                    <span class="price price--end">
+                                                        {{ display_unit_price | money }}
+                                                    </span>
+                                                {%- elsif item.original_price != item.final_price -%}
                                                     <dl class="cart-item__discounted-prices">
                                                         <dt class="visually-hidden">
                                                             {{ 'products.product.price.regular_price' | t }}
@@ -280,7 +355,12 @@
                                             </div>
                                         </td>
                                         <td class="cart-item-block cart-item-total" colspan="1" data-price="{{ item.original_price }}">
-                                            {%- if item.original_price != item.final_price -%}
+                                            {%- if has_components and bundle_has_discount -%}
+                                                <s class="cart-item__old-price">{{ display_original_line_price | money }}</s>
+                                                <span class="cart-item-value">{{ display_line_price | money }}</span>
+                                            {%- elsif has_components and item.final_price == 0 -%}
+                                                <span class="cart-item-value">{{ display_line_price | money }}</span>
+                                            {%- elsif item.original_price != item.final_price -%}
                                                 <span class="cart-item-value">{{ item.final_price | times: item.quantity | money }}</span>
                                             {%- elsif current_variant.compare_at_price > current_variant.price -%}
                                                 <span class="cart-item-value">{{ current_variant.price | times: item.quantity | money }}</span>
@@ -294,6 +374,18 @@
                                             </a>
                                         </td>
                                     </tr>
+                                    {%- if has_components -%}
+                                        <tr class="cart-item-summary-row" data-parent-line="{{ item.key }}">
+                                            <td class="cart-item-summary-cell" colspan="7">
+                                                {% render 'bundle-components', parent: item, part: 'summary' %}
+                                            </td>
+                                        </tr>
+                                        <tr class="cart-item-components-row" data-parent-line="{{ item.key }}">
+                                            <td class="cart-item-components-cell" colspan="7">
+                                                {% render 'bundle-components', parent: item, part: 'list' %}
+                                            </td>
+                                        </tr>
+                                    {%- endif -%}
                                 {%- endfor -%}
                             </tbody>
                         </table>
