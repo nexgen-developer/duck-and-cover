@@ -50,7 +50,7 @@
               "mataso-knit-t-shirt-slate-blue",
               "mataso-knit-t-shirt-stone"
             ],
-            "hide_linked_products": false,
+            "hide_linked_products": true,
             "desktop_number_of_cols": 3,
             "mobile_number_of_cols": 2,
             "margin_bottom_desktop": 0,
@@ -69,7 +69,7 @@
               "moretor-chinos-olive",
               "moretor-chinos-stone"
             ],
-            "hide_linked_products": false,
+            "hide_linked_products": true,
             "desktop_number_of_cols": 3,
             "mobile_number_of_cols": 2,
             "margin_bottom_desktop": 0,
