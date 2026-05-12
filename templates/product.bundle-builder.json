@@ -15,7 +15,7 @@
         "banner-1": {
           "type": "banner",
           "settings": {
-            "background_image": "shopify://shop_images/DAC-CO-ORD-DESKTOP.jpg",
+            "background_image": "shopify://shop_images/DAC-summer-bundle-web-banner.jpg",
             "title": "",
             "text": "",
             "text_alignment": "center",
@@ -36,7 +36,7 @@
               "adamsberg-hoodie-off-white",
               "ambridge-hoodie-black"
             ],
-            "hide_linked_products": false,
+            "hide_linked_products": true,
             "desktop_number_of_cols": 3,
             "mobile_number_of_cols": 2,
             "margin_bottom_desktop": 0,
@@ -59,30 +59,12 @@
             "margin_bottom_desktop": 0,
             "margin_bottom_mobile": 0
           }
-        },
-        "row-3": {
-          "type": "ca_row",
-          "settings": {
-            "index": 3,
-            "title": "Step 3",
-            "products": [
-              "juble-sports-socks-5pk-assorted",
-              "oclate-sports-socks-5pk-assorted",
-              "fubel-trainer-socks-5pk-black"
-            ],
-            "hide_linked_products": false,
-            "desktop_number_of_cols": 3,
-            "mobile_number_of_cols": 2,
-            "margin_bottom_desktop": 22,
-            "margin_bottom_mobile": 0
-          }
         }
       },
       "block_order": [
         "banner-1",
         "row-1",
-        "row-2",
-        "row-3"
+        "row-2"
       ],
       "settings": {
         "title": "Build your bundle",

@@ -32,11 +32,25 @@
             "index": 1,
             "title": "Step 1",
             "products": [
-              "adamsberg-hoodie-dark-olive",
-              "adamsberg-hoodie-off-white",
-              "ambridge-hoodie-black"
+              "wrentham-polo-black",
+              "wrentham-polo-denim-blue",
+              "wrentham-polo-light-stone",
+              "marvela-knit-t-shirt-black",
+              "marvela-knit-t-shirt-light-stone",
+              "marvela-knit-t-shirt-stone",
+              "dedham-knit-polo-black",
+              "dedham-knit-polo-stone",
+              "foxborough-knit-shirt-black",
+              "foxborough-knit-shirt-taupe",
+              "danvers-zip-knit-polo-black",
+              "danvers-zip-knit-polo-stone",
+              "littleton-knit-t-shirt-black",
+              "littleton-knit-t-shirt-light-stone",
+              "mataso-knit-t-shirt-black",
+              "mataso-knit-t-shirt-slate-blue",
+              "mataso-knit-t-shirt-stone"
             ],
-            "hide_linked_products": true,
+            "hide_linked_products": false,
             "desktop_number_of_cols": 3,
             "mobile_number_of_cols": 2,
             "margin_bottom_desktop": 0,
@@ -49,9 +63,11 @@
             "index": 2,
             "title": "Step 2",
             "products": [
-              "adamsberg-joggers-black",
-              "adamsberg-joggers-off-white",
-              "applewold-joggers-black"
+              "moretor-chinos-black",
+              "moretor-chinos-dark-grey",
+              "moretor-chinos-navy",
+              "moretor-chinos-olive",
+              "moretor-chinos-stone"
             ],
             "hide_linked_products": false,
             "desktop_number_of_cols": 3,
@@ -68,7 +84,7 @@
       ],
       "settings": {
         "title": "Build your bundle",
-        "overview_title": "Add 3 items to bundle"
+        "overview_title": "Add 2 items to bundle"
       }
     }
   },
