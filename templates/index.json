@@ -94,7 +94,6 @@
         "image_7wXyh6": {
           "type": "image",
           "name": "20% OFF",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/DAC-ss26-20-mobile_5d34f351-a662-4705-a677-9cc85beee2c8.jpg",
             "mobile_image": "shopify://shop_images/DAC-ss26-20-desktop_e026c88e-7b0f-40ef-9020-cbfcbf50e688.jpg",
@@ -142,6 +141,7 @@
         "image_X6yqbc": {
           "type": "image",
           "name": "20% Co-ords",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/DAC-CO-ORD-DESKTOP.jpg",
             "mobile_image": "shopify://shop_images/DAC-CO-ORD-MOB.jpg",
