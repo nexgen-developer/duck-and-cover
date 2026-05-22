@@ -113,6 +113,20 @@
     },
     "weekly_deal_CnQjac": {
       "type": "weekly-deal",
+      "disabled": true,
+      "name": "T-Shirt & Jean Bundle",
+      "settings": {
+        "image": "shopify://shop_images/Tee-_-Jean-Tile.jpg",
+        "title": "T-SHIRT & JEAN BUNDLE",
+        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">£28.99</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
+        "button1": "Get Deal",
+        "url": "",
+        "CustomCode": "NO CODE NEEDED",
+        "description": "Upgrade your everyday essentials with our T-Shirt & Jean Bundle for just £28.99! The perfect combination of comfort and style at an unbeatable price. No code needed - just add the items to your bundle add to save."
+      }
+    },
+    "weekly_deal_9Yh6RR": {
+      "type": "weekly-deal",
       "name": "Smart Summer Bundle",
       "settings": {
         "image": "shopify://shop_images/DAC-summer-bundle-TILE.jpg",
@@ -560,6 +574,7 @@
     "main",
     "25bcb4cf-3aa4-4cb5-b78f-4074368db4a6",
     "weekly_deal_CnQjac",
+    "weekly_deal_9Yh6RR",
     "weekly_deal_rEnB9G",
     "weekly_deal_78RRYA",
     "weekly_deal_8TnA9V",
