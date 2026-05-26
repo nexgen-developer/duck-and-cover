@@ -1,0 +1,94 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "bundle-builder": {
+      "type": "bundle-builder",
+      "blocks": {
+        "banner-1": {
+          "type": "banner",
+          "settings": {
+            "background_image": "shopify://shop_images/DAC-summer-bundle-web-banner.jpg",
+            "title": "",
+            "text": "",
+            "text_alignment": "center",
+            "text_color": "#ffffff",
+            "full_width_mobile": true,
+            "rounded_corners_mobile": false,
+            "margin_bottom_desktop": 16,
+            "margin_bottom_mobile": 16
+          }
+        },
+        "row-1": {
+          "type": "ca_row",
+          "settings": {
+            "index": 1,
+            "title": "Step 1",
+            "products": [
+              "wrentham-polo-black",
+              "wrentham-polo-denim-blue",
+              "wrentham-polo-light-stone",
+              "marvela-knit-t-shirt-black",
+              "marvela-knit-t-shirt-light-stone",
+              "marvela-knit-t-shirt-stone",
+              "dedham-knit-polo-black",
+              "dedham-knit-polo-stone",
+              "foxborough-knit-shirt-black",
+              "foxborough-knit-shirt-taupe",
+              "danvers-zip-knit-polo-black",
+              "danvers-zip-knit-polo-stone",
+              "littleton-knit-t-shirt-black",
+              "littleton-knit-t-shirt-light-stone",
+              "mataso-knit-t-shirt-black",
+              "mataso-knit-t-shirt-slate-blue",
+              "mataso-knit-t-shirt-stone"
+            ],
+            "hide_linked_products": true,
+            "desktop_number_of_cols": 3,
+            "mobile_number_of_cols": 2,
+            "margin_bottom_desktop": 0,
+            "margin_bottom_mobile": 0
+          }
+        },
+        "row-2": {
+          "type": "ca_row",
+          "settings": {
+            "index": 2,
+            "title": "Step 2",
+            "products": [
+              "moretor-chinos-black",
+              "moretor-chinos-dark-grey",
+              "moretor-chinos-navy",
+              "moretor-chinos-olive",
+              "moretor-chinos-stone"
+            ],
+            "hide_linked_products": true,
+            "desktop_number_of_cols": 3,
+            "mobile_number_of_cols": 2,
+            "margin_bottom_desktop": 0,
+            "margin_bottom_mobile": 0
+          }
+        }
+      },
+      "block_order": [
+        "banner-1",
+        "row-1",
+        "row-2"
+      ],
+      "settings": {
+        "title": "Build your bundle",
+        "overview_title": "Add 2 items to bundle"
+      }
+    }
+  },
+  "order": [
+    "bundle-builder"
+  ]
+}
