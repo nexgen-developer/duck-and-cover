@@ -113,14 +113,13 @@
     },
     "weekly_deal_CnQjac": {
       "type": "weekly-deal",
-      "disabled": true,
       "name": "T-Shirt & Jean Bundle",
       "settings": {
         "image": "shopify://shop_images/Tee-_-Jean-Tile.jpg",
         "title": "T-SHIRT & JEAN BUNDLE",
         "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">£28.99</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
         "button1": "Get Deal",
-        "url": "",
+        "url": "shopify://products/t-shirt-and-jean-bundle",
         "CustomCode": "NO CODE NEEDED",
         "description": "Upgrade your everyday essentials with our T-Shirt & Jean Bundle for just £28.99! The perfect combination of comfort and style at an unbeatable price. No code needed - just add the items to your bundle add to save."
       }
@@ -140,6 +139,7 @@
     },
     "weekly_deal_rEnB9G": {
       "type": "weekly-deal",
+      "disabled": true,
       "name": "Elix Jeans",
       "settings": {
         "image": "shopify://shop_images/DAC-ELIX-JEAN-TILE.gif",
