@@ -240,14 +240,14 @@
     {%- endif -%}
 
     {%- assign compare_at_price = target.compare_at_price -%}
-    {%- assign price = target.price | default: 1999 -%}
+    {%- assign price = target.price -%}
     {%- assign available = target.available | default: false -%}
     {%- assign money_price = price | money -%}
 
     {%- if target == product and product.price_varies -%}
       {% assign is_from = true %}
     {%- endif -%}
-
+{% if price > 0 %}
 
 <div class="price
     {%- if available == false %} price--sold-out {% endif -%}
@@ -304,7 +304,7 @@
     </dl>
 
 </div>
-                      
+{% endif %}                  
                     </div>
                   </div>
 
