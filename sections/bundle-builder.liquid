@@ -56,8 +56,17 @@
               class="bundle-banner {% if block.settings.full_width_mobile %}full-width-mobile{% endif %} {% if block.settings.rounded_corners_mobile %}rounded-corners-mobile{% endif %}"
               style="--margin-bottom-desktop: {{ block.settings.margin_bottom_desktop }}px; --margin-bottom-mobile: {{ block.settings.margin_bottom_mobile }}px;"
               {{ block.shopify_attributes }}>
-              {% if block.settings.background_image %}
-                {{ block.settings.background_image | image_url: width: 1200 | image_tag: class: 'bundle-banner-image' }}
+              {% if block.settings.background_image or block.settings.mobile_image %}
+                <picture>
+                  {% if block.settings.mobile_image %}
+                    <source media="(max-width: 1023px)" srcset="{{ block.settings.mobile_image | image_url: width: 1200 }}">
+                  {% endif %}
+                  {% if block.settings.background_image %}
+                    {{ block.settings.background_image | image_url: width: 1200 | image_tag: class: 'bundle-banner-image' }}
+                  {% else %}
+                    {{ block.settings.mobile_image | image_url: width: 1200 | image_tag: class: 'bundle-banner-image' }}
+                  {% endif %}
+                </picture>
               {% endif %}
               <div class="bundle-banner-content items-{{ block.settings.text_alignment }}" style="color: {{ block.settings.text_color }}">
                 {% if block.settings.title != blank %}
@@ -119,6 +128,12 @@
             "type": "image_picker",
             "id": "background_image",
             "label": "Background Image"
+          },
+          {
+            "type": "image_picker",
+            "id": "mobile_image",
+            "label": "Mobile Background Image",
+            "info": "Used on screens up to 1023px wide. Falls back to the desktop image if not set."
           },
           {
             "type": "text",
