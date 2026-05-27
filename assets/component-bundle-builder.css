@@ -670,7 +670,7 @@ input[disabled] + .bundle-variant-picker__option-value {
   }
 
   .bundle-banner {
-    aspect-ratio: 1.96;
+    aspect-ratio: auto;
     border-radius: 0;
     width: calc(100% - 2rem);
     margin: 0 auto;
