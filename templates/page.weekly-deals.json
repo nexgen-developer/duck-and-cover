@@ -113,6 +113,20 @@
     },
     "weekly_deal_CnQjac": {
       "type": "weekly-deal",
+      "disabled": true,
+      "name": "BOGOF - Chinos",
+      "settings": {
+        "image": "shopify://shop_images/DAC-CHINO-TILE.gif",
+        "title": "BUY ONE GET ONE FREE - CHINOS",
+        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">£30.99</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
+        "button1": "Get Deal",
+        "url": "shopify://collections/moretor",
+        "CustomCode": "CHINOBOGOF",
+        "description": "Double up on style with our Buy One Get One Free chinos deal - 2 pairs for just £30.99! Perfect for upgrading your everyday wardrobe. Use code CHINOBOGOF at checkout while the offer lasts!"
+      }
+    },
+    "weekly_deal_yt7eje": {
+      "type": "weekly-deal",
       "name": "T-Shirt & Jean Bundle",
       "settings": {
         "image": "shopify://shop_images/Tee-_-Jean-Tile.jpg",
@@ -574,6 +588,7 @@
     "main",
     "25bcb4cf-3aa4-4cb5-b78f-4074368db4a6",
     "weekly_deal_CnQjac",
+    "weekly_deal_yt7eje",
     "weekly_deal_9Yh6RR",
     "weekly_deal_rEnB9G",
     "weekly_deal_78RRYA",
