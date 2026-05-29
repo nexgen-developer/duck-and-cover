@@ -94,7 +94,6 @@
         "image_jPj3DA": {
           "type": "image",
           "name": "Pay Day",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/DAC-May-Payday-Desktop.jpg",
             "mobile_image": "shopify://shop_images/DAC-May-Payday-MAil.jpg",
@@ -142,6 +141,7 @@
         "image_bRAq48": {
           "type": "image",
           "name": "Bank Hol",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/DAC-BANK-HOL-DESKTOP.jpg",
             "mobile_image": "shopify://shop_images/DAC-BANK-HOL-MOB.jpg",
