@@ -111,6 +111,20 @@
         "lookbook_style": "1"
       }
     },
+    "weekly_deal_yt7eje": {
+      "type": "weekly-deal",
+      "disabled": true,
+      "name": "Underwear Bundle",
+      "settings": {
+        "image": "shopify://shop_images/DAC-UNDERWEAR-BUNDLE-TILE.jpg",
+        "title": "UNDERWEAR BUNDLE",
+        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">£26.99</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
+        "button1": "Get Deal",
+        "url": "",
+        "CustomCode": "NO CODE NEEDED",
+        "description": "Refresh your essentials with our underwear bundle - 7PK Anvilli Boxers and 5PK Socks for just £26.99! Everyday comfort, unbeatable value. No code needed - just add the items to your bundle add to save."
+      }
+    },
     "weekly_deal_CnQjac": {
       "type": "weekly-deal",
       "disabled": true,
@@ -125,7 +139,7 @@
         "description": "Double up on style with our Buy One Get One Free chinos deal - 2 pairs for just £30.99! Perfect for upgrading your everyday wardrobe. Use code CHINOBOGOF at checkout while the offer lasts!"
       }
     },
-    "weekly_deal_yt7eje": {
+    "weekly_deal_xfeYix": {
       "type": "weekly-deal",
       "name": "T-Shirt & Jean Bundle",
       "settings": {
@@ -587,8 +601,9 @@
   "order": [
     "main",
     "25bcb4cf-3aa4-4cb5-b78f-4074368db4a6",
-    "weekly_deal_CnQjac",
     "weekly_deal_yt7eje",
+    "weekly_deal_CnQjac",
+    "weekly_deal_xfeYix",
     "weekly_deal_9Yh6RR",
     "weekly_deal_rEnB9G",
     "weekly_deal_78RRYA",
