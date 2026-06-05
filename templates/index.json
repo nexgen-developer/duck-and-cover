@@ -94,7 +94,6 @@
         "image_wJ7JDb": {
           "type": "image",
           "name": "Summer - 20% OFF",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/DAC-SUN-20-DESKTOP.jpg",
             "mobile_image": "shopify://shop_images/DAC-SUN-20-MAIL.jpg",
@@ -142,6 +141,7 @@
         "image_jPj3DA": {
           "type": "image",
           "name": "Pay Day",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/DAC-May-Payday-Desktop.jpg",
             "mobile_image": "shopify://shop_images/DAC-May-Payday-MAil.jpg",
