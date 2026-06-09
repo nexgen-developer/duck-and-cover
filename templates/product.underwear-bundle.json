@@ -15,7 +15,8 @@
         "banner-1": {
           "type": "banner",
           "settings": {
-            "background_image": "shopify://shop_images/Tee-_-Jean-Landing-Page-Image.jpg",
+            "background_image": "shopify://shop_images/DAC-UNDERWEAR-BUNDLE-DESKTOP-BANNER.jpg",
+            "mobile_image": "shopify://shop_images/DAC-UNDERWEAR-BUNDLE-MOBILE-BANNER.jpg",
             "title": "",
             "text": "",
             "text_alignment": "center",
@@ -32,15 +33,8 @@
             "index": 1,
             "title": "Step 1",
             "products": [
-              "tatick-t-shirt-light-olive",
-              "topfield-t-shirt-black",
-              "cramptone-t-shirt-denim-blue",
-              "randolph-t-shirt-light-stone",
-              "lynnfold-t-shirt-black",
-              "sherborn-t-shirt-navy",
-              "tatick-t-shirt-light-stone",
-              "topfield-t-shirt-sand",
-              "camostack-t-shirt-black"
+              "anvilli-boxers-7pk-black",
+              "anvilli-boxers-7pk-multi"
             ],
             "hide_linked_products": true,
             "desktop_number_of_cols": 3,
@@ -55,22 +49,9 @@
             "index": 2,
             "title": "Step 2",
             "products": [
-              "overburg-slimmer-fit-jeans-black",
-              "overburg-slimmer-fit-jeans-dark-wash",
-              "overburg-tapered-jeans-black",
-              "overburg-tapered-jeans-mid-wash",
-              "overburg-tapered-jeans-dark-wash",
-              "rushawn-relaxed-fit-jeans-black",
-              "rushawn-relaxed-fit-jeans-dark-wash",
-              "rushawn-relaxed-fit-jeans-light-wash",
-              "rushawn-relaxed-fit-jeans-mid-wash",
-              "elix-straight-leg-jeans-black",
-              "elix-straight-leg-jeans-dark-wash",
-              "elix-straight-leg-jeans-mid-wash",
-              "janstar-straight-leg-jeans-black-wash",
-              "janstar-straight-leg-jeans-stone-wash",
-              "janstar-straight-leg-jeans-dark-wash",
-              "janstar-straight-leg-jeans-grey"
+              "fubel-trainer-socks-5pk-black",
+              "juble-sports-socks-5pk-assorted",
+              "oclate-sports-socks-5pk-assorted"
             ],
             "hide_linked_products": true,
             "desktop_number_of_cols": 3,
