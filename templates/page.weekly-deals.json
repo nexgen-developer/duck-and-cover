@@ -113,14 +113,13 @@
     },
     "weekly_deal_yt7eje": {
       "type": "weekly-deal",
-      "disabled": true,
       "name": "Underwear Bundle",
       "settings": {
         "image": "shopify://shop_images/DAC-UNDERWEAR-BUNDLE-TILE.jpg",
         "title": "UNDERWEAR BUNDLE",
         "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">£26.99</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
         "button1": "Get Deal",
-        "url": "",
+        "url": "shopify://products/underwear-bundle",
         "CustomCode": "NO CODE NEEDED",
         "description": "Refresh your essentials with our underwear bundle - 7PK Anvilli Boxers and 5PK Socks for just £26.99! Everyday comfort, unbeatable value. No code needed - just add the items to your bundle add to save."
       }
