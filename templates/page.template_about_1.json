@@ -15,6 +15,40 @@
         "163076055932ef236c-0": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/DENIM_GUIDE_-_Desktop_Scroller_d9eb9d09-4497-41f8-8a5c-187fc0cb845e.jpg",
+            "mobile_image": "shopify://shop_images/DENIM_GUIDE_-_Mobile_Scroller_78f085e5-4a9a-4630-bf10-08be46803737.jpg",
+            "enable_parallax": false,
+            "title": "",
+            "text": "",
+            "subtitle": "",
+            "btn": "2",
+            "btn_text": "",
+            "link": "",
+            "position": "left",
+            "align": "left",
+            "show_video": false,
+            "video_style": "1",
+            "video_id": "video_youtube",
+            "video_link": "_9VUPq3SxOc",
+            "video_mp4_link": "",
+            "transparent_button": false,
+            "background_color": "",
+            "text_color": "#ffffff",
+            "title_color": "#ffffff",
+            "title_font": "font_2",
+            "title_font_size": 26,
+            "title_mobile_font_size": 20,
+            "title_font_weight": "700",
+            "title_text_transform": "none",
+            "text_font_size": 14,
+            "text_font_weight": "600",
+            "text_text_transform": "uppercase"
+          }
+        },
+        "image_rwFyy8": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
             "image": "shopify://shop_images/DAC-SS23-DENIM-GUIDE-HEAD-BANNER.jpg",
             "mobile_image": "shopify://shop_images/DAC-SS23-DENIM-GUIDE-title-mobile.jpg",
             "enable_parallax": false,
@@ -47,8 +81,10 @@
         }
       },
       "block_order": [
-        "163076055932ef236c-0"
+        "163076055932ef236c-0",
+        "image_rwFyy8"
       ],
+      "name": "The Denim Guide Banner",
       "settings": {
         "show_fullwidth_banner": true,
         "padding_top": 0,
@@ -75,6 +111,15 @@
         "template--16746689986810__aff53f94-5643-410e-a2d0-9ab14609b3ef-image-2": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/DENIM_GUIDE_-_Slim_Straight_or_Relaxed.jpg",
+            "btn_text": "",
+            "link": ""
+          }
+        },
+        "image_hERgRt": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
             "image": "shopify://shop_images/DAC-SS23-DENIM-GUIDE-descript-banner_1.jpg",
             "btn_text": "",
             "link": ""
@@ -83,8 +128,10 @@
       },
       "block_order": [
         "template--16746689986810__aff53f94-5643-410e-a2d0-9ab14609b3ef-image-1",
-        "template--16746689986810__aff53f94-5643-410e-a2d0-9ab14609b3ef-image-2"
+        "template--16746689986810__aff53f94-5643-410e-a2d0-9ab14609b3ef-image-2",
+        "image_hERgRt"
       ],
+      "name": "Video / Slim, Straight or Relaxed",
       "settings": {
         "show_image_gallery": true,
         "container": "full",
@@ -110,6 +157,558 @@
         "block_show": "4",
         "block_dots": false,
         "block_arrows": true
+      }
+    },
+    "05596b60-4f69-4b76-b8e3-6831998875e7": {
+      "type": "halo-fullwidth-banner",
+      "blocks": {
+        "template--16746689986810__05596b60-4f69-4b76-b8e3-6831998875e7-image-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/DENIM_GUIDE_-_Slim_Fit_Desktop_395d690f-8a44-48f7-a6f8-82355f1f126c.jpg",
+            "mobile_image": "shopify://shop_images/DENIM_GUIDE_-_Slim_Fit_Mobile_9d6ad378-feaa-42c8-bde1-e6f9040cd859.jpg",
+            "enable_parallax": false,
+            "title": "",
+            "text": "",
+            "subtitle": "",
+            "btn": "2",
+            "btn_text": "",
+            "link": "https://www.duckandcover.co.uk/search?q=straight+fit+jeans&type=product&options%5Bprefix%5D=last",
+            "position": "left",
+            "align": "left",
+            "show_video": false,
+            "video_style": "1",
+            "video_id": "video_youtube",
+            "video_link": "_9VUPq3SxOc",
+            "video_mp4_link": "",
+            "transparent_button": false,
+            "background_color": "",
+            "text_color": "#ffffff",
+            "title_color": "#ffffff",
+            "title_font": "font_2",
+            "title_font_size": 26,
+            "title_mobile_font_size": 20,
+            "title_font_weight": "700",
+            "title_text_transform": "none",
+            "text_font_size": 14,
+            "text_font_weight": "600",
+            "text_text_transform": "uppercase"
+          }
+        },
+        "image_mtg4Db": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/DAC-SS23-DENIM-GUIDE-tranfold-desktop_2.jpg",
+            "mobile_image": "shopify://shop_images/DAC-SS23-DENIM-GUIDE-tranfold-mob_1.jpg",
+            "enable_parallax": false,
+            "title": "",
+            "text": "",
+            "subtitle": "",
+            "btn": "2",
+            "btn_text": "",
+            "link": "shopify://collections/tranfold",
+            "position": "left",
+            "align": "left",
+            "show_video": false,
+            "video_style": "1",
+            "video_id": "video_youtube",
+            "video_link": "_9VUPq3SxOc",
+            "video_mp4_link": "",
+            "transparent_button": false,
+            "background_color": "",
+            "text_color": "#ffffff",
+            "title_color": "#ffffff",
+            "title_font": "font_2",
+            "title_font_size": 26,
+            "title_mobile_font_size": 20,
+            "title_font_weight": "700",
+            "title_text_transform": "none",
+            "text_font_size": 14,
+            "text_font_weight": "600",
+            "text_text_transform": "uppercase"
+          }
+        }
+      },
+      "block_order": [
+        "template--16746689986810__05596b60-4f69-4b76-b8e3-6831998875e7-image-1",
+        "image_mtg4Db"
+      ],
+      "name": "Slim Fit Jeans Banner",
+      "settings": {
+        "show_fullwidth_banner": true,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_top_tablet": 0,
+        "padding_bottom_tablet": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0,
+        "padding_top_section": 0,
+        "show_hoverImage": false
+      }
+    },
+    "be6aec75-1d25-4232-a8cc-c9c06ed42f36": {
+      "type": "halo-image-gallery",
+      "blocks": {
+        "template--16746689986810__be6aec75-1d25-4232-a8cc-c9c06ed42f36-image-1": {
+          "type": "image",
+          "name": "Tranfold Slim Fit Jeans",
+          "settings": {
+            "image": "shopify://shop_images/DENIM_GUIDE_-_Product_Image_-_Slim_Fit_-_Tranfold.png",
+            "btn_text": "",
+            "link": "https://www.duckandcover.co.uk/search?q=tranfold&type=product&options%5Bprefix%5D=last"
+          }
+        },
+        "template--16746689986810__be6aec75-1d25-4232-a8cc-c9c06ed42f36-image-2": {
+          "type": "image",
+          "name": "Overburg Slim Fit Jeans",
+          "settings": {
+            "image": "shopify://shop_images/DENIM_GUIDE_-_Product_Image_-_Slim_Fit_-_Overburg.png",
+            "btn_text": "",
+            "link": "https://www.duckandcover.co.uk/search?q=overburg&type=product&options%5Bprefix%5D=last"
+          }
+        },
+        "template--16746689986810__be6aec75-1d25-4232-a8cc-c9c06ed42f36-image-3": {
+          "type": "image",
+          "name": "Maylead Slim Fit Jeans",
+          "settings": {
+            "image": "shopify://shop_images/DENIM_GUIDE_-_Product_Image_-_Slim_Fit_-_Maylead.png",
+            "btn_text": "",
+            "link": "https://www.duckandcover.co.uk/search?q=maylead&type=product&options%5Bprefix%5D=last"
+          }
+        },
+        "template--16746689986810__be6aec75-1d25-4232-a8cc-c9c06ed42f36-image-4": {
+          "type": "image",
+          "name": "Doves Slim Fit Jeans",
+          "settings": {
+            "image": "shopify://shop_images/DENIM_GUIDE_-_Product_Image_-_Slim_Fit_-_Doves.png",
+            "btn_text": "",
+            "link": "shopify://products/doves-slim-fit-jeans-mid-wash"
+          }
+        }
+      },
+      "block_order": [
+        "template--16746689986810__be6aec75-1d25-4232-a8cc-c9c06ed42f36-image-1",
+        "template--16746689986810__be6aec75-1d25-4232-a8cc-c9c06ed42f36-image-2",
+        "template--16746689986810__be6aec75-1d25-4232-a8cc-c9c06ed42f36-image-3",
+        "template--16746689986810__be6aec75-1d25-4232-a8cc-c9c06ed42f36-image-4"
+      ],
+      "custom_css": [
+        ".image-gallery {background-image: url(https://cdn.shopify.com/s/files/1/1543/1853/files/DAC-SS23-DENIM-GUIDE-Pentworth-Desktop-Background.jpg?v=1692796381);}",
+        "@media screen and (min-width: 750px) {a img {transition: transform 0.6s ease; will-change: transform; } a:hover img {transform: scale(1.06); }}"
+      ],
+      "name": "Slim Fit Jeans",
+      "settings": {
+        "show_image_gallery": true,
+        "container": "1770",
+        "padding_top": 75,
+        "padding_bottom": 75,
+        "padding_top_tablet": 40,
+        "padding_bottom_tablet": 40,
+        "padding_top_mobile": 30,
+        "padding_bottom_mobile": 30,
+        "block_title": "",
+        "block_text": "",
+        "block_title_align": "center",
+        "block_layout": "grid",
+        "block_mobile_layout": "swipe",
+        "col": "wide",
+        "col_border": 0,
+        "block_action": "link",
+        "block_btn": "2",
+        "block_view_btn": "1",
+        "block_view_btn_text": "",
+        "block_view_btn_link": "",
+        "block_per_row": "5",
+        "block_show": "4",
+        "block_dots": false,
+        "block_arrows": true
+      }
+    },
+    "0c923406-6087-43a2-88d8-88b783d98e6d": {
+      "type": "halo-fullwidth-banner",
+      "blocks": {
+        "template--16746689986810__0c923406-6087-43a2-88d8-88b783d98e6d-image-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/DENIM_GUIDE_-_Straight_Fit_Desktop_c3fd259f-aab3-4521-aba3-32ac342ad267.jpg",
+            "mobile_image": "shopify://shop_images/DENIM_GUIDE_-_Straight_Fit_Mobile_572452d9-dd1f-48f5-8f03-02c172b5f5a9.jpg",
+            "enable_parallax": false,
+            "title": "",
+            "text": "",
+            "subtitle": "",
+            "btn": "2",
+            "btn_text": "",
+            "link": "https://www.duckandcover.co.uk/search?q=straight+fit+jeans&type=product&options%5Bprefix%5D=last",
+            "position": "left",
+            "align": "left",
+            "show_video": false,
+            "video_style": "1",
+            "video_id": "video_youtube",
+            "video_link": "_9VUPq3SxOc",
+            "video_mp4_link": "",
+            "transparent_button": false,
+            "background_color": "",
+            "text_color": "#ffffff",
+            "title_color": "#ffffff",
+            "title_font": "font_2",
+            "title_font_size": 26,
+            "title_mobile_font_size": 20,
+            "title_font_weight": "700",
+            "title_text_transform": "none",
+            "text_font_size": 14,
+            "text_font_weight": "600",
+            "text_text_transform": "uppercase"
+          }
+        },
+        "image_japhJq": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/DAC-SS23-DENIM-GUIDE-MAYLEAD-DESKTOP.jpg",
+            "mobile_image": "shopify://shop_images/MAYLEAD_MOB.gif",
+            "enable_parallax": false,
+            "title": "",
+            "text": "",
+            "subtitle": "",
+            "btn": "2",
+            "btn_text": "",
+            "link": "shopify://collections/maylead",
+            "position": "left",
+            "align": "left",
+            "show_video": false,
+            "video_style": "1",
+            "video_id": "video_youtube",
+            "video_link": "_9VUPq3SxOc",
+            "video_mp4_link": "",
+            "transparent_button": false,
+            "background_color": "",
+            "text_color": "#ffffff",
+            "title_color": "#ffffff",
+            "title_font": "font_2",
+            "title_font_size": 26,
+            "title_mobile_font_size": 20,
+            "title_font_weight": "700",
+            "title_text_transform": "none",
+            "text_font_size": 14,
+            "text_font_weight": "600",
+            "text_text_transform": "uppercase"
+          }
+        }
+      },
+      "block_order": [
+        "template--16746689986810__0c923406-6087-43a2-88d8-88b783d98e6d-image-1",
+        "image_japhJq"
+      ],
+      "name": "Straight Fit Jeans Banner",
+      "settings": {
+        "show_fullwidth_banner": true,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_top_tablet": 0,
+        "padding_bottom_tablet": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0,
+        "padding_top_section": 20,
+        "show_hoverImage": false
+      }
+    },
+    "087e8fe5-55f9-42b5-ad79-4e149b02d44d": {
+      "type": "halo-image-gallery",
+      "blocks": {
+        "template--16746689986810__087e8fe5-55f9-42b5-ad79-4e149b02d44d-image-1": {
+          "type": "image",
+          "name": "Janstar Straight Fit Jeans",
+          "settings": {
+            "image": "shopify://shop_images/DENIM_GUIDE_-_Product_Image_-_Straight_Fit_-_Janstar.png",
+            "btn_text": "",
+            "link": "https://www.duckandcover.co.uk/search?q=janstar&type=product&options%5Bprefix%5D=last"
+          }
+        },
+        "template--16746689986810__087e8fe5-55f9-42b5-ad79-4e149b02d44d-image-2": {
+          "type": "image",
+          "name": "Hydras Straight Fit Jeans",
+          "settings": {
+            "image": "shopify://shop_images/DENIM_GUIDE_-_Product_Image_-_Straight_Fit_-_Hydras.png",
+            "btn_text": "",
+            "link": "https://www.duckandcover.co.uk/search?q=hydras&type=product&options%5Bprefix%5D=last"
+          }
+        },
+        "template--16746689986810__087e8fe5-55f9-42b5-ad79-4e149b02d44d-image-3": {
+          "type": "image",
+          "name": "Elix Straight Fit Jeans",
+          "settings": {
+            "image": "shopify://shop_images/DENIM_GUIDE_-_Product_Image_-_Straight_Fit_-_Elix.png",
+            "btn_text": "",
+            "link": "https://www.duckandcover.co.uk/search?q=elix&type=product&options%5Bprefix%5D=last"
+          }
+        },
+        "f3d783cf-5656-4bda-b182-bd429d3bf5fb": {
+          "type": "image",
+          "name": "Crestline Straight Fit Jeans",
+          "settings": {
+            "image": "shopify://shop_images/DENIM_GUIDE_-_Product_Image_-_Straight_Fit_-_Crestline.png",
+            "btn_text": "",
+            "link": "https://www.duckandcover.co.uk/search?q=crestline&type=product&options%5Bprefix%5D=last"
+          }
+        }
+      },
+      "block_order": [
+        "template--16746689986810__087e8fe5-55f9-42b5-ad79-4e149b02d44d-image-1",
+        "template--16746689986810__087e8fe5-55f9-42b5-ad79-4e149b02d44d-image-2",
+        "template--16746689986810__087e8fe5-55f9-42b5-ad79-4e149b02d44d-image-3",
+        "f3d783cf-5656-4bda-b182-bd429d3bf5fb"
+      ],
+      "custom_css": [
+        ".image-gallery {background-image: url(https://cdn.shopify.com/s/files/1/1543/1853/files/denim_guide_grey_background.jpg?v=1692792893); background-size: 1700px;}",
+        "@media screen and (min-width: 750px) {a img {transition: transform 0.6s ease; will-change: transform; } a:hover img {transform: scale(1.06); }}"
+      ],
+      "name": "Straight Fit Jeans",
+      "settings": {
+        "show_image_gallery": true,
+        "container": "1770",
+        "padding_top": 75,
+        "padding_bottom": 75,
+        "padding_top_tablet": 40,
+        "padding_bottom_tablet": 40,
+        "padding_top_mobile": 30,
+        "padding_bottom_mobile": 30,
+        "block_title": "",
+        "block_text": "",
+        "block_title_align": "center",
+        "block_layout": "grid",
+        "block_mobile_layout": "swipe",
+        "col": "wide",
+        "col_border": 0,
+        "block_action": "link",
+        "block_btn": "2",
+        "block_view_btn": "1",
+        "block_view_btn_text": "",
+        "block_view_btn_link": "",
+        "block_per_row": "4",
+        "block_show": "4",
+        "block_dots": false,
+        "block_arrows": true
+      }
+    },
+    "de409099-7de1-4f0a-af8f-8ede0ecb2618": {
+      "type": "halo-fullwidth-banner",
+      "blocks": {
+        "template--16746689986810__de409099-7de1-4f0a-af8f-8ede0ecb2618-image-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/DENIM_GUIDE_-_Relaxed_Fit_Desktop_1160b132-0f53-4e71-be67-babe1a0c05c6.jpg",
+            "mobile_image": "shopify://shop_images/DENIM_GUIDE_-_Relaxed_Fit_Mobile_61544e61-316c-444f-9a4f-09bc1840a4e5.jpg",
+            "enable_parallax": false,
+            "title": "",
+            "text": "",
+            "subtitle": "",
+            "btn": "2",
+            "btn_text": "",
+            "link": "https://www.duckandcover.co.uk/search?q=relaxed+fit+jeans&type=product&options%5Bprefix%5D=last",
+            "position": "left",
+            "align": "left",
+            "show_video": false,
+            "video_style": "1",
+            "video_id": "video_youtube",
+            "video_link": "_9VUPq3SxOc",
+            "video_mp4_link": "",
+            "transparent_button": false,
+            "background_color": "",
+            "text_color": "#ffffff",
+            "title_color": "#ffffff",
+            "title_font": "font_2",
+            "title_font_size": 26,
+            "title_mobile_font_size": 20,
+            "title_font_weight": "700",
+            "title_text_transform": "none",
+            "text_font_size": 14,
+            "text_font_weight": "600",
+            "text_text_transform": "uppercase"
+          }
+        },
+        "image_Xt6D7p": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/DAC-SS23-DENIM-GUIDE-Overburg-Desktop.jpg",
+            "mobile_image": "shopify://shop_images/DAC-SS23-DENIM-GUIDE-over-burg-mob.jpg",
+            "enable_parallax": false,
+            "title": "",
+            "text": "",
+            "subtitle": "",
+            "btn": "2",
+            "btn_text": "",
+            "link": "shopify://collections/overburg",
+            "position": "left",
+            "align": "left",
+            "show_video": false,
+            "video_style": "1",
+            "video_id": "video_youtube",
+            "video_link": "_9VUPq3SxOc",
+            "video_mp4_link": "",
+            "transparent_button": false,
+            "background_color": "",
+            "text_color": "#ffffff",
+            "title_color": "#ffffff",
+            "title_font": "font_2",
+            "title_font_size": 26,
+            "title_mobile_font_size": 20,
+            "title_font_weight": "700",
+            "title_text_transform": "none",
+            "text_font_size": 14,
+            "text_font_weight": "600",
+            "text_text_transform": "uppercase"
+          }
+        }
+      },
+      "block_order": [
+        "template--16746689986810__de409099-7de1-4f0a-af8f-8ede0ecb2618-image-1",
+        "image_Xt6D7p"
+      ],
+      "name": "Relaxed Fit Jeans Banner",
+      "settings": {
+        "show_fullwidth_banner": true,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_top_tablet": 0,
+        "padding_bottom_tablet": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0,
+        "padding_top_section": 20,
+        "show_hoverImage": false
+      }
+    },
+    "e1a2baef-ef8e-4247-bef6-a66a42790f72": {
+      "type": "halo-image-gallery",
+      "blocks": {
+        "e746a38c-8345-4af7-858f-8745901bffd6": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Asset_87-9.png",
+            "btn_text": "",
+            "link": ""
+          }
+        },
+        "template--16746689986810__e1a2baef-ef8e-4247-bef6-a66a42790f72-image-2": {
+          "type": "image",
+          "name": "Rushawn Relaxed Fit Jeans",
+          "settings": {
+            "image": "shopify://shop_images/DENIM_GUIDE_-_Product_Image_-_Relaxed_Fit_-_Rushawn.png",
+            "btn_text": "",
+            "link": "https://www.duckandcover.co.uk/search?q=rushawn&type=product&options%5Bprefix%5D=last"
+          }
+        },
+        "template--16746689986810__e1a2baef-ef8e-4247-bef6-a66a42790f72-image-1": {
+          "type": "image",
+          "name": "Kelvyn Relaxed Fit Jeans",
+          "settings": {
+            "image": "shopify://shop_images/DENIM_GUIDE_-_Product_Image_-_Relaxed_Fit_-_Kelvyn.png",
+            "btn_text": "",
+            "link": "https://www.duckandcover.co.uk/search?q=kelvyn+&type=product&options%5Bprefix%5D=last"
+          }
+        },
+        "0ffccdc2-6dbd-42c0-bbcb-367a0612fd35": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Overburg_DW_2.png",
+            "btn_text": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "e746a38c-8345-4af7-858f-8745901bffd6",
+        "template--16746689986810__e1a2baef-ef8e-4247-bef6-a66a42790f72-image-2",
+        "template--16746689986810__e1a2baef-ef8e-4247-bef6-a66a42790f72-image-1",
+        "0ffccdc2-6dbd-42c0-bbcb-367a0612fd35"
+      ],
+      "custom_css": [
+        ".image-gallery {background-image: url(https://cdn.shopify.com/s/files/1/1543/1853/files/denim_texture_BLUE_banner_1.jpg?v=1693393349);}",
+        "@media screen and (min-width: 750px) {a img {transition: transform 0.6s ease; will-change: transform; } a:hover img {transform: scale(1.06); }}"
+      ],
+      "name": "Relaxed Fit Jeans",
+      "settings": {
+        "show_image_gallery": true,
+        "container": "1170",
+        "padding_top": 75,
+        "padding_bottom": 75,
+        "padding_top_tablet": 40,
+        "padding_bottom_tablet": 40,
+        "padding_top_mobile": 30,
+        "padding_bottom_mobile": 30,
+        "block_title": "",
+        "block_text": "",
+        "block_title_align": "center",
+        "block_layout": "grid",
+        "block_mobile_layout": "swipe",
+        "col": "wide",
+        "col_border": 0,
+        "block_action": "link",
+        "block_btn": "2",
+        "block_view_btn": "1",
+        "block_view_btn_text": "",
+        "block_view_btn_link": "",
+        "block_per_row": "4",
+        "block_show": "4",
+        "block_dots": false,
+        "block_arrows": true
+      }
+    },
+    "356229d9-8af3-45d9-b893-518dfc937652": {
+      "type": "halo-fullwidth-banner",
+      "blocks": {
+        "template--16841527689466__356229d9-8af3-45d9-b893-518dfc937652-image-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/DAC-SS23-DENIM-GUIDE-size-guide-footer_1.jpg",
+            "mobile_image": "shopify://shop_images/DAC-SS23-DENIM-GUIDE-size-guide-mob.jpg",
+            "enable_parallax": false,
+            "title": "",
+            "text": "",
+            "subtitle": "",
+            "btn": "2",
+            "btn_text": "",
+            "link": "shopify://pages/size-guide",
+            "position": "left",
+            "align": "left",
+            "show_video": false,
+            "video_style": "1",
+            "video_id": "video_youtube",
+            "video_link": "_9VUPq3SxOc",
+            "video_mp4_link": "",
+            "transparent_button": false,
+            "background_color": "",
+            "text_color": "#ffffff",
+            "title_color": "#ffffff",
+            "title_font": "font_2",
+            "title_font_size": 26,
+            "title_mobile_font_size": 20,
+            "title_font_weight": "700",
+            "title_text_transform": "none",
+            "text_font_size": 14,
+            "text_font_weight": "600",
+            "text_text_transform": "uppercase"
+          }
+        }
+      },
+      "block_order": [
+        "template--16841527689466__356229d9-8af3-45d9-b893-518dfc937652-image-1"
+      ],
+      "custom_css": [],
+      "name": "The Size Guide",
+      "settings": {
+        "show_fullwidth_banner": true,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_top_tablet": 0,
+        "padding_bottom_tablet": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0,
+        "padding_top_section": 20,
+        "show_hoverImage": false
       }
     },
     "09b75e73-e9d2-4b39-914c-76700fbdcfbb": {
@@ -152,6 +751,7 @@
       "block_order": [
         "template--16746689986810__09b75e73-e9d2-4b39-914c-76700fbdcfbb-image-1"
       ],
+      "disabled": true,
       "settings": {
         "show_fullwidth_banner": true,
         "padding_top": 0,
@@ -198,170 +798,6 @@
         "image_JgaiR8"
       ],
       "disabled": true,
-      "settings": {
-        "show_image_gallery": true,
-        "container": "1770",
-        "padding_top": 75,
-        "padding_bottom": 75,
-        "padding_top_tablet": 40,
-        "padding_bottom_tablet": 40,
-        "padding_top_mobile": 30,
-        "padding_bottom_mobile": 30,
-        "block_title": "",
-        "block_text": "",
-        "block_title_align": "center",
-        "block_layout": "grid",
-        "block_mobile_layout": "swipe",
-        "col": "wide",
-        "col_border": 0,
-        "block_action": "link",
-        "block_btn": "2",
-        "block_view_btn": "1",
-        "block_view_btn_text": "",
-        "block_view_btn_link": "",
-        "block_per_row": "5",
-        "block_show": "4",
-        "block_dots": false,
-        "block_arrows": true
-      }
-    },
-    "05596b60-4f69-4b76-b8e3-6831998875e7": {
-      "type": "halo-fullwidth-banner",
-      "blocks": {
-        "template--16746689986810__05596b60-4f69-4b76-b8e3-6831998875e7-image-1": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/DAC-SS23-DENIM-GUIDE-tranfold-desktop_2.jpg",
-            "mobile_image": "shopify://shop_images/DAC-SS23-DENIM-GUIDE-tranfold-mob_1.jpg",
-            "enable_parallax": false,
-            "title": "",
-            "text": "",
-            "subtitle": "",
-            "btn": "2",
-            "btn_text": "",
-            "link": "shopify://collections/tranfold",
-            "position": "left",
-            "align": "left",
-            "show_video": false,
-            "video_style": "1",
-            "video_id": "video_youtube",
-            "video_link": "_9VUPq3SxOc",
-            "video_mp4_link": "",
-            "transparent_button": false,
-            "background_color": "",
-            "text_color": "#ffffff",
-            "title_color": "#ffffff",
-            "title_font": "font_2",
-            "title_font_size": 26,
-            "title_mobile_font_size": 20,
-            "title_font_weight": "700",
-            "title_text_transform": "none",
-            "text_font_size": 14,
-            "text_font_weight": "600",
-            "text_text_transform": "uppercase"
-          }
-        }
-      },
-      "block_order": [
-        "template--16746689986810__05596b60-4f69-4b76-b8e3-6831998875e7-image-1"
-      ],
-      "settings": {
-        "show_fullwidth_banner": true,
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "padding_top_tablet": 0,
-        "padding_bottom_tablet": 0,
-        "padding_top_mobile": 0,
-        "padding_bottom_mobile": 0,
-        "padding_top_section": 0,
-        "show_hoverImage": false
-      }
-    },
-    "8c16bdf3-1a1e-48be-83c7-219843231769": {
-      "type": "halo-product-block-5",
-      "disabled": true,
-      "custom_css": [
-        ".halo-product-block-sections {background-image: url(https://cdn.shopify.com/s/files/1/1543/1853/files/DAC-SS23-DENIM-GUIDE-desktop-background_2.jpg?v=1690976980); background-size: 1790px;}"
-      ],
-      "settings": {
-        "display_product_block": true,
-        "style": "1",
-        "container": "1770",
-        "padding_top": 30,
-        "padding_bottom": 0,
-        "padding_top_tablet": 40,
-        "padding_bottom_tablet": 40,
-        "padding_top_mobile": 30,
-        "padding_bottom_mobile": 30,
-        "block_title": "",
-        "block_text": "",
-        "block_title_align": "left",
-        "col": "expand",
-        "block_collection": "tranfold",
-        "block_limit": 10,
-        "block_image_ratio": "adapt",
-        "portrait_aspect_ratio": 133,
-        "show_add_to_cart": false,
-        "show_view_all": false,
-        "view_all_text": "View All",
-        "block_show": "6",
-        "block_arrows": false
-      }
-    },
-    "be6aec75-1d25-4232-a8cc-c9c06ed42f36": {
-      "type": "halo-image-gallery",
-      "blocks": {
-        "template--16746689986810__be6aec75-1d25-4232-a8cc-c9c06ed42f36-image-1": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Tranfold_Tinted_Blue_1.png",
-            "btn_text": "",
-            "link": "shopify://products/tranfold-slim-fit-jeans-tinted-blue"
-          }
-        },
-        "template--16746689986810__be6aec75-1d25-4232-a8cc-c9c06ed42f36-image-2": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Tranfold_Dark_Wash_1.png",
-            "btn_text": "",
-            "link": "shopify://products/tranfold-slim-fit-jeans-dark-wash"
-          }
-        },
-        "template--16746689986810__be6aec75-1d25-4232-a8cc-c9c06ed42f36-image-3": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Tranfold_Light_Wash_1.png",
-            "btn_text": "",
-            "link": "shopify://products/tranfold-slim-fit-jeans-light-wash"
-          }
-        },
-        "template--16746689986810__be6aec75-1d25-4232-a8cc-c9c06ed42f36-image-4": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Tranfold_Stone_Wash_1.png",
-            "btn_text": "",
-            "link": "shopify://products/tranfold-slim-fit-jeans-stone-wash"
-          }
-        },
-        "1aa25da4-1cde-4d3e-a731-6025cd87d3fe": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Tranfold_Grey_1.png",
-            "btn_text": "",
-            "link": "shopify://products/tranfold-slim-fit-jeans-mid-grey"
-          }
-        }
-      },
-      "block_order": [
-        "template--16746689986810__be6aec75-1d25-4232-a8cc-c9c06ed42f36-image-1",
-        "template--16746689986810__be6aec75-1d25-4232-a8cc-c9c06ed42f36-image-2",
-        "template--16746689986810__be6aec75-1d25-4232-a8cc-c9c06ed42f36-image-3",
-        "template--16746689986810__be6aec75-1d25-4232-a8cc-c9c06ed42f36-image-4",
-        "1aa25da4-1cde-4d3e-a731-6025cd87d3fe"
-      ],
-      "custom_css": [
-        ".image-gallery {background-image: url(https://cdn.shopify.com/s/files/1/1543/1853/files/DAC-SS23-DENIM-GUIDE-Pentworth-Desktop-Background.jpg?v=1692796381);}"
-      ],
       "settings": {
         "show_image_gallery": true,
         "container": "1770",
@@ -438,359 +874,20 @@
         "padding_top_mobile": 0,
         "padding_bottom_mobile": 10
       }
-    },
-    "0c923406-6087-43a2-88d8-88b783d98e6d": {
-      "type": "halo-fullwidth-banner",
-      "blocks": {
-        "template--16746689986810__0c923406-6087-43a2-88d8-88b783d98e6d-image-1": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/DAC-SS23-DENIM-GUIDE-MAYLEAD-DESKTOP.jpg",
-            "mobile_image": "shopify://shop_images/MAYLEAD_MOB.gif",
-            "enable_parallax": false,
-            "title": "",
-            "text": "",
-            "subtitle": "",
-            "btn": "2",
-            "btn_text": "",
-            "link": "shopify://collections/maylead",
-            "position": "left",
-            "align": "left",
-            "show_video": false,
-            "video_style": "1",
-            "video_id": "video_youtube",
-            "video_link": "_9VUPq3SxOc",
-            "video_mp4_link": "",
-            "transparent_button": false,
-            "background_color": "",
-            "text_color": "#ffffff",
-            "title_color": "#ffffff",
-            "title_font": "font_2",
-            "title_font_size": 26,
-            "title_mobile_font_size": 20,
-            "title_font_weight": "700",
-            "title_text_transform": "none",
-            "text_font_size": 14,
-            "text_font_weight": "600",
-            "text_text_transform": "uppercase"
-          }
-        }
-      },
-      "block_order": [
-        "template--16746689986810__0c923406-6087-43a2-88d8-88b783d98e6d-image-1"
-      ],
-      "settings": {
-        "show_fullwidth_banner": true,
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "padding_top_tablet": 0,
-        "padding_bottom_tablet": 0,
-        "padding_top_mobile": 0,
-        "padding_bottom_mobile": 0,
-        "padding_top_section": 20,
-        "show_hoverImage": false
-      }
-    },
-    "087e8fe5-55f9-42b5-ad79-4e149b02d44d": {
-      "type": "halo-image-gallery",
-      "blocks": {
-        "template--16746689986810__087e8fe5-55f9-42b5-ad79-4e149b02d44d-image-1": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Maylead_Tinted_Blue.png",
-            "btn_text": "",
-            "link": "shopify://products/maylead-slim-fit-jeans-tinted-blue"
-          }
-        },
-        "template--16746689986810__087e8fe5-55f9-42b5-ad79-4e149b02d44d-image-2": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Maylead_Raw_Wash.png",
-            "btn_text": "",
-            "link": "shopify://products/maylead-slim-fit-jeans"
-          }
-        },
-        "template--16746689986810__087e8fe5-55f9-42b5-ad79-4e149b02d44d-image-3": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Maylead_Stone_Wash.png",
-            "btn_text": "",
-            "link": "shopify://products/maylead-slim-fit-jeans-stone-wash"
-          }
-        },
-        "51e65eae-ac6f-4ee6-83ed-483930ed6595": {
-          "type": "image",
-          "disabled": true,
-          "settings": {
-            "image": "shopify://shop_images/Maylead_Grey_Wash.png",
-            "btn_text": "",
-            "link": "shopify://products/maylead-slim-fit-jeans-grey"
-          }
-        },
-        "f3d783cf-5656-4bda-b182-bd429d3bf5fb": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Maylead_Black.png",
-            "btn_text": "",
-            "link": "shopify://products/maylead-slim-fit-jeans-black"
-          }
-        },
-        "8d0f2f70-7c0b-43bf-9d9f-d3632f181052": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Maylead_Dark_Wash.png",
-            "btn_text": "",
-            "link": "shopify://products/maylead-slim-fit-jeans-dark-wash"
-          }
-        },
-        "template--16746689986810__087e8fe5-55f9-42b5-ad79-4e149b02d44d-image-4": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Maylead_Light_Wash.png",
-            "btn_text": "",
-            "link": "shopify://products/maylead-slim-fit-jeans-light-wash"
-          }
-        },
-        "5c3a29f7-17fb-4aea-95f7-2cdd05966262": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Maylead_Blue_Black.png",
-            "btn_text": "",
-            "link": "shopify://products/maylead-slim-fit-jeans-blue-black"
-          }
-        }
-      },
-      "block_order": [
-        "template--16746689986810__087e8fe5-55f9-42b5-ad79-4e149b02d44d-image-1",
-        "template--16746689986810__087e8fe5-55f9-42b5-ad79-4e149b02d44d-image-2",
-        "template--16746689986810__087e8fe5-55f9-42b5-ad79-4e149b02d44d-image-3",
-        "51e65eae-ac6f-4ee6-83ed-483930ed6595",
-        "f3d783cf-5656-4bda-b182-bd429d3bf5fb",
-        "8d0f2f70-7c0b-43bf-9d9f-d3632f181052",
-        "template--16746689986810__087e8fe5-55f9-42b5-ad79-4e149b02d44d-image-4",
-        "5c3a29f7-17fb-4aea-95f7-2cdd05966262"
-      ],
-      "custom_css": [
-        ".image-gallery {background-image: url(https://cdn.shopify.com/s/files/1/1543/1853/files/denim_guide_grey_background.jpg?v=1692792893);}"
-      ],
-      "settings": {
-        "show_image_gallery": true,
-        "container": "1770",
-        "padding_top": 75,
-        "padding_bottom": 75,
-        "padding_top_tablet": 40,
-        "padding_bottom_tablet": 40,
-        "padding_top_mobile": 30,
-        "padding_bottom_mobile": 30,
-        "block_title": "",
-        "block_text": "",
-        "block_title_align": "center",
-        "block_layout": "grid",
-        "block_mobile_layout": "swipe",
-        "col": "wide",
-        "col_border": 0,
-        "block_action": "link",
-        "block_btn": "2",
-        "block_view_btn": "1",
-        "block_view_btn_text": "",
-        "block_view_btn_link": "",
-        "block_per_row": "4",
-        "block_show": "4",
-        "block_dots": false,
-        "block_arrows": true
-      }
-    },
-    "de409099-7de1-4f0a-af8f-8ede0ecb2618": {
-      "type": "halo-fullwidth-banner",
-      "blocks": {
-        "template--16746689986810__de409099-7de1-4f0a-af8f-8ede0ecb2618-image-1": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/DAC-SS23-DENIM-GUIDE-Overburg-Desktop.jpg",
-            "mobile_image": "shopify://shop_images/DAC-SS23-DENIM-GUIDE-over-burg-mob.jpg",
-            "enable_parallax": false,
-            "title": "",
-            "text": "",
-            "subtitle": "",
-            "btn": "2",
-            "btn_text": "",
-            "link": "shopify://collections/overburg",
-            "position": "left",
-            "align": "left",
-            "show_video": false,
-            "video_style": "1",
-            "video_id": "video_youtube",
-            "video_link": "_9VUPq3SxOc",
-            "video_mp4_link": "",
-            "transparent_button": false,
-            "background_color": "",
-            "text_color": "#ffffff",
-            "title_color": "#ffffff",
-            "title_font": "font_2",
-            "title_font_size": 26,
-            "title_mobile_font_size": 20,
-            "title_font_weight": "700",
-            "title_text_transform": "none",
-            "text_font_size": 14,
-            "text_font_weight": "600",
-            "text_text_transform": "uppercase"
-          }
-        }
-      },
-      "block_order": [
-        "template--16746689986810__de409099-7de1-4f0a-af8f-8ede0ecb2618-image-1"
-      ],
-      "settings": {
-        "show_fullwidth_banner": true,
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "padding_top_tablet": 0,
-        "padding_bottom_tablet": 0,
-        "padding_top_mobile": 0,
-        "padding_bottom_mobile": 0,
-        "padding_top_section": 20,
-        "show_hoverImage": false
-      }
-    },
-    "e1a2baef-ef8e-4247-bef6-a66a42790f72": {
-      "type": "halo-image-gallery",
-      "blocks": {
-        "e746a38c-8345-4af7-858f-8745901bffd6": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Asset_87-9.png",
-            "btn_text": "",
-            "link": ""
-          }
-        },
-        "template--16746689986810__e1a2baef-ef8e-4247-bef6-a66a42790f72-image-2": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Overburg_MW.png",
-            "btn_text": "",
-            "link": "shopify://products/overburg-tapered-jeans-mid-wash"
-          }
-        },
-        "template--16746689986810__e1a2baef-ef8e-4247-bef6-a66a42790f72-image-1": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Overburg_DW.png",
-            "btn_text": "",
-            "link": "shopify://products/overburg-tapered-jeans-dark-wash"
-          }
-        },
-        "0ffccdc2-6dbd-42c0-bbcb-367a0612fd35": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Overburg_DW_2.png",
-            "btn_text": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "e746a38c-8345-4af7-858f-8745901bffd6",
-        "template--16746689986810__e1a2baef-ef8e-4247-bef6-a66a42790f72-image-2",
-        "template--16746689986810__e1a2baef-ef8e-4247-bef6-a66a42790f72-image-1",
-        "0ffccdc2-6dbd-42c0-bbcb-367a0612fd35"
-      ],
-      "custom_css": [
-        ".image-gallery {background-image: url(https://cdn.shopify.com/s/files/1/1543/1853/files/denim_texture_BLUE_banner_1.jpg?v=1693393349); background-size: 1700px;}"
-      ],
-      "settings": {
-        "show_image_gallery": true,
-        "container": "1770",
-        "padding_top": 75,
-        "padding_bottom": 75,
-        "padding_top_tablet": 40,
-        "padding_bottom_tablet": 40,
-        "padding_top_mobile": 30,
-        "padding_bottom_mobile": 30,
-        "block_title": "",
-        "block_text": "",
-        "block_title_align": "center",
-        "block_layout": "grid",
-        "block_mobile_layout": "swipe",
-        "col": "wide",
-        "col_border": 0,
-        "block_action": "link",
-        "block_btn": "2",
-        "block_view_btn": "1",
-        "block_view_btn_text": "",
-        "block_view_btn_link": "",
-        "block_per_row": "4",
-        "block_show": "4",
-        "block_dots": false,
-        "block_arrows": true
-      }
-    },
-    "356229d9-8af3-45d9-b893-518dfc937652": {
-      "type": "halo-fullwidth-banner",
-      "blocks": {
-        "template--16841527689466__356229d9-8af3-45d9-b893-518dfc937652-image-1": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/DAC-SS23-DENIM-GUIDE-size-guide-footer_1.jpg",
-            "mobile_image": "shopify://shop_images/DAC-SS23-DENIM-GUIDE-size-guide-mob.jpg",
-            "enable_parallax": false,
-            "title": "",
-            "text": "",
-            "subtitle": "",
-            "btn": "2",
-            "btn_text": "",
-            "link": "shopify://pages/size-guide",
-            "position": "left",
-            "align": "left",
-            "show_video": false,
-            "video_style": "1",
-            "video_id": "video_youtube",
-            "video_link": "_9VUPq3SxOc",
-            "video_mp4_link": "",
-            "transparent_button": false,
-            "background_color": "",
-            "text_color": "#ffffff",
-            "title_color": "#ffffff",
-            "title_font": "font_2",
-            "title_font_size": 26,
-            "title_mobile_font_size": 20,
-            "title_font_weight": "700",
-            "title_text_transform": "none",
-            "text_font_size": 14,
-            "text_font_weight": "600",
-            "text_text_transform": "uppercase"
-          }
-        }
-      },
-      "block_order": [
-        "template--16841527689466__356229d9-8af3-45d9-b893-518dfc937652-image-1"
-      ],
-      "custom_css": [],
-      "settings": {
-        "show_fullwidth_banner": true,
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "padding_top_tablet": 0,
-        "padding_bottom_tablet": 0,
-        "padding_top_mobile": 0,
-        "padding_bottom_mobile": 0,
-        "padding_top_section": 20,
-        "show_hoverImage": false
-      }
     }
   },
   "order": [
     "163076055954fb127d",
     "aff53f94-5643-410e-a2d0-9ab14609b3ef",
-    "09b75e73-e9d2-4b39-914c-76700fbdcfbb",
-    "halo_image_gallery_nwQtaF",
     "05596b60-4f69-4b76-b8e3-6831998875e7",
-    "8c16bdf3-1a1e-48be-83c7-219843231769",
     "be6aec75-1d25-4232-a8cc-c9c06ed42f36",
-    "main",
     "0c923406-6087-43a2-88d8-88b783d98e6d",
     "087e8fe5-55f9-42b5-ad79-4e149b02d44d",
     "de409099-7de1-4f0a-af8f-8ede0ecb2618",
     "e1a2baef-ef8e-4247-bef6-a66a42790f72",
-    "356229d9-8af3-45d9-b893-518dfc937652"
+    "356229d9-8af3-45d9-b893-518dfc937652",
+    "09b75e73-e9d2-4b39-914c-76700fbdcfbb",
+    "halo_image_gallery_nwQtaF",
+    "main"
   ]
 }
