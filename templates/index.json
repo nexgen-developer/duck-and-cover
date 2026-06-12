@@ -94,7 +94,6 @@
         "image_7wXyh6": {
           "type": "image",
           "name": "Father's Day Gifting",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/DAC-FATHERS-DAY-GIFTING-DESKTOP.jpg",
             "mobile_image": "shopify://shop_images/DAC-FATHERS-DAY-GIFTING-MAIL.jpg",
@@ -103,7 +102,7 @@
             "text": "",
             "btn": "2",
             "btn_text": "",
-            "link": "shopify://collections/new-in",
+            "link": "shopify://collections/fathers-day-gift-guide",
             "container_content": "1570",
             "position": "right",
             "alignment": "left",
@@ -142,6 +141,7 @@
         "image_wJ7JDb": {
           "type": "image",
           "name": "Summer - 20% OFF",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/DAC-SUN-20-DESKTOP.jpg",
             "mobile_image": "shopify://shop_images/DAC-SUN-20-MAIL.jpg",
