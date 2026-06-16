@@ -576,6 +576,15 @@
             "link": "shopify://pages/weekly-deals"
           }
         },
+        "template--16937253765370__f0a1f009-f7e3-4ad1-9307-9fcf06cf17a4-image-3": {
+          "type": "image",
+          "name": "Polos",
+          "settings": {
+            "image": "shopify://shop_images/DUCK_COVER_-_QUICK_LINK_-_Mystery_Box.jpg",
+            "btn_text": "",
+            "link": "shopify://products/mens-dac-mystery-box"
+          }
+        },
         "template--16937253765370__f0a1f009-f7e3-4ad1-9307-9fcf06cf17a4-image-2": {
           "type": "image",
           "name": "T-Shirts",
@@ -583,15 +592,6 @@
             "image": "shopify://shop_images/QUICK_LINK_-_T-Shirt_db240d1f-f6d6-4852-8e35-5eb4e5149320.jpg",
             "btn_text": "",
             "link": "shopify://collections/all-t-shirts"
-          }
-        },
-        "template--16937253765370__f0a1f009-f7e3-4ad1-9307-9fcf06cf17a4-image-3": {
-          "type": "image",
-          "name": "Polos",
-          "settings": {
-            "image": "shopify://shop_images/QUICK_LINK_-_Polos_e658af85-9715-4b3a-8cad-5038f30c2360.jpg",
-            "btn_text": "",
-            "link": "shopify://collections/polos"
           }
         },
         "image_qLwNdt": {
@@ -615,8 +615,8 @@
       },
       "block_order": [
         "template--16937253765370__f0a1f009-f7e3-4ad1-9307-9fcf06cf17a4-image-1",
-        "template--16937253765370__f0a1f009-f7e3-4ad1-9307-9fcf06cf17a4-image-2",
         "template--16937253765370__f0a1f009-f7e3-4ad1-9307-9fcf06cf17a4-image-3",
+        "template--16937253765370__f0a1f009-f7e3-4ad1-9307-9fcf06cf17a4-image-2",
         "image_qLwNdt",
         "template--16937253765370__f0a1f009-f7e3-4ad1-9307-9fcf06cf17a4-image-4"
       ],
