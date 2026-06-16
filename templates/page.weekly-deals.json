@@ -113,6 +113,19 @@
     },
     "weekly_deal_rEnB9G": {
       "type": "weekly-deal",
+      "name": "Mystery Box",
+      "settings": {
+        "image": "shopify://shop_images/DUCK_COVER_-_WEEKLY_DEAL_-_Mystery_Box.jpg",
+        "title": "MYSTERY BOX",
+        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">£5.00</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
+        "button1": "Get Deal",
+        "url": "shopify://collections/mystery-box",
+        "CustomCode": "",
+        "description": "Feeling lucky? Grab a £5.00 Duck & Cover Mystery Box. Choose your size and we’ll take care of the rest."
+      }
+    },
+    "weekly_deal_X7xVwp": {
+      "type": "weekly-deal",
       "name": "Elix Jeans",
       "settings": {
         "image": "shopify://shop_images/DAC-ELIX-JEAN-TILE.gif",
@@ -600,6 +613,7 @@
     "main",
     "25bcb4cf-3aa4-4cb5-b78f-4074368db4a6",
     "weekly_deal_rEnB9G",
+    "weekly_deal_X7xVwp",
     "weekly_deal_yt7eje",
     "weekly_deal_CnQjac",
     "weekly_deal_xfeYix",
