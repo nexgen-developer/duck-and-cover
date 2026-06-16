@@ -113,7 +113,6 @@
     },
     "weekly_deal_rEnB9G": {
       "type": "weekly-deal",
-      "disabled": true,
       "name": "Elix Jeans",
       "settings": {
         "image": "shopify://shop_images/DAC-ELIX-JEAN-TILE.gif",
@@ -140,6 +139,7 @@
     },
     "weekly_deal_CnQjac": {
       "type": "weekly-deal",
+      "disabled": true,
       "name": "BOGOF - Chinos",
       "settings": {
         "image": "shopify://shop_images/DAC-CHINO-TILE.gif",
