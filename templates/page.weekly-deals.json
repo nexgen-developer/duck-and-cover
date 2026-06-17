@@ -111,6 +111,20 @@
         "lookbook_style": "1"
       }
     },
+    "weekly_deal_4bedtQ": {
+      "type": "weekly-deal",
+      "disabled": true,
+      "name": "Smart Summer Bundle",
+      "settings": {
+        "image": "shopify://shop_images/DAC-SHORT-BUNDLE-TILE.jpg",
+        "title": "SMART SUMMER SHORTS BUNDLE",
+        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">£29.99</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
+        "button1": "Get Deal",
+        "url": "",
+        "CustomCode": "NO CODE NEEDED",
+        "description": "Get summer-ready with our Top & Chino Shorts Bundle for just £29.99! Simply choose a top and any pair of Moretor Chino Shorts to unlock the saving. No code needed - just add it to your bundle and enjoy the deal!"
+      }
+    },
     "weekly_deal_rEnB9G": {
       "type": "weekly-deal",
       "name": "Mystery Box",
@@ -612,6 +626,7 @@
   "order": [
     "main",
     "25bcb4cf-3aa4-4cb5-b78f-4074368db4a6",
+    "weekly_deal_4bedtQ",
     "weekly_deal_rEnB9G",
     "weekly_deal_X7xVwp",
     "weekly_deal_yt7eje",
