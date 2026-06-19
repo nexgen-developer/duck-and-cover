@@ -3730,6 +3730,7 @@
           "label__6": "Sticky Header Shows",
           "options__1": "On the screen as customers scroll up.",
           "options__2": "On the screen as customers scroll down.",
+          "options__3": "Always show on mobile.",
           "info": "Header shows on the screen as customers scroll up."
         },
         "transparent-header": {

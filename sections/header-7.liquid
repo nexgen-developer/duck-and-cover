@@ -17,7 +17,7 @@
 
 {% render 'header-style' %}
 
-<{% if section.settings.show_sticky_header %}sticky-header{% else %}div{% endif %} class="header-wrapper{% if section.settings.show_line_separator %} header-wrapper--border-bottom{% endif %}">
+<{% if section.settings.show_sticky_header %}sticky-header{% else %}div{% endif %} class="header-wrapper{% if section.settings.show_line_separator %} header-wrapper--border-bottom{% endif %}"{% if section.settings.show_sticky_header %} data-sticky-header-type="{{ section.settings.sticky_header_type }}"{% endif %}>
 	<header class="header header-7{% if section.settings.menu != blank %} header--has-menu{% endif %}">
 		<div class="header-top header-top-7">
 			<div class="container container-header-{{ section.settings.container }}">
@@ -270,6 +270,17 @@
         onScroll() {
             const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
+            if (window.innerWidth <= 1024 && this.dataset.stickyHeaderType === 'always') {
+                if (scrollTop > this.headerBounds.bottom) {
+                    requestAnimationFrame(this.reveal.bind(this));
+                } else if (scrollTop <= this.headerBounds.top) {
+                    requestAnimationFrame(this.reset.bind(this));
+                }
+
+                this.currentScrollTop = scrollTop;
+                return;
+            }
+
             if (scrollTop > this.currentScrollTop && scrollTop > this.headerBounds.bottom) {
                 if(!document.body.classList.contains('open-search')){
                     requestAnimationFrame(this.hide.bind(this));
@@ -384,6 +395,10 @@
             {
                 "value": "down",
                 "label": "t:sections.header.settings.general.options__2"
+            },
+            {
+                "value": "always",
+                "label": "t:sections.header.settings.general.options__3"
             }]
         },
 	    {

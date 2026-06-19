@@ -379,7 +379,8 @@
                     background: {{ header_mobile_bg | color_modify: 'alpha', color_modify_mobile }}!important;
                 }
 
-                {%- if show_sticky_header and sticky_header_type == 'up' -%}
+                {%- if show_sticky_header -%}
+                {%- if sticky_header_type == 'up' or sticky_header_type == 'always' -%}
                     .shopify-section-header .header-mobile{
                         position: relative;
                         top: unset;
@@ -401,7 +402,8 @@
                     [id^='shopify-section-announcement-bar-'] + .shopify-section-header:not(.shopify-section-header-sticky){
                         top: var(--top-fixed-header);
                     }
-                {% endif %}
+                {%- endif -%}
+                {%- endif -%}
 
                 .header-top,
                 .header-middle,
@@ -874,7 +876,8 @@
                     transition: background .3s;
                 }
 
-                {%- if show_sticky_header and sticky_header_type == 'up' -%}
+                {%- if show_sticky_header -%}
+                {%- if sticky_header_type == 'up' or sticky_header_type == 'always' -%}
                     .shopify-section-header .header{
                         position: relative;
                         top: unset;
@@ -896,7 +899,8 @@
                     [id^='shopify-section-announcement-bar-'] + .shopify-section-header:not(.shopify-section-header-sticky){
                         top: var(--top-fixed-header);
                     }
-                {% endif %}
+                {%- endif -%}
+                {%- endif -%}
 
                 {% if settings.header_layout == '7' %}
                     {% if header_top_bg != 'rgba(0,0,0,0)' and header_top_bg != blank %}
