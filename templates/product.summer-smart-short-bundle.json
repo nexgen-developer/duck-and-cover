@@ -15,7 +15,8 @@
         "banner-1": {
           "type": "banner",
           "settings": {
-            "background_image": "shopify://shop_images/DAC-summer-bundle-web-banner.jpg",
+            "background_image": "shopify://shop_images/DAC-SHORT-BUNDLE-DESKTOP.jpg",
+            "mobile_image": "shopify://shop_images/DAC-SHORT-BUNDLE-MOBILE.jpg",
             "title": "",
             "text": "",
             "text_alignment": "center",
@@ -32,6 +33,7 @@
             "index": 1,
             "title": "Step 1",
             "products": [
+              "sudbury-t-shirt-olive-1",
               "wrentham-polo-black",
               "wrentham-polo-denim-blue",
               "wrentham-polo-light-stone",
@@ -63,11 +65,12 @@
             "index": 2,
             "title": "Step 2",
             "products": [
-              "moretor-chinos-black",
-              "moretor-chinos-dark-grey",
-              "moretor-chinos-navy",
-              "moretor-chinos-olive",
-              "moretor-chinos-stone"
+              "moreshore-chino-shorts-black",
+              "moreshore-chino-shorts-dark-grey",
+              "moreshore-chino-shorts-light-grey",
+              "moreshore-chino-shorts-navy",
+              "moreshore-chino-shorts-olive",
+              "moreshore-chino-shorts-stone"
             ],
             "hide_linked_products": true,
             "desktop_number_of_cols": 3,
