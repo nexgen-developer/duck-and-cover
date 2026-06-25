@@ -111,6 +111,20 @@
         "lookbook_style": "1"
       }
     },
+    "weekly_deal_X7xVwp": {
+      "type": "weekly-deal",
+      "disabled": true,
+      "name": "Elix Jeans",
+      "settings": {
+        "image": "shopify://shop_images/DAC-5PK-TEE-TILE.gif",
+        "title": "5PK T-SHIRTS",
+        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">£19.99</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
+        "button1": "Get Deal",
+        "url": "shopify://collections/5pk-t-shirt-deal",
+        "CustomCode": "5PKTEES",
+        "description": "Stock up on everyday essentials with our 5PK T-Shirts for just £19.99! Comfortable, versatile, and perfect for any wardrobe. Use code 5PKTEES at checkout and save today!"
+      }
+    },
     "weekly_deal_4bedtQ": {
       "type": "weekly-deal",
       "name": "Smart Summer Bundle",
@@ -137,7 +151,7 @@
         "description": "Feeling lucky? Grab a £5.00 Duck & Cover Mystery Box. Choose your size and we’ll take care of the rest."
       }
     },
-    "weekly_deal_X7xVwp": {
+    "weekly_deal_pATLmh": {
       "type": "weekly-deal",
       "name": "Elix Jeans",
       "settings": {
@@ -625,9 +639,10 @@
   "order": [
     "main",
     "25bcb4cf-3aa4-4cb5-b78f-4074368db4a6",
+    "weekly_deal_X7xVwp",
     "weekly_deal_4bedtQ",
     "weekly_deal_rEnB9G",
-    "weekly_deal_X7xVwp",
+    "weekly_deal_pATLmh",
     "weekly_deal_yt7eje",
     "weekly_deal_CnQjac",
     "weekly_deal_xfeYix",
