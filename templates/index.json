@@ -94,7 +94,6 @@
         "image_jPj3DA": {
           "type": "image",
           "name": "Pay Day",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/DAC-JUNE-PAYDAY-DESKTOP.jpg",
             "mobile_image": "shopify://shop_images/DAC-JUNE-PAYDAY-MAIL.jpg",
@@ -142,6 +141,7 @@
         "image_X6yqbc": {
           "type": "image",
           "name": "Father's Day",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/DAC-FATHER25-DESKTOP.jpg",
             "mobile_image": "shopify://shop_images/DAC-FATHER25-MAIL.jpg",
