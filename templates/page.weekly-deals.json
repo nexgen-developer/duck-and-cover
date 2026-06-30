@@ -113,8 +113,7 @@
     },
     "weekly_deal_X7xVwp": {
       "type": "weekly-deal",
-      "disabled": true,
-      "name": "Elix Jeans",
+      "name": "5PK TEES",
       "settings": {
         "image": "shopify://shop_images/DAC-5PK-TEE-TILE.gif",
         "title": "5PK T-SHIRTS",
@@ -153,6 +152,7 @@
     },
     "weekly_deal_pATLmh": {
       "type": "weekly-deal",
+      "disabled": true,
       "name": "Elix Jeans",
       "settings": {
         "image": "shopify://shop_images/DAC-ELIX-JEAN-TILE.gif",
