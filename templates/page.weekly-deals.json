@@ -111,6 +111,20 @@
         "lookbook_style": "1"
       }
     },
+    "weekly_deal_JXpkmF": {
+      "type": "weekly-deal",
+      "disabled": true,
+      "name": "Sherborn Bundle",
+      "settings": {
+        "image": "shopify://shop_images/DAC-SHERBORN-BUNDLE-TILE.jpg",
+        "title": "SHERBORN BUNDLE",
+        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">FROM £16.34</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
+        "button1": "Get Deal",
+        "url": "",
+        "CustomCode": "NO CODE NEEDED",
+        "description": "Get summer sorted with our Sherborn Bundles—Tee & Shorts for just £16.34 or Polo & Shorts for £20.21. With 57% OFF, it's the perfect time to refresh your warm-weather wardrobe. No code needed! Just add the selected products to your bundle to save!"
+      }
+    },
     "weekly_deal_X7xVwp": {
       "type": "weekly-deal",
       "name": "5PK TEES",
@@ -639,6 +653,7 @@
   "order": [
     "main",
     "25bcb4cf-3aa4-4cb5-b78f-4074368db4a6",
+    "weekly_deal_JXpkmF",
     "weekly_deal_X7xVwp",
     "weekly_deal_4bedtQ",
     "weekly_deal_rEnB9G",
