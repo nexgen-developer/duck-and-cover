@@ -1641,7 +1641,7 @@
           "header_icon": "#172532",
           "container": "1370",
           "show_sticky_header": true,
-          "sticky_header_type": "up",
+          "sticky_header_type": "always",
           "show_wishlist": true,
           "show_customer": true,
           "show_cart": true,
