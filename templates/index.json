@@ -46,7 +46,6 @@
         "image_yUcgG3": {
           "type": "image",
           "name": "30% OFF Jeans",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/DAC-DENIM30-DESKTOP.jpg",
             "mobile_image": "shopify://shop_images/DAC-DENIM30-MOBILE.jpg",
@@ -94,6 +93,7 @@
         "image_jPj3DA": {
           "type": "image",
           "name": "Pay Day",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/DAC-JUNE-PAYDAY-DESKTOP.jpg",
             "mobile_image": "shopify://shop_images/DAC-JUNE-PAYDAY-MAIL.jpg",
