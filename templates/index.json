@@ -47,8 +47,8 @@
           "type": "image",
           "name": "Summer Sale",
           "settings": {
-            "image": "shopify://shop_images/DAC-SUMMER-SALE-DESKTOP.jpg",
-            "mobile_image": "shopify://shop_images/DAC-SUMMER-SALE-MOBILE.jpg",
+            "image": "shopify://shop_images/DAC-SUMMER-SALE-DESKTOP.png",
+            "mobile_image": "shopify://shop_images/DAC-SUMMER-SALE-MOBILE.png",
             "title": "",
             "subtitle": "",
             "text": "",
