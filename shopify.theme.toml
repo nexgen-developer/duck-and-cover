@@ -1,0 +1,14 @@
+# Duck and Cover — Shopify theme environments
+# Registry: /Users/andrewdouglas/Shopify/SHOPIFY-CLIENTS.md
+
+[environments.default]
+store = "duck-and-cover.myshopify.com"
+theme = "191721963903"
+
+[environments.main]
+store = "duck-and-cover.myshopify.com"
+theme = "191721963903"
+
+[environments.staging]
+store = "duck-and-cover.myshopify.com"
+theme = "144712204538"

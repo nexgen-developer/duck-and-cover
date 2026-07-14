@@ -1,0 +1,335 @@
+<script>
+(function () {
+  var BATCH_SIZE = 50;
+  var MAX_RETRIES = 6;
+  var RETRY_DELAY = 400;
+  var GRID_IDS = ['main-collection-product-grid'];
+
+  function shopifyRoot() {
+    return (window.Shopify && window.Shopify.routes && window.Shopify.routes.root) || '/';
+  }
+
+  function refreshFlairBadges() {
+    if (!window.FlairApp || typeof window.FlairApp.refreshProductBadges !== 'function') {
+      return false;
+    }
+
+    try {
+      window.FlairApp.refreshProductBadges();
+    } catch (error) {
+      console.log('[Flair] Error refreshing badges', error);
+    }
+
+    return true;
+  }
+
+  function refreshFlairWithRetry(retries) {
+    var remaining = typeof retries === 'number' ? retries : MAX_RETRIES;
+
+    if (!refreshFlairBadges() && remaining > 0) {
+      setTimeout(function () {
+        refreshFlairWithRetry(remaining - 1);
+      }, RETRY_DELAY);
+      return;
+    }
+
+    requestAnimationFrame(function () {
+      refreshFlairBadges();
+    });
+  }
+
+  function getCollectionHandle() {
+    if (window.location.pathname.indexOf('/collections/') !== 0) {
+      return '';
+    }
+
+    return window.location.pathname.split('/')[2] || '';
+  }
+
+  function placeholderNeedsBadges(element) {
+    if (!element) return false;
+
+    return (
+      !element.classList.contains('flair-badge-layout') &&
+      !element.querySelector('.flair-badge, .flair-badge-layout')
+    );
+  }
+
+  function getEmptyBadgePlaceholders(scope) {
+    var root = scope || document;
+
+    return Array.from(root.querySelectorAll('[data-flair-product-badge][data-product-id]')).filter(
+      placeholderNeedsBadges
+    );
+  }
+
+  function applyFlairBadgesToPlaceholders(placeholders) {
+    if (!placeholders.length) return Promise.resolve();
+
+    var productMap = new Map();
+
+    placeholders.forEach(function (placeholder) {
+      var productId = placeholder.getAttribute('data-product-id');
+      if (!productId) return;
+
+      if (!productMap.has(productId)) {
+        productMap.set(productId, []);
+      }
+
+      productMap.get(productId).push(placeholder);
+    });
+
+    var productIds = Array.from(productMap.keys());
+    if (!productIds.length) return Promise.resolve();
+
+    var collectionHandle = getCollectionHandle();
+
+    function fetchBatch(ids) {
+      var queryParts = ids.map(function (id) {
+        return 'id:' + id;
+      });
+
+      if (collectionHandle) {
+        queryParts.push('_col:' + collectionHandle);
+      }
+
+      queryParts.push('_pag:collection');
+
+      var url =
+        shopifyRoot() +
+        'search?q=' +
+        encodeURIComponent(queryParts.join(' OR ')) +
+        '&sections=flair-product-badges';
+
+      return fetch(url)
+        .then(function (response) {
+          return response.json();
+        })
+        .then(function (response) {
+          var html = document.createElement('div');
+          html.innerHTML = response['flair-product-badges'] || '';
+
+          ids.forEach(function (productId) {
+            var badgeNode = html.querySelector('.flair-badge-layout[data-product-id="' + productId + '"]');
+            var targets = productMap.get(productId) || [];
+
+            if (!badgeNode) return;
+
+            targets.forEach(function (placeholder) {
+              if (!placeholderNeedsBadges(placeholder)) return;
+              placeholder.replaceWith(badgeNode.cloneNode(true));
+            });
+          });
+        });
+    }
+
+    var chain = Promise.resolve();
+
+    for (var index = 0; index < productIds.length; index += BATCH_SIZE) {
+      (function (batch) {
+        chain = chain.then(function () {
+          return fetchBatch(batch);
+        });
+      })(productIds.slice(index, index + BATCH_SIZE));
+    }
+
+    return chain.catch(function (error) {
+      console.log('[Flair] Error applying badges to appended products', error);
+    });
+  }
+
+  function refreshNewFlairBadges(scope) {
+    var emptyPlaceholders = getEmptyBadgePlaceholders(scope);
+
+    if (emptyPlaceholders.length) {
+      applyFlairBadgesToPlaceholders(emptyPlaceholders).finally(function () {
+        refreshFlairWithRetry();
+      });
+      return;
+    }
+
+    refreshFlairWithRetry();
+  }
+
+  window.refreshFlairCollectionBadges = refreshNewFlairBadges;
+
+  function updateGloboScrollFade(scroll, fade) {
+    if (!scroll || !fade) return;
+
+    var block = scroll.closest('.gf-option-block');
+    if (block && block.classList.contains('is-collapsed')) {
+      fade.classList.remove('is-visible');
+      return;
+    }
+
+    scroll.style.setProperty('content-visibility', 'visible', 'important');
+
+    var canScroll = scroll.scrollHeight - scroll.clientHeight > 4;
+    var hasMoreBelow = scroll.scrollTop + scroll.clientHeight < scroll.scrollHeight - 4;
+    fade.classList.toggle('is-visible', canScroll && hasMoreBelow);
+  }
+
+  function bindGloboScrollFade(scroll, fade) {
+    function update() {
+      updateGloboScrollFade(scroll, fade);
+    }
+
+    if (scroll.dataset.fadeBound !== 'true') {
+      scroll.dataset.fadeBound = 'true';
+      scroll.addEventListener('scroll', update, { passive: true });
+      window.addEventListener('resize', update);
+    }
+
+    window.requestAnimationFrame(update);
+    window.setTimeout(update, 150);
+    window.setTimeout(update, 400);
+  }
+
+  function initGloboFilterScrollHints() {
+    var tree = document.getElementById('gf-tree');
+    if (!tree) return;
+
+    tree.querySelectorAll('.gf-scroll').forEach(function (scroll) {
+      if (scroll.querySelector('.gf-range-slider') || scroll.querySelector('select')) {
+        return;
+      }
+
+      var items = scroll.querySelectorAll('.gf-option-box > li:not(.hidden-box)');
+      if (items.length > 5) {
+        scroll.classList.add('gf-block-scroll');
+      }
+
+      var wrap = scroll.parentElement;
+      if (!wrap || !wrap.classList.contains('gf-scroll-wrap')) {
+        wrap = document.createElement('div');
+        wrap.className = 'gf-scroll-wrap';
+        scroll.parentNode.insertBefore(wrap, scroll);
+        wrap.appendChild(scroll);
+      }
+
+      var fade = wrap.querySelector('.gf-scroll-fade');
+      if (!fade) {
+        fade = document.createElement('div');
+        fade.className = 'gf-scroll-fade';
+        fade.innerHTML = '&nbsp;';
+        wrap.appendChild(fade);
+      }
+
+      bindGloboScrollFade(scroll, fade);
+    });
+  }
+
+  function observeGloboFilterTree() {
+    var tree = document.getElementById('gf-tree');
+    if (!tree || tree.dataset.scrollObserverInit === 'true') return;
+
+    tree.dataset.scrollObserverInit = 'true';
+
+    var debounceTimer;
+    var observer = new MutationObserver(function () {
+      window.clearTimeout(debounceTimer);
+      debounceTimer = window.setTimeout(initGloboFilterScrollHints, 80);
+    });
+
+    observer.observe(tree, {
+      subtree: true,
+      childList: true,
+      attributes: true,
+      attributeFilter: ['class', 'style']
+    });
+  }
+
+  document.addEventListener('click', function (event) {
+    if (
+      event.target.closest('.gf-refine-toggle-mobile, .gf-filter-trigger, .gf-block-title, .gf-filter-heading')
+    ) {
+      window.setTimeout(initGloboFilterScrollHints, 200);
+      window.setTimeout(initGloboFilterScrollHints, 500);
+    }
+  });
+
+  window.addEventListener('globoFilterRenderCompleted', function () {
+    refreshNewFlairBadges();
+    initGloboFilterScrollHints();
+    observeGloboFilterTree();
+  });
+
+  window.initGloboFilterScrollHints = initGloboFilterScrollHints;
+
+  function hookGloboCanvas() {
+    if (!window.globofilter || window.globofilter.__scrollFadeHooked) return;
+
+    window.globofilter.__scrollFadeHooked = true;
+
+    var toggleCanvas = window.globofilter.toggleCanvas;
+    if (typeof toggleCanvas === 'function') {
+      window.globofilter.toggleCanvas = function () {
+        var result = toggleCanvas.apply(this, arguments);
+        window.setTimeout(initGloboFilterScrollHints, 200);
+        window.setTimeout(initGloboFilterScrollHints, 600);
+        return result;
+      };
+    }
+  }
+
+  function initObserver(grid) {
+    if (!grid || grid.dataset.flairObserverInitialized === 'true') return;
+
+    var refreshTimeout;
+
+    var observer = new MutationObserver(function (mutations) {
+      var hasNewBadges = mutations.some(function (mutation) {
+        return Array.from(mutation.addedNodes).some(function (node) {
+          if (node.nodeType !== 1) return false;
+
+          return (
+            node.matches &&
+            (node.matches('[data-flair-product-badge]') ||
+              node.querySelector('[data-flair-product-badge]'))
+          );
+        });
+      });
+
+      if (!hasNewBadges) return;
+
+      clearTimeout(refreshTimeout);
+      refreshTimeout = setTimeout(function () {
+        refreshNewFlairBadges(grid);
+      }, 150);
+    });
+
+    observer.observe(grid, { childList: true, subtree: true });
+    grid.dataset.flairObserverInitialized = 'true';
+  }
+
+  function initObservers() {
+    GRID_IDS.forEach(function (gridId) {
+      initObserver(document.getElementById(gridId));
+    });
+  }
+
+  function initPage() {
+    hookGloboCanvas();
+    initObservers();
+    initGloboFilterScrollHints();
+    observeGloboFilterTree();
+  }
+
+  var globoHookPoll = window.setInterval(function () {
+    hookGloboCanvas();
+    if (document.getElementById('gf-tree')) {
+      initGloboFilterScrollHints();
+    }
+  }, 300);
+
+  window.setTimeout(function () {
+    window.clearInterval(globoHookPoll);
+  }, 30000);
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initPage);
+  } else {
+    initPage();
+  }
+})();
+</script>

@@ -157,6 +157,7 @@
             {{ "accessibility.skip_to_text" | t }}
         </a>
         {% render 'global-style' %}
+        {% render 'globo-filter-styles' %}
         {% render 'global-script' %}
         {% render 'wrapper-header' %}
         <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
@@ -183,6 +184,8 @@
         {% render 'theme-demo-notification' %}
     
 
+	{% include 'globo.filter.action' %}
+	{% render 'flair-collection-scroll' %}
 	{%- capture productTemplate -%}{% render 'globo.filter.product', themeTranslation: shop.metafields.globoFilter.themeTranslation.value[request.locale.iso_code] %}{%- endcapture -%}{%- unless productTemplate contains 'Liquid error' -%}<script id="gspfProduct" type="template/html">{{- productTemplate | replace: "script>", "scripttag>" -}}</script>{%- endunless -%}
 
 <script>
@@ -192,11 +195,6 @@
     $('[data-menu-close-sidebar]').click(function(){   
         $('body').removeClass('menu-open');
     })
-    window.addEventListener('globoFilterRenderCompleted', function (e) {
-      try {
-        FlairApp.refreshProductBadges();
-      } catch(e) { console.log("[Flair] Error refreshing badges", e); }
-    });
   </script>
       
 	</body>
