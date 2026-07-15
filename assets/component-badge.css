@@ -20,7 +20,7 @@
 }
 
 .halo-productBadges .badge{
-    font-size: calc(var(--font-size) - 4px);
+    font-size: calc(var(--font-size) - 2px);
     font-weight: var(--font-weight-bold);
     letter-spacing: var(--letter-spacing);
     line-height: var(--line-height);
