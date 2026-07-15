@@ -127,7 +127,6 @@
     },
     "weekly_deal_ra36zm": {
       "type": "weekly-deal",
-      "disabled": true,
       "name": "Chino Shorts",
       "settings": {
         "image": "shopify://shop_images/DAC_CHINO_SHORT_TILE.jpg",
