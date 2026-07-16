@@ -46,7 +46,6 @@
         "image_yUcgG3": {
           "type": "image",
           "name": "Summer Sale Week 2 ",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/DAC-SUMMER-SALE-DESKTOP-2.jpg",
             "mobile_image": "shopify://shop_images/DAC-SUMMER-SALE-MOBILE-2.jpg",
@@ -94,6 +93,7 @@
         "image_PhYbye": {
           "type": "image",
           "name": "Summer Sale",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/DAC-SUMMER-SALE-DESKTOP.png",
             "mobile_image": "shopify://shop_images/DAC-SUMMER-SALE-MOBILE.png",
