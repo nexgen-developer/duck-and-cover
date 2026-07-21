@@ -15,7 +15,8 @@
         "banner-1": {
           "type": "banner",
           "settings": {
-            "background_image": "shopify://shop_images/Tee-_-Jean-Landing-Page-Image.jpg",
+            "background_image": "shopify://shop_images/DAC-TEE-SHORT-DESKTOP.jpg",
+            "mobile_image": "shopify://shop_images/DAC-TEE-SHORT-MOBILE.jpg",
             "title": "",
             "text": "",
             "text_alignment": "center",
@@ -26,11 +27,29 @@
             "margin_bottom_mobile": 16
           }
         },
+        "row-2": {
+          "type": "ca_row",
+          "settings": {
+            "index": 2,
+            "title": "Step 1",
+            "products": [
+              "zeki-shorts-black",
+              "zeki-shorts-dark-wash",
+              "zeki-shorts-light-wash",
+              "zeki-shorts-stone-wash"
+            ],
+            "hide_linked_products": true,
+            "desktop_number_of_cols": 4,
+            "mobile_number_of_cols": 2,
+            "margin_bottom_desktop": 0,
+            "margin_bottom_mobile": 0
+          }
+        },
         "row-1": {
           "type": "ca_row",
           "settings": {
             "index": 1,
-            "title": "Step 1",
+            "title": "Step 2",
             "products": [
               "tatick-t-shirt-light-olive",
               "topfield-t-shirt-black",
@@ -40,40 +59,13 @@
               "sherborn-t-shirt-navy",
               "tatick-t-shirt-light-stone",
               "topfield-t-shirt-sand",
-              "camostack-t-shirt-black"
+              "camostack-t-shirt-black",
+              "walpole-t-shirt-white",
+              "sudbury-t-shirt-olive-1",
+              "sherborn-t-shirt-black"
             ],
             "hide_linked_products": true,
-            "desktop_number_of_cols": 3,
-            "mobile_number_of_cols": 2,
-            "margin_bottom_desktop": 0,
-            "margin_bottom_mobile": 0
-          }
-        },
-        "row-2": {
-          "type": "ca_row",
-          "settings": {
-            "index": 2,
-            "title": "Step 2",
-            "products": [
-              "overburg-slimmer-fit-jeans-black",
-              "overburg-slimmer-fit-jeans-dark-wash",
-              "overburg-tapered-jeans-black",
-              "overburg-tapered-jeans-mid-wash",
-              "overburg-tapered-jeans-dark-wash",
-              "rushawn-relaxed-fit-jeans-black",
-              "rushawn-relaxed-fit-jeans-dark-wash",
-              "rushawn-relaxed-fit-jeans-light-wash",
-              "rushawn-relaxed-fit-jeans-mid-wash",
-              "elix-straight-leg-jeans-black",
-              "elix-straight-leg-jeans-dark-wash",
-              "elix-straight-leg-jeans-mid-wash",
-              "janstar-straight-leg-jeans-black-wash",
-              "janstar-straight-leg-jeans-stone-wash",
-              "janstar-straight-leg-jeans-dark-wash",
-              "janstar-straight-leg-jeans-grey"
-            ],
-            "hide_linked_products": true,
-            "desktop_number_of_cols": 3,
+            "desktop_number_of_cols": 4,
             "mobile_number_of_cols": 2,
             "margin_bottom_desktop": 0,
             "margin_bottom_mobile": 0
@@ -82,8 +74,8 @@
       },
       "block_order": [
         "banner-1",
-        "row-1",
-        "row-2"
+        "row-2",
+        "row-1"
       ],
       "settings": {
         "title": "Build your bundle",
