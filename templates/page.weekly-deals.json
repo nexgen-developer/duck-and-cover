@@ -127,14 +127,13 @@
     },
     "weekly_deal_nCEwdV": {
       "type": "weekly-deal",
-      "disabled": true,
       "name": "Tee & Denim Shorts Bundle",
       "settings": {
         "image": "shopify://shop_images/DAC-TEE-SHORT-TILE.gif",
         "title": "DENIM SHORTS & T-SHIRT BUNDLE",
         "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">FROM £19.99</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
         "button1": "Get Deal",
-        "url": "",
+        "url": "shopify://products/denim-short-t-shirt-bundle",
         "CustomCode": "NO CODE NEEDED",
         "description": "Refresh your summer wardrobe with our Denim Shorts & T-Shirt Bundle for just £19.99! An easy, everyday outfit at an unbeatable price. No code needed - just add to basket and save."
       }
