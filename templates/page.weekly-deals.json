@@ -125,6 +125,20 @@
         "description": "Get summer sorted with our Sherborn Bundles—Tee & Shorts for just £16.34 or Polo & Shorts for £20.21. With 57% OFF, it's the perfect time to refresh your warm-weather wardrobe. No code needed! Just add the selected products to your bundle to save!"
       }
     },
+    "weekly_deal_PF8J66": {
+      "type": "weekly-deal",
+      "disabled": true,
+      "name": "WRENTHAM POLO",
+      "settings": {
+        "image": "shopify://shop_images/DAC-WRENTHAM-POLO-TILE.jpg",
+        "title": "WRENTHAM POLO",
+        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">FOR £10</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
+        "button1": "Get Deal",
+        "url": "shopify://products/wrentham-polo-black",
+        "CustomCode": "POLODEAL",
+        "description": "Upgrade your summer style with the Wrentham Polo for just £10! Smart, comfortable, and perfect for any occasion. Use code POLODEAL at checkout to grab yours."
+      }
+    },
     "weekly_deal_nCEwdV": {
       "type": "weekly-deal",
       "name": "Tee & Denim Shorts Bundle",
@@ -680,6 +694,7 @@
     "main",
     "25bcb4cf-3aa4-4cb5-b78f-4074368db4a6",
     "weekly_deal_JXpkmF",
+    "weekly_deal_PF8J66",
     "weekly_deal_nCEwdV",
     "weekly_deal_ra36zm",
     "weekly_deal_X7xVwp",
