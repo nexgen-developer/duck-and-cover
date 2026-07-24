@@ -160,7 +160,7 @@
         "title": "CHINO SHORTS",
         "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">NOW £14.40</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
         "button1": "Get Deal",
-        "url": "",
+        "url": "shopify://collections/everett-chino-shorts",
         "CustomCode": "CHINOSHORT",
         "description": "Step into summer with our Chino Shorts for just £14.40! Lightweight, versatile, and made for sunny days. Use code CHINOSHORT at checkout to save."
       }
