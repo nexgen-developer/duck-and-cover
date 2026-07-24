@@ -94,7 +94,6 @@
         "image_LiqnCN": {
           "type": "image",
           "name": "Summer Sale Week 3 - Shorts",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/DAC-Shorts-SALE-DESKTOP.jpg",
             "mobile_image": "shopify://shop_images/DAC-Shorts-SALE-mobile.jpg",
@@ -103,7 +102,7 @@
             "text": "",
             "btn": "2",
             "btn_text": "",
-            "link": "shopify://collections/clearance",
+            "link": "shopify://collections/shorts",
             "container_content": "1570",
             "position": "right",
             "alignment": "left",
@@ -142,6 +141,7 @@
         "image_TrUTiz": {
           "type": "image",
           "name": "Summer Sale Week 2 ",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/DAC-SUMMER-SALE-DESKTOP-2.jpg",
             "mobile_image": "shopify://shop_images/DAC-SUMMER-SALE-MOBILE-2.jpg",
