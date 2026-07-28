@@ -127,14 +127,13 @@
     },
     "weekly_deal_PF8J66": {
       "type": "weekly-deal",
-      "disabled": true,
       "name": "WRENTHAM POLO",
       "settings": {
         "image": "shopify://shop_images/DAC-WRENTHAM-POLO-TILE.jpg",
         "title": "WRENTHAM POLO",
         "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">FOR £10</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
         "button1": "Get Deal",
-        "url": "shopify://products/wrentham-polo-black",
+        "url": "shopify://collections/wrentham-polo",
         "CustomCode": "POLODEAL",
         "description": "Upgrade your summer style with the Wrentham Polo for just £10! Smart, comfortable, and perfect for any occasion. Use code POLODEAL at checkout to grab yours."
       }
