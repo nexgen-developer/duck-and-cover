@@ -856,6 +856,16 @@
             "btn_text": "",
             "link": "shopify://collections/all-hoodies"
           }
+        },
+        "image_QxVyVG": {
+          "type": "image",
+          "name": "DAC League",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/DAC-league-QL-2_05b35144-6e6a-4f60-bc76-c8b26b174326.jpg",
+            "btn_text": "",
+            "link": ""
+          }
         }
       },
       "block_order": [
@@ -863,7 +873,8 @@
         "template--16937253765370__f0a1f009-f7e3-4ad1-9307-9fcf06cf17a4-image-3",
         "template--16937253765370__f0a1f009-f7e3-4ad1-9307-9fcf06cf17a4-image-2",
         "image_qLwNdt",
-        "template--16937253765370__f0a1f009-f7e3-4ad1-9307-9fcf06cf17a4-image-4"
+        "template--16937253765370__f0a1f009-f7e3-4ad1-9307-9fcf06cf17a4-image-4",
+        "image_QxVyVG"
       ],
       "name": "Quick Links",
       "settings": {
