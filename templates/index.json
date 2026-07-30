@@ -94,7 +94,6 @@
         "image_tTGHnG": {
           "type": "image",
           "name": "Summer Sale Payday",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/DAC-PAYDAY-SALE-DESKTOP.jpg",
             "mobile_image": "shopify://shop_images/DAC-PAYDAY-SALE-MOBILE.jpg",
@@ -142,6 +141,7 @@
         "image_LiqnCN": {
           "type": "image",
           "name": "Summer Sale Week 3 - Shorts",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/DAC-Shorts-SALE-DESKTOP.jpg",
             "mobile_image": "shopify://shop_images/DAC-Shorts-SALE-mobile.jpg",
