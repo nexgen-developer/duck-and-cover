@@ -12,9 +12,96 @@
     "smile-landing-page": {
       "type": "smile-landing-page",
       "settings": {}
+    },
+    "178583036400f22755": {
+      "type": "apps",
+      "blocks": {
+        "smile_io_smile_landing_page_header_QpcxxC": {
+          "type": "shopify://apps/smile-io/blocks/smile-landing-page-header/2fae4e25-1841-4ea2-bc02-bd548478c4f6",
+          "settings": {
+            "primary_colour": "#333",
+            "secondary_colour": "#fff",
+            "title_text": "",
+            "description_text": "",
+            "join_button_text": "",
+            "login_button_text": "",
+            "is_previewing_logged_in_state": false,
+            "discover_button_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "smile_io_smile_landing_page_header_QpcxxC"
+      ],
+      "settings": {}
+    },
+    "178583038389e42d82": {
+      "type": "apps",
+      "blocks": {
+        "smile_io_smile_landing_page_how_it_works_fbaW8r": {
+          "type": "shopify://apps/smile-io/blocks/smile-landing-page-how-it-works/2fae4e25-1841-4ea2-bc02-bd548478c4f6",
+          "settings": {
+            "primary_colour": "#333",
+            "secondary_colour": "#fff",
+            "title_text": "",
+            "step1_heading_text": "",
+            "step1_description_text": "",
+            "step2_heading_text": "",
+            "step2_description_text": "",
+            "step3_heading_text": "",
+            "step3_description_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "smile_io_smile_landing_page_how_it_works_fbaW8r"
+      ],
+      "settings": {}
+    },
+    "1785830390f1994b03": {
+      "type": "apps",
+      "blocks": {
+        "smile_io_smile_landing_page_earning_rule_highlight_LrA66W": {
+          "type": "shopify://apps/smile-io/blocks/smile-landing-page-earning-rule-highlight/2fae4e25-1841-4ea2-bc02-bd548478c4f6",
+          "settings": {
+            "primary_colour": "#333",
+            "secondary_colour": "#fff",
+            "title_text": "",
+            "description_text": "",
+            "button_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "smile_io_smile_landing_page_earning_rule_highlight_LrA66W"
+      ],
+      "settings": {}
+    },
+    "178583039741f6e91a": {
+      "type": "apps",
+      "blocks": {
+        "smile_io_smile_landing_page_redeeming_rule_highlight_merxPn": {
+          "type": "shopify://apps/smile-io/blocks/smile-landing-page-redeeming-rule-highlight/2fae4e25-1841-4ea2-bc02-bd548478c4f6",
+          "settings": {
+            "primary_colour": "#333",
+            "secondary_colour": "#fff",
+            "title_text": "",
+            "description_text": "",
+            "button_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "smile_io_smile_landing_page_redeeming_rule_highlight_merxPn"
+      ],
+      "settings": {}
     }
   },
   "order": [
-    "smile-landing-page"
+    "smile-landing-page",
+    "178583036400f22755",
+    "178583038389e42d82",
+    "1785830390f1994b03",
+    "178583039741f6e91a"
   ]
 }
