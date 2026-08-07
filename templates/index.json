@@ -94,7 +94,6 @@
         "image_rNBiUp": {
           "type": "image",
           "name": "Summer Sale - T-Shirts",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/DAC-TSHIRT-SALE-16.9.gif",
             "mobile_image": "shopify://shop_images/TSHIRT-SALE-MAIL.gif",
@@ -103,7 +102,7 @@
             "text": "",
             "btn": "2",
             "btn_text": "",
-            "link": "https://www.duckandcover.co.uk/collections/clearance?gf_203219=T-Shirts&page=2",
+            "link": "shopify://collections/all-t-shirts",
             "container_content": "1570",
             "position": "right",
             "alignment": "left",
@@ -142,6 +141,7 @@
         "image_tTGHnG": {
           "type": "image",
           "name": "Summer Sale Payday",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/DAC-PAYDAY-SALE-DESKTOP.jpg",
             "mobile_image": "shopify://shop_images/DAC-PAYDAY-SALE-MOBILE.jpg",
