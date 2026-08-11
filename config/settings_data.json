@@ -1716,7 +1716,7 @@
           "hot_label_color": "#ffffff",
           "show_announcement_bar": true,
           "announcement_bar_text": "NEW PREMIER DELIVERY: FREE DELIVERY FOR A YEAR",
-          "announcement_bar_link": "",
+          "announcement_bar_link": "shopify://pages/duck-and-cover-premier-delivery-deal",
           "cart_count_background": "#bc1b3b",
           "cart_count_color": "#ffffff",
           "show_custom_link": false,
