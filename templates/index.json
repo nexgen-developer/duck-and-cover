@@ -46,7 +46,6 @@
         "image_yUcgG3": {
           "type": "image",
           "name": "Summer Sale - Ending Soon",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/DAC-ending-soon-sale-desktop_4349f48f-9a36-43d9-b9c7-430d1b00e36f.jpg",
             "mobile_image": "shopify://shop_images/DAC-ending-soon-sale-mobile_79ed9bb4-3234-4d16-aa13-4f21967df019.jpg",
@@ -141,6 +140,7 @@
         "image_wVBcFc": {
           "type": "image",
           "name": "Summer Sale - T-Shirts",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/DAC-TSHIRT-SALE-16.9.gif",
             "mobile_image": "shopify://shop_images/TSHIRT-SALE-MAIL.gif",
