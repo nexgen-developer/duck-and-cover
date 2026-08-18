@@ -113,7 +113,6 @@
     },
     "weekly_deal_JXpkmF": {
       "type": "weekly-deal",
-      "disabled": true,
       "name": "Sherborn Bundle",
       "settings": {
         "image": "shopify://shop_images/DAC-SHERBORN-BUNDLE-TILE.jpg",
@@ -178,7 +177,6 @@
       "block_order": [
         "image_E9jg8b"
       ],
-      "disabled": true,
       "name": "Premier Delivery",
       "settings": {
         "show_slideshow": true,
