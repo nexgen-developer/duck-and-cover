@@ -30,13 +30,21 @@
         "row-2": {
           "type": "ca_row",
           "settings": {
-            "index": 2,
+            "index": 1,
             "title": "Step 1",
             "products": [
-              "zeki-shorts-black",
-              "zeki-shorts-dark-wash",
-              "zeki-shorts-light-wash",
-              "zeki-shorts-stone-wash"
+              "sherborn-polo-black",
+              "sherborn-polo-denim-blue",
+              "sherborn-polo-light-olive",
+              "sherborn-polo-light-stone",
+              "sherborn-polo-navy",
+              "sherborn-polo-stone",
+              "sherborn-t-shirt-black",
+              "sherborn-t-shirt-denim-blue",
+              "sherborn-t-shirt-light-olive",
+              "sherborn-t-shirt-light-stone",
+              "sherborn-t-shirt-navy",
+              "sherborn-t-shirt-stone"
             ],
             "hide_linked_products": true,
             "desktop_number_of_cols": 4,
@@ -48,21 +56,15 @@
         "row-1": {
           "type": "ca_row",
           "settings": {
-            "index": 1,
+            "index": 2,
             "title": "Step 2",
             "products": [
-              "tatick-t-shirt-light-olive",
-              "topfield-t-shirt-black",
-              "cramptone-t-shirt-denim-blue",
-              "randolph-t-shirt-light-stone",
-              "lynnfold-t-shirt-black",
-              "sherborn-t-shirt-navy",
-              "tatick-t-shirt-light-stone",
-              "topfield-t-shirt-sand",
-              "camostack-t-shirt-black",
-              "walpole-t-shirt-white",
-              "sudbury-t-shirt-olive-1",
-              "sherborn-t-shirt-black"
+              "sherborn-shorts-black",
+              "sherborn-shorts-denim-blue",
+              "sherborn-shorts-light-olive",
+              "sherborn-shorts-light-stone",
+              "sherborn-shorts-navy",
+              "sherborn-shorts-stone"
             ],
             "hide_linked_products": true,
             "desktop_number_of_cols": 4,
