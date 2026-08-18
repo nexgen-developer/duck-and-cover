@@ -15,8 +15,8 @@
         "banner-1": {
           "type": "banner",
           "settings": {
-            "background_image": "shopify://shop_images/DAC-TEE-SHORT-DESKTOP.jpg",
-            "mobile_image": "shopify://shop_images/DAC-TEE-SHORT-MOBILE.jpg",
+            "background_image": "shopify://shop_images/DAC-SHERBORN-BUNDLE-DESKTOP.jpg",
+            "mobile_image": "shopify://shop_images/DAC-SHERBORN-BUNDLE-MOBILE.jpg",
             "title": "",
             "text": "",
             "text_alignment": "center",
