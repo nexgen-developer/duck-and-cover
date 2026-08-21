@@ -113,6 +113,20 @@
     },
     "weekly_deal_JXpkmF": {
       "type": "weekly-deal",
+      "disabled": true,
+      "name": "30% OFF Jeans",
+      "settings": {
+        "image": "shopify://shop_images/DAC-SS24-Weekly-Deals-jean-tile_8218869a-c419-4e20-b5f5-ea5a393667d7.jpg",
+        "title": "30% OFF JEANS",
+        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">FROM £20</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
+        "button1": "Get Deal",
+        "url": "shopify://products/sherborn-bundle",
+        "CustomCode": "NO CODE NEEDED",
+        "description": "30% OFF Jeans! Upgrade your denim for less with 30% OFF selected jeans. Use code DENIM30 at checkout and save!"
+      }
+    },
+    "weekly_deal_XM6RQ9": {
+      "type": "weekly-deal",
       "name": "Sherborn Bundle",
       "settings": {
         "image": "shopify://shop_images/DAC-SHERBORN-BUNDLE-TILE.jpg",
@@ -775,6 +789,7 @@
     "main",
     "25bcb4cf-3aa4-4cb5-b78f-4074368db4a6",
     "weekly_deal_JXpkmF",
+    "weekly_deal_XM6RQ9",
     "halo_slideshow_ntNC8f",
     "weekly_deal_PF8J66",
     "weekly_deal_nCEwdV",
