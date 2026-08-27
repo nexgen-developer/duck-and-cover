@@ -114,6 +114,19 @@
     "weekly_deal_JXpkmF": {
       "type": "weekly-deal",
       "disabled": true,
+      "name": "3PK Boxer Deal",
+      "settings": {
+        "image": "shopify://shop_images/3PK-BOXERS-tile.gif",
+        "title": "3PK Boxers",
+        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">NOW £9.50</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
+        "button1": "Get Deal",
+        "url": "shopify://collections/3pk-boxer-deal",
+        "CustomCode": "3PKDEAL",
+        "description": "Stock up on everyday essentials with 3PK Boxers for just £9.50! Comfortable, practical and great value. Use code 3PKDEAL at checkout and grab the deal!"
+      }
+    },
+    "weekly_deal_pmhwQp": {
+      "type": "weekly-deal",
       "name": "30% OFF Jeans",
       "settings": {
         "image": "shopify://shop_images/DAC-SS24-Weekly-Deals-jean-tile_8218869a-c419-4e20-b5f5-ea5a393667d7.jpg",
@@ -247,45 +260,6 @@
         "description": "Refresh your summer wardrobe with our Denim Shorts & T-Shirt Bundle for just £19.99! An easy, everyday outfit at an unbeatable price. No code needed - just add to basket and save."
       }
     },
-    "weekly_deal_ra36zm": {
-      "type": "weekly-deal",
-      "name": "Chino Shorts",
-      "settings": {
-        "image": "shopify://shop_images/DAC_CHINO_SHORT_TILE.jpg",
-        "title": "CHINO SHORTS",
-        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">NOW £14.40</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
-        "button1": "Get Deal",
-        "url": "shopify://collections/everett-chino-shorts",
-        "CustomCode": "CHINOSHORT",
-        "description": "Step into summer with our Chino Shorts for just £14.40! Lightweight, versatile, and made for sunny days. Use code CHINOSHORT at checkout to save."
-      }
-    },
-    "weekly_deal_X7xVwp": {
-      "type": "weekly-deal",
-      "name": "5PK TEES",
-      "settings": {
-        "image": "shopify://shop_images/DAC-5PK-TEE-TILE.gif",
-        "title": "5PK T-SHIRTS",
-        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">£19.99</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
-        "button1": "Get Deal",
-        "url": "shopify://collections/5pk-t-shirt-deal",
-        "CustomCode": "5PKTEES",
-        "description": "Stock up on everyday essentials with our 5PK T-Shirts for just £19.99! Comfortable, versatile, and perfect for any wardrobe. Use code 5PKTEES at checkout and save today!"
-      }
-    },
-    "weekly_deal_4bedtQ": {
-      "type": "weekly-deal",
-      "name": "Smart Summer Bundle",
-      "settings": {
-        "image": "shopify://shop_images/DAC-SHORT-BUNDLE-TILE.jpg",
-        "title": "SMART SUMMER SHORTS BUNDLE",
-        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">£29.99</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
-        "button1": "Get Deal",
-        "url": "shopify://products/summer-smart-short-bundle",
-        "CustomCode": "NO CODE NEEDED",
-        "description": "Get summer-ready with our Top & Chino Shorts Bundle for just £29.99! Simply choose a top and any pair of Moretor Chino Shorts to unlock the saving. No code needed - just add it to your bundle and enjoy the deal!"
-      }
-    },
     "weekly_deal_rEnB9G": {
       "type": "weekly-deal",
       "name": "Mystery Box",
@@ -313,19 +287,6 @@
         "description": "Upgrade your denim rotation with Elix straight leg jeans for just £18.90! A timeless fit that works with anything. Use code ELIXJEAN at checkout - don’t miss out!"
       }
     },
-    "weekly_deal_yt7eje": {
-      "type": "weekly-deal",
-      "name": "Underwear Bundle",
-      "settings": {
-        "image": "shopify://shop_images/DAC-UNDERWEAR-BUNDLE-TILE.jpg",
-        "title": "UNDERWEAR BUNDLE",
-        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">£26.99</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
-        "button1": "Get Deal",
-        "url": "shopify://products/underwear-bundle",
-        "CustomCode": "NO CODE NEEDED",
-        "description": "Refresh your essentials with our underwear bundle - 7PK Anvilli Boxers and 5PK Socks for just £26.99! Everyday comfort, unbeatable value. No code needed - just add the items to your bundle add to save."
-      }
-    },
     "weekly_deal_CnQjac": {
       "type": "weekly-deal",
       "disabled": true,
@@ -351,19 +312,6 @@
         "url": "shopify://products/t-shirt-and-jean-bundle",
         "CustomCode": "NO CODE NEEDED",
         "description": "Upgrade your everyday essentials with our T-Shirt & Jean Bundle for just £28.99! The perfect combination of comfort and style at an unbeatable price. No code needed - just add the items to your bundle add to save."
-      }
-    },
-    "weekly_deal_9Yh6RR": {
-      "type": "weekly-deal",
-      "name": "Smart Summer Bundle",
-      "settings": {
-        "image": "shopify://shop_images/DAC-summer-bundle-TILE.jpg",
-        "title": "SMART SUMMER BUNDLE",
-        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">£32.99</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
-        "button1": "Get Deal",
-        "url": "https://www.duckandcover.co.uk/products/summer-smart-bundle",
-        "CustomCode": "NO CODE NEEDED",
-        "description": "Refresh your wardrobe with our smart summer bundle deal! Select a top and any Moretor chinos for just £32.99 - no code needed. The perfect combo for effortless everyday style!"
       }
     },
     "weekly_deal_78RRYA": {
@@ -789,19 +737,15 @@
     "main",
     "25bcb4cf-3aa4-4cb5-b78f-4074368db4a6",
     "weekly_deal_JXpkmF",
+    "weekly_deal_pmhwQp",
     "weekly_deal_XM6RQ9",
     "halo_slideshow_ntNC8f",
     "weekly_deal_PF8J66",
     "weekly_deal_nCEwdV",
-    "weekly_deal_ra36zm",
-    "weekly_deal_X7xVwp",
-    "weekly_deal_4bedtQ",
     "weekly_deal_rEnB9G",
     "weekly_deal_pATLmh",
-    "weekly_deal_yt7eje",
     "weekly_deal_CnQjac",
     "weekly_deal_xfeYix",
-    "weekly_deal_9Yh6RR",
     "weekly_deal_78RRYA",
     "weekly_deal_8TnA9V",
     "weekly_deal_EVKQ7T",
