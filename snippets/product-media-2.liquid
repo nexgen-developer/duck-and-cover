@@ -8,7 +8,7 @@
             {%- assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' -%}
             {%- if product.selected_or_first_available_variant.featured_media != null -%}
                 {%- assign media = product.selected_or_first_available_variant.featured_media -%}
-                <li class="productView-mediaItem slider__slide{% if media.media_type != 'image' %} productView-mediaItem--full{% endif %}">
+                <li class="productView-mediaItem slider__slide">
                     {% render 'product-thumbnail-2',
                         media: media,
                         product_image_popup: product_image_popup,
@@ -24,7 +24,7 @@
             {%- if product.featured_media -%}
                 {%- for media in product.media -%}
                     {%- unless media.id == product.selected_or_first_available_variant.featured_media.id -%}
-                        <li class="productView-mediaItem slider__slide{% if media.media_type != 'image' %} productView-mediaItem--full{% endif %}">
+                        <li class="productView-mediaItem slider__slide">
                             {% render 'product-thumbnail-2',
                                 media: media,
                                 product_image_popup: product_image_popup,

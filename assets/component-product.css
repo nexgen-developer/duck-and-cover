@@ -1683,6 +1683,17 @@ body.dark-mode .halo-product-specification .productView-propertyInfo .productVie
         width:  100%;
     }
 
+    .productView.layout-5 .productView-mediaList.slider {
+        overflow: visible;
+        scroll-snap-type: none;
+    }
+
+    .productView.layout-5 .productView-mediaItem.slider__slide {
+        flex: 0 0 calc(50% - 3px);
+        max-width: calc(50% - 3px);
+        width: calc(50% - 3px);
+    }
+
     .productView-mediaList .deferred-media__poster-button:hover{
         transform: translate(-50%,-50%) scale(1.1);
     }
