@@ -1,0 +1,91 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "bundle-builder": {
+      "type": "bundle-builder",
+      "blocks": {
+        "banner-1": {
+          "type": "banner",
+          "settings": {
+            "background_image": "shopify://shop_images/DAC-SHERBORN-BUNDLE-DESKTOP.jpg",
+            "mobile_image": "shopify://shop_images/DAC-SHERBORN-BUNDLE-MOBILE.jpg",
+            "title": "",
+            "text": "",
+            "text_alignment": "center",
+            "text_color": "#ffffff",
+            "full_width_mobile": true,
+            "rounded_corners_mobile": false,
+            "margin_bottom_desktop": 16,
+            "margin_bottom_mobile": 16
+          }
+        },
+        "row-2": {
+          "type": "ca_row",
+          "settings": {
+            "index": 1,
+            "title": "Step 1",
+            "products": [
+              "sherborn-polo-black",
+              "sherborn-polo-denim-blue",
+              "sherborn-polo-light-olive",
+              "sherborn-polo-light-stone",
+              "sherborn-polo-navy",
+              "sherborn-polo-stone",
+              "sherborn-t-shirt-black",
+              "sherborn-t-shirt-denim-blue",
+              "sherborn-t-shirt-light-olive",
+              "sherborn-t-shirt-light-stone",
+              "sherborn-t-shirt-navy",
+              "sherborn-t-shirt-stone"
+            ],
+            "hide_linked_products": true,
+            "desktop_number_of_cols": 4,
+            "mobile_number_of_cols": 2,
+            "margin_bottom_desktop": 0,
+            "margin_bottom_mobile": 0
+          }
+        },
+        "row-1": {
+          "type": "ca_row",
+          "settings": {
+            "index": 2,
+            "title": "Step 2",
+            "products": [
+              "sherborn-shorts-black",
+              "sherborn-shorts-denim-blue",
+              "sherborn-shorts-light-olive",
+              "sherborn-shorts-light-stone",
+              "sherborn-shorts-navy",
+              "sherborn-shorts-stone"
+            ],
+            "hide_linked_products": true,
+            "desktop_number_of_cols": 4,
+            "mobile_number_of_cols": 2,
+            "margin_bottom_desktop": 0,
+            "margin_bottom_mobile": 0
+          }
+        }
+      },
+      "block_order": [
+        "banner-1",
+        "row-2",
+        "row-1"
+      ],
+      "settings": {
+        "title": "Build your bundle",
+        "overview_title": "Add 2 items to bundle"
+      }
+    }
+  },
+  "order": [
+    "bundle-builder"
+  ]
+}

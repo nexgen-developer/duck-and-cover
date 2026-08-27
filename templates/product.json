@@ -114,6 +114,19 @@
             "padding_bottom": 11
           }
         },
+        "smile_io_smile_points_on_product_page_BR3hFE": {
+          "type": "shopify://apps/smile-io/blocks/smile-points-on-product-page/2fae4e25-1841-4ea2-bc02-bd548478c4f6",
+          "settings": {
+            "primary_colour": "#121212",
+            "secondary_colour": "#FFFFFF",
+            "preview_scenario": "customer_can_earn_points",
+            "should_show_icon": true,
+            "custom_image_height": 40,
+            "should_show_points_label": true,
+            "points_text_logged_in": "<p>[points_amount] earned on this product.</p>",
+            "points_text_logged_out": ""
+          }
+        },
         "judge_me_reviews_preview_badge_EpTB7E": {
           "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {}
@@ -287,6 +300,7 @@
       "block_order": [
         "14ecbf6d-9ff4-4849-8d77-84f0356e560f",
         "d88448e4-51ad-4d10-9224-e576f110bb60",
+        "smile_io_smile_points_on_product_page_BR3hFE",
         "judge_me_reviews_preview_badge_EpTB7E",
         "flair_product_labels_badges_product_badges_4NWce8",
         "flair_product_labels_badges_banners_NGVgRa",

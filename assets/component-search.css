@@ -541,3 +541,10 @@ body.open-search .header-mobile-style-3 .header-mobile-search .header__search-fu
         right: calc((100% - 1770px)/ 2);
     }
 }
+
+/* Bundle products in fuzzy/predictive search: image + title only (no £0.00 / PRE-ORDER) */
+.predictive-search__results-list .product--search-bundle .card-price,
+.predictive-search__results-list .product--search-bundle .card-action,
+.predictive-search__results-list .product--search-bundle .card-action__group {
+    display: none !important;
+}

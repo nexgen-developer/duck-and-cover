@@ -15,12 +15,21 @@
                   {%- if predictive_search.resources.products.size > 0 -%}  
                     <div class="products-grid custom-scrollbar-x column-4">
                         {%- for product in predictive_search.resources.products -%}
-                            <div class="product">
+                            {%- liquid
+                                assign is_search_bundle = false
+                                assign template_suffix = product.template_suffix | downcase
+                                assign product_handle = product.handle | downcase
+                                assign product_type = product.type | downcase
+                                if template_suffix contains 'bundle' or product_handle contains 'bundle' or product_type contains 'bundle'
+                                    assign is_search_bundle = true
+                                endif
+                            -%}
+                            <div class="product{% if is_search_bundle %} product--search-bundle{% endif %}">
                                 {% render 'product-card',
                                     product_card_product: product,
                                     media_size: media_size,
                                     portrait_aspect_ratio: portrait_aspect_ratio,
-                                    show_add_to_cart: true,
+                                    show_add_to_cart: is_search_bundle == false,
                                     serial: forloop.index,
                                     sectionId: section.id,
                                     show_list: true,

@@ -16,7 +16,7 @@
 * Flair: https://apps.shopify.com/flair
 * Copyright Brainy Atom LLC, All Rights Reserved.
 *
-* Last updated: 2026-07-14T09:05:05Z
+* Last updated: 2026-08-25T09:08:07Z
 ************************************************************************
 {%- endcomment -%}
 {%- liquid
@@ -493,7 +493,7 @@ for flair_mf_key in flair_config.badge_metafield_keys
 
     if flair_show_badge
       assign flair_badge_count = flair_badge_count | plus: 1
-      capture "flair_badge_output"
+      capture flair_badge_output
         if flair_badge.css
           assign _css = flair_badge.css | replace: "${product_id}", product.id
           echo "<style>" | append: _css | append: "</style>"
