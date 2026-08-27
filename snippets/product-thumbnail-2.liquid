@@ -149,7 +149,7 @@
                 echo media | external_video_url: autoplay: true, loop: loop, muted: true | external_video_tag: class: video_class, loading: "lazy"
             endif
             when 'video'
-                echo media | media_tag: image_size: "2048x", autoplay: true, muted: true, loop: loop, controls: false, preload: "metadata"
+                echo media | media_tag: image_size: "2048x", autoplay: true, muted: true, loop: loop, controls: false, playsinline: true, preload: "auto"
             when 'model'
                 echo media | media_tag: image_size: "2048x", toggleable: true
             endcase
