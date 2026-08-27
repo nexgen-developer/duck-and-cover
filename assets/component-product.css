@@ -17,6 +17,16 @@
     position: relative;
 }
 
+/* App blocks inherit font-size: 0 from the column layout above.
+   Native blocks reset their own size; Smile / other apps often do not,
+   which leaves icons visible but text invisible. */
+.halo-productView-left .shopify-block.shopify-app-block,
+.halo-productView-right .shopify-block.shopify-app-block{
+    font-size: var(--font-size);
+    letter-spacing: normal;
+    line-height: normal;
+}
+
 .productView-2 .halo-productView-right{
     margin-bottom: 0;
 }

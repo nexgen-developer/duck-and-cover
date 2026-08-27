@@ -124,7 +124,7 @@
             "custom_image_height": 40,
             "should_show_points_label": true,
             "points_text_logged_in": "<p>[points_amount] earned on this product.</p>",
-            "points_text_logged_out": ""
+            "points_text_logged_out": "<p>[points_amount] earned on this product.</p>"
           }
         },
         "judge_me_reviews_preview_badge_EpTB7E": {
