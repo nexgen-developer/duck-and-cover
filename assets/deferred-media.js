@@ -6,7 +6,7 @@ if (!customElements.get('deferred-media')) {
         }
 
         connectedCallback() {
-            if (!this.dataset.autoplayPdp || !this.closest('.productView-mediaList')) return;
+            if (!this.hasAttribute('data-autoplay-pdp') || !this.closest('.productView-mediaList')) return;
             if (this.querySelector('product-model, model-viewer')) return;
 
             this.slider = this.closest('.productView-mediaList.slider');
