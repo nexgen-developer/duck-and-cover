@@ -111,7 +111,7 @@
     {%- if media.media_type == 'model' -%}
         <product-model class="deferred-media media media--transparent no-js-hidden" style="padding-top: 100%" data-media-id="{{ media.id }}">
     {%- else -%}
-        <deferred-media class="deferred-media media no-js-hidden" style="padding-top: {{ 1 | divided_by: media.aspect_ratio | times: 100 }}%" data-media-id="{{ media.id }}">
+        <deferred-media class="deferred-media media no-js-hidden" style="padding-top: {{ 1 | divided_by: media.aspect_ratio | times: 100 }}%" data-media-id="{{ media.id }}" data-autoplay-pdp>
     {%- endif -%}
     <button id="Deferred-Poster-Modal-{{ media.id }}" class="deferred-media__poster" type="button">
         <span class="deferred-media__poster-button motion-reduce">
@@ -149,7 +149,7 @@
                 echo media | external_video_url: autoplay: true, loop: loop, muted: true | external_video_tag: class: video_class, loading: "lazy"
             endif
             when 'video'
-                echo media | media_tag: image_size: "2048x", autoplay: true, muted: true, loop: loop, controls: true, preload: "metadata"
+                echo media | media_tag: image_size: "2048x", autoplay: true, muted: true, loop: loop, controls: false, preload: "metadata"
             when 'model'
                 echo media | media_tag: image_size: "2048x", toggleable: true
             endcase
