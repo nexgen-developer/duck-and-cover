@@ -113,7 +113,6 @@
     },
     "weekly_deal_JXpkmF": {
       "type": "weekly-deal",
-      "disabled": true,
       "name": "3PK Boxer Deal",
       "settings": {
         "image": "shopify://shop_images/3PK-BOXERS-tile.gif",
