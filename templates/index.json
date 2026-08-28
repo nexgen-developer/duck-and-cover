@@ -46,7 +46,6 @@
         "image_yUcgG3": {
           "type": "image",
           "name": "Summer Sale - Bank Hol",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/DAC-AUGUST-BANK-HOL-DESKTOP_795d0c0c-ac6c-485f-b72e-899f2d81740d.jpg",
             "mobile_image": "shopify://shop_images/DAC-AUGUST-BANK-HOL-MOB_50800ffb-fbf9-45ea-aed4-c12f00af5a71.jpg",
@@ -94,6 +93,7 @@
         "image_m7xbhk": {
           "type": "image",
           "name": "Summer Sale - Ending Soon",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/DAC-SALE-AUG-DESKTOP.jpg",
             "mobile_image": "shopify://shop_images/DAC-SALE-AUG-MOB.jpg",
@@ -189,6 +189,7 @@
         "image_rNBiUp": {
           "type": "image",
           "name": "Delivery ",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Duck_Cover-Scroller-Desktop.jpg",
             "mobile_image": "shopify://shop_images/Duck_Cover-Scroller-Mobile.jpg",
