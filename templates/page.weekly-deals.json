@@ -125,6 +125,89 @@
         "description": "40% OFF Everett Chino Trousers! Get yours for just £18 - smart, versatile and perfect for everyday style. Use code EVERETT at checkout."
       }
     },
+    "halo_slideshow_ntNC8f": {
+      "type": "halo-slideshow",
+      "blocks": {
+        "image_E9jg8b": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/DAC-bundle-page-desktop-banner_1.gif",
+            "mobile_image": "shopify://shop_images/DAC-bundle-page-mob-banner-2.gif",
+            "title": "",
+            "subtitle": "",
+            "text": "",
+            "btn": "2",
+            "btn_text": "",
+            "link": "shopify://collections/duck-and-cover-bundles",
+            "container_content": "1570",
+            "position": "left",
+            "alignment": "left",
+            "lookbook": false,
+            "product_1": "",
+            "point_x_1": 10,
+            "point_y_1": 10,
+            "product_2": "",
+            "point_x_2": 10,
+            "point_y_2": 10,
+            "product_3": "",
+            "point_x_3": 10,
+            "point_y_3": 10,
+            "product_4": "",
+            "point_x_4": 10,
+            "point_y_4": 10,
+            "product_5": "",
+            "point_x_5": 10,
+            "point_y_5": 10,
+            "show_background_overlay": false,
+            "transparent_button": false,
+            "background_color": "",
+            "background_overlay": "#000000",
+            "text_color": "#ffffff",
+            "title_color": "#ffffff",
+            "title_font": "font_2",
+            "title_font_size": 26,
+            "title_mobile_font_size": 20,
+            "title_font_weight": "700",
+            "title_text_transform": "none",
+            "text_font_size": 14,
+            "text_font_weight": "600",
+            "text_text_transform": "uppercase"
+          }
+        }
+      },
+      "block_order": [
+        "image_E9jg8b"
+      ],
+      "name": "Bundle Page",
+      "settings": {
+        "show_slideshow": true,
+        "container": "full",
+        "padding_top": 30,
+        "padding_bottom": 30,
+        "padding_top_tablet": 0,
+        "padding_bottom_tablet": 0,
+        "padding_top_mobile": 30,
+        "padding_bottom_mobile": 0,
+        "block_title": "",
+        "block_text": "",
+        "block_title_align": "center",
+        "block_layout": "1",
+        "block_content": "absolute",
+        "block_content_style": "1",
+        "block_fade": true,
+        "block_autoplay": true,
+        "block_autoplay_time": 5,
+        "block_dots": false,
+        "block_dots_bg": "",
+        "block_dots_color": "",
+        "block_dots_border": "",
+        "block_arrows": true,
+        "block_arrows_bg": "",
+        "block_arrows_color": "",
+        "block_arrows_border": "",
+        "lookbook_style": "1"
+      }
+    },
     "weekly_deal_YDVHfG": {
       "type": "weekly-deal",
       "name": "3PK Boxer Deal",
@@ -164,10 +247,10 @@
         "description": "Get summer sorted with our Sherborn Bundles—Tee & Shorts for just £17.49 or Polo & Shorts for £19.59. With 30% OFF, it's the perfect time to refresh your warm-weather wardrobe. No code needed! Just add the selected products to your bundle to save!"
       }
     },
-    "halo_slideshow_ntNC8f": {
+    "halo_slideshow_G3qR4P": {
       "type": "halo-slideshow",
       "blocks": {
-        "image_E9jg8b": {
+        "image_DHNxJN": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/DAC-DELIVERY-DESKTOP.jpg",
@@ -215,7 +298,7 @@
         }
       },
       "block_order": [
-        "image_E9jg8b"
+        "image_DHNxJN"
       ],
       "name": "Premier Delivery",
       "settings": {
@@ -750,10 +833,11 @@
     "main",
     "25bcb4cf-3aa4-4cb5-b78f-4074368db4a6",
     "weekly_deal_JXpkmF",
+    "halo_slideshow_ntNC8f",
     "weekly_deal_YDVHfG",
     "weekly_deal_pmhwQp",
     "weekly_deal_XM6RQ9",
-    "halo_slideshow_ntNC8f",
+    "halo_slideshow_G3qR4P",
     "weekly_deal_PF8J66",
     "weekly_deal_nCEwdV",
     "weekly_deal_rEnB9G",
