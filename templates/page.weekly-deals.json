@@ -113,6 +113,20 @@
     },
     "weekly_deal_JXpkmF": {
       "type": "weekly-deal",
+      "disabled": true,
+      "name": "Everett Chinos",
+      "settings": {
+        "image": "shopify://shop_images/DAC-everett-tile.gif",
+        "title": "Everett Chinos",
+        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">NOW £18</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label>40% oFF</label>",
+        "button1": "Get Deal",
+        "url": "https://www.duckandcover.co.uk/search?gf_203219=Chinos&q=everett&options%5Bprefix%5D=last",
+        "CustomCode": "EVERETT",
+        "description": "40% OFF Everett Chino Trousers! Get yours for just £18 - smart, versatile and perfect for everyday style. Use code EVERETT at checkout."
+      }
+    },
+    "weekly_deal_YDVHfG": {
+      "type": "weekly-deal",
       "name": "3PK Boxer Deal",
       "settings": {
         "image": "shopify://shop_images/3PK-BOXERS-tile.gif",
@@ -736,6 +750,7 @@
     "main",
     "25bcb4cf-3aa4-4cb5-b78f-4074368db4a6",
     "weekly_deal_JXpkmF",
+    "weekly_deal_YDVHfG",
     "weekly_deal_pmhwQp",
     "weekly_deal_XM6RQ9",
     "halo_slideshow_ntNC8f",
