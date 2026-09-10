@@ -296,176 +296,6 @@
         "text_color": "#000000"
       }
     },
-    "halo_custom_banner_TnzkyF": {
-      "type": "halo-custom-banner",
-      "blocks": {
-        "image_e4qnCM": {
-          "type": "image",
-          "name": "Weekly Deals",
-          "settings": {
-            "image": "shopify://shop_images/QUICK_LINK_-_Weekly_Deals_02988f99-2723-4890-bcb6-2362d5dfe9f0.jpg",
-            "title": "",
-            "text": "",
-            "btn": "5",
-            "btn_text": "",
-            "link": "shopify://pages/weekly-deals",
-            "align": "center",
-            "position": "center"
-          }
-        },
-        "image_wK88cj": {
-          "type": "image",
-          "name": "T-Shirts",
-          "settings": {
-            "image": "shopify://shop_images/QUICK_LINK_-_T-Shirt_09ec00ca-7cb7-4696-8764-c547b1d468a6.jpg",
-            "title": "",
-            "text": "",
-            "btn": "5",
-            "btn_text": "",
-            "link": "shopify://collections/all-t-shirts",
-            "align": "center",
-            "position": "center"
-          }
-        }
-      },
-      "block_order": [
-        "image_e4qnCM",
-        "image_wK88cj"
-      ],
-      "disabled": true,
-      "name": "t:sections.custom-banner.presets.name",
-      "settings": {
-        "show_custom_banner": true,
-        "background_color_section": "",
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "padding_top_tablet": 40,
-        "padding_bottom_tablet": 40,
-        "padding_top_mobile": 0,
-        "padding_bottom_mobile": 50,
-        "container": "1860",
-        "column": "2",
-        "block_title": "",
-        "block_text": "",
-        "block_title_align": "center",
-        "block_mobile_layout": "grid",
-        "style": "1",
-        "col": "narrow",
-        "show_custom_banner_style": true,
-        "transparent_button": false,
-        "background_color": "",
-        "text_color": "#ffffff",
-        "title_color": "#ffffff",
-        "title_font": "font_1",
-        "title_font_size": 30,
-        "title_mobile_font_size": 30,
-        "title_font_weight": "700",
-        "title_text_transform": "none",
-        "text_font_size": 14,
-        "text_font_weight": "600",
-        "text_text_transform": "uppercase",
-        "show_hoverImage_1": false,
-        "show_hoverImage_2": true
-      }
-    },
-    "f0a1f009-f7e3-4ad1-9307-9fcf06cf17a4": {
-      "type": "halo-image-gallery",
-      "blocks": {
-        "image_QxVyVG": {
-          "type": "image",
-          "name": "DAC League",
-          "settings": {
-            "image": "shopify://shop_images/QUICK_LINK_-_DAC_League_068afad6-db04-4c63-b0b8-85be9ec17bda.jpg",
-            "btn_text": "",
-            "link": "https://shopify.com/15431853/account/pages/daacc659-e05e-4631-8c8a-09c6370fe146"
-          }
-        },
-        "template--16937253765370__f0a1f009-f7e3-4ad1-9307-9fcf06cf17a4-image-1": {
-          "type": "image",
-          "name": "Weekly Deals",
-          "settings": {
-            "image": "shopify://shop_images/QUICK_LINK_-_Weekly_Deals_d6380cf0-84a5-4e6c-8f79-6e383556290e.jpg",
-            "btn_text": "",
-            "link": "shopify://pages/weekly-deals"
-          }
-        },
-        "template--16937253765370__f0a1f009-f7e3-4ad1-9307-9fcf06cf17a4-image-3": {
-          "type": "image",
-          "name": "Mystery Box",
-          "settings": {
-            "image": "shopify://shop_images/QUICK_LINK_-_Mystery_Box_c9ce3136-9512-48a7-a344-6e098a90183f.jpg",
-            "btn_text": "",
-            "link": "shopify://products/mens-dac-mystery-box"
-          }
-        }
-      },
-      "block_order": [
-        "image_QxVyVG",
-        "template--16937253765370__f0a1f009-f7e3-4ad1-9307-9fcf06cf17a4-image-1",
-        "template--16937253765370__f0a1f009-f7e3-4ad1-9307-9fcf06cf17a4-image-3"
-      ],
-      "name": "Quick Links",
-      "settings": {
-        "show_image_gallery": true,
-        "container": "full",
-        "padding_top": 0,
-        "padding_bottom": 25,
-        "padding_top_tablet": 50,
-        "padding_bottom_tablet": 0,
-        "padding_top_mobile": 0,
-        "padding_bottom_mobile": 40,
-        "block_title": "",
-        "block_text": "",
-        "block_title_align": "center",
-        "block_layout": "grid",
-        "block_mobile_layout": "swipe",
-        "col": "narrow",
-        "col_border": 0,
-        "block_action": "link",
-        "block_btn": "2",
-        "block_view_btn": "1",
-        "block_view_btn_text": "",
-        "block_view_btn_link": "",
-        "block_per_row": "5",
-        "block_show": "5",
-        "block_dots": false,
-        "block_arrows": true
-      }
-    },
-    "6a2d9346-e7f0-4e21-a77f-79eeac908797": {
-      "type": "halo-product-block",
-      "custom_css": [
-        ".text {font-size: 14px;}",
-        ".price-item {font-size: 14px;}",
-        ".card-title {margin: 0 0 0px;}"
-      ],
-      "settings": {
-        "display_product_block": true,
-        "container": "1860",
-        "boxed_container": false,
-        "padding_top": 100,
-        "padding_bottom": 100,
-        "padding_top_tablet": 40,
-        "padding_bottom_tablet": 40,
-        "padding_top_mobile": 30,
-        "padding_bottom_mobile": 30,
-        "block_title": "NEW ARRIVALS",
-        "block_text": "",
-        "block_title_align": "center",
-        "block_layout": "slider",
-        "col": "slim",
-        "block_collection": "new-in",
-        "block_limit": 20,
-        "block_image_ratio": "portrait",
-        "portrait_aspect_ratio": 150,
-        "show_add_to_cart": false,
-        "block_per_row": "4",
-        "block_infinite_scroll": false,
-        "block_show": "4",
-        "block_dots": false,
-        "block_arrows": true
-      }
-    },
     "halo_image_gallery_ERkU9q": {
       "type": "halo-image-gallery",
       "blocks": {
@@ -522,6 +352,104 @@
         "padding_bottom_tablet": 0,
         "padding_top_mobile": 30,
         "padding_bottom_mobile": 10,
+        "block_title": "",
+        "block_text": "",
+        "block_title_align": "center",
+        "block_layout": "grid",
+        "block_mobile_layout": "swipe",
+        "col": "narrow",
+        "col_border": 0,
+        "block_action": "link",
+        "block_btn": "2",
+        "block_view_btn": "1",
+        "block_view_btn_text": "",
+        "block_view_btn_link": "",
+        "block_per_row": "5",
+        "block_show": "5",
+        "block_dots": false,
+        "block_arrows": true
+      }
+    },
+    "6a2d9346-e7f0-4e21-a77f-79eeac908797": {
+      "type": "halo-product-block",
+      "custom_css": [
+        ".text {font-size: 14px;}",
+        ".price-item {font-size: 14px;}",
+        ".card-title {margin: 0 0 0px;}"
+      ],
+      "settings": {
+        "display_product_block": true,
+        "container": "1860",
+        "boxed_container": false,
+        "padding_top": 100,
+        "padding_bottom": 100,
+        "padding_top_tablet": 40,
+        "padding_bottom_tablet": 40,
+        "padding_top_mobile": 30,
+        "padding_bottom_mobile": 30,
+        "block_title": "NEW ARRIVALS",
+        "block_text": "",
+        "block_title_align": "center",
+        "block_layout": "slider",
+        "col": "slim",
+        "block_collection": "new-in",
+        "block_limit": 20,
+        "block_image_ratio": "portrait",
+        "portrait_aspect_ratio": 150,
+        "show_add_to_cart": false,
+        "block_per_row": "4",
+        "block_infinite_scroll": false,
+        "block_show": "4",
+        "block_dots": false,
+        "block_arrows": true
+      }
+    },
+    "f0a1f009-f7e3-4ad1-9307-9fcf06cf17a4": {
+      "type": "halo-image-gallery",
+      "blocks": {
+        "image_QxVyVG": {
+          "type": "image",
+          "name": "DAC League",
+          "settings": {
+            "image": "shopify://shop_images/QUICK_LINK_-_DAC_League_068afad6-db04-4c63-b0b8-85be9ec17bda.jpg",
+            "btn_text": "",
+            "link": "https://shopify.com/15431853/account/pages/daacc659-e05e-4631-8c8a-09c6370fe146"
+          }
+        },
+        "template--16937253765370__f0a1f009-f7e3-4ad1-9307-9fcf06cf17a4-image-1": {
+          "type": "image",
+          "name": "Weekly Deals",
+          "settings": {
+            "image": "shopify://shop_images/QUICK_LINK_-_Weekly_Deals_d6380cf0-84a5-4e6c-8f79-6e383556290e.jpg",
+            "btn_text": "",
+            "link": "shopify://pages/weekly-deals"
+          }
+        },
+        "template--16937253765370__f0a1f009-f7e3-4ad1-9307-9fcf06cf17a4-image-3": {
+          "type": "image",
+          "name": "Mystery Box",
+          "settings": {
+            "image": "shopify://shop_images/QUICK_LINK_-_Mystery_Box_c9ce3136-9512-48a7-a344-6e098a90183f.jpg",
+            "btn_text": "",
+            "link": "shopify://products/mens-dac-mystery-box"
+          }
+        }
+      },
+      "block_order": [
+        "image_QxVyVG",
+        "template--16937253765370__f0a1f009-f7e3-4ad1-9307-9fcf06cf17a4-image-1",
+        "template--16937253765370__f0a1f009-f7e3-4ad1-9307-9fcf06cf17a4-image-3"
+      ],
+      "name": "Quick Links",
+      "settings": {
+        "show_image_gallery": true,
+        "container": "full",
+        "padding_top": 0,
+        "padding_bottom": 25,
+        "padding_top_tablet": 50,
+        "padding_bottom_tablet": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 40,
         "block_title": "",
         "block_text": "",
         "block_title_align": "center",
@@ -931,10 +859,9 @@
     "1d860dd6-f939-49ad-b78c-d9ca851b4724",
     "205c4f7a-d208-44ad-9a74-a5715aff1348",
     "9e2400a3-bdb2-4ec4-a76b-5ea5ae61cfdf",
-    "halo_custom_banner_TnzkyF",
-    "f0a1f009-f7e3-4ad1-9307-9fcf06cf17a4",
-    "6a2d9346-e7f0-4e21-a77f-79eeac908797",
     "halo_image_gallery_ERkU9q",
+    "6a2d9346-e7f0-4e21-a77f-79eeac908797",
+    "f0a1f009-f7e3-4ad1-9307-9fcf06cf17a4",
     "746fe2ac-65b1-46bd-a19d-8fd87d2490da",
     "halo_fullwidth_banner_WKzT7D",
     "c87b5a9e-f50e-48d4-93f2-38aa2d4f1d29",
