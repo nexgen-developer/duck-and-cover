@@ -9,31 +9,56 @@
 *
 * Copyright Brainy Atom LLC, All Rights Reserved.
 *
-* Last updated: 2026-09-15T08:25:53Z
+* Last updated: 2026-09-18T01:51:28Z
 ************************************************************************
 {%- endcomment -%}
 {%- liquid
   if search.performed
-    assign flair_terms = search.terms | split: ' OR '
     assign flair_collection = collection
     assign flair_layout = ''
     assign flair_page_type = ''
-    for t in flair_terms
-      assign kv = t | split: ':'
-      assign k = kv[0] | url_decode
-      assign v = kv[1] | url_decode
-      if k == '_col'
-        assign flair_collection = collections[v]
-      elsif k == '_lay'
-        assign flair_layout = v | remove: '&quot;'
-      elsif k == '_pag'
-        assign flair_page_type = v
-      elsif k == '_var'
-        assign _parts = v | split: '|'
-        assign flair_variant_product_id = _parts[0] | plus: 0
-        assign flair_variant_id = _parts[1] | plus: 0
-      endif
-    endfor
+    assign flair_terms = search.terms | split: ' OR '
+    if flair_terms contains 'id:0'
+      capture flair_form
+        form 'localization'
+        endform
+      endcapture
+      assign flair_query = flair_form | split: 'name="return_to" value="' | last | split: '"' | first | split: '?' | last | replace: '&amp;', '&'
+      assign flair_params = flair_query | split: '&'
+      for p in flair_params
+        assign kv = p | split: '='
+        assign k = kv[0]
+        assign v = kv[1] | url_decode
+        if k == '_col'
+          assign flair_collection = collections[v]
+        elsif k == '_lay'
+          assign flair_layout = v | escape
+        elsif k == '_pag'
+          assign flair_page_type = v
+        elsif k == '_var'
+          assign _parts = v | split: '|'
+          assign flair_variant_product_id = _parts[0] | plus: 0
+          assign flair_variant_id = _parts[1] | plus: 0
+        endif
+      endfor
+    else
+      for t in flair_terms
+        assign kv = t | split: ':'
+        assign k = kv[0] | url_decode
+        assign v = kv[1] | url_decode
+        if k == '_col'
+          assign flair_collection = collections[v]
+        elsif k == '_lay'
+          assign flair_layout = v | remove: '&quot;'
+        elsif k == '_pag'
+          assign flair_page_type = v
+        elsif k == '_var'
+          assign _parts = v | split: '|'
+          assign flair_variant_product_id = _parts[0] | plus: 0
+          assign flair_variant_id = _parts[1] | plus: 0
+        endif
+      endfor
+    endif
 
     paginate search.results by 1000
       for item in search.results
