@@ -94,7 +94,6 @@
         "image_9dLdq8": {
           "type": "image",
           "name": "September Payday",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/DAC-SEPT-PAYDAY-DESKTOP_f083e226-c968-4adf-b099-a378de95a8d2.jpg",
             "mobile_image": "shopify://shop_images/DAC-SEPT-PAYDAY-MOBILE.jpg",
