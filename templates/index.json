@@ -429,6 +429,7 @@
         "image_Nhe8D8": {
           "type": "image",
           "name": "AW26 Base",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/SCROLLER_-_Desktop_2c1130fe-ac72-460a-9d9e-e6dd5ece7097.jpg",
             "mobile_image": "shopify://shop_images/SCROLLER_-_Mobile_51d407b5-e947-4e4c-9cfa-f954cacaff3b.jpg",
