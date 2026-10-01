@@ -113,6 +113,20 @@
     },
     "weekly_deal_pATLmh": {
       "type": "weekly-deal",
+      "disabled": true,
+      "name": "Mystery Jeans",
+      "settings": {
+        "image": "shopify://shop_images/DAC-mystery-jean-tile.jpg",
+        "title": "MYSTERY JEANS",
+        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">£8.99</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
+        "button1": "Get Deal",
+        "url": "",
+        "CustomCode": "NO CODE NEEDED",
+        "description": "Mystery Jeans just £8.99! Pick your size and we’ll handle the rest. You won’t know which style you’re getting until they arrive - perfect for a surprise bargain!\n\nPlease note: Mystery Jeans are non-returnable and non-refundable."
+      }
+    },
+    "weekly_deal_MJpb7p": {
+      "type": "weekly-deal",
       "name": "Elix Jeans",
       "settings": {
         "image": "shopify://shop_images/DAC-ELIX-TILE.gif",
@@ -748,6 +762,7 @@
     "main",
     "25bcb4cf-3aa4-4cb5-b78f-4074368db4a6",
     "weekly_deal_pATLmh",
+    "weekly_deal_MJpb7p",
     "weekly_deal_JXpkmF",
     "weekly_deal_YDVHfG",
     "halo_slideshow_ntNC8f",
