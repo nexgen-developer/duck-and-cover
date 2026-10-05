@@ -12,7 +12,7 @@
     "weekly_deals_columns": {
       "type": "weekly-deals-columns",
       "settings": {
-        "columns": "2"
+        "columns": "1"
       }
     },
     "main": {
@@ -124,11 +124,11 @@
       "settings": {
         "image": "shopify://shop_images/DAC-mystery-jean-tile.jpg",
         "title": "MYSTERY JEANS",
-        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">\u00a38.99</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
+        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">£8.99</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
         "button1": "Get Deal",
         "url": "",
         "CustomCode": "NO CODE NEEDED",
-        "description": "Mystery Jeans just \u00a38.99! Pick your size and we\u2019ll handle the rest. You won\u2019t know which style you\u2019re getting until they arrive - perfect for a surprise bargain!\n\nPlease note: Mystery Jeans are non-returnable and non-refundable."
+        "description": "Mystery Jeans just £8.99! Pick your size and we’ll handle the rest. You won’t know which style you’re getting until they arrive - perfect for a surprise bargain!\n\nPlease note: Mystery Jeans are non-returnable and non-refundable."
       }
     },
     "weekly_deal_MJpb7p": {
@@ -137,11 +137,11 @@
       "settings": {
         "image": "shopify://shop_images/DAC-ELIX-TILE.gif",
         "title": "ELIX JEANS",
-        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">\u00a318.90</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
+        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">£18.90</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
         "button1": "Get Deal",
         "url": "shopify://collections/elix-jean",
         "CustomCode": "ELIXDEAL",
-        "description": "Upgrade your denim rotation with Elix straight leg jeans for just \u00a318.90! A timeless fit that works with anything. Use code ELIXDEAL at checkout - don\u2019t miss out!"
+        "description": "Upgrade your denim rotation with Elix straight leg jeans for just £18.90! A timeless fit that works with anything. Use code ELIXDEAL at checkout - don’t miss out!"
       }
     },
     "weekly_deal_JXpkmF": {
@@ -150,11 +150,11 @@
       "settings": {
         "image": "shopify://shop_images/DAC-everett-tile.gif",
         "title": "Everett Chinos",
-        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">NOW \u00a318</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label>40% oFF</label>",
+        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">NOW £18</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label>40% oFF</label>",
         "button1": "Get Deal",
         "url": "shopify://collections/everett-chinos",
         "CustomCode": "EVERETT",
-        "description": "40% Off Everett Chino Trousers! Get yours for just \u00a318 - smart, versatile and perfect for everyday style. Use code EVERETT at checkout."
+        "description": "40% Off Everett Chino Trousers! Get yours for just £18 - smart, versatile and perfect for everyday style. Use code EVERETT at checkout."
       }
     },
     "weekly_deal_YDVHfG": {
@@ -163,11 +163,11 @@
       "settings": {
         "image": "shopify://shop_images/3PK-BOXERS-tile.gif",
         "title": "3PK Boxers",
-        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">NOW \u00a39.50</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
+        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">NOW £9.50</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
         "button1": "Get Deal",
         "url": "shopify://collections/3pk-boxer-deal",
         "CustomCode": "3PKDEAL",
-        "description": "Stock up on everyday essentials with 3PK Boxers for just \u00a39.50! Comfortable, practical and great value. Use code 3PKDEAL at checkout and grab the deal!"
+        "description": "Stock up on everyday essentials with 3PK Boxers for just £9.50! Comfortable, practical and great value. Use code 3PKDEAL at checkout and grab the deal!"
       }
     },
     "halo_slideshow_ntNC8f": {
@@ -259,7 +259,7 @@
       "settings": {
         "image": "shopify://shop_images/DAC-SS24-Weekly-Deals-jean-tile_8218869a-c419-4e20-b5f5-ea5a393667d7.jpg",
         "title": "30% OFF JEANS",
-        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">FROM \u00a320</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
+        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">FROM £20</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
         "button1": "Get Deal",
         "url": "shopify://products/sherborn-bundle",
         "CustomCode": "NO CODE NEEDED",
@@ -272,11 +272,11 @@
       "settings": {
         "image": "shopify://shop_images/DAC-SHERBORN-BUNDLE-TILE.jpg",
         "title": "SHERBORN BUNDLE",
-        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">FROM \u00a317.49</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
+        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">FROM £17.49</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
         "button1": "Get Deal",
         "url": "shopify://products/sherborn-bundle",
         "CustomCode": "NO CODE NEEDED",
-        "description": "Get summer sorted with our Sherborn Bundles\u2014Tee & Shorts for just \u00a317.49 or Polo & Shorts for \u00a319.59. With 30% OFF, it's the perfect time to refresh your warm-weather wardrobe. No code needed! Just add the selected products to your bundle to save!"
+        "description": "Get summer sorted with our Sherborn Bundles—Tee & Shorts for just £17.49 or Polo & Shorts for £19.59. With 30% OFF, it's the perfect time to refresh your warm-weather wardrobe. No code needed! Just add the selected products to your bundle to save!"
       }
     },
     "weekly_deal_PF8J66": {
@@ -285,11 +285,11 @@
       "settings": {
         "image": "shopify://shop_images/DAC-WRENTHAM-POLO-TILE.jpg",
         "title": "WRENTHAM POLO",
-        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">FOR \u00a310</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
+        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">FOR £10</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
         "button1": "Get Deal",
         "url": "shopify://collections/wrentham-polo",
         "CustomCode": "POLODEAL",
-        "description": "Upgrade your summer style with the Wrentham Polo for just \u00a310! Smart, comfortable, and perfect for any occasion. Use code POLODEAL at checkout to grab yours."
+        "description": "Upgrade your summer style with the Wrentham Polo for just £10! Smart, comfortable, and perfect for any occasion. Use code POLODEAL at checkout to grab yours."
       }
     },
     "weekly_deal_nCEwdV": {
@@ -298,11 +298,11 @@
       "settings": {
         "image": "shopify://shop_images/DAC-TEE-SHORT-TILE.gif",
         "title": "DENIM SHORTS & T-SHIRT BUNDLE",
-        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">FROM \u00a319.99</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
+        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">FROM £19.99</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
         "button1": "Get Deal",
         "url": "shopify://products/denim-short-t-shirt-bundle",
         "CustomCode": "NO CODE NEEDED",
-        "description": "Refresh your summer wardrobe with our Denim Shorts & T-Shirt Bundle for just \u00a319.99! An easy, everyday outfit at an unbeatable price. No code needed - just add to basket and save."
+        "description": "Refresh your summer wardrobe with our Denim Shorts & T-Shirt Bundle for just £19.99! An easy, everyday outfit at an unbeatable price. No code needed - just add to basket and save."
       }
     },
     "weekly_deal_rEnB9G": {
@@ -311,11 +311,11 @@
       "settings": {
         "image": "shopify://shop_images/DUCK_COVER_-_WEEKLY_DEAL_-_Mystery_Box.jpg",
         "title": "MYSTERY BOX",
-        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">\u00a35.00</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
+        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">£5.00</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
         "button1": "Get Deal",
         "url": "shopify://collections/mystery-box",
         "CustomCode": "",
-        "description": "Feeling lucky? Grab a \u00a35.00 Duck & Cover Mystery Box. Choose your size and we\u2019ll take care of the rest."
+        "description": "Feeling lucky? Grab a £5.00 Duck & Cover Mystery Box. Choose your size and we’ll take care of the rest."
       }
     },
     "weekly_deal_CnQjac": {
@@ -325,11 +325,11 @@
       "settings": {
         "image": "shopify://shop_images/DAC-CHINO-TILE.gif",
         "title": "BUY ONE GET ONE FREE - CHINOS",
-        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">\u00a330.99</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
+        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">£30.99</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
         "button1": "Get Deal",
         "url": "shopify://collections/moretor",
         "CustomCode": "CHINOBOGOF",
-        "description": "Double up on style with our Buy One Get One Free chinos deal - 2 pairs for just \u00a330.99! Perfect for upgrading your everyday wardrobe. Use code CHINOBOGOF at checkout while the offer lasts!"
+        "description": "Double up on style with our Buy One Get One Free chinos deal - 2 pairs for just £30.99! Perfect for upgrading your everyday wardrobe. Use code CHINOBOGOF at checkout while the offer lasts!"
       }
     },
     "weekly_deal_xfeYix": {
@@ -338,11 +338,11 @@
       "settings": {
         "image": "shopify://shop_images/Tee-_-Jean-Tile.jpg",
         "title": "T-SHIRT & JEAN BUNDLE",
-        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">\u00a328.99</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
+        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">£28.99</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
         "button1": "Get Deal",
         "url": "shopify://products/t-shirt-and-jean-bundle",
         "CustomCode": "NO CODE NEEDED",
-        "description": "Upgrade your everyday essentials with our T-Shirt & Jean Bundle for just \u00a328.99! The perfect combination of comfort and style at an unbeatable price. No code needed - just add the items to your bundle add to save."
+        "description": "Upgrade your everyday essentials with our T-Shirt & Jean Bundle for just £28.99! The perfect combination of comfort and style at an unbeatable price. No code needed - just add the items to your bundle add to save."
       }
     },
     "weekly_deal_78RRYA": {
@@ -352,11 +352,11 @@
       "settings": {
         "image": "shopify://shop_images/DAC-2PK-BOXER-TILE.gif",
         "title": "2PK BOXERS",
-        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">\u00a35 WITH CODE</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
+        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">£5 WITH CODE</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
         "button1": "Get Deal",
         "url": "shopify://collections/2pk-boxers",
         "CustomCode": "2PKBOXER",
-        "description": "Stock up on essentials with 2PK boxers for just \u00a35! Everyday comfort at an unbeatable price. Use code 2PKBOXER at checkout."
+        "description": "Stock up on essentials with 2PK boxers for just £5! Everyday comfort at an unbeatable price. Use code 2PKBOXER at checkout."
       }
     },
     "weekly_deal_8TnA9V": {
@@ -366,11 +366,11 @@
       "settings": {
         "image": "shopify://shop_images/Tile_cfb97a84-623f-4cd6-87c6-daea790f8114.gif",
         "title": "TAMES JOGGERS",
-        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">\u00a313.50 WITH CODE</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
+        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">£13.50 WITH CODE</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
         "button1": "Get Deal",
         "url": "shopify://collections/tames-jogger",
         "CustomCode": "TAMESJOGGER",
-        "description": "3 colours to choose from. Tames Joggers for just \u00a313.50. Just use the code TAMESJOGGER at the checkout."
+        "description": "3 colours to choose from. Tames Joggers for just £13.50. Just use the code TAMESJOGGER at the checkout."
       }
     },
     "weekly_deal_EVKQ7T": {
@@ -380,11 +380,11 @@
       "settings": {
         "image": "shopify://shop_images/Tile.jpg",
         "title": "JEANS SAVING DEAL",
-        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">\u00a316.50 WITH CODE</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
+        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">£16.50 WITH CODE</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
         "button1": "Get Deal",
         "url": "shopify://collections/tranfold",
         "CustomCode": "JEANSAVING",
-        "description": "Upgrade your everyday denim with Duck & Cover jeans, now just \u00a316.50 when you use code JEANSAVING."
+        "description": "Upgrade your everyday denim with Duck & Cover jeans, now just £16.50 when you use code JEANSAVING."
       }
     },
     "weekly_deal_8mNUCp": {
@@ -394,11 +394,11 @@
       "settings": {
         "image": "shopify://shop_images/WEEKLY-DEALS---Tile.gif",
         "title": "2 FOR 1 ON T-SHIRTS",
-        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">\n\u00a316 for 2</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
+        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">\n£16 for 2</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
         "button1": "Get Deal",
         "url": "shopify://collections/2-for-1-t-shirt-deal",
         "CustomCode": "2FOR1",
-        "description": "2 T-Shirts for \u00a316 from Duck and Cover \u2014 just use code 2FOR1. That\u2019s only \u00a38 per tee. Time to refresh your T-shirt rotation."
+        "description": "2 T-Shirts for £16 from Duck and Cover — just use code 2FOR1. That’s only £8 per tee. Time to refresh your T-shirt rotation."
       }
     },
     "weekly_deal_6tPR9e": {
@@ -408,11 +408,11 @@
       "settings": {
         "image": "shopify://shop_images/TILE_8f9123cf-b94f-4908-b7ab-c9d25b955c73.gif",
         "title": "BUY ONE GET ONE FREE CHINO",
-        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">\n\u00a330.99 for 2</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
+        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">\n£30.99 for 2</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
         "button1": "Get Deal",
         "url": "shopify://collections/moretor",
         "CustomCode": "CHINOBOGOF",
-        "description": "Double up with Duck & Cover Chinos \u2013 2 for \u00a330.99. Use code CHINOBOGOF at checkout."
+        "description": "Double up with Duck & Cover Chinos – 2 for £30.99. Use code CHINOBOGOF at checkout."
       }
     },
     "halo_slideshow_FtAeWB": {
