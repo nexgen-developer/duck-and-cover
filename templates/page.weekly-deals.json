@@ -12,7 +12,7 @@
     "weekly_deals_columns": {
       "type": "weekly-deals-columns",
       "settings": {
-        "columns": "1"
+        "columns": "2"
       }
     },
     "main": {
