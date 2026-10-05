@@ -1,0 +1,120 @@
+<script>
+  document.documentElement.classList.add('weekly-deals-cols-{{ section.settings.columns }}');
+</script>
+
+<style>
+  #shopify-section-{{ section.id }} {
+    display: none;
+  }
+
+  @media (min-width: 990px) {
+    html.weekly-deals-cols-2,
+    html.weekly-deals-cols-3 {
+      overflow-x: hidden;
+    }
+
+    html.weekly-deals-cols-2 #MainContent,
+    html.weekly-deals-cols-3 #MainContent {
+      display: grid;
+      justify-content: center;
+      column-gap: 20px;
+      width: min(1200px, calc(100% - 30px));
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    html.weekly-deals-cols-2 #MainContent {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    html.weekly-deals-cols-3 #MainContent {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    html.weekly-deals-cols-2 #MainContent > .shopify-section:not(:has(.section-product-code)),
+    html.weekly-deals-cols-3 #MainContent > .shopify-section:not(:has(.section-product-code)) {
+      grid-column: 1 / -1;
+      width: 100vw;
+      max-width: 100vw;
+      margin-left: calc(50% - 50vw);
+      margin-right: calc(50% - 50vw);
+    }
+
+    html.weekly-deals-cols-2 .section-product-code .container.container-1170,
+    html.weekly-deals-cols-3 .section-product-code .container.container-1170 {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    html.weekly-deals-cols-2 .section-product-code,
+    html.weekly-deals-cols-3 .section-product-code,
+    html.weekly-deals-cols-2 .section-custom,
+    html.weekly-deals-cols-3 .section-custom {
+      height: 100%;
+    }
+
+    html.weekly-deals-cols-2 .product-info h2 a,
+    html.weekly-deals-cols-3 .product-info h2 a {
+      font-size: 20px;
+      line-height: 1.2;
+    }
+
+    html.weekly-deals-cols-2 .button-wapper,
+    html.weekly-deals-cols-3 .button-wapper {
+      flex-wrap: wrap;
+    }
+
+    html.weekly-deals-cols-3 .product-info h2 a {
+      font-size: 18px;
+    }
+
+    html.weekly-deals-cols-3 .button-wapper {
+      flex-direction: column;
+    }
+
+    html.weekly-deals-cols-3 .button-wapper > * {
+      width: 100%;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Weekly deals columns",
+  "limit": 1,
+  "enabled_on": {
+    "templates": ["page"]
+  },
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "Desktop only. Mobile stays one deal per row. Banners between deals stay full width."
+    },
+    {
+      "type": "select",
+      "id": "columns",
+      "label": "Desktop columns",
+      "default": "1",
+      "options": [
+        {
+          "value": "1",
+          "label": "1 column"
+        },
+        {
+          "value": "2",
+          "label": "2 columns"
+        },
+        {
+          "value": "3",
+          "label": "3 columns"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Weekly deals columns"
+    }
+  ]
+}
+{% endschema %}
