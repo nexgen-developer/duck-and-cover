@@ -59,9 +59,15 @@
       line-height: 1.2;
     }
 
-    html.weekly-deals-cols-2 .button-wapper,
-    html.weekly-deals-cols-3 .button-wapper {
-      flex-wrap: wrap;
+    html.weekly-deals-cols-2 .button-wapper {
+      flex-wrap: nowrap;
+      align-items: stretch;
+    }
+
+    html.weekly-deals-cols-2 .button-wapper > * {
+      flex: 1 1 0;
+      width: auto;
+      min-width: 0;
     }
 
     html.weekly-deals-cols-3 .product-info h2 a {
@@ -69,6 +75,7 @@
     }
 
     html.weekly-deals-cols-3 .button-wapper {
+      flex-wrap: wrap;
       flex-direction: column;
     }
 
