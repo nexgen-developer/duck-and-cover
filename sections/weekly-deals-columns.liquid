@@ -64,20 +64,14 @@
       align-items: stretch;
     }
 
-    html.weekly-deals-cols-2 .button-wapper > * {
-      width: auto;
+    html.weekly-deals-cols-2 .button-wapper > a,
+    html.weekly-deals-cols-2 .button-wapper > .clipboard {
+      flex: 1 1 0;
+      width: 0;
       min-width: 0;
     }
 
-    html.weekly-deals-cols-2 .button-wapper > a {
-      flex: 0 0 auto;
-      white-space: nowrap;
-    }
-
-    html.weekly-deals-cols-2 .button-wapper > .clipboard {
-      flex: 1 1 auto;
-    }
-
+    html.weekly-deals-cols-2 .button-wapper > a,
     html.weekly-deals-cols-2 .button-wapper .clipboard input {
       font-size: 16px;
     }
