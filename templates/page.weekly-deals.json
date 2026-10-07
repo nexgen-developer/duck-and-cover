@@ -313,7 +313,7 @@
         "title": "MYSTERY BOX",
         "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">£5.00</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
         "button1": "Get Deal",
-        "url": "shopify://collections/mystery-box",
+        "url": "shopify://collections/mystery-item",
         "CustomCode": "",
         "description": "Feeling lucky? Grab a £5.00 Duck & Cover Mystery Box. Choose your size and we’ll take care of the rest."
       }
