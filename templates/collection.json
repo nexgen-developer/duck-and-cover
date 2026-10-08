@@ -14,6 +14,55 @@
       "blocks": {
         "template--16937253372154__db7096be-e358-4fc3-8c65-d810472d5c81-image-1": {
           "type": "image",
+          "name": "BF Deals Banner",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/DAC-BF-COLLECTION-DESKTOP_826596d0-ed89-4682-98d8-c124cb623159.gif",
+            "mobile_image": "shopify://shop_images/DAC_BF_COLLECTION_BANNER_MOB.gif",
+            "title": "",
+            "subtitle": "",
+            "text": "",
+            "btn": "2",
+            "btn_text": "",
+            "link": "shopify://pages/black-friday",
+            "container_content": "1570",
+            "position": "left",
+            "alignment": "left",
+            "lookbook": false,
+            "product_1": "",
+            "point_x_1": 10,
+            "point_y_1": 10,
+            "product_2": "",
+            "point_x_2": 10,
+            "point_y_2": 10,
+            "product_3": "",
+            "point_x_3": 10,
+            "point_y_3": 10,
+            "product_4": "",
+            "point_x_4": 10,
+            "point_y_4": 10,
+            "product_5": "",
+            "point_x_5": 10,
+            "point_y_5": 10,
+            "show_background_overlay": false,
+            "transparent_button": false,
+            "background_color": "",
+            "background_overlay": "#000000",
+            "text_color": "#ffffff",
+            "title_color": "#ffffff",
+            "title_font": "font_2",
+            "title_font_size": 26,
+            "title_mobile_font_size": 20,
+            "title_font_weight": "700",
+            "title_text_transform": "none",
+            "text_font_size": 14,
+            "text_font_weight": "600",
+            "text_text_transform": "uppercase"
+          }
+        },
+        "image_YkgxiU": {
+          "type": "image",
+          "name": "Weekly Deals Banner",
           "settings": {
             "image": "shopify://shop_images/COLLECTION-HEADER---Desktop.gif",
             "mobile_image": "shopify://shop_images/COLLECTION-HEADER---Mobile.gif",
@@ -60,7 +109,8 @@
         }
       },
       "block_order": [
-        "template--16937253372154__db7096be-e358-4fc3-8c65-d810472d5c81-image-1"
+        "template--16937253372154__db7096be-e358-4fc3-8c65-d810472d5c81-image-1",
+        "image_YkgxiU"
       ],
       "settings": {
         "show_slideshow": true,
