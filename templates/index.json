@@ -663,6 +663,16 @@
         },
         "template--16937253765370__f0a1f009-f7e3-4ad1-9307-9fcf06cf17a4-image-1": {
           "type": "image",
+          "name": "BF Deals",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/DAC-BF-QL.jpg",
+            "btn_text": "",
+            "link": "shopify://pages/black-friday"
+          }
+        },
+        "image_imG3qz": {
+          "type": "image",
           "name": "Weekly Deals",
           "settings": {
             "image": "shopify://shop_images/QUICK_LINK_-_Weekly_Deals_d6380cf0-84a5-4e6c-8f79-6e383556290e.jpg",
@@ -683,6 +693,7 @@
       "block_order": [
         "image_QxVyVG",
         "template--16937253765370__f0a1f009-f7e3-4ad1-9307-9fcf06cf17a4-image-1",
+        "image_imG3qz",
         "template--16937253765370__f0a1f009-f7e3-4ad1-9307-9fcf06cf17a4-image-3"
       ],
       "name": "Quick Links",
