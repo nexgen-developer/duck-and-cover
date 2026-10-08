@@ -1576,6 +1576,60 @@
         "blocks": {
           "de3e2be9-fb31-4bc8-9387-d52d876d7ff2": {
             "type": "megamenu",
+            "name": "BF Mega Menu",
+            "disabled": true,
+            "settings": {
+              "item": "Shop All",
+              "column": 4,
+              "show_custom_text": false,
+              "custom_text_title": "",
+              "custom_text_text": "",
+              "custom_text_link_text": "",
+              "custom_text_url": "",
+              "show_banner": true,
+              "banner_width": "20%",
+              "show_banner_1": true,
+              "banner_1": "shopify://shop_images/DAC-BF-NAV.jpg",
+              "banner_title_1": "",
+              "banner_text_1": "",
+              "banner_url_1": "shopify://pages/black-friday",
+              "show_banner_2": false,
+              "banner_2": "shopify://shop_images/DAC-BF-SIGN-UP-NAV.jpg",
+              "banner_title_2": "",
+              "banner_text_2": "",
+              "banner_url_2": "shopify://pages/subscribe",
+              "show_banner_3": false,
+              "banner_3": "shopify://shop_images/DAC-BF-SIGN-UP-30-NAV.jpg",
+              "banner_title_3": "",
+              "banner_text_3": "",
+              "banner_url_3": "shopify://pages/subscribe",
+              "show_banner_4": false,
+              "banner_title_4": "",
+              "banner_text_4": "",
+              "banner_url_4": "",
+              "heading_font": "font_1",
+              "heading_font_size": 15,
+              "heading_font_weight": "900",
+              "heading_text_transform": "uppercase",
+              "heading_color": "#000000",
+              "link_font": "font_1",
+              "link_font_size": 15,
+              "link_font_weight": "400",
+              "link_text_transform": "capitalize",
+              "link_color": "#000000",
+              "show_az_brand": false,
+              "az_brand_title": "",
+              "az_brand_link_text": "",
+              "az_brand_url": "",
+              "show_product": false,
+              "product_title": "",
+              "product_collection": "",
+              "product_limit": 6,
+              "product_per_row": "5"
+            }
+          },
+          "megamenu_hFCWbU": {
+            "type": "megamenu",
             "settings": {
               "item": "Shop All",
               "column": 4,
@@ -1628,7 +1682,8 @@
           }
         },
         "block_order": [
-          "de3e2be9-fb31-4bc8-9387-d52d876d7ff2"
+          "de3e2be9-fb31-4bc8-9387-d52d876d7ff2",
+          "megamenu_hFCWbU"
         ],
         "custom_css": [
           ".top-announcement-bar-item p {font-size: 12px;}",
