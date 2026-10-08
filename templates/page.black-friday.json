@@ -32,8 +32,8 @@
         "template--16854807609594__25bcb4cf-3aa4-4cb5-b78f-4074368db4a6-image-1": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/DAC-BF-DEALS-DESKTOP_060289a6-fdca-4616-9d51-cf5ccc5af3e3.jpg",
-            "mobile_image": "shopify://shop_images/DAC-BF-DEALS-MOB.jpg",
+            "image": "shopify://shop_images/DAC-BF-DEALS-DESKTOP_81df53d8-3e6f-412e-8351-0868aaae509b.jpg",
+            "mobile_image": "shopify://shop_images/DAC-BF-DEALS-MOBILE.jpg",
             "title": "",
             "subtitle": "",
             "text": "",
@@ -114,6 +114,7 @@
     },
     "weekly_deal_LTkbYt": {
       "type": "weekly-deal",
+      "disabled": true,
       "settings": {
         "image": "shopify://shop_images/DAC-MERCHELL-TILE.jpg",
         "title": "Merchell Tracksuits £24.50",
@@ -126,6 +127,7 @@
     },
     "weekly_deal_BGFXdV": {
       "type": "weekly-deal",
+      "disabled": true,
       "settings": {
         "image": "shopify://shop_images/DAC-POTENZA-TILE.jpg",
         "title": "Potenza 1/4 Zip Knit",
@@ -138,6 +140,7 @@
     },
     "weekly_deal_EzxgFU": {
       "type": "weekly-deal",
+      "disabled": true,
       "settings": {
         "image": "shopify://shop_images/DAC-KREMES-TILE.gif",
         "title": "Kremes Trainers £16",
@@ -150,6 +153,7 @@
     },
     "weekly_deal_KqekLd": {
       "type": "weekly-deal",
+      "disabled": true,
       "settings": {
         "image": "shopify://shop_images/DAC-HOODIE-TILE.jpg",
         "title": "60% OFF Selected Hoodies",
@@ -175,6 +179,7 @@
     },
     "weekly_deal_X9ejcT": {
       "type": "weekly-deal",
+      "disabled": true,
       "settings": {
         "image": "shopify://shop_images/DAC-CONSENZA-TILE.gif",
         "title": "Consenza Knit £13.34",
@@ -187,6 +192,7 @@
     },
     "weekly_deal_n6BCBX": {
       "type": "weekly-deal",
+      "disabled": true,
       "settings": {
         "image": "shopify://shop_images/DAC-ANVILLI-TILE.gif",
         "title": "Anvilli 7PK Boxers £17.55",
