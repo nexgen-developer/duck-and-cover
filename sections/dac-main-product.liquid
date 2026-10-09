@@ -13,7 +13,7 @@
 
 <section
   id="DacPdp-{{ section.id }}"
-  class="dac-pdp dac-pdp--align-{{ s.container_align }}{% if s.info_sticky %} dac-pdp--sticky-info{% endif %}"
+  class="dac-pdp dac-pdp--align-{{ s.container_align }}{% if s.info_sticky %} dac-pdp--sticky-info{% endif %}{% if request.design_mode %} dac-pdp--editor{% endif %}"
   data-dac-pdp
   data-section-id="{{ section.id }}"
   data-money-format="{{ shop.money_format | strip_html | escape }}"
@@ -153,7 +153,8 @@
       "type": "checkbox",
       "id": "info_sticky",
       "label": "Keep details in view while the gallery scrolls",
-      "default": false
+      "info": "Desktop only. Details taller than the screen scroll to their end first, then stay in view.",
+      "default": true
     },
     {
       "type": "range",

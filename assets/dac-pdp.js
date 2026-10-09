@@ -3,6 +3,7 @@
   if (window.DacPdp) return;
 
   const DESKTOP = window.matchMedia('(min-width: 1025px)');
+  const REDUCED_MOTION = window.matchMedia('(prefers-reduced-motion: reduce)');
   const DAY = 86400000;
 
   const formatMoney = (cents, format) => {
@@ -59,6 +60,7 @@
 
       this.initGallery();
       this.initAccordion();
+      this.initSticky();
       this.renderDelivery();
       this.syncOptions();
       if (this.variant) this.applyVariant(this.variant, false);
@@ -111,6 +113,7 @@
     }
 
     setVariantInput(variant) {
+      this.root.classList.toggle('has-variant', Boolean(variant));
       this.root.querySelectorAll('[data-dac-variant-input]').forEach((input) => {
         const value = variant ? String(variant.id) : '';
         if (input.value === value) return;
@@ -223,6 +226,11 @@
       if (target.classList && target.classList.contains('dac-modal')) {
         target.close();
         return;
+      }
+      const summary = target.closest('.dac-acc__summary');
+      if (summary) {
+        event.preventDefault();
+        return this.toggleRow(summary.parentElement);
       }
       const copy = target.closest('[data-dac-copy]');
       if (copy) return this.copyCode(copy);
@@ -386,6 +394,46 @@
       this.root.querySelectorAll('[data-dac-acc-row]').forEach((row) => {
         row.open = desktop ? row.hasAttribute('data-open-desktop') : row.hasAttribute('data-open-mobile');
       });
+    }
+
+    // GSAP comes with the theme (vendor.js). Without it, or with reduced motion, rows just open and close.
+    toggleRow(row) {
+      const opening = !row.open || row.classList.contains('is-closing');
+      const gsap = window.gsap;
+      if (!gsap || REDUCED_MOTION.matches) {
+        row.classList.remove('is-closing');
+        row.open = opening;
+        return;
+      }
+      const from = row.offsetHeight;
+      gsap.killTweensOf(row);
+      row.style.height = '';
+      row.open = false;
+      const closedHeight = row.offsetHeight;
+      row.open = true;
+      const openHeight = row.offsetHeight;
+      row.classList.toggle('is-closing', !opening);
+      gsap.fromTo(row, { height: from, overflow: 'hidden' }, {
+        height: opening ? openHeight : closedHeight,
+        duration: 0.35,
+        ease: 'power2.inOut',
+        onComplete: () => {
+          if (!opening) row.open = false;
+          row.classList.remove('is-closing');
+          gsap.set(row, { clearProps: 'height,overflow' });
+        }
+      });
+    }
+
+    /* Sticky details. CSS needs the details height and the theme header height to pick where to stick. */
+    initSticky() {
+      const info = this.root.querySelector('.dac-pdp__info');
+      if (!info || !this.root.classList.contains('dac-pdp--sticky-info') || !('ResizeObserver' in window)) return;
+      const header = document.querySelector('.shopify-section-header');
+      new ResizeObserver(() => {
+        info.style.setProperty('--dac-info-h', `${info.offsetHeight}px`);
+        if (header) this.root.style.setProperty('--dac-header-h', `${header.offsetHeight}px`);
+      }).observe(info);
     }
 
     toggleReadMore(button) {
