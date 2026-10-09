@@ -544,14 +544,20 @@
 .dac-text { color: var(--dac-color); font-size: var(--dac-fs-m); line-height: 1.5; }
 
 @media (min-width: 1025px) {
+  /* --dac-col-gap and --dac-pr grow from compact at 1025px to the Figma values at 1920px, see the section. */
   .dac-pdp__inner {
     display: grid;
     grid-template-columns: var(--dac-cols);
     column-gap: var(--dac-col-gap);
     align-items: start;
-    max-width: var(--dac-max);
+    max-width: calc(var(--dac-max) + var(--dac-pr));
+    padding-right: var(--dac-pr);
   }
-  .dac-pdp--align-center .dac-pdp__inner { margin-inline: auto; }
+  .dac-pdp--align-center .dac-pdp__inner {
+    max-width: calc(var(--dac-max) + 2 * var(--dac-pr));
+    margin-inline: auto;
+    padding-left: var(--dac-pr);
+  }
   .dac-pdp__info { padding: var(--dac-info-offset) 0 0; }
   /* Short details stay under the header. Details taller than the screen scroll until their end is in view, then stay there while the gallery carries on. */
   .dac-pdp--sticky-info .dac-pdp__info {
@@ -689,4 +695,137 @@
   .dac-acc__more { display: none; }
 
   .dac-text { font-size: var(--dac-fs); }
+}
+
+/* Style with. Mobile is one swipe track: look photo, then the cards. Desktop is a row that scales with the screen. */
+.dac-style { padding: var(--dac-sw-pt-m) var(--dac-sw-side-m) var(--dac-sw-pb-m); color: #121212; }
+.dac-style[hidden] { display: none; }
+.dac-style__title {
+  margin: 0 0 14px;
+  color: var(--dac-sw-title-color);
+  font-size: var(--dac-sw-title-m);
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: -0.2px;
+}
+.dac-style__row {
+  display: flex;
+  gap: 10px;
+  align-items: stretch;
+  margin: 0 calc(var(--dac-sw-side-m) * -1);
+  padding: 0 var(--dac-sw-side-m);
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+  scroll-padding-inline: var(--dac-sw-side-m);
+  scrollbar-width: none;
+}
+.dac-style__row::-webkit-scrollbar { display: none; }
+.dac-style__cards { display: contents; }
+.dac-style__look { position: relative; flex: 0 0 196px; overflow: hidden; background: #F6F6F6; scroll-snap-align: start; }
+.dac-style__look img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+
+.dac-card { display: flex; flex: 0 0 170px; flex-direction: column; gap: 8px; min-width: 0; scroll-snap-align: start; }
+.dac-card__media { position: relative; display: flex; flex-direction: column; aspect-ratio: 4 / 5; background: #F6F6F6; }
+.dac-card__image { position: relative; display: block; flex: 1 1 auto; min-height: 0; overflow: hidden; }
+.dac-card__image img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.dac-card__badge {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  padding: 4px 8px;
+  border-radius: 2px;
+  background: var(--dac-sw-badge-bg);
+  color: #FFFFFF;
+  font-size: 9px;
+  font-weight: 700;
+  line-height: 13px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
+.dac-card__sizes {
+  display: flex;
+  flex: 0 0 26px;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 0 4px;
+  overflow-x: auto;
+  background: #F9F9F9;
+  scrollbar-width: none;
+}
+.dac-card__size {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: #222222;
+  font: inherit;
+  font-size: 10px;
+  line-height: 14px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.dac-card__size:disabled { color: #999999; text-decoration: line-through; cursor: default; }
+.dac-card__size[aria-pressed="true"] { font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+.dac-card__info { display: flex; flex-direction: column; gap: 8px; }
+.dac-card__rating { --dac-star-color: #121212; display: flex; align-items: center; gap: 3px; color: #808080; font-size: 11px; line-height: 15px; }
+.dac-card__rating .dac-rating__base,
+.dac-card__rating .dac-rating__fill { gap: 1px; }
+.dac-card__rating .dac-icon { flex: 0 0 auto; width: calc(11px * 19 / 18); height: 11px; overflow: visible; }
+.dac-card__title { margin: 0; font-size: 13px; font-weight: 700; line-height: 18px; }
+.dac-card__title a { color: inherit; text-decoration: none; }
+.dac-card__price { display: flex; align-items: baseline; gap: 7px; white-space: nowrap; }
+.dac-card__now { font-size: 14px; font-weight: 700; line-height: 19px; }
+.dac-card__was { color: #808080; font-size: 11px; line-height: 16px; }
+.dac-card__product-form { display: block; margin-top: auto; }
+.dac-card__form { margin: 0; }
+.dac-card__error { margin: 0 0 6px; color: #D12442; font-size: 11px; line-height: 15px; }
+.dac-card__atc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 40px;
+  margin-top: auto;
+  padding: 0 8px;
+  border: 1.5px solid #121212;
+  background: #FFFFFF;
+  color: #121212;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 15px;
+  letter-spacing: 0.9px;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.dac-card__atc:disabled { opacity: 0.5; cursor: default; }
+
+@media (min-width: 1025px) {
+  .dac-style { padding: var(--dac-sw-pt) var(--dac-sw-side) var(--dac-sw-pb); }
+  .dac-style__title { margin-bottom: 20px; font-size: var(--dac-sw-title); font-weight: 500; line-height: 1.15; letter-spacing: -1px; }
+  .dac-style__row {
+    display: grid;
+    grid-template-columns: repeat(var(--dac-sw-count), minmax(0, 1fr));
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+  }
+  .dac-style--has-look .dac-style__row { grid-template-columns: minmax(0, 494fr) repeat(var(--dac-sw-count), minmax(0, 429fr)); }
+  .dac-style__look,
+  .dac-card { flex: none; }
+  .dac-card { gap: 12px; }
+  .dac-card__badge { top: 14px; left: 14px; padding: 6px 11px; font-size: 11px; line-height: 15px; letter-spacing: 0.8px; }
+  .dac-card__sizes { flex-basis: 34px; gap: 14px; background: #F6F6F6; }
+  .dac-card__size { color: #121212; font-size: 13px; line-height: 19.5px; }
+  .dac-card__size:disabled { color: #808080; }
+  .dac-card__info { gap: 4px; }
+  .dac-card__rating { font-size: 12px; line-height: 18px; }
+  .dac-card__rating .dac-icon { width: calc(13px * 19 / 18); height: 13px; }
+  .dac-card__title { color: #000000; font-size: 16px; line-height: 23px; }
+  .dac-card__price { gap: 10px; }
+  .dac-card__now { font-size: 17px; line-height: 24px; }
+  .dac-card__was { font-size: 13px; line-height: 19.5px; }
+  .dac-card__error { font-size: 12px; }
+  .dac-card__atc { height: 48px; border-color: #000000; color: #000000; font-size: 12px; line-height: 16px; letter-spacing: 1.1px; }
 }

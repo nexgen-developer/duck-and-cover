@@ -1,0 +1,104 @@
+{%- comment -%}
+  One product card for the Style with section.
+  Sizes pick the variant, Add to bag goes through the theme's cart flow (data-btn-addtocart inside product-form)
+  so the cart drawer opens as it does for the main button. Products with two options link to the product instead.
+{%- endcomment -%}
+{%- liquid
+  assign card_variant = product.selected_or_first_available_variant
+  assign compare = card_variant.compare_at_price | default: 0
+  assign on_sale = false
+  if compare > card_variant.price
+    assign on_sale = true
+    assign half_compare = compare | divided_by: 2
+    assign save_percent = compare | minus: card_variant.price | times: 100 | plus: half_compare | divided_by: compare
+  endif
+  assign pick_size = false
+  if product.has_only_default_variant == false and product.options.size == 1
+    assign pick_size = true
+  endif
+  assign rating = product.metafields.reviews.rating.value
+  assign rating_count = product.metafields.reviews.rating_count.value | default: 0
+  assign form_id = 'DacCardForm-' | append: section_id | append: '-' | append: product.id
+-%}
+<article class="dac-card" data-dac-card>
+  <div class="dac-card__media">
+    <a class="dac-card__image" href="{{ product.url }}" tabindex="-1" aria-hidden="true">
+      {%- if product.featured_media -%}
+        {{ product.featured_media.preview_image | image_url: width: 900 | image_tag: loading: 'lazy', widths: '200, 300, 400, 600, 900', sizes: '(min-width: 1025px) 22vw, 170px', alt: product.title }}
+      {%- endif -%}
+    </a>
+    {%- if on_sale and s.show_badge -%}
+      <span class="dac-card__badge">{{ s.badge_text | replace: '[percent]', save_percent | escape }}</span>
+    {%- endif -%}
+    {%- if pick_size -%}
+      <div class="dac-card__sizes" role="group" aria-label="{{ product.options.first | escape }}">
+        {%- for variant in product.variants -%}
+          <button
+            type="button"
+            class="dac-card__size"
+            data-dac-card-size="{{ variant.id }}"
+            aria-pressed="false"
+            {% unless variant.available %}disabled{% endunless %}
+          >
+            {{- variant.option1 | escape -}}
+          </button>
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+  </div>
+
+  <div class="dac-card__info">
+    {%- if rating != blank and rating_count > 0 -%}
+      {%- liquid
+        assign rating_value = rating.rating | plus: 0
+        assign rating_max = rating.scale_max | plus: 0
+        if rating_max == 0
+          assign rating_max = 5
+        endif
+        assign rating_percent = rating_value | times: 100.0 | divided_by: rating_max
+      -%}
+      <div class="dac-card__rating">
+        <span class="dac-rating__stars" style="--dac-rating: {{ rating_percent }}%;" aria-hidden="true">
+          <span class="dac-rating__base">
+            {%- for i in (1..5) -%}{% render 'dac-icon', icon: 'star-outline' %}{%- endfor -%}
+          </span>
+          <span class="dac-rating__fill">
+            {%- for i in (1..5) -%}{% render 'dac-icon', icon: 'star' %}{%- endfor -%}
+          </span>
+        </span>
+        <span>{{ rating_value | round: 1 }}</span>
+        <span>({{ rating_count }})</span>
+      </div>
+    {%- endif -%}
+    <h3 class="dac-card__title"><a href="{{ product.url }}">{{ product.title | escape }}</a></h3>
+    <div class="dac-card__price">
+      <span class="dac-card__now">{{ card_variant.price | money }}</span>
+      {%- if on_sale -%}
+        <s class="dac-card__was">{{ compare | money }}</s>
+      {%- endif -%}
+    </div>
+  </div>
+
+  {%- if product.options.size > 1 -%}
+    <a class="dac-card__atc" href="{{ product.url }}">{{ s.options_label | escape }}</a>
+  {%- else -%}
+    <product-form class="dac-card__product-form">
+      {%- form 'product', product, id: form_id, class: 'dac-card__form', novalidate: 'novalidate' -%}
+        <input type="hidden" name="id" value="{% unless pick_size %}{{ card_variant.id }}{% endunless %}" data-dac-card-input>
+        <input type="hidden" name="quantity" value="1">
+        <div class="productView-message" style="display: none;"></div>
+        <p class="dac-card__error" data-dac-card-error hidden>{{ s.error_text | escape }}</p>
+        <button
+          type="submit"
+          name="add"
+          class="dac-card__atc button-text-change"
+          data-btn-addtocart
+          data-dac-card-atc
+          {% unless product.available %}disabled{% endunless %}
+        >
+          {%- if product.available -%}{{ s.atc_label | escape }}{%- else -%}{{ s.sold_out_label | escape }}{%- endif -%}
+        </button>
+      {%- endform -%}
+    </product-form>
+  {%- endif -%}
+</article>
