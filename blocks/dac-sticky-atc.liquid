@@ -1,0 +1,245 @@
+{%- comment -%}
+  Sticky add to bag. Slides in once the main Add to bag button has scrolled out of view.
+  Desktop picks the size in a dropdown, mobile opens a size sheet when no size is picked yet.
+  Both drive the main size picker and press the main Add to bag button, so the cart flow stays the theme's.
+{%- endcomment -%}
+{%- liquid
+  assign p = closest.product | default: product
+  assign bs = block.settings
+  assign ss = section.settings
+  assign variant = p.selected_variant | default: p.selected_or_first_available_variant
+  assign price = variant.price
+  assign compare = variant.compare_at_price | default: 0
+  assign code = ss.discount_code | strip
+  assign code_percent = ss.code_percent | default: 0
+  assign code_on = false
+  if ss.show_code_price and code != blank and code_percent > 0 and p.gift_card? == false
+    assign code_on = true
+    assign vendor_key = p.vendor | downcase | strip
+    assign hide_list = ss.code_hide_vendors | downcase | split: ','
+    for hide_vendor in hide_list
+      assign hide_clean = hide_vendor | strip
+      if hide_clean != blank and hide_clean == vendor_key
+        assign code_on = false
+      endif
+    endfor
+  endif
+  assign keep_percent = 100 | minus: code_percent
+  assign shown_price = price
+  if code_on
+    assign shown_price = price | times: keep_percent | plus: 50 | divided_by: 100
+  endif
+  assign on_sale = false
+  if code_on or compare > price
+    assign on_sale = true
+  endif
+  assign pick_size = false
+  if p.has_only_default_variant == false and p.options.size == 1
+    assign pick_size = true
+  endif
+  assign option = p.options_with_values.first
+  assign sheet_id = 'DacSheet-' | append: block.id
+-%}
+{%- if bs.show_desktop or bs.show_mobile -%}
+<div
+  class="dac-sticky{% unless bs.show_desktop %} dac-sticky--no-desktop{% endunless %}{% unless bs.show_mobile %} dac-sticky--no-mobile{% endunless %}"
+  data-dac-sticky
+  data-sheet="{{ sheet_id }}"
+  inert
+  style="--dac-sticky-btn: {{ bs.button_bg }}; --dac-sticky-sale: {{ bs.sale_color }}; --dac-sticky-pill-bg: {{ bs.pill_bg }};"
+  {{ block.shopify_attributes }}
+>
+  <div class="dac-sticky__inner">
+    <div class="dac-sticky__product">
+      {%- if p.featured_media -%}
+        {{ p.featured_media.preview_image | image_url: width: 120 | image_tag: class: 'dac-sticky__thumb', loading: 'lazy', widths: '60, 96, 120', sizes: '48px', alt: '' }}
+      {%- endif -%}
+      <div class="dac-sticky__info">
+        <p class="dac-sticky__title">{{ p.title | escape }}</p>
+        <div class="dac-sticky__price" data-dac-price data-code-on="{{ code_on }}" data-code-percent="{{ code_percent }}">
+          <span class="dac-sticky__now{% if on_sale %} is-sale{% endif %}" data-dac-now>{{ shown_price | money }}</span>
+          <s class="dac-sticky__was" data-dac-compare{% unless compare > price %} hidden{% endunless %}>{{ compare | money }}</s>
+          {%- if code_on and bs.pill_text != blank -%}
+            <span class="dac-sticky__pill">{{ bs.pill_text | replace: '[code]', code | escape }}</span>
+          {%- endif -%}
+        </div>
+      </div>
+    </div>
+    <div class="dac-sticky__actions">
+      {%- if pick_size -%}
+        <label class="dac-sticky__select">
+          <span class="dac-visually-hidden">{{ option.name | escape }}</span>
+          <select data-dac-sticky-select>
+            <option value="">{{ bs.select_label | escape }}</option>
+            {%- for value in option.values -%}
+              {%- liquid
+                assign value_available = false
+                for v in p.variants
+                  if v.option1 == value and v.available
+                    assign value_available = true
+                    break
+                  endif
+                endfor
+              -%}
+              <option value="{{ value | escape }}"{% unless value_available %} disabled{% endunless %}>
+                {{- value | escape }}{% unless value_available %} {{ bs.sold_out_suffix | escape }}{% endunless -%}
+              </option>
+            {%- endfor -%}
+          </select>
+          {%- render 'dac-icon', icon: 'chevron-down' -%}
+        </label>
+      {%- endif -%}
+      <button type="button" class="dac-sticky__atc" data-dac-sticky-atc data-label="{{ bs.atc_label | escape }}" data-sold-out-label="{{ bs.sold_out_label | escape }}"{% unless p.available %} disabled{% endunless %}>
+        {%- if p.available -%}{{ bs.atc_label | escape }}{%- else -%}{{ bs.sold_out_label | escape }}{%- endif -%}
+      </button>
+    </div>
+  </div>
+</div>
+
+{%- if pick_size and bs.show_mobile -%}
+  <dialog class="dac-sheet" id="{{ sheet_id }}" data-dac-sheet aria-labelledby="{{ sheet_id }}-title">
+    <div class="dac-sheet__handle" aria-hidden="true"></div>
+    <div class="dac-sheet__head">
+      <h2 class="dac-sheet__title" id="{{ sheet_id }}-title">{{ bs.sheet_title | escape }}</h2>
+      {%- if bs.guide_label != blank -%}
+        <button type="button" class="dac-sheet__guide" data-dac-sheet-guide>{{ bs.guide_label | escape }}</button>
+      {%- endif -%}
+    </div>
+    <div class="dac-sheet__sizes" role="group" aria-label="{{ option.name | escape }}">
+      {%- for value in option.values -%}
+        {%- liquid
+          assign value_available = false
+          for v in p.variants
+            if v.option1 == value and v.available
+              assign value_available = true
+              break
+            endif
+          endfor
+        -%}
+        <button type="button" class="dac-sheet__size" data-dac-sheet-size="{{ value | escape }}" aria-pressed="false"{% unless value_available %} disabled{% endunless %}>{{ value | escape }}</button>
+      {%- endfor -%}
+    </div>
+    <p class="dac-sheet__error" data-dac-sheet-error hidden>{{ bs.error_text | escape }}</p>
+    <p class="dac-sheet__price" data-dac-price data-code-on="{{ code_on }}" data-code-percent="{{ code_percent }}" data-without-code="{{ bs.without_code_text | escape }}">
+      <span data-dac-now>{{ shown_price | money }}</span>
+      {%- if code_on -%}
+        {{ ' ' }}{{ bs.with_code_text | replace: '[code]', code | escape }} · <span data-dac-regular>{{ price | money }} {{ bs.without_code_text | escape }}</span>
+      {%- endif -%}
+    </p>
+    <button type="button" class="dac-sheet__atc" data-dac-sheet-atc>{{ bs.atc_label | escape }}</button>
+  </dialog>
+{%- endif -%}
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Sticky add to bag",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "Shows at the bottom of the screen once the main Add to bag button scrolls away. Default sizes and colours follow the PDP V1 design in Figma."
+    },
+    {
+      "type": "checkbox",
+      "id": "show_desktop",
+      "label": "Show on desktop",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_mobile",
+      "label": "Show on mobile",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "atc_label",
+      "label": "Add to bag label",
+      "default": "Add to bag"
+    },
+    {
+      "type": "text",
+      "id": "sold_out_label",
+      "label": "Sold out label",
+      "default": "Sold out"
+    },
+    {
+      "type": "text",
+      "id": "select_label",
+      "label": "Size dropdown placeholder, desktop",
+      "default": "Select size"
+    },
+    {
+      "type": "text",
+      "id": "sold_out_suffix",
+      "label": "Added to sold out sizes in the dropdown",
+      "default": "(sold out)"
+    },
+    {
+      "type": "text",
+      "id": "pill_text",
+      "label": "Code pill",
+      "info": "[code] becomes the discount code. Shows only when the code price applies.",
+      "default": "With code [code]"
+    },
+    {
+      "type": "header",
+      "content": "Size sheet, mobile"
+    },
+    {
+      "type": "text",
+      "id": "sheet_title",
+      "label": "Title",
+      "default": "Select a size"
+    },
+    {
+      "type": "text",
+      "id": "guide_label",
+      "label": "Size guide link",
+      "info": "Opens the size guide from the size picker. Leave empty to hide.",
+      "default": "Size Guide"
+    },
+    {
+      "type": "text",
+      "id": "with_code_text",
+      "label": "After the code price",
+      "default": "with code [code]"
+    },
+    {
+      "type": "text",
+      "id": "without_code_text",
+      "label": "After the price without code",
+      "default": "without code"
+    },
+    {
+      "type": "text",
+      "id": "error_text",
+      "label": "Message when no size is picked",
+      "default": "Please select a size"
+    },
+    {
+      "type": "header",
+      "content": "Style"
+    },
+    {
+      "type": "color",
+      "id": "button_bg",
+      "label": "Button background",
+      "default": "#121212"
+    },
+    {
+      "type": "color",
+      "id": "sale_color",
+      "label": "Sale price colour",
+      "default": "#D12442"
+    },
+    {
+      "type": "color",
+      "id": "pill_bg",
+      "label": "Code pill background, desktop",
+      "default": "#FCE9ED"
+    }
+  ],
+  "presets": [{ "name": "Sticky add to bag" }]
+}
+{% endschema %}

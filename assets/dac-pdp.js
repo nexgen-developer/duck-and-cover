@@ -61,6 +61,7 @@
       this.initGallery();
       this.initAccordion();
       this.initSticky();
+      this.initStickyAtc();
       this.renderDelivery();
       this.syncOptions();
       if (this.variant) this.applyVariant(this.variant, false);
@@ -113,6 +114,7 @@
           if (label) label.classList.toggle('is-unavailable', !possible);
         });
       });
+      this.syncStickyAtc(values);
     }
 
     setVariantInput(variant) {
@@ -135,6 +137,10 @@
       });
       this.root.querySelectorAll('[data-dac-buy-now]').forEach((button) => {
         button.disabled = !available;
+      });
+      this.root.querySelectorAll('[data-dac-sticky-atc]').forEach((button) => {
+        button.disabled = !available;
+        button.textContent = available ? button.dataset.label : button.dataset.soldOutLabel;
       });
       if (variant) this.updatePrice(variant);
       this.updateStock(variant);
@@ -448,6 +454,91 @@
         info.style.setProperty('--dac-info-h', `${info.offsetHeight}px`);
         if (header) this.root.style.setProperty('--dac-header-h', `${header.offsetHeight}px`);
       }).observe(info);
+    }
+
+    /* Sticky add to bag. Shows once the main button has scrolled up out of view, and drives the main picker and button. */
+    initStickyAtc() {
+      const bar = this.root.querySelector('[data-dac-sticky]');
+      const mainAtc = this.root.querySelector('[data-dac-atc]');
+      if (!bar || !mainAtc || !('IntersectionObserver' in window)) return;
+      this.stickySelect = bar.querySelector('[data-dac-sticky-select]');
+      this.sheet = this.root.querySelector('[data-dac-sheet]');
+      // The root reaches far below the screen, so the button only stops intersecting once it is above the screen.
+      // A jump from below the fold straight past the button (anchor link, restored scroll) still fires.
+      new IntersectionObserver(([entry]) => {
+        const show = !entry.isIntersecting;
+        bar.classList.toggle('is-visible', show);
+        bar.inert = !show;
+      }, { rootMargin: '0px 0px 10000px 0px' }).observe(mainAtc);
+
+      bar.querySelector('[data-dac-sticky-atc]').addEventListener('click', () => this.stickyAdd(mainAtc));
+      if (this.stickySelect) {
+        this.stickySelect.addEventListener('change', () => {
+          this.stickySelect.parentElement.classList.remove('has-error');
+          this.pickSize(this.stickySelect.value);
+        });
+      }
+      if (!this.sheet) return;
+      this.sheet.addEventListener('click', (event) => {
+        if (event.target === this.sheet) return this.sheet.close();
+        const size = event.target.closest('[data-dac-sheet-size]');
+        if (size) {
+          this.sheet.querySelector('[data-dac-sheet-error]').hidden = true;
+          return this.pickSize(size.dataset.dacSheetSize);
+        }
+        if (event.target.closest('[data-dac-sheet-guide]')) {
+          const guide = this.root.querySelector('dialog.dac-modal');
+          if (guide) {
+            this.loadGuide(guide);
+            guide.showModal();
+          }
+          return;
+        }
+        if (!event.target.closest('[data-dac-sheet-atc]')) return;
+        if (!this.variant) {
+          this.sheet.querySelector('[data-dac-sheet-error]').hidden = false;
+          return;
+        }
+        this.sheet.close();
+        mainAtc.click();
+      });
+    }
+
+    // Picks a value in the main picker, the change event updates price, stock, URL and the sticky bar.
+    pickSize(value) {
+      const input = Array.from(this.root.querySelectorAll('[data-dac-option-input]')).find((el) => el.value === value);
+      if (!input || input.checked) return;
+      input.checked = true;
+      input.dispatchEvent(new Event('change', { bubbles: true }));
+    }
+
+    stickyAdd(mainAtc) {
+      if (this.variant) {
+        mainAtc.click();
+        return;
+      }
+      if (!DESKTOP.matches && this.sheet) {
+        this.sheet.showModal();
+        return;
+      }
+      if (!this.stickySelect) {
+        this.showError();
+        return;
+      }
+      this.stickySelect.parentElement.classList.add('has-error');
+      this.stickySelect.focus();
+      if (typeof this.stickySelect.showPicker === 'function') {
+        try { this.stickySelect.showPicker(); } catch (e) { /* some browsers only open it from a direct user gesture */ }
+      }
+    }
+
+    syncStickyAtc(values) {
+      if (this.stickySelect) this.stickySelect.value = values[0] || '';
+      if (this.sheet) {
+        this.sheet.querySelectorAll('[data-dac-sheet-size]').forEach((button) => {
+          button.setAttribute('aria-pressed', String(button.dataset.dacSheetSize === values[0]));
+        });
+      }
     }
 
     toggleReadMore(button) {

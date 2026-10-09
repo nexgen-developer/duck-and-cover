@@ -560,9 +560,12 @@
   }
   .dac-pdp__info { padding: var(--dac-info-offset) 0 0; }
   /* Short details stay under the header. Details taller than the screen scroll until their end is in view, then stay there while the gallery carries on. */
+  /* Sticky makes the column its own stacking layer, and the sticky add to bag bar lives inside it.
+     19 keeps the bar above the sections below and under Halo's header (20), overlay (100) and drawers (101). */
   .dac-pdp--sticky-info .dac-pdp__info {
     position: sticky;
     top: min(calc(var(--dac-header-h, 0px) + 20px - var(--dac-info-offset)), calc(100vh - var(--dac-info-h, 0px) - 24px));
+    z-index: 19;
   }
   .dac-block { margin-top: var(--dac-mt, 0px); }
 
@@ -868,4 +871,163 @@
   .dac-wna__track .dac-card { flex: 0 0 calc((100% - 60px) / 4); }
   .dac-wna__track .dac-card__media { aspect-ratio: 445 / 536; }
   .dac-card__text { color: #555555; font-size: 15px; line-height: 1.3; }
+}
+
+/* Sticky add to bag. Hidden until the main Add to bag scrolls away (is-visible). */
+.dac-pdp__blocks > .shopify-block:has(> .dac-sticky) { display: contents; }
+.dac-visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.dac-sticky {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 90;
+  padding: 12px 12px calc(12px + env(safe-area-inset-bottom));
+  border-top: 1px solid #E9E9E9;
+  background: #FFFFFF;
+  box-shadow: 0 -3px 14px rgba(0, 0, 0, 0.1);
+  color: #121212;
+  transform: translateY(110%);
+  visibility: hidden;
+  transition: transform 0.25s ease, visibility 0s linear 0.25s;
+}
+.dac-sticky.is-visible { transform: translateY(0); visibility: visible; transition: transform 0.25s ease; }
+.dac-sticky__inner { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.dac-sticky__product { display: flex; flex: 1 1 auto; align-items: center; gap: 12px; min-width: 0; }
+.dac-sticky__thumb { flex: 0 0 44px; width: 44px; height: 56px; border-radius: 2px; object-fit: cover; }
+.dac-sticky__info { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+.dac-sticky__title { margin: 0; overflow: hidden; color: #505050; font-size: 12px; line-height: 16px; text-overflow: ellipsis; white-space: nowrap; }
+.dac-sticky__price { display: flex; flex-wrap: wrap; align-items: center; gap: 7px; }
+.dac-sticky__now { font-size: 16px; font-weight: 700; line-height: 21px; }
+.dac-sticky__now.is-sale { color: var(--dac-sticky-sale); }
+.dac-sticky__was { display: none; color: #808080; font-size: 14px; line-height: 20px; }
+.dac-sticky__pill {
+  padding: 2px 5px;
+  border: 1px dashed #8C8C8C;
+  border-radius: 4px;
+  background: #F4F4F4;
+  color: #121212;
+  font-size: 10px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.dac-sticky__actions { display: flex; flex: 0 0 auto; align-items: center; gap: 12px; }
+.dac-sticky__select { display: none; }
+.dac-sticky__atc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 146px;
+  height: 48px;
+  padding: 0 10px;
+  border: 0;
+  background: var(--dac-sticky-btn);
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.dac-sticky__atc:disabled { opacity: 0.5; cursor: default; }
+body:has(.dac-sticky.is-visible:not(.dac-sticky--no-mobile)) { padding-bottom: 80px; }
+.dac-sticky--no-mobile { display: none; }
+/* App launchers in the bottom corners (PushOwl bell, Smile rewards) move up while the bar shows, so neither covers the other. */
+body:has(.dac-sticky.is-visible:not(.dac-sticky--no-mobile)) :is(.pushowl-simple-toast, #smile-ui-lite-launcher-frame-container) {
+  translate: 0 calc(-80px - env(safe-area-inset-bottom));
+}
+
+/* Size sheet, mobile */
+.dac-sheet {
+  width: 100%;
+  max-width: 100%;
+  margin: auto auto 0;
+  padding: 10px 10px calc(24px + env(safe-area-inset-bottom));
+  border: 0;
+  border-radius: 16px 16px 0 0;
+  background: #FFFFFF;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.15);
+  color: #121212;
+}
+.dac-sheet[open] { display: flex; flex-direction: column; gap: 16px; }
+.dac-sheet::backdrop { background: rgba(0, 0, 0, 0.5); }
+.dac-sheet__handle { align-self: center; width: 36px; height: 4px; border-radius: 2px; background: #D0D0D0; }
+.dac-sheet__head { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.dac-sheet__title { margin: 0; font-size: 16px; font-weight: 600; line-height: 1.25; }
+.dac-sheet__guide { padding: 0; border: 0; background: none; color: #121212; font-size: 13px; text-decoration: underline; cursor: pointer; }
+.dac-sheet__sizes { display: flex; flex-wrap: wrap; gap: 8px; }
+.dac-sheet__size {
+  min-width: 68px;
+  height: 48px;
+  padding: 0 10px;
+  border: 1px solid #CCCCCC;
+  background: #FFFFFF;
+  color: #121212;
+  font-size: 14px;
+  line-height: 20px;
+  cursor: pointer;
+}
+.dac-sheet__size[aria-pressed="true"] { border-color: #121212; background: #121212; color: #FFFFFF; }
+.dac-sheet__size:disabled { background: #F4F4F4; color: #9A9A9A; text-decoration: line-through; cursor: default; }
+.dac-sheet__error { margin: -8px 0 0; color: #D12442; font-size: 13px; }
+.dac-sheet__price { margin: 0; color: #808080; font-size: 13px; }
+.dac-sheet__atc {
+  height: 54px;
+  border: 0;
+  background: var(--dac-sticky-btn, #121212);
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 19px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+@media (min-width: 1025px) {
+  .dac-sticky { padding: 14px clamp(20px, calc(20px + (100vw - 1025px) * 52 / 895), 72px); box-shadow: 0 -3px 18px rgba(0, 0, 0, 0.1); }
+  .dac-sticky--no-mobile { display: block; }
+  .dac-sticky--no-desktop { display: none; }
+  body:has(.dac-sticky.is-visible:not(.dac-sticky--no-mobile)) { padding-bottom: 0; }
+  body:has(.dac-sticky.is-visible:not(.dac-sticky--no-desktop)) { padding-bottom: 88px; }
+  body:has(.dac-sticky.is-visible:not(.dac-sticky--no-mobile)) :is(.pushowl-simple-toast, #smile-ui-lite-launcher-frame-container) { translate: none; }
+  body:has(.dac-sticky.is-visible:not(.dac-sticky--no-desktop)) :is(.pushowl-simple-toast, #smile-ui-lite-launcher-frame-container) { translate: 0 -88px; }
+  .dac-sticky__inner { max-width: 1776px; height: 60px; margin: 0 auto; }
+  .dac-sticky__product { gap: 16px; }
+  .dac-sticky__thumb { flex-basis: 48px; width: 48px; height: 60px; }
+  .dac-sticky__info { gap: 4px; }
+  .dac-sticky__title { font-size: 14px; line-height: 20px; }
+  .dac-sticky__price { gap: 10px; }
+  .dac-sticky__now { font-size: 20px; line-height: 26px; }
+  .dac-sticky__was { display: inline; }
+  .dac-sticky__pill {
+    padding: 5px 8px;
+    border: 0;
+    border-radius: 2px;
+    background: var(--dac-sticky-pill-bg);
+    color: var(--dac-sticky-sale);
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 15px;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+  }
+  .dac-sticky__select { position: relative; display: block; }
+  .dac-sticky__select select {
+    width: 200px;
+    height: 56px;
+    padding: 0 40px 0 16px;
+    border: 1px solid #BDBDBD;
+    border-radius: 0;
+    background: #FFFFFF;
+    color: #333333;
+    font: inherit;
+    font-size: 15px;
+    appearance: none;
+    cursor: pointer;
+  }
+  .dac-sticky__select.has-error select { border-color: #D12442; }
+  .dac-sticky__select .dac-icon { position: absolute; top: 50%; right: 16px; width: 14px; height: 14px; color: #111111; pointer-events: none; transform: translateY(-50%); }
+  .dac-sticky__atc { width: 240px; height: 56px; font-size: 13px; line-height: 18px; letter-spacing: 1.2px; }
 }

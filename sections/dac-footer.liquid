@@ -1,0 +1,246 @@
+{%- comment -%}
+  Footer from the PDP V1 Figma, used site wide when Theme settings > Footer layout is "Duck and Cover".
+  Newsletter (the store's own customer form, tagged newsletter), menu columns as blocks, contact details,
+  copyright and the brand wordmark. Setting the layout back to 1 restores the previous footer.
+{%- endcomment -%}
+{{ 'dac-footer.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign s = section.settings
+  assign side_min = s.padding_side | at_most: 20
+  assign year = 'now' | date: '%Y'
+-%}
+
+<footer
+  class="dac-footer"
+  style="
+    --dac-ft-bg: {{ s.background }};
+    --dac-ft-text: {{ s.text_color }};
+    --dac-ft-muted: {{ s.muted_color }};
+    --dac-ft-side: clamp({{ side_min }}px, calc({{ side_min }}px + (100vw - 1025px) * {{ s.padding_side | minus: side_min }} / 895), {{ s.padding_side }}px);
+  "
+>
+  <div class="dac-footer__top">
+    {%- if s.show_newsletter -%}
+      <div class="dac-footer__news">
+        <div class="dac-footer__news-copy">
+          {%- if s.newsletter_title != blank -%}<h2 class="dac-footer__news-title">{{ s.newsletter_title | escape }}</h2>{%- endif -%}
+          {%- if s.newsletter_text != blank -%}<p class="dac-footer__news-text">{{ s.newsletter_text | escape }}</p>{%- endif -%}
+        </div>
+        {%- form 'customer', id: 'DacFooterNewsletter', class: 'dac-footer__form' -%}
+          <input type="hidden" name="contact[tags]" value="newsletter">
+          <label class="dac-visually-hidden" for="NewsletterForm--dac-footer">{{ s.placeholder | escape }}</label>
+          <input
+            id="NewsletterForm--dac-footer"
+            class="dac-footer__input"
+            type="email"
+            name="contact[email]"
+            value="{{ form.email }}"
+            placeholder="{{ s.placeholder | escape }}"
+            autocomplete="email"
+            autocapitalize="off"
+            aria-required="true"
+            {% if form.errors %}aria-invalid="true" aria-describedby="DacFooterNewsletter-message"{% endif %}
+          >
+          <button type="submit" class="dac-footer__submit" name="commit">{{ s.button_label | escape }}</button>
+          {%- if form.posted_successfully? -%}
+            <p class="dac-footer__message" id="DacFooterNewsletter-message" role="status">{{ 'newsletter.success' | t }}</p>
+          {%- elsif form.errors -%}
+            <p class="dac-footer__message dac-footer__message--error" id="DacFooterNewsletter-message" role="alert">
+              {{- form.errors.translated_fields.email | capitalize }} {{ form.errors.messages.email -}}
+            </p>
+          {%- endif -%}
+        {%- endform -%}
+      </div>
+    {%- endif -%}
+
+    <div class="dac-footer__links">
+      {%- for block in section.blocks -%}
+        {%- if block.settings.menu != blank -%}
+          <nav class="dac-footer__col" aria-label="{{ block.settings.heading | escape }}" {{ block.shopify_attributes }}>
+            {%- if block.settings.heading != blank -%}<h2 class="dac-footer__heading">{{ block.settings.heading | escape }}</h2>{%- endif -%}
+            <ul class="dac-footer__list">
+              {%- for link in block.settings.menu.links -%}
+                <li><a class="dac-footer__link" href="{{ link.url }}">{{ link.title | escape }}</a></li>
+              {%- endfor -%}
+            </ul>
+          </nav>
+        {%- endif -%}
+      {%- endfor -%}
+
+      {%- if s.address != blank or s.email != blank or s.phone != blank -%}
+        <div class="dac-footer__col dac-footer__contact">
+          {%- if s.contact_heading != blank -%}<h2 class="dac-footer__heading dac-footer__heading--mobile">{{ s.contact_heading | escape }}</h2>{%- endif -%}
+          {%- if s.address != blank -%}
+            <p class="dac-footer__contact-row"><span class="dac-footer__icon">{% render 'dac-icon', icon: 'pin' %}</span>{{ s.address | escape }}</p>
+          {%- endif -%}
+          {%- if s.email != blank -%}
+            <p class="dac-footer__contact-row"><span class="dac-footer__icon">{% render 'dac-icon', icon: 'mail' %}</span><a href="mailto:{{ s.email | escape }}">{{ s.email | escape }}</a></p>
+          {%- endif -%}
+          {%- if s.phone != blank -%}
+            <p class="dac-footer__contact-row"><span class="dac-footer__icon">{% render 'dac-icon', icon: 'phone' %}</span><a href="tel:{{ s.phone | remove: ' ' | escape }}">{{ s.phone | escape }}</a></p>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+
+  <div class="dac-footer__legal">
+    <p>{{ s.copyright | replace: '[year]', year | escape }}</p>
+  </div>
+
+  {%- if s.show_wordmark -%}
+    <div class="dac-footer__wordmark">
+      <img src="{{ 'dac-footer-wordmark.svg' | asset_url }}" alt="{{ shop.name | escape }}" width="1838" height="388" loading="lazy">
+    </div>
+  {%- endif -%}
+</footer>
+
+{% schema %}
+{
+  "name": "Footer, Duck and Cover",
+  "class": "dac-footer-section",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "Shows on every page when Theme settings > Layouts > Footer layout is set to Duck and Cover. Default sizes and colours follow the PDP V1 design in Figma."
+    },
+    {
+      "type": "header",
+      "content": "Newsletter"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_newsletter",
+      "label": "Show newsletter",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "newsletter_title",
+      "label": "Heading",
+      "default": "Sign up for 25% off"
+    },
+    {
+      "type": "text",
+      "id": "newsletter_text",
+      "label": "Text",
+      "default": "Be first to hear about new drops, restocks and offers from Duck and Cover"
+    },
+    {
+      "type": "text",
+      "id": "placeholder",
+      "label": "Email placeholder",
+      "default": "Your email address..."
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label",
+      "default": "Submit"
+    },
+    {
+      "type": "header",
+      "content": "Contact"
+    },
+    {
+      "type": "text",
+      "id": "contact_heading",
+      "label": "Heading, mobile only",
+      "default": "Contact"
+    },
+    {
+      "type": "text",
+      "id": "address",
+      "label": "Address",
+      "default": "Knutsford, Cheshire WA16 8DX"
+    },
+    {
+      "type": "text",
+      "id": "email",
+      "label": "Email",
+      "default": "ask@duckandcover.co.uk"
+    },
+    {
+      "type": "text",
+      "id": "phone",
+      "label": "Phone",
+      "info": "Leave empty to hide. The store has no public phone number yet."
+    },
+    {
+      "type": "header",
+      "content": "Bottom"
+    },
+    {
+      "type": "text",
+      "id": "copyright",
+      "label": "Copyright",
+      "info": "[year] becomes the current year.",
+      "default": "© [year] Duck and Cover. All rights reserved."
+    },
+    {
+      "type": "checkbox",
+      "id": "show_wordmark",
+      "label": "Show the Duck and Cover wordmark",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Style"
+    },
+    {
+      "type": "color",
+      "id": "background",
+      "label": "Background",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "muted_color",
+      "label": "Column headings",
+      "default": "#505050"
+    },
+    {
+      "type": "range",
+      "id": "padding_side",
+      "label": "Side padding, desktop",
+      "info": "On a 1920px screen. Shrinks to 20px at 1025px.",
+      "min": 0,
+      "max": 120,
+      "step": 2,
+      "unit": "px",
+      "default": 40
+    }
+  ],
+  "blocks": [
+    {
+      "type": "menu",
+      "name": "Menu column",
+      "limit": 4,
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading"
+        },
+        {
+          "type": "link_list",
+          "id": "menu",
+          "label": "Menu"
+        }
+      ]
+    }
+  ],
+  "default": {
+    "blocks": [
+      { "type": "menu", "settings": { "heading": "About", "menu": "footer" } }
+    ]
+  }
+}
+{% endschema %}

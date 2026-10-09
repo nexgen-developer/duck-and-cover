@@ -11,7 +11,7 @@
   "current": {
     "layout": "1",
     "header_layout": "10",
-    "footer_layout": "1",
+    "footer_layout": "dac",
     "header_mobile_layout": "1",
     "password_layout": "1",
     "product_card_style": "1",
@@ -1814,6 +1814,46 @@
           "cart_count_background": "#BC1B3B",
           "cart_count_color": "#FFFFFF"
         }
+      },
+      "dac-footer": {
+        "type": "dac-footer",
+        "blocks": {
+          "menu_1": {
+            "type": "menu",
+            "settings": {
+              "heading": "Shop",
+              "menu": "shop-footer"
+            }
+          },
+          "menu_2": {
+            "type": "menu",
+            "settings": {
+              "heading": "Information",
+              "menu": "useful-info"
+            }
+          },
+          "menu_3": {
+            "type": "menu",
+            "settings": {
+              "heading": "Discover",
+              "menu": "discover"
+            }
+          },
+          "menu_4": {
+            "type": "menu",
+            "settings": {
+              "heading": "About",
+              "menu": "footer"
+            }
+          }
+        },
+        "block_order": [
+          "menu_1",
+          "menu_2",
+          "menu_3",
+          "menu_4"
+        ],
+        "settings": {}
       }
     },
     "content_for_index": [],

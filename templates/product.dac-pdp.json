@@ -155,6 +155,10 @@
             "row_size_fit",
             "row_shipping"
           ]
+        },
+        "sticky_atc": {
+          "type": "dac-sticky-atc",
+          "settings": {}
         }
       },
       "block_order": [
@@ -169,7 +173,8 @@
         "loyalty",
         "reassurance",
         "delivery",
-        "details"
+        "details",
+        "sticky_atc"
       ],
       "settings": {}
     },
@@ -211,32 +216,6 @@
       ],
       "settings": {}
     },
-    "newsletter": {
-      "type": "halo-newsletter",
-      "settings": {
-        "show_newsletter": true,
-        "padding_top": 60,
-        "padding_bottom": 60,
-        "padding_top_tablet": 0,
-        "padding_bottom_tablet": 0,
-        "padding_top_mobile": 40,
-        "padding_bottom_mobile": 40,
-        "show_newsletter_bg_img": false,
-        "newsletter_bg_position_x": "center",
-        "newsletter_bg_position_y": "center",
-        "newsletter_bg_repeat": "no-repeat",
-        "newsletter_bg_attachment": "scroll",
-        "newsletter_bg_size": "cover",
-        "newsletter_heading": "",
-        "newsletter_text": "<p>SIGN UP FOR AN EXTRA 25% OFF</p>",
-        "newsletter_text_2": "",
-        "block_bg": "#000",
-        "newsletter_color": "#ffffff",
-        "newsletter_border": "#000000",
-        "newsletter_input_bg": "#FFFFFF",
-        "newsletter_input_color": "#000000"
-      }
-    },
     "style_with": {
       "type": "dac-style-with",
       "settings": {}
@@ -257,7 +236,6 @@
     "style_with",
     "why_not_add",
     "recommendations",
-    "reviews",
-    "newsletter"
+    "reviews"
   ]
 }
