@@ -142,7 +142,6 @@
         "image_fVMkUq": {
           "type": "image",
           "name": "30% OFF Jeans",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/DAC-30_OFF_JEANS_DESKTOP_8044fff4-0322-48c3-8c7a-b6da0d7bd315.jpg",
             "mobile_image": "shopify://shop_images/DAC-30_-JEANS-MAIL_52b06fa6-dbb0-4bad-9a04-13258f712449.jpg",
@@ -190,6 +189,7 @@
         "image_TGHx3Y": {
           "type": "image",
           "name": "Hoodie Season",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/DAC-HOODIE-DESKTOP.jpg",
             "mobile_image": "shopify://shop_images/DAC-HOODIE-MAIL.jpg",
