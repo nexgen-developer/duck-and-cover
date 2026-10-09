@@ -189,7 +189,8 @@
   overflow: hidden;
   white-space: nowrap;
 }
-.dac-rating .dac-icon { flex: 0 0 auto; width: var(--dac-star-m); height: var(--dac-star-m); }
+/* Star size sets the height, the Figma glyph is 19 wide by 18 high. Outline strokes reach past the glyph edge. */
+.dac-rating .dac-icon { flex: 0 0 auto; width: calc(var(--dac-star-m) * 19 / 18); height: var(--dac-star-m); overflow: visible; }
 
 /* Title */
 .dac-title__text {
@@ -575,7 +576,7 @@
   .dac-rating__link { gap: 10px; font-size: var(--dac-fs); }
   .dac-rating__base,
   .dac-rating__fill { gap: 5px; }
-  .dac-rating .dac-icon { width: var(--dac-star); height: var(--dac-star); }
+  .dac-rating .dac-icon { width: calc(var(--dac-star) * 19 / 18); height: var(--dac-star); }
   .dac-rating__text { text-decoration: underline; text-underline-offset: 3px; text-transform: capitalize; }
 
   .dac-title__text {
