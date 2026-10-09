@@ -46,7 +46,13 @@
   {{ block.shopify_attributes }}
 >
   <div class="dac-delivery__row">
-    <span class="dac-delivery__icon">{% render 'dac-icon', icon: 'delivery' %}</span>
+    <span class="dac-delivery__icon">
+      {%- if bs.icon_image -%}
+        {{ bs.icon_image | image_url: width: 80 | image_tag: alt: '', loading: 'lazy' }}
+      {%- else -%}
+        <img src="{{ 'dac-shipping.svg' | asset_url }}" alt="" width="40" height="40" loading="lazy">
+      {%- endif -%}
+    </span>
     <p class="dac-delivery__text" data-dac-delivery-text>{{ bs.text_fallback | escape }}</p>
   </div>
   {%- if bs.show_nudge and bs.free_threshold > 0 -%}
@@ -67,6 +73,12 @@
     {
       "type": "paragraph",
       "content": "Times follow UK time, whatever the shopper's own time zone."
+    },
+    {
+      "type": "image_picker",
+      "id": "icon_image",
+      "label": "Custom icon",
+      "info": "Leave empty to use the shipping icon from the PDP V1 design."
     },
     {
       "type": "text",

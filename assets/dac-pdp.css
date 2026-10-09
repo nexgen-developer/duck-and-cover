@@ -471,7 +471,7 @@
 }
 .dac-delivery__row { display: flex; align-items: center; gap: 10px; }
 .dac-delivery__icon { flex: 0 0 26px; width: 26px; height: 26px; display: flex; color: #121212; }
-.dac-delivery__icon .dac-icon { width: 100%; height: 100%; }
+.dac-delivery__icon > * { width: 100%; height: 100%; object-fit: contain; }
 .dac-delivery__text { color: #121212; font-size: 13px; font-weight: 700; line-height: 19px; }
 .dac-delivery__nudge { display: flex; flex-direction: column; gap: 6px; }
 .dac-delivery__nudge-text { color: #121212; font-size: 13px; font-weight: 500; line-height: 1.4; }
