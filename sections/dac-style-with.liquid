@@ -20,7 +20,7 @@
 -%}
 
 <section
-  class="dac-style{% if look %} dac-style--has-look{% endif %}"
+  class="dac-style{% if look != blank %} dac-style--has-look{% endif %}"
   data-dac-style
   data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit={{ s.products_count }}&intent=complementary"
   {% unless request.design_mode %}hidden{% endunless %}
@@ -40,7 +40,8 @@
 >
   <h2 class="dac-style__title">{{ s.heading | escape }}</h2>
   <div class="dac-style__row">
-    {%- if look -%}
+    {%- comment -%} != blank, not a bare if: an empty value is truthy in Liquid. {%- endcomment -%}
+    {%- if look != blank -%}
       <div class="dac-style__look">
         {{ look | image_url: width: 1000 | image_tag: loading: 'lazy', widths: '300, 400, 600, 800, 1000', sizes: '(min-width: 1025px) 26vw, 196px', alt: product.title }}
       </div>
