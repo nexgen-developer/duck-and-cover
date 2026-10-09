@@ -240,12 +240,22 @@
     "style_with": {
       "type": "dac-style-with",
       "settings": {}
+    },
+    "why_not_add": {
+      "type": "dac-why-not-add",
+      "settings": {
+        "pinned_products": [
+          "mens-dac-mystery-box",
+          "mens-dac-mystery-jeans"
+        ]
+      }
     }
   },
   "order": [
     "breadcrumb",
     "main",
     "style_with",
+    "why_not_add",
     "recommendations",
     "reviews",
     "newsletter"

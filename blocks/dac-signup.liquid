@@ -9,26 +9,28 @@
 
   assign code = ss.discount_code | strip
   assign code_percent = ss.code_percent | default: 0
-  assign code_on = false
-  if ss.show_code_price and code != blank and code_percent > 0 and p.gift_card? == false
-    assign code_on = true
-    assign vendor_key = p.vendor | downcase | strip
-    assign hide_list = ss.code_hide_vendors | downcase | split: ','
-    for hide_vendor in hide_list
-      assign hide_clean = hide_vendor | strip
-      if hide_clean != blank and hide_clean == vendor_key
-        assign code_on = false
-      endif
-    endfor
-  endif
+
+  comment
+    Vendors in the list (Mystery by default) and gift cards take no discount codes,
+    so neither the code price nor the sign up offer applies to them.
+  endcomment
+  assign offer_blocked = p.gift_card?
+  assign vendor_key = p.vendor | downcase | strip
+  assign hide_list = ss.code_hide_vendors | downcase | split: ','
+  for hide_vendor in hide_list
+    assign hide_clean = hide_vendor | strip
+    if hide_clean != blank and hide_clean == vendor_key
+      assign offer_blocked = true
+    endif
+  endfor
 
   assign active_percent = 0
-  if code_on
+  if ss.show_code_price and code != blank and code_percent > 0
     assign active_percent = code_percent
   endif
   assign signup_percent = ss.signup_percent | default: 0
 -%}
-{%- if active_percent < signup_percent -%}
+{%- if offer_blocked == false and active_percent < signup_percent -%}
   <div
     class="dac-block dac-signup"
     style="--dac-mt: {{ bs.spacing_top }}px; --dac-mt-m: {{ bs.spacing_top_mobile }}px; --dac-bg: {{ bs.background }}; --dac-color: {{ bs.text_color }}; --dac-fs: {{ bs.text_size }}px; --dac-fs-m: {{ bs.text_size_mobile }}px;"

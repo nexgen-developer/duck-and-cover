@@ -1,7 +1,8 @@
 {%- comment -%}
-  One product card for the Style with section.
+  One product card, used by Style with and Why not add.
   Sizes pick the variant, Add to bag goes through the theme's cart flow (data-btn-addtocart inside product-form)
   so the cart drawer opens as it does for the main button. Products with two options link to the product instead.
+  Optional: badge (text that replaces the sale badge) and subtitle (a line under the title).
 {%- endcomment -%}
 {%- liquid
   assign card_variant = product.selected_or_first_available_variant
@@ -20,15 +21,17 @@
   assign rating_count = product.metafields.reviews.rating_count.value | default: 0
   assign form_id = 'DacCardForm-' | append: section_id | append: '-' | append: product.id
 -%}
-<article class="dac-card" data-dac-card>
+<article class="dac-card" data-dac-card data-handle="{{ product.handle }}">
   <div class="dac-card__media">
     <a class="dac-card__image" href="{{ product.url }}" tabindex="-1" aria-hidden="true">
       {%- if product.featured_media -%}
         {{ product.featured_media.preview_image | image_url: width: 900 | image_tag: loading: 'lazy', widths: '200, 300, 400, 600, 900', sizes: '(min-width: 1025px) 22vw, 170px', alt: product.title }}
       {%- endif -%}
     </a>
-    {%- if on_sale and s.show_badge -%}
-      <span class="dac-card__badge">{{ s.badge_text | replace: '[percent]', save_percent | escape }}</span>
+    {%- if badge != blank -%}
+      <span class="dac-card__badge">{{ badge | escape }}</span>
+    {%- elsif on_sale and s.show_badge -%}
+      <span class="dac-card__badge" data-save="{{ save_percent }}">{{ s.badge_text | replace: '[percent]', save_percent | escape }}</span>
     {%- endif -%}
     {%- if pick_size -%}
       <div class="dac-card__sizes" role="group" aria-label="{{ product.options.first | escape }}">
@@ -71,6 +74,9 @@
       </div>
     {%- endif -%}
     <h3 class="dac-card__title"><a href="{{ product.url }}">{{ product.title | escape }}</a></h3>
+    {%- if subtitle != blank -%}
+      <p class="dac-card__text">{{ subtitle | escape }}</p>
+    {%- endif -%}
     <div class="dac-card__price">
       <span class="dac-card__now">{{ card_variant.price | money }}</span>
       {%- if on_sale -%}

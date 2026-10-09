@@ -524,34 +524,10 @@
     }
   }
 
-  /* Style with. Cards come from the Product Recommendations API (complementary intent). With none, the section stays hidden. */
-  class DacStyle {
-    constructor(root) {
-      this.root = root;
-      root.addEventListener('click', (event) => this.onClickCapture(event), true);
-      root.addEventListener('click', (event) => this.onClick(event));
-      fetch(root.dataset.url)
-        .then((response) => (response.ok ? response.text() : Promise.reject(new Error('recommendations'))))
-        .then((html) => {
-          const cards = new DOMParser().parseFromString(html, 'text/html').querySelector('[data-dac-style-cards]');
-          if (!cards || !cards.querySelector('[data-dac-card]')) return;
-          root.querySelector('[data-dac-style-cards]').replaceChildren(...cards.childNodes);
-          root.hidden = false;
-        })
-        .catch(() => {});
-    }
-
-    onClick(event) {
-      const size = event.target.closest('[data-dac-card-size]');
-      if (!size) return;
-      const card = size.closest('[data-dac-card]');
-      card.querySelectorAll('[data-dac-card-size]').forEach((button) => button.setAttribute('aria-pressed', String(button === size)));
-      card.querySelector('[data-dac-card-input]').value = size.dataset.dacCardSize;
-      card.querySelector('[data-dac-card-error]').hidden = true;
-    }
-
-    // Runs before the theme's add to cart handler, which would post an empty variant.
-    onClickCapture(event) {
+  /* Product cards (Style with, Why not add). A size picks the variant, Add to bag waits for one. */
+  const bindCards = (root) => {
+    // Capture runs before the theme's add to cart handler, which would post an empty variant.
+    root.addEventListener('click', (event) => {
       const button = event.target.closest('[data-dac-card-atc]');
       if (!button) return;
       const card = button.closest('[data-dac-card]');
@@ -559,6 +535,77 @@
       event.preventDefault();
       event.stopImmediatePropagation();
       card.querySelector('[data-dac-card-error]').hidden = false;
+    }, true);
+    root.addEventListener('click', (event) => {
+      const size = event.target.closest('[data-dac-card-size]');
+      if (!size) return;
+      const card = size.closest('[data-dac-card]');
+      card.querySelectorAll('[data-dac-card-size]').forEach((button) => button.setAttribute('aria-pressed', String(button === size)));
+      card.querySelector('[data-dac-card-input]').value = size.dataset.dacCardSize;
+      card.querySelector('[data-dac-card-error]').hidden = true;
+    });
+  };
+
+  const fetchSection = (url) => fetch(url)
+    .then((response) => (response.ok ? response.text() : Promise.reject(new Error(url))))
+    .then((html) => new DOMParser().parseFromString(html, 'text/html'));
+
+  /* Style with. Cards come from the Product Recommendations API (complementary intent). With none, the section stays hidden. */
+  class DacStyle {
+    constructor(root) {
+      bindCards(root);
+      fetchSection(root.dataset.url)
+        .then((doc) => {
+          const cards = doc.querySelector('[data-dac-style-cards]');
+          if (!cards || !cards.querySelector('[data-dac-card]')) return;
+          root.querySelector('[data-dac-style-cards]').replaceChildren(...cards.childNodes);
+          root.hidden = false;
+        })
+        .catch(() => {});
+    }
+  }
+
+  /* Why not add. Pinned cards are in the page, best sellers are added after it loads. */
+  class DacWna {
+    constructor(root) {
+      this.root = root;
+      this.track = root.querySelector('[data-dac-wna-track]');
+      this.prev = root.querySelector('[data-dac-wna-prev]');
+      this.next = root.querySelector('[data-dac-wna-next]');
+      bindCards(root);
+      this.prev.addEventListener('click', () => this.track.scrollBy({ left: -this.track.clientWidth, behavior: 'smooth' }));
+      this.next.addEventListener('click', () => this.track.scrollBy({ left: this.track.clientWidth, behavior: 'smooth' }));
+      this.track.addEventListener('scroll', () => this.updateArrows(), { passive: true });
+      this.updateArrows();
+      fetchSection(root.dataset.url)
+        .then((doc) => this.addBestSellers(doc))
+        .catch(() => {});
+    }
+
+    addBestSellers(doc) {
+      const data = this.root.dataset;
+      const exclude = new Set((data.exclude || '').split(',').filter(Boolean));
+      const cards = Array.from(doc.querySelectorAll('[data-dac-best-sellers] [data-dac-card]'))
+        .filter((card) => !exclude.has(card.dataset.handle))
+        .slice(0, Number(data.count) || 8);
+      // The source section renders with its own default labels, swap in this section's settings.
+      cards.forEach((card) => {
+        card.querySelectorAll('button[data-dac-card-atc]').forEach((button) => { button.textContent = button.disabled ? data.soldOut : data.atc; });
+        card.querySelectorAll('a.dac-card__atc').forEach((link) => { link.textContent = data.options; });
+        card.querySelectorAll('[data-dac-card-error]').forEach((error) => { error.textContent = data.error; });
+        card.querySelectorAll('.dac-card__badge[data-save]').forEach((badge) => {
+          if (data.badge) badge.textContent = data.badge.replace('[percent]', badge.dataset.save);
+          else badge.remove();
+        });
+      });
+      this.track.append(...cards);
+      this.updateArrows();
+    }
+
+    updateArrows() {
+      const { scrollLeft, clientWidth, scrollWidth } = this.track;
+      this.prev.disabled = scrollLeft <= 2;
+      this.next.disabled = scrollLeft + clientWidth >= scrollWidth - 2;
     }
   }
 
@@ -568,6 +615,9 @@
     });
     (scope || document).querySelectorAll('[data-dac-style]').forEach((root) => {
       if (!root.dacStyle) root.dacStyle = new DacStyle(root);
+    });
+    (scope || document).querySelectorAll('[data-dac-wna]').forEach((root) => {
+      if (!root.dacWna) root.dacWna = new DacWna(root);
     });
   };
 

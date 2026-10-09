@@ -1,0 +1,34 @@
+{%- comment -%}
+  Not placed in any template. Why not add renders it through the Section Rendering API at
+  /collections/all?sort_by=best-selling&section_id=dac-best-sellers, so collection.products comes back in
+  best selling order. Labels here are placeholders, Why not add swaps in its own after loading.
+{%- endcomment -%}
+{%- liquid
+  assign s = section.settings
+  assign shown = 0
+-%}
+<div data-dac-best-sellers>
+  {%- if collection -%}
+    {%- for item in collection.products limit: 30 -%}
+      {%- if item.available == false or item.gift_card? -%}{%- continue -%}{%- endif -%}
+      {% render 'dac-style-card', product: item, s: s, section_id: section.id %}
+      {%- assign shown = shown | plus: 1 -%}
+      {%- if shown >= 16 -%}{%- break -%}{%- endif -%}
+    {%- endfor -%}
+  {%- endif -%}
+</div>
+
+{% schema %}
+{
+  "name": "Best sellers source",
+  "tag": "div",
+  "settings": [
+    { "type": "checkbox", "id": "show_badge", "label": "Show sale badge", "default": true },
+    { "type": "text", "id": "badge_text", "label": "Sale badge text", "default": "Save [percent]%" },
+    { "type": "text", "id": "atc_label", "label": "Add to bag label", "default": "Add to bag" },
+    { "type": "text", "id": "sold_out_label", "label": "Sold out label", "default": "Sold out" },
+    { "type": "text", "id": "options_label", "label": "Label for products with two options", "default": "Choose options" },
+    { "type": "text", "id": "error_text", "label": "Message when no size is picked", "default": "Please select a size" }
+  ]
+}
+{% endschema %}
