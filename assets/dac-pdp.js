@@ -206,6 +206,17 @@
 
     /* Clicks */
     onClickCapture(event) {
+      // Each colour is its own product, linked by the Linkify app. Keep an alternate template (?view=) when
+      // moving between colours, otherwise the next colour opens on the product's assigned template.
+      const swatch = event.target.closest('linkify-product-colors-swatch[data-handle]');
+      const view = new URLSearchParams(window.location.search).get('view');
+      if (swatch && view && !window.location.pathname.endsWith(`/products/${swatch.dataset.handle}`)) {
+        event.preventDefault();
+        event.stopImmediatePropagation();
+        const shopRoot = (window.Shopify && window.Shopify.routes && window.Shopify.routes.root) || '/';
+        window.location.href = `${shopRoot}products/${swatch.dataset.handle}?view=${encodeURIComponent(view)}`;
+        return;
+      }
       const button = event.target.closest('[data-dac-atc], [data-dac-buy-now]');
       if (!button || !this.root.contains(button)) return;
       if (this.needsChoice()) {
