@@ -570,7 +570,11 @@
     position: sticky;
     top: min(calc(var(--dac-header-h, 0px) + 20px - var(--dac-info-offset)), calc(100vh - var(--dac-atc-end, 0px) - 24px));
     z-index: 19;
+    transition: top 0.15s ease-out;
   }
+  /* Halo slides the header away while scrolling down (body.scroll-down) and back on scroll up, in 0.15s.
+     The details follow it, so the gap above them stays 20px either way. */
+  body.scroll-down .dac-pdp--sticky-info .dac-pdp__info { --dac-header-h: 0px; }
   .dac-block { margin-top: var(--dac-mt, 0px); }
 
   .dac-gallery { padding: 0; }
