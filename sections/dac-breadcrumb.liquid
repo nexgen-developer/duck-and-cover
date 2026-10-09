@@ -26,6 +26,8 @@
     endif
   endif
 
+  assign left_min = s.padding_left | at_most: 10
+
   assign parent_absolute = s.parent_link
   unless s.parent_link contains '://'
     assign parent_absolute = shop.url | append: s.parent_link
@@ -44,7 +46,7 @@
     --dac-crumb-current-m: {{ s.current_color_mobile }};
     --dac-crumb-pt: {{ s.padding_top }}px;
     --dac-crumb-pb: {{ s.padding_bottom }}px;
-    --dac-crumb-left: {{ s.padding_left }}px;
+    --dac-crumb-left: clamp({{ left_min }}px, calc({{ left_min }}px + (100vw - 1025px) * {{ s.padding_left | minus: left_min }} / 895), {{ s.padding_left }}px);
     --dac-crumb-pt-m: {{ s.padding_top_mobile }}px;
     --dac-crumb-pb-m: {{ s.padding_bottom_mobile }}px;
     --dac-crumb-side-m: {{ s.side_padding_mobile }}px;
@@ -212,6 +214,7 @@
       "type": "range",
       "id": "padding_left",
       "label": "Left padding, desktop",
+      "info": "On a 1920px screen. Shrinks to 10px at 1025px.",
       "min": 0,
       "max": 120,
       "step": 2,

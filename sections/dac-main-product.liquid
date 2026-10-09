@@ -6,9 +6,16 @@
 {{ 'dac-pdp.css' | asset_url | stylesheet_tag }}
 <script src="{{ 'dac-pdp.js' | asset_url }}" defer="defer"></script>
 
+{%- comment -%}
+  Desktop spacing follows the 1920px Figma frame and shrinks in a straight line to compact values at 1025px,
+  so smaller laptops keep the same layout without a wide middle gap.
+{%- endcomment -%}
 {%- liquid
   assign s = section.settings
   assign selected_variant = product.selected_variant
+  assign right_margin = 1920 | minus: s.container_width | at_least: 0
+  assign margin_min = right_margin | at_most: 20
+  assign gap_min = s.column_gap | at_most: 40
 -%}
 
 <section
@@ -19,7 +26,8 @@
   data-money-format="{{ shop.money_format | strip_html | escape }}"
   style="
     --dac-max: {{ s.container_width }}px;
-    --dac-col-gap: {{ s.column_gap }}px;
+    --dac-col-gap: clamp({{ gap_min }}px, calc({{ gap_min }}px + (100vw - 1025px) * {{ s.column_gap | minus: gap_min }} / 895), {{ s.column_gap }}px);
+    --dac-pr: clamp({{ margin_min }}px, calc({{ margin_min }}px + (100vw - 1025px) * {{ right_margin | minus: margin_min }} / 895), {{ right_margin }}px);
     --dac-cols: minmax(0, {{ s.media_width }}fr) minmax(0, {{ 100 | minus: s.media_width }}fr);
     --dac-info-offset: {{ s.info_offset }}px;
     --dac-pt: {{ s.padding_top }}px;
@@ -103,6 +111,7 @@
       "type": "range",
       "id": "container_width",
       "label": "Maximum width",
+      "info": "Content width on a 1920px screen. The space left over on the right shrinks on smaller screens.",
       "min": 1200,
       "max": 2000,
       "step": 8,
@@ -133,6 +142,7 @@
       "type": "range",
       "id": "column_gap",
       "label": "Space between gallery and details",
+      "info": "On a 1920px screen. Shrinks to 40px at 1025px.",
       "min": 0,
       "max": 200,
       "step": 2,
