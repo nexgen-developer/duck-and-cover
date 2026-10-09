@@ -110,7 +110,11 @@
               }
             }
           },
-          "block_order": ["usp_returns", "usp_delivery", "usp_checkout"]
+          "block_order": [
+            "usp_returns",
+            "usp_delivery",
+            "usp_checkout"
+          ]
         },
         "delivery": {
           "type": "dac-delivery",
@@ -146,7 +150,11 @@
               }
             }
           },
-          "block_order": ["row_description", "row_size_fit", "row_shipping"]
+          "block_order": [
+            "row_description",
+            "row_size_fit",
+            "row_shipping"
+          ]
         }
       },
       "block_order": [
@@ -179,7 +187,10 @@
           "settings": {}
         }
       },
-      "block_order": ["wiser_featured", "wiser_recent"],
+      "block_order": [
+        "wiser_featured",
+        "wiser_recent"
+      ],
       "settings": {}
     },
     "reviews": {
@@ -195,9 +206,43 @@
           }
         }
       },
-      "block_order": ["judge_me_review_widget"],
+      "block_order": [
+        "judge_me_review_widget"
+      ],
       "settings": {}
+    },
+    "newsletter": {
+      "type": "halo-newsletter",
+      "settings": {
+        "show_newsletter": true,
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "padding_top_tablet": 0,
+        "padding_bottom_tablet": 0,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40,
+        "show_newsletter_bg_img": false,
+        "newsletter_bg_position_x": "center",
+        "newsletter_bg_position_y": "center",
+        "newsletter_bg_repeat": "no-repeat",
+        "newsletter_bg_attachment": "scroll",
+        "newsletter_bg_size": "cover",
+        "newsletter_heading": "",
+        "newsletter_text": "<p>SIGN UP FOR AN EXTRA 25% OFF</p>",
+        "newsletter_text_2": "",
+        "block_bg": "#000",
+        "newsletter_color": "#ffffff",
+        "newsletter_border": "#000000",
+        "newsletter_input_bg": "#FFFFFF",
+        "newsletter_input_color": "#000000"
+      }
     }
   },
-  "order": ["breadcrumb", "main", "recommendations", "reviews"]
+  "order": [
+    "breadcrumb",
+    "main",
+    "recommendations",
+    "reviews",
+    "newsletter"
+  ]
 }

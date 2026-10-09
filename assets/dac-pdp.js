@@ -65,6 +65,9 @@
       this.syncOptions();
       if (this.variant) this.applyVariant(this.variant, false);
       this.updateNudge();
+      // Halo rewrites every [data-cart-count] after each cart change, from any page widget or the cart drawer.
+      const cartCount = document.querySelector('[data-cart-count]');
+      if (cartCount) new MutationObserver(() => this.updateNudge()).observe(cartCount, { childList: true, characterData: true, subtree: true });
     }
 
     findById(id) {
@@ -503,7 +506,9 @@
       fetch(`${root}cart.js`, { headers: { Accept: 'application/json' } })
         .then((response) => response.json())
         .then((cart) => {
-          const total = Number(cart.total_price || 0) + itemPrice;
+          // Count this item once: shown as if added, unless it is already in the cart.
+          const inCart = (cart.items || []).some((item) => (this.variant ? item.variant_id === this.variant.id : item.product_id === this.product.id));
+          const total = Number(cart.total_price || 0) + (inCart ? 0 : itemPrice);
           const remaining = threshold - total;
           const textEl = nudge.querySelector('[data-dac-nudge-text]');
           const bar = nudge.querySelector('[data-dac-nudge-bar]');
