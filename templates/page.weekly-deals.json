@@ -111,6 +111,20 @@
         "lookbook_style": "1"
       }
     },
+    "weekly_deal_iDiiCj": {
+      "type": "weekly-deal",
+      "disabled": true,
+      "name": "Knit & Jean Bundle",
+      "settings": {
+        "image": "shopify://shop_images/DAC-knit-bundle-tile.gif",
+        "title": "KNIT & JEAN BUNDLE",
+        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">FOR £34.99</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
+        "button1": "Get Deal",
+        "url": "",
+        "CustomCode": "NO CODE NEEDED",
+        "description": "Refresh your wardrobe with the perfect combo! Pair your favourite knit with a fresh pair of jeans for just £34.99. Click now to start creating your bundle - no code needed!"
+      }
+    },
     "weekly_deal_pATLmh": {
       "type": "weekly-deal",
       "name": "Mystery Jeans",
@@ -760,6 +774,7 @@
   "order": [
     "main",
     "25bcb4cf-3aa4-4cb5-b78f-4074368db4a6",
+    "weekly_deal_iDiiCj",
     "weekly_deal_pATLmh",
     "weekly_deal_MJpb7p",
     "weekly_deal_JXpkmF",
