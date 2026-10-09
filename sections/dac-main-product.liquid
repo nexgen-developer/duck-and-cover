@@ -1,0 +1,353 @@
+{%- comment -%}
+  Product information for the redesigned product page.
+  Gallery on the left. Every widget on the right is its own block, so the merchant
+  can reorder, hide or remove each one in the theme editor.
+{%- endcomment -%}
+{{ 'dac-pdp.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'dac-pdp.js' | asset_url }}" defer="defer"></script>
+
+{%- liquid
+  assign s = section.settings
+  assign selected_variant = product.selected_variant
+-%}
+
+<section
+  id="DacPdp-{{ section.id }}"
+  class="dac-pdp dac-pdp--align-{{ s.container_align }}{% if s.info_sticky %} dac-pdp--sticky-info{% endif %}"
+  data-dac-pdp
+  data-section-id="{{ section.id }}"
+  data-money-format="{{ shop.money_format | strip_html | escape }}"
+  style="
+    --dac-max: {{ s.container_width }}px;
+    --dac-col-gap: {{ s.column_gap }}px;
+    --dac-cols: minmax(0, {{ s.media_width }}fr) minmax(0, {{ 100 | minus: s.media_width }}fr);
+    --dac-info-offset: {{ s.info_offset }}px;
+    --dac-pt: {{ s.padding_top }}px;
+    --dac-pb: {{ s.padding_bottom }}px;
+    --dac-side-m: {{ s.mobile_side_padding }}px;
+    --dac-info-pt-m: {{ s.mobile_info_padding_top }}px;
+    --dac-block-gap: {{ s.block_gap }}px;
+    --dac-gallery-gap: {{ s.gallery_gap }}px;
+    --dac-media-fit: {{ s.image_fit }};
+    --dac-badge-bg: {{ s.sale_badge_bg }};
+    --dac-badge-color: {{ s.sale_badge_color }};
+  "
+>
+  <div class="dac-pdp__inner">
+    <div class="dac-pdp__media">
+      {% render 'dac-gallery', product: product, section: section %}
+    </div>
+
+    <div class="dac-pdp__info">
+      <div class="dac-pdp__blocks">
+        {% content_for 'blocks', closest.product: product %}
+      </div>
+    </div>
+  </div>
+
+  <script type="application/json" data-dac-product-json>
+    {
+      "id": {{ product.id }},
+      "options": {{ product.options | json }},
+      "selectedVariantId": {% if selected_variant %}{{ selected_variant.id }}{% else %}null{% endif %},
+      "variants": [
+        {%- for variant in product.variants -%}
+          {
+            "id": {{ variant.id }},
+            "title": {{ variant.title | json }},
+            "options": {{ variant.options | json }},
+            "available": {{ variant.available | json }},
+            "price": {{ variant.price }},
+            "compare_at_price": {% if variant.compare_at_price %}{{ variant.compare_at_price }}{% else %}null{% endif %},
+            "inventory": {% if variant.inventory_management == 'shopify' and variant.inventory_policy == 'deny' %}{{ variant.inventory_quantity }}{% else %}null{% endif %}
+          }{% unless forloop.last %},{% endunless %}
+        {%- endfor -%}
+      ]
+    }
+  </script>
+</section>
+
+{% render 'dac-product-schema', product: product %}
+
+{% schema %}
+{
+  "name": "Product information",
+  "tag": "div",
+  "class": "dac-pdp-section",
+  "enabled_on": {
+    "templates": ["product"]
+  },
+  "blocks": [
+    { "type": "dac-rating" },
+    { "type": "dac-title" },
+    { "type": "dac-price" },
+    { "type": "dac-signup" },
+    { "type": "dac-variant-picker" },
+    { "type": "dac-buy-buttons" },
+    { "type": "dac-usps" },
+    { "type": "dac-delivery" },
+    { "type": "dac-accordion" },
+    { "type": "dac-text" },
+    { "type": "@app" }
+  ],
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "Default sizes, spacing and colours follow the PDP V1 design in Figma. Change them only when the design changes."
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "container_width",
+      "label": "Maximum width",
+      "min": 1200,
+      "max": 2000,
+      "step": 8,
+      "unit": "px",
+      "default": 1776
+    },
+    {
+      "type": "select",
+      "id": "container_align",
+      "label": "Alignment on wide screens",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "range",
+      "id": "media_width",
+      "label": "Gallery width",
+      "min": 40,
+      "max": 70,
+      "step": 1,
+      "unit": "%",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "column_gap",
+      "label": "Space between gallery and details",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "default": 138
+    },
+    {
+      "type": "range",
+      "id": "info_offset",
+      "label": "Details top offset, desktop",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 80
+    },
+    {
+      "type": "checkbox",
+      "id": "info_sticky",
+      "label": "Keep details in view while the gallery scrolls",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "block_gap",
+      "label": "Space between blocks",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Top padding",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Bottom padding",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "mobile_side_padding",
+      "label": "Side padding, mobile",
+      "min": 0,
+      "max": 24,
+      "step": 2,
+      "unit": "px",
+      "default": 10
+    },
+    {
+      "type": "range",
+      "id": "mobile_info_padding_top",
+      "label": "Details top padding, mobile",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 18
+    },
+    {
+      "type": "header",
+      "content": "Gallery"
+    },
+    {
+      "type": "range",
+      "id": "gallery_gap",
+      "label": "Space between images",
+      "min": 0,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 6
+    },
+    {
+      "type": "select",
+      "id": "image_ratio",
+      "label": "Image ratio",
+      "options": [
+        { "value": "portrait", "label": "Portrait 4:5" },
+        { "value": "square", "label": "Square" },
+        { "value": "adapt", "label": "Original" }
+      ],
+      "default": "portrait"
+    },
+    {
+      "type": "select",
+      "id": "image_fit",
+      "label": "Image fit",
+      "options": [
+        { "value": "cover", "label": "Fill the frame" },
+        { "value": "contain", "label": "Show the whole image" }
+      ],
+      "default": "cover"
+    },
+    {
+      "type": "checkbox",
+      "id": "video_autoplay",
+      "label": "Play videos automatically, muted",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_mobile_counter",
+      "label": "Show image counter on mobile",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_mobile_thumbs",
+      "label": "Show thumbnails on mobile",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Sale badge"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_sale_badge",
+      "label": "Show sale badge on the gallery",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "sale_badge_vendor",
+      "label": "Only for this vendor",
+      "info": "Leave empty to show the badge on every product with a compare at price.",
+      "default": "Clearance"
+    },
+    {
+      "type": "text",
+      "id": "sale_badge_text",
+      "label": "Badge text",
+      "info": "[percent] becomes the saving.",
+      "default": "Save [percent]%"
+    },
+    {
+      "type": "color",
+      "id": "sale_badge_bg",
+      "label": "Badge background",
+      "default": "#D12442"
+    },
+    {
+      "type": "color",
+      "id": "sale_badge_color",
+      "label": "Badge text colour",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "header",
+      "content": "Discount code"
+    },
+    {
+      "type": "paragraph",
+      "content": "Used by the Price and Sign up blocks. The code is not applied automatically, shoppers enter it at checkout."
+    },
+    {
+      "type": "checkbox",
+      "id": "show_code_price",
+      "label": "Show the price with code",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "discount_code",
+      "label": "Discount code",
+      "default": "DAC20"
+    },
+    {
+      "type": "range",
+      "id": "code_percent",
+      "label": "Code discount",
+      "min": 0,
+      "max": 90,
+      "step": 1,
+      "unit": "%",
+      "default": 20
+    },
+    {
+      "type": "text",
+      "id": "code_hide_vendors",
+      "label": "Hide the code price for these vendors",
+      "info": "Separate vendors with commas."
+    },
+    {
+      "type": "range",
+      "id": "signup_percent",
+      "label": "Sign up discount",
+      "info": "The Sign up block only shows when the code discount is lower than this.",
+      "min": 0,
+      "max": 90,
+      "step": 1,
+      "unit": "%",
+      "default": 25
+    },
+    {
+      "type": "text",
+      "id": "best_price_label",
+      "label": "Best price badge",
+      "info": "Shows when the Sign up block is hidden. Leave empty to turn it off.",
+      "default": "Best price"
+    }
+  ]
+}
+{% endschema %}

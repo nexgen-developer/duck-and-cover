@@ -1,0 +1,61 @@
+{%- comment -%}
+  One reassurance item. Used inside the Reassurance block.
+{%- endcomment -%}
+{%- assign bs = block.settings -%}
+{%- if bs.title != blank or bs.text != blank -%}
+  <div class="dac-usp" {{ block.shopify_attributes }}>
+    <span class="dac-usp__icon">
+      {%- if bs.icon_image != blank -%}
+        {{ bs.icon_image | image_url: width: 72 | image_tag: loading: 'lazy', alt: '' }}
+      {%- elsif bs.icon != 'none' -%}
+        {% render 'dac-icon', icon: bs.icon %}
+      {%- endif -%}
+    </span>
+    <span class="dac-usp__text">
+      {%- if bs.title != blank -%}<span class="dac-usp__title">{{ bs.title | escape }}</span>{%- endif -%}
+      {%- if bs.text != blank -%}<span class="dac-usp__sub">{{ bs.text | escape }}</span>{%- endif -%}
+    </span>
+  </div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Reassurance item",
+  "settings": [
+    {
+      "type": "select",
+      "id": "icon",
+      "label": "Icon",
+      "options": [
+        { "value": "returns", "label": "Returns" },
+        { "value": "box", "label": "Parcel" },
+        { "value": "delivery", "label": "Van" },
+        { "value": "payment", "label": "Card" },
+        { "value": "secure", "label": "Lock" },
+        { "value": "gift", "label": "Gift" },
+        { "value": "none", "label": "None" }
+      ],
+      "default": "box"
+    },
+    {
+      "type": "image_picker",
+      "id": "icon_image",
+      "label": "Custom icon",
+      "info": "Replaces the icon above."
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Free UK delivery over £50"
+    },
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Text",
+      "default": "Standard, 2 to 5 working days"
+    }
+  ],
+  "presets": [{ "name": "Reassurance item" }]
+}
+{% endschema %}

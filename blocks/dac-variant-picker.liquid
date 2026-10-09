@@ -1,0 +1,289 @@
+{%- comment -%}
+  Variant picker. Nothing is selected until the shopper picks, unless the URL already
+  carries a variant. Includes the size guide pop out and the model line.
+{%- endcomment -%}
+{%- liquid
+  assign p = closest.product | default: product
+  assign bs = block.settings
+  assign selected = p.selected_variant
+  assign guide_option = bs.size_option_name | downcase | strip
+  assign guide_page = bs.size_guide_page
+  assign guide_id = 'DacGuide-' | append: block.id
+
+  assign model_text = blank
+  if bs.show_model
+    assign model = p.metafields.custom.model.value
+    assign size_worn = p.metafields.custom.size_worn.value
+    if model != blank and size_worn != blank and model.name != blank and model.height_cm != blank
+      assign model_text = bs.model_text | replace: '[name]', model.name | replace: '[height]', model.height_cm | replace: '[size]', size_worn
+    endif
+  endif
+-%}
+{%- unless p.has_only_default_variant -%}
+  <div
+    class="dac-block dac-variant"
+    data-dac-picker
+    data-low-stock="{{ bs.low_stock_threshold }}"
+    data-low-stock-text="{{ bs.low_stock_text | escape }}"
+    style="--dac-mt: {{ bs.spacing_top }}px; --dac-mt-m: {{ bs.spacing_top_mobile }}px; --dac-sw: {{ bs.swatch_size }}px; --dac-sw-w-m: {{ bs.swatch_width_mobile }}px; --dac-sw-h-m: {{ bs.swatch_height_mobile }}px; --dac-sw-r: {{ bs.swatch_radius }}px; --dac-sw-r-m: {{ bs.swatch_radius_mobile }}px; --dac-sw-border: {{ bs.swatch_border }}; --dac-sw-active: {{ bs.swatch_active }}; --dac-color: {{ bs.label_color }};"
+    {{ block.shopify_attributes }}
+  >
+    {%- for option in p.options_with_values -%}
+      {%- liquid
+        assign option_key = option.name | downcase | strip
+        assign option_index = forloop.index0
+        assign placeholder = bs.placeholder | replace: '[option]', option_key
+      -%}
+      <fieldset class="dac-variant__option" data-dac-option="{{ option_index }}">
+        <legend class="dac-variant__label">
+          <span class="dac-variant__name">{{ option.name | escape }}:</span>
+          <span class="dac-variant__value" data-dac-option-value data-placeholder="{{ placeholder | escape }}">
+            {%- if selected -%}{{ option.selected_value | escape }}{%- else -%}{{ placeholder | escape }}{%- endif -%}
+          </span>
+        </legend>
+        {%- if option_key == guide_option and guide_page != blank -%}
+          <button type="button" class="dac-variant__guide dac-variant__guide--desktop" data-dac-modal-open="{{ guide_id }}">
+            {% render 'dac-icon', icon: 'ruler' %}<span>{{ bs.guide_label | escape }}</span>
+          </button>
+        {%- endif -%}
+        <div class="dac-variant__values">
+          {%- for value in option.values -%}
+            {%- assign input_id = 'DacOpt-' | append: block.id | append: '-' | append: option_index | append: '-' | append: forloop.index0 -%}
+            <input
+              type="radio"
+              class="dac-variant__input"
+              id="{{ input_id }}"
+              name="dac-{{ block.id }}-{{ option.position }}"
+              value="{{ value | escape }}"
+              data-dac-option-input
+              {% if selected and value.selected %}checked{% endif %}
+            >
+            <label class="dac-variant__swatch{% unless value.available %} is-unavailable{% endunless %}" for="{{ input_id }}">{{ value | escape }}</label>
+          {%- endfor -%}
+        </div>
+      </fieldset>
+    {%- endfor -%}
+
+    <p class="dac-variant__stock" data-dac-stock hidden></p>
+    <p class="dac-variant__error" data-dac-error role="alert" hidden>{{ bs.error_text | escape }}</p>
+
+    {%- if model_text != blank or guide_page != blank -%}
+      <div class="dac-variant__footer">
+        {%- if model_text != blank -%}
+          <p class="dac-variant__model">{{ model_text | escape }}</p>
+        {%- endif -%}
+        {%- if guide_page != blank -%}
+          <button type="button" class="dac-variant__guide dac-variant__guide--mobile" data-dac-modal-open="{{ guide_id }}">
+            {% render 'dac-icon', icon: 'ruler' %}<span>{{ bs.guide_label | escape }}</span>
+          </button>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+  </div>
+
+  {%- if guide_page != blank -%}
+    <dialog class="dac-modal" id="{{ guide_id }}" aria-labelledby="{{ guide_id }}-title">
+      <div class="dac-modal__panel">
+        <div class="dac-modal__head">
+          <h2 class="dac-modal__title" id="{{ guide_id }}-title">{{ bs.guide_title | default: guide_page.title | escape }}</h2>
+          <button type="button" class="dac-modal__close" data-dac-modal-close aria-label="{{ bs.close_label | escape }}">{% render 'dac-icon', icon: 'close' %}</button>
+        </div>
+        {%- if guide_page.content != blank -%}
+          <div class="dac-modal__body rte">{{ guide_page.content }}</div>
+        {%- else -%}
+          {%- comment -%} The size guide tables live in a section of the page template, not the page body. They load when the pop out first opens. {%- endcomment -%}
+          <div class="dac-modal__body rte" data-dac-guide-src="{{ guide_page.url }}">
+            <a href="{{ guide_page.url }}">{{ guide_page.title | escape }}</a>
+          </div>
+        {%- endif -%}
+      </div>
+    </dialog>
+  {%- endif -%}
+{%- endunless -%}
+
+{% schema %}
+{
+  "name": "Variant picker",
+  "settings": [
+    {
+      "type": "text",
+      "id": "placeholder",
+      "label": "Text before a choice is made",
+      "info": "[option] becomes the option name, for example size.",
+      "default": "Select a [option]"
+    },
+    {
+      "type": "text",
+      "id": "error_text",
+      "label": "Message when Add to bag is pressed without a choice",
+      "default": "Please select a size"
+    },
+    {
+      "type": "range",
+      "id": "low_stock_threshold",
+      "label": "Low stock message from",
+      "info": "Shows the message when stock is this number or lower. 0 turns it off.",
+      "min": 0,
+      "max": 10,
+      "step": 1,
+      "default": 3
+    },
+    {
+      "type": "text",
+      "id": "low_stock_text",
+      "label": "Low stock message",
+      "info": "[count] becomes the stock left and [value] the chosen size.",
+      "default": "Only [count] left in [value]"
+    },
+    {
+      "type": "header",
+      "content": "Size guide"
+    },
+    {
+      "type": "text",
+      "id": "size_option_name",
+      "label": "Show the size guide next to this option",
+      "default": "Size"
+    },
+    {
+      "type": "page",
+      "id": "size_guide_page",
+      "label": "Size guide page",
+      "info": "The page content opens in a pop out, so shoppers stay on the product."
+    },
+    {
+      "type": "text",
+      "id": "guide_label",
+      "label": "Link text",
+      "default": "Size Guide"
+    },
+    {
+      "type": "text",
+      "id": "guide_title",
+      "label": "Pop out title",
+      "info": "Leave empty to use the page title."
+    },
+    {
+      "type": "text",
+      "id": "close_label",
+      "label": "Close button label",
+      "default": "Close"
+    },
+    {
+      "type": "header",
+      "content": "Model info"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_model",
+      "label": "Show model info",
+      "info": "Reads the custom.model metaobject and custom.size_worn metafields. Hidden when either is empty.",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "model_text",
+      "label": "Model text",
+      "info": "[name], [height] and [size] come from the metafields.",
+      "default": "[name] is [height]cm and wears size [size]"
+    },
+    {
+      "type": "header",
+      "content": "Style"
+    },
+    {
+      "type": "range",
+      "id": "swatch_size",
+      "label": "Box size, desktop",
+      "min": 40,
+      "max": 80,
+      "step": 1,
+      "unit": "px",
+      "default": 58
+    },
+    {
+      "type": "range",
+      "id": "swatch_width_mobile",
+      "label": "Box width, mobile",
+      "min": 40,
+      "max": 90,
+      "step": 1,
+      "unit": "px",
+      "default": 68
+    },
+    {
+      "type": "range",
+      "id": "swatch_height_mobile",
+      "label": "Box height, mobile",
+      "min": 36,
+      "max": 64,
+      "step": 1,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "swatch_radius",
+      "label": "Corner radius, desktop",
+      "min": 0,
+      "max": 12,
+      "step": 1,
+      "unit": "px",
+      "default": 5
+    },
+    {
+      "type": "range",
+      "id": "swatch_radius_mobile",
+      "label": "Corner radius, mobile",
+      "min": 0,
+      "max": 12,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "color",
+      "id": "swatch_border",
+      "label": "Box border",
+      "default": "#BDBDBD"
+    },
+    {
+      "type": "color",
+      "id": "swatch_active",
+      "label": "Selected box fill",
+      "default": "#121212"
+    },
+    {
+      "type": "color",
+      "id": "label_color",
+      "label": "Label colour",
+      "default": "#505050"
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "spacing_top",
+      "label": "Space above, desktop",
+      "min": -20,
+      "max": 40,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "spacing_top_mobile",
+      "label": "Space above, mobile",
+      "min": -20,
+      "max": 40,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    }
+  ],
+  "presets": [{ "name": "Variant picker" }]
+}
+{% endschema %}

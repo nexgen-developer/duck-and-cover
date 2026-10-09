@@ -1,0 +1,158 @@
+{%- comment -%}
+  Star rating from the Shopify review metafields that Judge.me keeps in sync.
+  Hidden on the live store when the product has no reviews.
+{%- endcomment -%}
+{%- liquid
+  assign p = closest.product | default: product
+  assign bs = block.settings
+  assign rating = p.metafields.reviews.rating.value
+  assign rating_count = p.metafields.reviews.rating_count.value | default: 0
+-%}
+{%- if rating != blank and rating_count > 0 -%}
+  {%- liquid
+    assign rating_value = rating.rating | plus: 0
+    assign rating_max = rating.scale_max | plus: 0
+    if rating_max == 0
+      assign rating_max = 5
+    endif
+    assign rating_percent = rating_value | times: 100.0 | divided_by: rating_max
+    assign rating_shown = rating_value | round: 1
+    assign count_label = bs.label
+    if rating_count == 1
+      assign count_label = bs.label_one
+    endif
+  -%}
+  <div
+    class="dac-block dac-rating"
+    style="--dac-mt: {{ bs.spacing_top }}px; --dac-mt-m: {{ bs.spacing_top_mobile }}px; --dac-star: {{ bs.star_size }}px; --dac-star-m: {{ bs.star_size_mobile }}px; --dac-star-color: {{ bs.star_color }}; --dac-fs: {{ bs.text_size }}px; --dac-fs-m: {{ bs.text_size_mobile }}px; --dac-color: {{ bs.text_color }};"
+    {{ block.shopify_attributes }}
+  >
+    <a class="dac-rating__link" href="{{ bs.anchor | default: '#' }}">
+      <span class="dac-rating__stars" style="--dac-rating: {{ rating_percent }}%;" aria-hidden="true">
+        <span class="dac-rating__base">
+          {%- for i in (1..5) -%}{% render 'dac-icon', icon: 'star-outline' %}{%- endfor -%}
+        </span>
+        <span class="dac-rating__fill">
+          {%- for i in (1..5) -%}{% render 'dac-icon', icon: 'star' %}{%- endfor -%}
+        </span>
+      </span>
+      <span class="dac-rating__text">{{ rating_shown }} ({{ rating_count }} {{ count_label }})</span>
+    </a>
+  </div>
+{%- elsif request.design_mode -%}
+  <div class="dac-block dac-editor-note" {{ block.shopify_attributes }}>{{ bs.empty_note }}</div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Rating",
+  "settings": [
+    {
+      "type": "text",
+      "id": "label",
+      "label": "Label after the count",
+      "default": "reviews"
+    },
+    {
+      "type": "text",
+      "id": "label_one",
+      "label": "Label after a count of 1",
+      "default": "review"
+    },
+    {
+      "type": "text",
+      "id": "anchor",
+      "label": "Link",
+      "info": "Where the rating scrolls to. #judgeme_product_reviews is the Judge.me review widget.",
+      "default": "#judgeme_product_reviews"
+    },
+    {
+      "type": "text",
+      "id": "empty_note",
+      "label": "Note shown in the editor when there are no reviews",
+      "default": "No reviews yet. This block stays hidden on the store until the product has a review."
+    },
+    {
+      "type": "header",
+      "content": "Style"
+    },
+    {
+      "type": "range",
+      "id": "star_size",
+      "label": "Star size, desktop",
+      "min": 10,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "star_size_mobile",
+      "label": "Star size, mobile",
+      "min": 10,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "color",
+      "id": "star_color",
+      "label": "Star colour",
+      "default": "#121212"
+    },
+    {
+      "type": "range",
+      "id": "text_size",
+      "label": "Text size, desktop",
+      "min": 10,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "text_size_mobile",
+      "label": "Text size, mobile",
+      "min": 10,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text colour",
+      "default": "#333333"
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "spacing_top",
+      "label": "Space above, desktop",
+      "min": -20,
+      "max": 40,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "spacing_top_mobile",
+      "label": "Space above, mobile",
+      "min": -20,
+      "max": 40,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    }
+  ],
+  "presets": [{ "name": "Rating" }]
+}
+{% endschema %}

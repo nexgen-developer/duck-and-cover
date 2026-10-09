@@ -1,0 +1,143 @@
+{%- comment -%}
+  Product title.
+{%- endcomment -%}
+{%- liquid
+  assign p = closest.product | default: product
+  assign bs = block.settings
+-%}
+<div
+  class="dac-block dac-title"
+  style="--dac-mt: {{ bs.spacing_top }}px; --dac-mt-m: {{ bs.spacing_top_mobile }}px; --dac-fs: {{ bs.size }}px; --dac-fs-m: {{ bs.size_mobile }}px; --dac-fw: {{ bs.weight }}; --dac-fw-m: {{ bs.weight_mobile }}; --dac-lh: {{ bs.line_height | divided_by: 100.0 }}; --dac-lh-m: {{ bs.line_height_mobile | divided_by: 100.0 }}; --dac-color: {{ bs.color }}; --dac-transform: {{ bs.transform }};"
+  {{ block.shopify_attributes }}
+>
+  <{{ bs.tag }} class="dac-title__text">{{ p.title | escape }}</{{ bs.tag }}>
+</div>
+
+{% schema %}
+{
+  "name": "Title",
+  "settings": [
+    {
+      "type": "select",
+      "id": "tag",
+      "label": "Heading level",
+      "options": [
+        { "value": "h1", "label": "H1" },
+        { "value": "h2", "label": "H2" },
+        { "value": "p", "label": "Paragraph" }
+      ],
+      "default": "h1"
+    },
+    {
+      "type": "header",
+      "content": "Style"
+    },
+    {
+      "type": "range",
+      "id": "size",
+      "label": "Size, desktop",
+      "min": 16,
+      "max": 64,
+      "step": 1,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "size_mobile",
+      "label": "Size, mobile",
+      "min": 14,
+      "max": 40,
+      "step": 1,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "select",
+      "id": "weight",
+      "label": "Weight, desktop",
+      "options": [
+        { "value": "400", "label": "Regular" },
+        { "value": "500", "label": "Medium" },
+        { "value": "600", "label": "Semi bold" },
+        { "value": "700", "label": "Bold" }
+      ],
+      "default": "500"
+    },
+    {
+      "type": "select",
+      "id": "weight_mobile",
+      "label": "Weight, mobile",
+      "options": [
+        { "value": "400", "label": "Regular" },
+        { "value": "500", "label": "Medium" },
+        { "value": "600", "label": "Semi bold" },
+        { "value": "700", "label": "Bold" }
+      ],
+      "default": "700"
+    },
+    {
+      "type": "range",
+      "id": "line_height",
+      "label": "Line height, desktop",
+      "min": 90,
+      "max": 160,
+      "step": 5,
+      "unit": "%",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "line_height_mobile",
+      "label": "Line height, mobile",
+      "min": 90,
+      "max": 160,
+      "step": 5,
+      "unit": "%",
+      "default": 150
+    },
+    {
+      "type": "select",
+      "id": "transform",
+      "label": "Letter case",
+      "options": [
+        { "value": "none", "label": "As written" },
+        { "value": "capitalize", "label": "Capitalise words" },
+        { "value": "uppercase", "label": "Uppercase" }
+      ],
+      "default": "none"
+    },
+    {
+      "type": "color",
+      "id": "color",
+      "label": "Colour",
+      "default": "#121212"
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "spacing_top",
+      "label": "Space above, desktop",
+      "min": -20,
+      "max": 40,
+      "step": 1,
+      "unit": "px",
+      "default": -10
+    },
+    {
+      "type": "range",
+      "id": "spacing_top_mobile",
+      "label": "Space above, mobile",
+      "min": -20,
+      "max": 40,
+      "step": 1,
+      "unit": "px",
+      "default": -10
+    }
+  ],
+  "presets": [{ "name": "Title" }]
+}
+{% endschema %}

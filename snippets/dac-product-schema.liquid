@@ -1,0 +1,55 @@
+{%- comment -%}
+  Product structured data for the redesigned product page.
+  Ratings come from the Shopify review metafields that Judge.me keeps in sync.
+  Unlike the older schema snippet, it never writes a review node of its own.
+{%- endcomment -%}
+{%- liquid
+  assign first_variant = product.selected_or_first_available_variant
+  assign rating = product.metafields.reviews.rating.value
+  assign rating_count = product.metafields.reviews.rating_count.value | default: 0
+-%}
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": {{ product.title | json }},
+    "url": {{ request.origin | append: product.url | json }},
+    {%- if product.featured_media -%}
+    "image": [{{ product.featured_media | image_url: width: 1200 | prepend: 'https:' | json }}],
+    {%- endif -%}
+    "description": {{ product.description | strip_html | strip | truncate: 5000 | json }},
+    {%- if first_variant.sku != blank -%}
+    "sku": {{ first_variant.sku | json }},
+    {%- endif -%}
+    {%- if first_variant.barcode != blank -%}
+    "gtin": {{ first_variant.barcode | json }},
+    {%- endif -%}
+    {%- if rating != blank and rating_count > 0 -%}
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": {{ rating.rating | json }},
+      "bestRating": {{ rating.scale_max | json }},
+      "worstRating": {{ rating.scale_min | json }},
+      "reviewCount": {{ rating_count | json }}
+    },
+    {%- endif -%}
+    "brand": {
+      "@type": "Brand",
+      "name": {{ product.vendor | json }}
+    },
+    "offers": [
+      {%- for variant in product.variants -%}
+        {
+          "@type": "Offer",
+          {%- if variant.sku != blank -%}
+          "sku": {{ variant.sku | json }},
+          {%- endif -%}
+          "price": {{ variant.price | divided_by: 100.0 | json }},
+          "priceCurrency": {{ cart.currency.iso_code | json }},
+          "availability": "https://schema.org/{% if variant.available %}InStock{% else %}OutOfStock{% endif %}",
+          "url": {{ request.origin | append: variant.url | json }}
+        }{% unless forloop.last %},{% endunless %}
+      {%- endfor -%}
+    ]
+  }
+</script>

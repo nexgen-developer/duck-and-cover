@@ -1,0 +1,187 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "dac-main-product",
+      "blocks": {
+        "rating": {
+          "type": "dac-rating",
+          "settings": {}
+        },
+        "title": {
+          "type": "dac-title",
+          "settings": {}
+        },
+        "price": {
+          "type": "dac-price",
+          "settings": {}
+        },
+        "signup": {
+          "type": "dac-signup",
+          "settings": {}
+        },
+        "colours": {
+          "type": "shopify://apps/linkify-product-colors/blocks/app-block/1fdc741b-f4ed-4b8c-aee7-aa5e4ad76aa8",
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
+        "variant_picker": {
+          "type": "dac-variant-picker",
+          "settings": {
+            "size_guide_page": "size-guide"
+          }
+        },
+        "buy_buttons": {
+          "type": "dac-buy-buttons",
+          "settings": {}
+        },
+        "back_in_stock": {
+          "type": "shopify://apps/mailchimp-email-sms/blocks/mailchimp_for_shopify_bis/e3b67dce-fd41-4b61-b3cf-961c12344cde",
+          "settings": {
+            "button_text": "Notify me when available",
+            "button_bg_color": "#222222",
+            "button_text_color": "#ffffff"
+          }
+        },
+        "loyalty": {
+          "type": "shopify://apps/smile-io/blocks/smile-points-on-product-page/2fae4e25-1841-4ea2-bc02-bd548478c4f6",
+          "settings": {
+            "primary_colour": "#121212",
+            "secondary_colour": "#ffffff",
+            "preview_scenario": "customer_can_earn_points",
+            "should_show_icon": true,
+            "custom_image_height": 40,
+            "should_show_points_label": true,
+            "points_text_logged_in": "<p>[points_amount] earned on this product.</p>",
+            "points_text_logged_out": "<p>[points_amount] earned on this product. Join our DAC League rewards program to earn.</p>"
+          }
+        },
+        "reassurance": {
+          "type": "dac-usps",
+          "settings": {},
+          "blocks": {
+            "usp_returns": {
+              "type": "dac-usp",
+              "settings": {
+                "icon": "returns",
+                "title": "Easy returns",
+                "text": "30 days, tags still on"
+              }
+            },
+            "usp_delivery": {
+              "type": "dac-usp",
+              "settings": {
+                "icon": "box",
+                "title": "Free UK delivery over £50",
+                "text": "Standard, 2 to 5 working days"
+              }
+            },
+            "usp_checkout": {
+              "type": "dac-usp",
+              "settings": {
+                "icon": "payment",
+                "title": "Secure checkout",
+                "text": "PayPal and Shop Pay accepted"
+              }
+            }
+          },
+          "block_order": ["usp_returns", "usp_delivery", "usp_checkout"]
+        },
+        "delivery": {
+          "type": "dac-delivery",
+          "settings": {}
+        },
+        "details": {
+          "type": "dac-accordion",
+          "settings": {},
+          "blocks": {
+            "row_description": {
+              "type": "dac-accordion-row",
+              "settings": {
+                "title": "Description",
+                "source": "description",
+                "open_mobile": true
+              }
+            },
+            "row_size_fit": {
+              "type": "dac-accordion-row",
+              "settings": {
+                "title": "Size & fit",
+                "source": "text",
+                "text": "<p>To see our size guide <a href=\"/pages/size-guide\" title=\"Size Guide\">click here.</a></p>"
+              }
+            },
+            "row_shipping": {
+              "type": "dac-accordion-row",
+              "settings": {
+                "title": "Shipping, exchanges & returns",
+                "source": "page",
+                "page": "delivery",
+                "page_2": "returns"
+              }
+            }
+          },
+          "block_order": ["row_description", "row_size_fit", "row_shipping"]
+        }
+      },
+      "block_order": [
+        "rating",
+        "title",
+        "price",
+        "signup",
+        "colours",
+        "variant_picker",
+        "buy_buttons",
+        "back_in_stock",
+        "loyalty",
+        "reassurance",
+        "delivery",
+        "details"
+      ],
+      "settings": {}
+    },
+    "recommendations": {
+      "type": "apps",
+      "blocks": {
+        "wiser_featured": {
+          "type": "shopify://apps/wiser-ai-upsell-cross-sell/blocks/wiser_featured/3f966edc-9a4a-465c-a4df-436d2a39160d",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "wiser_recent": {
+          "type": "shopify://apps/wiser-ai-upsell-cross-sell/blocks/wiser_recent/3f966edc-9a4a-465c-a4df-436d2a39160d",
+          "settings": {}
+        }
+      },
+      "block_order": ["wiser_featured", "wiser_recent"],
+      "settings": {}
+    },
+    "reviews": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_review_widget": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
+          }
+        }
+      },
+      "block_order": ["judge_me_review_widget"],
+      "settings": {}
+    }
+  },
+  "order": ["main", "recommendations", "reviews"]
+}

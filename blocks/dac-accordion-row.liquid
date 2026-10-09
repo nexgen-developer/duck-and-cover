@@ -1,0 +1,127 @@
+{%- comment -%}
+  One accordion row. Content comes from the product description, up to two pages, or text.
+  Pages render on the product page itself, so shoppers never leave the product.
+{%- endcomment -%}
+{%- liquid
+  assign p = closest.product | default: product
+  assign bs = block.settings
+  assign row_content = ''
+  case bs.source
+    when 'description'
+      assign row_content = p.description
+    when 'page'
+      if bs.page != blank
+        assign row_content = row_content | append: bs.page.content
+      endif
+      if bs.page_2 != blank
+        assign row_content = row_content | append: bs.page_2.content
+      endif
+    when 'text'
+      assign row_content = bs.text
+  endcase
+  assign clamp = false
+  if bs.source == 'description' and bs.read_more_mobile
+    assign clamp = true
+  endif
+-%}
+{%- if row_content != blank -%}
+  <details
+    class="dac-acc__row"
+    data-dac-acc-row
+    {% if bs.open_desktop %}data-open-desktop{% endif %}
+    {% if bs.open_mobile %}data-open-mobile{% endif %}
+    {{ block.shopify_attributes }}
+  >
+    <summary class="dac-acc__summary">
+      <span class="dac-acc__title">{{ bs.title | escape }}</span>
+      <span class="dac-acc__icon" aria-hidden="true">
+        <span class="dac-acc__plus">{% render 'dac-icon', icon: 'plus' %}</span>
+        <span class="dac-acc__minus">{% render 'dac-icon', icon: 'close' %}</span>
+      </span>
+    </summary>
+    <div class="dac-acc__content rte{% if clamp %} dac-acc__content--clamp{% endif %}" data-dac-clamp>
+      {{ row_content }}
+    </div>
+    {%- if clamp -%}
+      <button type="button" class="dac-acc__more" data-dac-read-more data-more="{{ bs.read_more_label | escape }}" data-less="{{ bs.read_less_label | escape }}">{{ bs.read_more_label | escape }}</button>
+    {%- endif -%}
+  </details>
+{%- elsif request.design_mode -%}
+  <div class="dac-editor-note" {{ block.shopify_attributes }}>{{ bs.title | escape }} has no content yet, so it is hidden on the store.</div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Accordion row",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Description"
+    },
+    {
+      "type": "select",
+      "id": "source",
+      "label": "Content",
+      "options": [
+        { "value": "description", "label": "Product description" },
+        { "value": "page", "label": "Page" },
+        { "value": "text", "label": "Text" }
+      ],
+      "default": "description"
+    },
+    {
+      "type": "page",
+      "id": "page",
+      "label": "Page"
+    },
+    {
+      "type": "page",
+      "id": "page_2",
+      "label": "Second page",
+      "info": "Shown under the first page."
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text"
+    },
+    {
+      "type": "checkbox",
+      "id": "open_desktop",
+      "label": "Open by default on desktop",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "open_mobile",
+      "label": "Open by default on mobile",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Read more on mobile"
+    },
+    {
+      "type": "checkbox",
+      "id": "read_more_mobile",
+      "label": "Shorten the description on mobile",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "read_more_label",
+      "label": "Read more label",
+      "default": "Read more"
+    },
+    {
+      "type": "text",
+      "id": "read_less_label",
+      "label": "Read less label",
+      "default": "Read less"
+    }
+  ],
+  "presets": [{ "name": "Accordion row" }]
+}
+{% endschema %}

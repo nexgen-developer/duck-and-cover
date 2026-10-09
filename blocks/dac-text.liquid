@@ -1,0 +1,81 @@
+{%- comment -%}
+  Free text for anything the other blocks do not cover.
+{%- endcomment -%}
+{%- assign bs = block.settings -%}
+{%- if bs.text != blank -%}
+  <div
+    class="dac-block dac-text rte"
+    style="--dac-mt: {{ bs.spacing_top }}px; --dac-mt-m: {{ bs.spacing_top_mobile }}px; --dac-fs: {{ bs.text_size }}px; --dac-fs-m: {{ bs.text_size_mobile }}px; --dac-color: {{ bs.text_color }};"
+    {{ block.shopify_attributes }}
+  >
+    {{ bs.text }}
+  </div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Text",
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text"
+    },
+    {
+      "type": "header",
+      "content": "Style"
+    },
+    {
+      "type": "range",
+      "id": "text_size",
+      "label": "Text size, desktop",
+      "min": 10,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "text_size_mobile",
+      "label": "Text size, mobile",
+      "min": 10,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 13
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text colour",
+      "default": "#505050"
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "spacing_top",
+      "label": "Space above, desktop",
+      "min": -20,
+      "max": 40,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "spacing_top_mobile",
+      "label": "Space above, mobile",
+      "min": -20,
+      "max": 40,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    }
+  ],
+  "presets": [{ "name": "Text" }]
+}
+{% endschema %}

@@ -1,0 +1,250 @@
+{%- comment -%}
+  Delivery estimate. The receive by date is worked out in the browser from the cut off,
+  dispatch days, delivery working days and bank holidays below, in UK time.
+  The free delivery nudge reads the cart and adds the item on the page.
+{%- endcomment -%}
+{%- liquid
+  assign bs = block.settings
+  assign dispatch_days = ''
+  if bs.dispatch_mon
+    assign dispatch_days = dispatch_days | append: '1,'
+  endif
+  if bs.dispatch_tue
+    assign dispatch_days = dispatch_days | append: '2,'
+  endif
+  if bs.dispatch_wed
+    assign dispatch_days = dispatch_days | append: '3,'
+  endif
+  if bs.dispatch_thu
+    assign dispatch_days = dispatch_days | append: '4,'
+  endif
+  if bs.dispatch_fri
+    assign dispatch_days = dispatch_days | append: '5,'
+  endif
+  if bs.dispatch_sat
+    assign dispatch_days = dispatch_days | append: '6,'
+  endif
+  if bs.dispatch_sun
+    assign dispatch_days = dispatch_days | append: '0,'
+  endif
+  assign holidays = bs.bank_holidays | newline_to_br | strip_newlines | replace: '<br />', ',' | replace: ' ', ''
+  assign threshold_cents = bs.free_threshold | times: 100
+-%}
+<div
+  class="dac-block dac-delivery"
+  data-dac-delivery
+  data-cutoff="{{ bs.cutoff_hour }}"
+  data-dispatch-days="{{ dispatch_days }}"
+  data-transit-days="{{ bs.transit_days }}"
+  data-holidays="{{ holidays | escape }}"
+  data-text-today="{{ bs.text_today | escape }}"
+  data-text-later="{{ bs.text_later | escape }}"
+  data-threshold="{{ threshold_cents }}"
+  data-nudge-text="{{ bs.nudge_text | escape }}"
+  data-unlocked-text="{{ bs.unlocked_text | escape }}"
+  style="--dac-mt: {{ bs.spacing_top }}px; --dac-mt-m: {{ bs.spacing_top_mobile }}px; --dac-bg: {{ bs.background }}; --dac-border: {{ bs.border }}; --dac-accent: {{ bs.accent }}; --dac-track: {{ bs.track }};"
+  {{ block.shopify_attributes }}
+>
+  <div class="dac-delivery__row">
+    <span class="dac-delivery__icon">{% render 'dac-icon', icon: 'delivery' %}</span>
+    <p class="dac-delivery__text" data-dac-delivery-text>{{ bs.text_fallback | escape }}</p>
+  </div>
+  {%- if bs.show_nudge and bs.free_threshold > 0 -%}
+    <div class="dac-delivery__nudge" data-dac-nudge hidden>
+      <p class="dac-delivery__nudge-text" data-dac-nudge-text></p>
+      <div class="dac-delivery__track" aria-hidden="true"><span class="dac-delivery__bar" data-dac-nudge-bar></span></div>
+    </div>
+  {%- endif -%}
+  {%- if bs.rates != blank -%}
+    <div class="dac-delivery__rates">{{ bs.rates }}</div>
+  {%- endif -%}
+</div>
+
+{% schema %}
+{
+  "name": "Delivery estimate",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "Times follow UK time, whatever the shopper's own time zone."
+    },
+    {
+      "type": "text",
+      "id": "text_today",
+      "label": "Text before the cut off",
+      "info": "[cutoff] becomes the cut off time and [date] the receive by date.",
+      "default": "Order before [cutoff] today and receive by [date]"
+    },
+    {
+      "type": "text",
+      "id": "text_later",
+      "label": "Text after the cut off",
+      "info": "[date] becomes the receive by date.",
+      "default": "Order now and receive by [date]"
+    },
+    {
+      "type": "text",
+      "id": "text_fallback",
+      "label": "Text while the date loads",
+      "default": "Standard UK delivery in 2 to 5 working days"
+    },
+    {
+      "type": "range",
+      "id": "cutoff_hour",
+      "label": "Same day dispatch cut off",
+      "min": 0,
+      "max": 23,
+      "step": 1,
+      "unit": "h",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "transit_days",
+      "label": "Working days to deliver",
+      "min": 1,
+      "max": 10,
+      "step": 1,
+      "default": 5
+    },
+    {
+      "type": "checkbox",
+      "id": "dispatch_mon",
+      "label": "Dispatch on Monday",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "dispatch_tue",
+      "label": "Dispatch on Tuesday",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "dispatch_wed",
+      "label": "Dispatch on Wednesday",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "dispatch_thu",
+      "label": "Dispatch on Thursday",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "dispatch_fri",
+      "label": "Dispatch on Friday",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "dispatch_sat",
+      "label": "Dispatch on Saturday",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "dispatch_sun",
+      "label": "Dispatch on Sunday",
+      "default": false
+    },
+    {
+      "type": "textarea",
+      "id": "bank_holidays",
+      "label": "Bank holidays",
+      "info": "One date per line, written as YYYY-MM-DD. No dispatch or delivery on these days.",
+      "default": "2026-12-25\n2026-12-28\n2027-01-01\n2027-03-26\n2027-03-29\n2027-05-03\n2027-05-31\n2027-08-30\n2027-12-27\n2027-12-28"
+    },
+    {
+      "type": "header",
+      "content": "Free delivery nudge"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_nudge",
+      "label": "Show free delivery nudge",
+      "default": true
+    },
+    {
+      "type": "number",
+      "id": "free_threshold",
+      "label": "Free delivery from",
+      "info": "In pounds.",
+      "default": 50
+    },
+    {
+      "type": "text",
+      "id": "nudge_text",
+      "label": "Nudge text",
+      "info": "[amount] becomes the amount still needed.",
+      "default": "Add [amount] more for free delivery"
+    },
+    {
+      "type": "text",
+      "id": "unlocked_text",
+      "label": "Text once free delivery is reached",
+      "default": "You've unlocked free UK delivery"
+    },
+    {
+      "type": "richtext",
+      "id": "rates",
+      "label": "Rates",
+      "default": "<p>Standard 2 to 5 working days £3.99, free over £50. Express 1 to 3 days £4.99.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Style"
+    },
+    {
+      "type": "color",
+      "id": "background",
+      "label": "Background",
+      "default": "#F3F8F4"
+    },
+    {
+      "type": "color",
+      "id": "border",
+      "label": "Border",
+      "default": "#BFD8C2"
+    },
+    {
+      "type": "color",
+      "id": "accent",
+      "label": "Nudge text and bar",
+      "default": "#1F6B2F"
+    },
+    {
+      "type": "color",
+      "id": "track",
+      "label": "Bar track",
+      "default": "#D6E6D8"
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "spacing_top",
+      "label": "Space above, desktop",
+      "min": -20,
+      "max": 40,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "spacing_top_mobile",
+      "label": "Space above, mobile",
+      "min": -20,
+      "max": 40,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    }
+  ],
+  "presets": [{ "name": "Delivery estimate" }]
+}
+{% endschema %}

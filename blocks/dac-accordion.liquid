@@ -1,0 +1,76 @@
+{%- comment -%}
+  Accordion. Holds Accordion row blocks.
+{%- endcomment -%}
+{%- assign bs = block.settings -%}
+<div
+  class="dac-block dac-acc"
+  style="--dac-mt: {{ bs.spacing_top }}px; --dac-mt-m: {{ bs.spacing_top_mobile }}px; --dac-border: {{ bs.border }}; --dac-color: {{ bs.title_color }}; --dac-muted: {{ bs.text_color }};"
+  {{ block.shopify_attributes }}
+>
+  {% content_for 'blocks' %}
+</div>
+
+{% schema %}
+{
+  "name": "Accordion",
+  "blocks": [{ "type": "dac-accordion-row" }],
+  "settings": [
+    {
+      "type": "header",
+      "content": "Style"
+    },
+    {
+      "type": "color",
+      "id": "border",
+      "label": "Row border",
+      "default": "#CCCCCC"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title colour",
+      "default": "#121212"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text colour",
+      "default": "#505050"
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "spacing_top",
+      "label": "Space above, desktop",
+      "min": -20,
+      "max": 40,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "spacing_top_mobile",
+      "label": "Space above, mobile",
+      "min": -20,
+      "max": 40,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "Accordion",
+      "blocks": [
+        { "type": "dac-accordion-row", "settings": { "title": "Description", "source": "description", "open_mobile": true } },
+        { "type": "dac-accordion-row", "settings": { "title": "Size & fit", "source": "page" } },
+        { "type": "dac-accordion-row", "settings": { "title": "Shipping, exchanges & returns", "source": "page" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

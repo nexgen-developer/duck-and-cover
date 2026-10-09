@@ -1,0 +1,211 @@
+{%- comment -%}
+  Add to bag and Buy now. Add to bag goes through the theme's own cart flow
+  (data-btn-addtocart inside product-form), so the cart drawer opens as it does today.
+  Buy now adds the item and goes straight to checkout.
+{%- endcomment -%}
+{%- liquid
+  assign p = closest.product | default: product
+  assign bs = block.settings
+  assign form_id = 'DacProductForm-' | append: section.id
+  assign initial_variant = blank
+  if p.has_only_default_variant
+    assign initial_variant = p.selected_or_first_available_variant
+  elsif p.selected_variant
+    assign initial_variant = p.selected_variant
+  endif
+  assign sold_out = false
+  if initial_variant != blank and initial_variant.available == false
+    assign sold_out = true
+  endif
+  if p.available == false
+    assign sold_out = true
+  endif
+-%}
+<div
+  class="dac-block dac-buy{% unless bs.buy_now_mobile %} dac-buy--now-desktop-only{% endunless %}"
+  style="--dac-mt: {{ bs.spacing_top }}px; --dac-mt-m: {{ bs.spacing_top_mobile }}px; --dac-h: {{ bs.height }}px; --dac-h-m: {{ bs.height_mobile }}px; --dac-fs: {{ bs.text_size }}px; --dac-fs-m: {{ bs.text_size_mobile }}px; --dac-ls: {{ bs.letter_spacing }}px; --dac-ls-m: {{ bs.letter_spacing_mobile }}px; --dac-atc-bg: {{ bs.atc_bg }}; --dac-atc-color: {{ bs.atc_color }}; --dac-atc-hover: {{ bs.atc_hover }}; --dac-now-color: {{ bs.buy_now_color }};"
+  {{ block.shopify_attributes }}
+>
+  <product-form class="dac-buy__product-form">
+    {%- form 'product', p, id: form_id, class: 'dac-buy__form', novalidate: 'novalidate' -%}
+      <input type="hidden" name="id" value="{{ initial_variant.id }}" data-dac-variant-input>
+      <input type="hidden" name="quantity" value="1">
+      <div class="productView-message" style="display: none;"></div>
+      <button
+        type="submit"
+        name="add"
+        class="dac-buy__atc button-text-change"
+        data-btn-addtocart
+        data-dac-atc
+        data-label="{{ bs.atc_label | escape }}"
+        data-sold-out-label="{{ bs.sold_out_label | escape }}"
+        {% if sold_out %}disabled{% endif %}
+      >
+        {%- if sold_out -%}{{ bs.sold_out_label | escape }}{%- else -%}{{ bs.atc_label | escape }}{%- endif -%}
+      </button>
+      {%- if bs.show_buy_now -%}
+        <button
+          type="button"
+          class="dac-buy__now"
+          data-dac-buy-now
+          data-cart-add-url="{{ routes.cart_add_url }}.js"
+          {% if sold_out %}disabled{% endif %}
+        >
+          {{- bs.buy_now_label | escape -}}
+        </button>
+      {%- endif -%}
+    {%- endform -%}
+  </product-form>
+</div>
+
+{% schema %}
+{
+  "name": "Buy buttons",
+  "settings": [
+    {
+      "type": "text",
+      "id": "atc_label",
+      "label": "Add to bag label",
+      "default": "Add to bag"
+    },
+    {
+      "type": "text",
+      "id": "sold_out_label",
+      "label": "Sold out label",
+      "default": "Sold out"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_buy_now",
+      "label": "Show Buy now",
+      "info": "Adds the item and goes straight to checkout, so every payment method is offered.",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "buy_now_mobile",
+      "label": "Show Buy now on mobile",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "buy_now_label",
+      "label": "Buy now label",
+      "default": "Buy now"
+    },
+    {
+      "type": "header",
+      "content": "Style"
+    },
+    {
+      "type": "range",
+      "id": "height",
+      "label": "Button height, desktop",
+      "min": 40,
+      "max": 80,
+      "step": 1,
+      "unit": "px",
+      "default": 64
+    },
+    {
+      "type": "range",
+      "id": "height_mobile",
+      "label": "Button height, mobile",
+      "min": 40,
+      "max": 80,
+      "step": 1,
+      "unit": "px",
+      "default": 54
+    },
+    {
+      "type": "range",
+      "id": "text_size",
+      "label": "Text size, desktop",
+      "min": 10,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 15
+    },
+    {
+      "type": "range",
+      "id": "text_size_mobile",
+      "label": "Text size, mobile",
+      "min": 10,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "letter_spacing",
+      "label": "Letter spacing, desktop",
+      "min": 0,
+      "max": 3,
+      "step": 0.1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "letter_spacing_mobile",
+      "label": "Letter spacing, mobile",
+      "min": 0,
+      "max": 3,
+      "step": 0.1,
+      "unit": "px",
+      "default": 1.2
+    },
+    {
+      "type": "color",
+      "id": "atc_bg",
+      "label": "Add to bag background",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "atc_color",
+      "label": "Add to bag text",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "atc_hover",
+      "label": "Add to bag hover background",
+      "default": "#D12442"
+    },
+    {
+      "type": "color",
+      "id": "buy_now_color",
+      "label": "Buy now border and text",
+      "default": "#111111"
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "spacing_top",
+      "label": "Space above, desktop",
+      "min": -20,
+      "max": 40,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "spacing_top_mobile",
+      "label": "Space above, mobile",
+      "min": -20,
+      "max": 40,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    }
+  ],
+  "presets": [{ "name": "Buy buttons" }]
+}
+{% endschema %}

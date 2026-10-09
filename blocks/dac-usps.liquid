@@ -1,0 +1,80 @@
+{%- comment -%}
+  Reassurance row. Holds Reassurance item blocks.
+{%- endcomment -%}
+{%- assign bs = block.settings -%}
+<div
+  class="dac-block dac-usps"
+  style="--dac-mt: {{ bs.spacing_top }}px; --dac-mt-m: {{ bs.spacing_top_mobile }}px; --dac-title: {{ bs.title_color }}; --dac-muted: {{ bs.text_color }}; --dac-icon-border: {{ bs.icon_border }};"
+  {{ block.shopify_attributes }}
+>
+  {% content_for 'blocks' %}
+</div>
+
+{% schema %}
+{
+  "name": "Reassurance",
+  "blocks": [{ "type": "dac-usp" }],
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "Desktop shows the items side by side with the icon above. Mobile stacks them with the icon on the left."
+    },
+    {
+      "type": "header",
+      "content": "Style"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title colour",
+      "default": "#121212"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text colour",
+      "default": "#808080"
+    },
+    {
+      "type": "color",
+      "id": "icon_border",
+      "label": "Icon box border, desktop",
+      "default": "#CCCCCC"
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "spacing_top",
+      "label": "Space above, desktop",
+      "min": -20,
+      "max": 40,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "spacing_top_mobile",
+      "label": "Space above, mobile",
+      "min": -20,
+      "max": 40,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "Reassurance",
+      "blocks": [
+        { "type": "dac-usp", "settings": { "icon": "returns", "title": "Easy returns", "text": "30 days, tags still on" } },
+        { "type": "dac-usp", "settings": { "icon": "box", "title": "Free UK delivery over £50", "text": "Standard, 2 to 5 working days" } },
+        { "type": "dac-usp", "settings": { "icon": "payment", "title": "Secure checkout", "text": "PayPal and Shop Pay accepted" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,146 @@
+{%- comment -%}
+  Sign up offer. Shows only when the code discount on this product is lower than the
+  sign up discount, so the two offers never undercut each other.
+{%- endcomment -%}
+{%- liquid
+  assign p = closest.product | default: product
+  assign bs = block.settings
+  assign ss = section.settings
+
+  assign code = ss.discount_code | strip
+  assign code_percent = ss.code_percent | default: 0
+  assign code_on = false
+  if ss.show_code_price and code != blank and code_percent > 0 and p.gift_card? == false
+    assign code_on = true
+    assign vendor_key = p.vendor | downcase | strip
+    assign hide_list = ss.code_hide_vendors | downcase | split: ','
+    for hide_vendor in hide_list
+      assign hide_clean = hide_vendor | strip
+      if hide_clean != blank and hide_clean == vendor_key
+        assign code_on = false
+      endif
+    endfor
+  endif
+
+  assign active_percent = 0
+  if code_on
+    assign active_percent = code_percent
+  endif
+  assign signup_percent = ss.signup_percent | default: 0
+-%}
+{%- if active_percent < signup_percent -%}
+  <div
+    class="dac-block dac-signup"
+    style="--dac-mt: {{ bs.spacing_top }}px; --dac-mt-m: {{ bs.spacing_top_mobile }}px; --dac-bg: {{ bs.background }}; --dac-color: {{ bs.text_color }}; --dac-fs: {{ bs.text_size }}px; --dac-fs-m: {{ bs.text_size_mobile }}px;"
+    {{ block.shopify_attributes }}
+  >
+    <p class="dac-signup__text">{{ bs.text | replace: '[percent]', signup_percent | escape }}</p>
+    {%- if bs.button_label != blank -%}
+      {%- if bs.button_link != blank -%}
+        <a class="dac-signup__button" href="{{ bs.button_link }}">{{ bs.button_label | escape }}</a>
+      {%- else -%}
+        <button type="button" class="dac-signup__button" data-dac-signup-scroll>{{ bs.button_label | escape }}</button>
+      {%- endif -%}
+    {%- endif -%}
+  </div>
+{%- elsif request.design_mode -%}
+  <div class="dac-block dac-editor-note" {{ block.shopify_attributes }}>{{ bs.hidden_note }}</div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Sign up offer",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "The sign up discount is set on the Product information section. This block hides itself when the code discount is equal or higher."
+    },
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Text",
+      "info": "[percent] becomes the sign up discount.",
+      "default": "Sign up and get [percent]% off instead"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label",
+      "default": "Sign up"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link",
+      "info": "Leave empty to scroll to the newsletter sign up in the footer."
+    },
+    {
+      "type": "text",
+      "id": "hidden_note",
+      "label": "Note shown in the editor when the block is hidden",
+      "default": "Hidden on this product because the code discount is equal or higher than the sign up discount."
+    },
+    {
+      "type": "header",
+      "content": "Style"
+    },
+    {
+      "type": "color",
+      "id": "background",
+      "label": "Background",
+      "default": "#F4F4F4"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text colour",
+      "default": "#222222"
+    },
+    {
+      "type": "range",
+      "id": "text_size",
+      "label": "Text size, desktop",
+      "min": 10,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "text_size_mobile",
+      "label": "Text size, mobile",
+      "min": 10,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 13
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "spacing_top",
+      "label": "Space above, desktop",
+      "min": -20,
+      "max": 40,
+      "step": 1,
+      "unit": "px",
+      "default": -12
+    },
+    {
+      "type": "range",
+      "id": "spacing_top_mobile",
+      "label": "Space above, mobile",
+      "min": -20,
+      "max": 40,
+      "step": 1,
+      "unit": "px",
+      "default": -10
+    }
+  ],
+  "presets": [{ "name": "Sign up offer" }]
+}
+{% endschema %}

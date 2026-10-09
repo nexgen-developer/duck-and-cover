@@ -1,0 +1,230 @@
+{%- comment -%}
+  Price block. Compare at price, price without code, price with code, a copyable code chip
+  and a helper line. Discount code settings live on the section so other blocks share them.
+{%- endcomment -%}
+{%- liquid
+  assign p = closest.product | default: product
+  assign bs = block.settings
+  assign ss = section.settings
+  assign variant = p.selected_variant | default: p.selected_or_first_available_variant
+  assign price = variant.price
+  assign compare = variant.compare_at_price | default: 0
+
+  assign code = ss.discount_code | strip
+  assign code_percent = ss.code_percent | default: 0
+  assign code_on = false
+  if ss.show_code_price and code != blank and code_percent > 0 and p.gift_card? == false
+    assign code_on = true
+    assign vendor_key = p.vendor | downcase | strip
+    assign hide_list = ss.code_hide_vendors | downcase | split: ','
+    for hide_vendor in hide_list
+      assign hide_clean = hide_vendor | strip
+      if hide_clean != blank and hide_clean == vendor_key
+        assign code_on = false
+      endif
+    endfor
+  endif
+
+  assign keep_percent = 100 | minus: code_percent
+  assign code_price = price | times: keep_percent | plus: 50 | divided_by: 100
+
+  assign best_price_on = false
+  if code_on and code_percent >= ss.signup_percent and ss.best_price_label != blank
+    assign best_price_on = true
+  endif
+
+  assign code_markup = '<strong>' | append: code | append: '</strong>'
+  assign chip_text = bs.chip_text | escape | replace: '[code]', code_markup
+-%}
+<div
+  class="dac-block dac-price{% if code_on %} dac-price--code{% endif %}"
+  data-dac-price
+  data-code-on="{{ code_on }}"
+  data-code-percent="{{ code_percent }}"
+  data-without-code="{{ bs.without_code_label | escape }}"
+  style="--dac-mt: {{ bs.spacing_top }}px; --dac-mt-m: {{ bs.spacing_top_mobile }}px; --dac-hero: {{ bs.hero_size }}px; --dac-hero-m: {{ bs.hero_size_mobile }}px; --dac-hero-fw: {{ bs.hero_weight }}; --dac-hero-fw-m: {{ bs.hero_weight_mobile }}; --dac-sale: {{ bs.sale_color }}; --dac-regular: {{ bs.regular_color }}; --dac-fs: {{ bs.small_size }}px; --dac-fs-m: {{ bs.small_size_mobile }}px; --dac-muted: {{ bs.muted_color }};"
+  {{ block.shopify_attributes }}
+>
+  {%- if best_price_on -%}
+    <span class="dac-price__badge">{{ ss.best_price_label | escape }}</span>
+  {%- endif -%}
+
+  <div class="dac-price__was"{% if code_on == false and compare <= price %} hidden{% endif %} data-dac-was>
+    <s class="dac-price__compare" data-dac-compare{% if compare <= price %} hidden{% endif %}>{{ compare | money }}</s>
+    {%- if code_on -%}
+      <span class="dac-price__regular" data-dac-regular>{{ price | money }} {{ bs.without_code_label | escape }}</span>
+    {%- endif -%}
+  </div>
+
+  <div class="dac-price__hero">
+    <span class="dac-price__now{% if code_on or compare > price %} is-sale{% endif %}" data-dac-now>
+      {%- if code_on -%}{{ code_price | money }}{%- else -%}{{ price | money }}{%- endif -%}
+    </span>
+    {%- if code_on -%}
+      <button type="button" class="dac-code" data-dac-copy="{{ code | escape }}" data-copied="{{ bs.copied_label | escape }}">
+        <span class="dac-code__text">{{ chip_text }}</span>
+        <span class="dac-code__divider" aria-hidden="true"></span>
+        <span class="dac-code__action">{% render 'dac-icon', icon: 'copy' %}<span data-dac-copy-label>{{ bs.copy_label | escape }}</span></span>
+      </button>
+    {%- endif -%}
+  </div>
+
+  {%- if code_on and bs.helper_text != blank -%}
+    <p class="dac-price__helper">{{ bs.helper_text | escape }}</p>
+  {%- endif -%}
+  <span class="dac-visually-hidden" aria-live="polite" data-dac-copy-status></span>
+</div>
+
+{% schema %}
+{
+  "name": "Price",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "The code and its discount are set on the Product information section, under Discount code."
+    },
+    {
+      "type": "text",
+      "id": "without_code_label",
+      "label": "Text after the price without code",
+      "default": "without code"
+    },
+    {
+      "type": "text",
+      "id": "chip_text",
+      "label": "Code chip text",
+      "info": "[code] becomes the discount code.",
+      "default": "when you use code [code] at checkout"
+    },
+    {
+      "type": "text",
+      "id": "copy_label",
+      "label": "Copy label",
+      "default": "copy"
+    },
+    {
+      "type": "text",
+      "id": "copied_label",
+      "label": "Copied label",
+      "default": "copied"
+    },
+    {
+      "type": "text",
+      "id": "helper_text",
+      "label": "Helper text",
+      "default": "Code isn't applied automatically, enter it at checkout"
+    },
+    {
+      "type": "header",
+      "content": "Style"
+    },
+    {
+      "type": "range",
+      "id": "hero_size",
+      "label": "Main price size, desktop",
+      "min": 16,
+      "max": 64,
+      "step": 1,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "hero_size_mobile",
+      "label": "Main price size, mobile",
+      "min": 14,
+      "max": 40,
+      "step": 1,
+      "unit": "px",
+      "default": 28
+    },
+    {
+      "type": "select",
+      "id": "hero_weight",
+      "label": "Main price weight, desktop",
+      "options": [
+        { "value": "400", "label": "Regular" },
+        { "value": "600", "label": "Semi bold" },
+        { "value": "700", "label": "Bold" },
+        { "value": "900", "label": "Black" }
+      ],
+      "default": "900"
+    },
+    {
+      "type": "select",
+      "id": "hero_weight_mobile",
+      "label": "Main price weight, mobile",
+      "options": [
+        { "value": "400", "label": "Regular" },
+        { "value": "600", "label": "Semi bold" },
+        { "value": "700", "label": "Bold" },
+        { "value": "900", "label": "Black" }
+      ],
+      "default": "700"
+    },
+    {
+      "type": "color",
+      "id": "sale_color",
+      "label": "Sale price colour",
+      "default": "#D12442"
+    },
+    {
+      "type": "color",
+      "id": "regular_color",
+      "label": "Regular price colour",
+      "default": "#121212"
+    },
+    {
+      "type": "range",
+      "id": "small_size",
+      "label": "Small text size, desktop",
+      "min": 10,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 15
+    },
+    {
+      "type": "range",
+      "id": "small_size_mobile",
+      "label": "Small text size, mobile",
+      "min": 10,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "color",
+      "id": "muted_color",
+      "label": "Muted text colour",
+      "default": "#6B6B6B"
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "spacing_top",
+      "label": "Space above, desktop",
+      "min": -20,
+      "max": 40,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "spacing_top_mobile",
+      "label": "Space above, mobile",
+      "min": -20,
+      "max": 40,
+      "step": 1,
+      "unit": "px",
+      "default": -10
+    }
+  ],
+  "presets": [{ "name": "Price" }]
+}
+{% endschema %}

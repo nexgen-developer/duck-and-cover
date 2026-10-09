@@ -1,0 +1,80 @@
+{%- comment -%}
+  Product media for the redesigned product page.
+  Desktop shows every media item in a grid. Mobile turns the same list into a swipe track
+  with a counter and a thumbnail row. Expects product and section.
+{%- endcomment -%}
+{%- liquid
+  assign s = section.settings
+  assign media_count = product.media.size
+  assign badge_variant = product.selected_or_first_available_variant
+  assign show_badge = false
+  if s.show_sale_badge and badge_variant.compare_at_price > badge_variant.price
+    assign vendor_key = product.vendor | downcase | strip
+    assign badge_vendor = s.sale_badge_vendor | downcase | strip
+    if badge_vendor == blank or badge_vendor == vendor_key
+      assign show_badge = true
+    endif
+  endif
+  if show_badge
+    assign half_compare = badge_variant.compare_at_price | divided_by: 2
+    assign save_percent = badge_variant.compare_at_price | minus: badge_variant.price | times: 100 | plus: half_compare | divided_by: badge_variant.compare_at_price
+    assign badge_text = s.sale_badge_text | replace: '[percent]', save_percent
+  endif
+-%}
+
+<div class="dac-gallery dac-gallery--{{ s.image_ratio }}" data-dac-gallery>
+  {%- if show_badge -%}
+    <span class="dac-gallery__badge">{{ badge_text }}</span>
+  {%- endif -%}
+
+  <div class="dac-gallery__track" data-dac-gallery-track>
+    {%- for media in product.media -%}
+      {%- liquid
+        assign loading = 'lazy'
+        if forloop.index <= 2
+          assign loading = 'eager'
+        endif
+      -%}
+      <div class="dac-gallery__item dac-gallery__item--{{ media.media_type }}" data-dac-slide="{{ forloop.index0 }}">
+        {%- case media.media_type -%}
+          {%- when 'image' -%}
+            {%- if forloop.first -%}
+              {{ media | image_url: width: 1400 | image_tag: widths: '400, 600, 800, 1000, 1200, 1400', sizes: '(min-width: 1025px) 30vw, 100vw', loading: loading, fetchpriority: 'high', alt: media.alt, class: 'dac-gallery__media' }}
+            {%- else -%}
+              {{ media | image_url: width: 1400 | image_tag: widths: '400, 600, 800, 1000, 1200, 1400', sizes: '(min-width: 1025px) 30vw, 100vw', loading: loading, alt: media.alt, class: 'dac-gallery__media' }}
+            {%- endif -%}
+          {%- when 'video' -%}
+            {%- if s.video_autoplay -%}
+              {{ media | video_tag: image_size: '1200x', autoplay: true, loop: true, muted: true, playsinline: true, controls: true, preload: 'metadata', class: 'dac-gallery__media' }}
+            {%- else -%}
+              {{ media | video_tag: image_size: '1200x', controls: true, playsinline: true, preload: 'metadata', class: 'dac-gallery__media' }}
+            {%- endif -%}
+          {%- when 'external_video' -%}
+            <div class="dac-gallery__embed">{{ media | external_video_tag }}</div>
+          {%- when 'model' -%}
+            {{ media | model_viewer_tag: image_size: '1200x', reveal: 'interaction', toggleable: true }}
+        {%- endcase -%}
+      </div>
+    {%- else -%}
+      <div class="dac-gallery__item">{{ 'product-1' | placeholder_svg_tag: 'dac-gallery__placeholder' }}</div>
+    {%- endfor -%}
+  </div>
+
+  {%- if media_count > 1 -%}
+    {%- if s.show_mobile_counter -%}
+      <span class="dac-gallery__counter" data-dac-counter aria-hidden="true">1 / {{ media_count }}</span>
+    {%- endif -%}
+    {%- if s.show_mobile_thumbs -%}
+      <div class="dac-gallery__thumbs" data-dac-thumbs>
+        {%- for media in product.media -%}
+          <button type="button" class="dac-gallery__thumb{% if forloop.first %} is-active{% endif %}" data-dac-thumb="{{ forloop.index0 }}" aria-label="{{ forloop.index }} / {{ media_count }}">
+            {{ media.preview_image | image_url: width: 120 | image_tag: loading: 'lazy', alt: '' }}
+            {%- if media.media_type == 'video' or media.media_type == 'external_video' -%}
+              <span class="dac-gallery__play">{% render 'dac-icon', icon: 'play' %}</span>
+            {%- endif -%}
+          </button>
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+  {%- endif -%}
+</div>
