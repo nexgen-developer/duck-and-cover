@@ -1,0 +1,254 @@
+{%- comment -%}
+  Breadcrumb for the redesigned product page: Home / optional level / product type / product.
+  The product type level links to the first category collection (from the settings) that holds the product,
+  otherwise to Shopify's page of all products of that type.
+{%- endcomment -%}
+{{ 'dac-pdp.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign s = section.settings
+  assign show_parent = false
+  if s.parent_label != blank and s.parent_link != blank
+    assign show_parent = true
+  endif
+
+  assign category_url = blank
+  if product.type != blank
+    assign product_collection_handles = product.collections | map: 'handle'
+    for category in s.category_collections
+      if product_collection_handles contains category.handle
+        assign category_url = category.url
+        break
+      endif
+    endfor
+    if category_url == blank
+      assign category_url = product.type | url_for_type
+    endif
+  endif
+
+  assign parent_absolute = s.parent_link
+  unless s.parent_link contains '://'
+    assign parent_absolute = shop.url | append: s.parent_link
+  endunless
+-%}
+
+<nav
+  class="dac-crumbs{% if s.show_mid_mobile %} dac-crumbs--mid-mobile{% endif %}"
+  aria-label="{{ s.aria_label | escape }}"
+  style="
+    --dac-crumb-fs: {{ s.text_size }}px;
+    --dac-crumb-fs-m: {{ s.text_size_mobile }}px;
+    --dac-crumb-color: {{ s.text_color }};
+    --dac-crumb-link-m: {{ s.link_color_mobile }};
+    --dac-crumb-sep-m: {{ s.separator_color_mobile }};
+    --dac-crumb-current-m: {{ s.current_color_mobile }};
+    --dac-crumb-pt: {{ s.padding_top }}px;
+    --dac-crumb-pb: {{ s.padding_bottom }}px;
+    --dac-crumb-left: {{ s.padding_left }}px;
+    --dac-crumb-pt-m: {{ s.padding_top_mobile }}px;
+    --dac-crumb-pb-m: {{ s.padding_bottom_mobile }}px;
+    --dac-crumb-side-m: {{ s.side_padding_mobile }}px;
+  "
+>
+  <ol class="dac-crumbs__list">
+    <li class="dac-crumbs__item"><a href="{{ routes.root_url }}">{{ s.home_label | escape }}</a></li>
+    {%- if show_parent -%}
+      <li class="dac-crumbs__item dac-crumbs__item--mid"><a href="{{ s.parent_link }}">{{ s.parent_label | escape }}</a></li>
+    {%- endif -%}
+    {%- if category_url != blank -%}
+      <li class="dac-crumbs__item dac-crumbs__item--mid"><a href="{{ category_url }}">{{ product.type | escape }}</a></li>
+    {%- endif -%}
+    <li class="dac-crumbs__item dac-crumbs__item--current" aria-current="page">{{ product.title | escape }}</li>
+  </ol>
+</nav>
+
+{%- comment -%} Structured data mirrors the levels shown above, so it disappears with the section. {%- endcomment -%}
+{%- assign crumb_position = 1 -%}
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": {{ s.home_label | json }}, "item": {{ shop.url | append: routes.root_url | json }} },
+      {%- if show_parent -%}
+        {%- assign crumb_position = crumb_position | plus: 1 -%}
+        { "@type": "ListItem", "position": {{ crumb_position }}, "name": {{ s.parent_label | json }}, "item": {{ parent_absolute | json }} },
+      {%- endif -%}
+      {%- if category_url != blank -%}
+        {%- assign crumb_position = crumb_position | plus: 1 -%}
+        { "@type": "ListItem", "position": {{ crumb_position }}, "name": {{ product.type | json }}, "item": {{ shop.url | append: category_url | json }} },
+      {%- endif -%}
+      {%- assign crumb_position = crumb_position | plus: 1 -%}
+      { "@type": "ListItem", "position": {{ crumb_position }}, "name": {{ product.title | json }}, "item": {{ shop.url | append: product.url | json }} }
+    ]
+  }
+</script>
+
+{% schema %}
+{
+  "name": "Breadcrumb",
+  "tag": "div",
+  "class": "dac-breadcrumb-section",
+  "enabled_on": {
+    "templates": ["product"]
+  },
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "Default sizes, spacing and colours follow the PDP V1 design in Figma. Change them only when the design changes."
+    },
+    {
+      "type": "header",
+      "content": "Levels"
+    },
+    {
+      "type": "text",
+      "id": "home_label",
+      "label": "First level",
+      "default": "Home"
+    },
+    {
+      "type": "text",
+      "id": "parent_label",
+      "label": "Extra level after Home",
+      "info": "Optional, for example Men. Shows only when both this and its link are filled."
+    },
+    {
+      "type": "url",
+      "id": "parent_link",
+      "label": "Extra level link"
+    },
+    {
+      "type": "collection_list",
+      "id": "category_collections",
+      "label": "Category collections",
+      "info": "The product type level links to the first of these collections that holds the product. Products in none of them link to all products of their type."
+    },
+    {
+      "type": "checkbox",
+      "id": "show_mid_mobile",
+      "label": "Show the middle levels on mobile",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "aria_label",
+      "label": "Name read by screen readers",
+      "default": "Breadcrumb"
+    },
+    {
+      "type": "header",
+      "content": "Style"
+    },
+    {
+      "type": "range",
+      "id": "text_size",
+      "label": "Text size, desktop",
+      "min": 10,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "text_size_mobile",
+      "label": "Text size, mobile",
+      "min": 9,
+      "max": 16,
+      "step": 1,
+      "unit": "px",
+      "default": 11
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text colour, desktop",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "link_color_mobile",
+      "label": "Link colour, mobile",
+      "default": "#808080"
+    },
+    {
+      "type": "color",
+      "id": "separator_color_mobile",
+      "label": "Separator colour, mobile",
+      "default": "#CCCCCC"
+    },
+    {
+      "type": "color",
+      "id": "current_color_mobile",
+      "label": "Product name colour, mobile",
+      "default": "#121212"
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Top padding, desktop",
+      "min": 0,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Bottom padding, desktop",
+      "min": 0,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "padding_left",
+      "label": "Left padding, desktop",
+      "min": 0,
+      "max": 120,
+      "step": 2,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "label": "Top padding, mobile",
+      "min": 0,
+      "max": 40,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "label": "Bottom padding, mobile",
+      "min": 0,
+      "max": 40,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "side_padding_mobile",
+      "label": "Side padding, mobile",
+      "min": 0,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 10
+    }
+  ],
+  "presets": [{ "name": "Breadcrumb" }]
+}
+{% endschema %}

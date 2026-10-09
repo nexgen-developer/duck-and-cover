@@ -9,6 +9,22 @@
  */
 {
   "sections": {
+    "breadcrumb": {
+      "type": "dac-breadcrumb",
+      "settings": {
+        "category_collections": [
+          "all-t-shirts",
+          "all-hoodies",
+          "all-tracksuits",
+          "all-shirts-and-polos",
+          "all-jeans",
+          "all-joggers",
+          "all-outerwear",
+          "all-underwear",
+          "all-knits"
+        ]
+      }
+    },
     "main": {
       "type": "dac-main-product",
       "blocks": {
@@ -183,5 +199,5 @@
       "settings": {}
     }
   },
-  "order": ["main", "recommendations", "reviews"]
+  "order": ["breadcrumb", "main", "recommendations", "reviews"]
 }
