@@ -445,13 +445,14 @@
       });
     }
 
-    /* Sticky details. CSS needs the details height and the theme header height to pick where to stick. */
+    /* Sticky details. CSS needs the theme header height, and how far down the column Add to bag ends, to pick where to stick. */
     initSticky() {
       const info = this.root.querySelector('.dac-pdp__info');
       if (!info || !this.root.classList.contains('dac-pdp--sticky-info') || !('ResizeObserver' in window)) return;
       const header = document.querySelector('.shopify-section-header');
+      const atc = info.querySelector('[data-dac-atc]');
       new ResizeObserver(() => {
-        info.style.setProperty('--dac-info-h', `${info.offsetHeight}px`);
+        if (atc) info.style.setProperty('--dac-atc-end', `${atc.getBoundingClientRect().bottom - info.getBoundingClientRect().top}px`);
         if (header) this.root.style.setProperty('--dac-header-h', `${header.offsetHeight}px`);
       }).observe(info);
     }

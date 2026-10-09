@@ -562,12 +562,13 @@
     padding-left: var(--dac-pr);
   }
   .dac-pdp__info { padding: var(--dac-info-offset) 0 0; }
-  /* Short details stay under the header. Details taller than the screen scroll until their end is in view, then stay there while the gallery carries on. */
+  /* The details stick from their top, 20px under the header, so rating and title stay in view. On short screens they
+     move up only as far as needed to keep Add to bag in view; the rest of the column shows at the end of the gallery. */
   /* Sticky makes the column its own stacking layer, and the sticky add to bag bar lives inside it.
      19 keeps the bar above the sections below and under Halo's header (20), overlay (100) and drawers (101). */
   .dac-pdp--sticky-info .dac-pdp__info {
     position: sticky;
-    top: min(calc(var(--dac-header-h, 0px) + 20px - var(--dac-info-offset)), calc(100vh - var(--dac-info-h, 0px) - 24px));
+    top: min(calc(var(--dac-header-h, 0px) + 20px - var(--dac-info-offset)), calc(100vh - var(--dac-atc-end, 0px) - 24px));
     z-index: 19;
   }
   .dac-block { margin-top: var(--dac-mt, 0px); }
