@@ -64,6 +64,23 @@
   </ol>
 </nav>
 
+{%- if s.align_header -%}
+  {%- comment -%}
+    Halo centres the header in its own container (1370px), so on wide screens the logo sat far in from the page.
+    The PDP V1 Figma puts the logo and the header icons on the same 40px edge as this breadcrumb and the footer.
+    The header takes the breadcrumb's left padding on both sides, desktop only, on this template only.
+  {%- endcomment -%}
+  <style>
+    @media (min-width: 1025px) {
+      .shopify-section-header :is(.header-top, .header-bottom) > .container {
+        max-width: none !important;
+        padding-left: clamp({{ left_min }}px, calc({{ left_min }}px + (100vw - 1025px) * {{ s.padding_left | minus: left_min }} / 895), {{ s.padding_left }}px);
+        padding-right: clamp({{ left_min }}px, calc({{ left_min }}px + (100vw - 1025px) * {{ s.padding_left | minus: left_min }} / 895), {{ s.padding_left }}px);
+      }
+    }
+  </style>
+{%- endif -%}
+
 {%- comment -%} Structured data mirrors the levels shown above, so it disappears with the section. {%- endcomment -%}
 {%- assign crumb_position = 1 -%}
 <script type="application/ld+json">
@@ -220,6 +237,13 @@
       "step": 2,
       "unit": "px",
       "default": 40
+    },
+    {
+      "type": "checkbox",
+      "id": "align_header",
+      "label": "Line the header up with the breadcrumb",
+      "info": "Desktop only. The header logo and icons use the left padding above as their edge, as in the PDP V1 design.",
+      "default": true
     },
     {
       "type": "range",
