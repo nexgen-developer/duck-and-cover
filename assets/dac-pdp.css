@@ -883,9 +883,10 @@
   .dac-card__text { color: #555555; font-size: 15px; line-height: 1.3; }
 }
 
-/* Colours, drawn from the swatches Linkify renders (dac-pdp.js). Mobile shows the photos, desktop the PDP V1 cards. */
-.dac-colours-ready { position: relative; }
-.dac-colours-ready webyze-linkify-product-colors { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+/* Colours, drawn from the swatches Linkify renders (dac-pdp.js). Mobile shows the photos, desktop the PDP V1 cards.
+   Linkify's own swatches are hidden from the first paint so they don't flash before the cards, and come back if the cards fail.
+   Only swatches the cards can read are hidden, so another Linkify layout stays visible. */
+[data-colour-cards="true"] .dac-pdp__blocks > :not(.dac-colours-failed) webyze-linkify-product-colors:has(linkify-product-colors-swatch[data-handle]) { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 .dac-colours { display: flex; flex-direction: column; gap: 10px; }
 .dac-colours__label { display: flex; align-items: center; gap: 6px; margin: 0; color: #121212; font-size: 12px; font-weight: 700; line-height: 16px; letter-spacing: 0.8px; text-transform: uppercase; }
 .dac-colours__sep { color: #CCCCCC; letter-spacing: 0; }

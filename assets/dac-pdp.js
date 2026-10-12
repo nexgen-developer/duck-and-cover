@@ -534,7 +534,8 @@
         products = await Promise.all(handles.map((handle) => fetch(`${shopRoot}products/${handle}.js`)
           .then((response) => (response.ok ? response.json() : Promise.reject(new Error(handle))))));
       } catch (e) {
-        return; // Linkify's own swatches stay in place.
+        block.classList.add('dac-colours-failed'); // Linkify's own swatches come back.
+        return;
       }
       const words = products.map((p) => p.title.split(' '));
       let shared = 0;
@@ -558,7 +559,6 @@
       block.insertAdjacentHTML('beforeend', `<div class="dac-colours" data-dac-colours><p class="dac-colours__label"><span>${label}</span>${current}</p><div class="dac-colours__track">${cards}</div></div>`);
       const linkify = block.querySelector('webyze-linkify-product-colors');
       if (linkify) linkify.inert = true;
-      block.classList.add('dac-colours-ready');
 
       // As in the design, the label names the hovered colour and goes back to this product's colour after.
       const currentEl = block.querySelector('.dac-colours__current');
