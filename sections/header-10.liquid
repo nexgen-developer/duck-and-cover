@@ -503,6 +503,9 @@
     }
 
     customElements.define('sticky-header', StickyHeader);
+
+    // DAC fix: the theme fits the header menu once, which can happen before the web font arrives and widens it.
+    if (document.fonts) document.fonts.ready.then(() => window.dispatchEvent(new Event('resize')));
 {% endjavascript %}
 
 {%- if request.page_type == 'index' and section.settings.show_header_transparent -%}

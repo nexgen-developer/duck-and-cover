@@ -262,7 +262,9 @@ document.addEventListener("DOMContentLoaded", function () {
                         $toggle.addClass('visually-hidden');
                     }
 
-                    if ($win.width() <= 1024) {
+                    // DAC fix: match the CSS breakpoint, which counts the scrollbar. $win.width() does not, so between
+                    // 1025px and about 1040px the desktop menu showed while this check treated the screen as mobile.
+                    if (window.matchMedia('(max-width: 1024px)').matches) {
                         $('#HeaderNavigation').removeClass('has-resize-menu');
                         $('#HeaderNavigation-2').removeClass('has-resize-menu');
                         return;

@@ -2104,6 +2104,13 @@
             flex: 1;
         }
 
+        /* DAC fix: a centred menu that is too wide spills to both sides and runs into the logo, and the theme's
+           overflow check only looks at the right edge, so items never move into the "more" menu.
+           "safe center" keeps it centred when it fits and starts it at the left edge when it does not. */
+        .header-inline .header-bottom-center .list-menu--inline.justify-center{
+            justify-content: safe center;
+        }
+
         .header-inline .style-search-full .header-bottom--wrapper .header-bottom-right{
             width: 490px;
         }
