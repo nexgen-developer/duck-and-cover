@@ -24,6 +24,7 @@
   data-dac-pdp
   data-section-id="{{ section.id }}"
   data-money-format="{{ shop.money_format | strip_html | escape }}"
+  data-colour-cards="{{ s.colour_cards }}"
   style="
     --dac-max: {{ s.container_width }}px;
     --dac-col-gap: clamp({{ gap_min }}px, calc({{ gap_min }}px + (100vw - 1025px) * {{ s.column_gap | minus: gap_min }} / 895), {{ s.column_gap }}px);
@@ -56,6 +57,7 @@
   <script type="application/json" data-dac-product-json>
     {
       "id": {{ product.id }},
+      "handle": {{ product.handle | json }},
       "options": {{ product.options | json }},
       "selectedVariantId": {% if selected_variant %}{{ selected_variant.id }}{% else %}null{% endif %},
       "variants": [
@@ -269,6 +271,17 @@
       "type": "checkbox",
       "id": "show_mobile_thumbs",
       "label": "Show thumbnails on mobile",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Colours"
+    },
+    {
+      "type": "checkbox",
+      "id": "colour_cards",
+      "label": "Show colours as cards",
+      "info": "Uses the colours linked in the Linkify app. Desktop shows each colour's name and price, mobile shows the photos only, as in the PDP V1 design. Turn off to show Linkify's own swatches.",
       "default": true
     },
     {

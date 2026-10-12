@@ -62,6 +62,7 @@
       this.initAccordion();
       this.initSticky();
       this.initStickyAtc();
+      if (root.dataset.colourCards === 'true') this.initColours();
       this.renderDelivery();
       this.syncOptions();
       if (this.variant) this.applyVariant(this.variant, false);
@@ -504,6 +505,74 @@
         this.sheet.close();
         mainAtc.click();
       });
+    }
+
+    /* Colours. Linkify links each colour's product and draws plain swatches. The PDP V1 design shows cards with the
+       colour name and price, so the swatches Linkify renders are read and drawn again, and Linkify's own UI is hidden.
+       The colour name is the end of the product title that the colours do not share ("... T-Shirt Light Sage"). */
+    initColours() {
+      const app = this.root.querySelector('webyze-product-colors-anchor, webyze-linkify-product-colors');
+      const block = app && app.closest('.dac-pdp__blocks > *');
+      if (!block) return;
+      const build = () => {
+        const swatches = block.querySelectorAll('linkify-product-colors-swatch[data-handle]');
+        if (!swatches.length) return false;
+        this.renderColours(block, Array.from(swatches, (swatch) => swatch.dataset.handle));
+        return true;
+      };
+      if (build()) return;
+      const observer = new MutationObserver(() => { if (build()) observer.disconnect(); });
+      observer.observe(block, { childList: true, subtree: true });
+    }
+
+    async renderColours(block, handles) {
+      if (block.dacColours) return;
+      block.dacColours = true;
+      const shopRoot = (window.Shopify && window.Shopify.routes && window.Shopify.routes.root) || '/';
+      let products;
+      try {
+        products = await Promise.all(handles.map((handle) => fetch(`${shopRoot}products/${handle}.js`)
+          .then((response) => (response.ok ? response.json() : Promise.reject(new Error(handle))))));
+      } catch (e) {
+        return; // Linkify's own swatches stay in place.
+      }
+      const words = products.map((p) => p.title.split(' '));
+      let shared = 0;
+      while (words.length > 1 && words.every((w) => w.length > shared + 1 && w[shared] === words[0][shared])) shared += 1;
+      const nameOf = (index) => words[index].slice(shared).join(' ');
+      const view = new URLSearchParams(window.location.search).get('view');
+      const currentIndex = products.findIndex((p) => p.handle === this.product.handle);
+      const labelEl = block.querySelector('linkify-product-colors-label');
+      const label = escapeHtml(labelEl ? labelEl.textContent.trim() : 'Colour');
+      const cards = products.map((p, i) => {
+        const url = `${shopRoot}products/${p.handle}${view ? `?view=${encodeURIComponent(view)}` : ''}`;
+        const image = p.featured_image ? `${p.featured_image}${p.featured_image.includes('?') ? '&' : '?'}width=300` : '';
+        const compare = p.compare_at_price > p.price ? `<s class="dac-colours__compare">${formatMoney(p.compare_at_price, this.format)}</s>` : '';
+        return `<a class="dac-colours__card${i === currentIndex ? ' is-current' : ''}${p.available ? '' : ' is-sold-out'}" href="${escapeHtml(url)}"${i === currentIndex ? ' aria-current="page"' : ''}>`
+          + `<span class="dac-colours__thumb">${image ? `<img src="${escapeHtml(image)}" alt="" width="300" height="375" loading="lazy">` : ''}</span>`
+          + `<span class="dac-colours__details"><span class="dac-colours__name">${escapeHtml(nameOf(i))}</span>`
+          + `<span class="dac-colours__prices"><span class="dac-colours__price">${formatMoney(p.price, this.format)}</span>${compare}</span></span>`
+          + '</a>';
+      }).join('');
+      const current = currentIndex > -1 ? `<span class="dac-colours__sep" aria-hidden="true">:</span><span class="dac-colours__current">${escapeHtml(nameOf(currentIndex))}</span>` : '';
+      block.insertAdjacentHTML('beforeend', `<div class="dac-colours" data-dac-colours><p class="dac-colours__label"><span>${label}</span>${current}</p><div class="dac-colours__track">${cards}</div></div>`);
+      const linkify = block.querySelector('webyze-linkify-product-colors');
+      if (linkify) linkify.inert = true;
+      block.classList.add('dac-colours-ready');
+
+      // As in the design, the label names the hovered colour and goes back to this product's colour after.
+      const currentEl = block.querySelector('.dac-colours__current');
+      const track = block.querySelector('.dac-colours__track');
+      if (!currentEl) return;
+      const show = (event) => {
+        const card = event.target.closest('.dac-colours__card');
+        if (card) currentEl.textContent = card.querySelector('.dac-colours__name').textContent;
+      };
+      const reset = () => { currentEl.textContent = nameOf(currentIndex); };
+      track.addEventListener('mouseover', show);
+      track.addEventListener('focusin', show);
+      track.addEventListener('mouseleave', reset);
+      track.addEventListener('focusout', reset);
     }
 
     // Picks a value in the main picker, the change event updates price, stock, URL and the sticky bar.

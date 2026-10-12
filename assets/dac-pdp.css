@@ -883,6 +883,52 @@
   .dac-card__text { color: #555555; font-size: 15px; line-height: 1.3; }
 }
 
+/* Colours, drawn from the swatches Linkify renders (dac-pdp.js). Mobile shows the photos, desktop the PDP V1 cards. */
+.dac-colours-ready { position: relative; }
+.dac-colours-ready webyze-linkify-product-colors { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.dac-colours { display: flex; flex-direction: column; gap: 10px; }
+.dac-colours__label { display: flex; align-items: center; gap: 6px; margin: 0; color: #121212; font-size: 12px; font-weight: 700; line-height: 16px; letter-spacing: 0.8px; text-transform: uppercase; }
+.dac-colours__sep { color: #CCCCCC; letter-spacing: 0; }
+.dac-colours__current { color: #808080; }
+.dac-colours__track { display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none; }
+.dac-colours__track::-webkit-scrollbar { display: none; }
+.dac-colours__card { position: relative; display: flex; flex: 0 0 56px; flex-direction: column; color: inherit; text-decoration: none; }
+.dac-colours__thumb { display: block; aspect-ratio: 4 / 5; overflow: hidden; background: #F6F6F6; }
+.dac-colours__thumb img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.dac-colours__card.is-current .dac-colours__thumb { box-shadow: inset 0 0 0 2px #121212; }
+.dac-colours__card.is-current .dac-colours__thumb img { padding: 2px; }
+.dac-colours__card.is-sold-out .dac-colours__thumb img { opacity: 0.5; }
+.dac-colours__details { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* Sizes are the Figma values at 1920px and shrink in a straight line to 1025px, where the details column is narrowest. */
+@media (min-width: 1025px) {
+  .dac-colours { gap: 16px; padding: clamp(10px, calc(10px + (100vw - 1025px) * 5 / 895), 15px); border: 1px solid #CCCCCC; border-radius: 5px; background: #FFFFFF; }
+  .dac-colours__label { font-size: 14px; line-height: 1; letter-spacing: 0; }
+  .dac-colours__sep { color: #808080; }
+  .dac-colours__track { gap: clamp(8px, calc(8px + (100vw - 1025px) * 8 / 895), 16px); }
+  .dac-colours__card {
+    flex: 1 0 0;
+    gap: clamp(6px, calc(6px + (100vw - 1025px) * 4 / 895), 10px);
+    min-width: 72px;
+    padding: clamp(6px, calc(6px + (100vw - 1025px) * 4 / 895), 10px);
+    border: 1px solid #F5F5F4;
+    border-radius: 6px;
+    background: #FFFFFF;
+    transition: box-shadow 0.2s ease;
+  }
+  .dac-colours__card:hover { box-shadow: 0 4px 5px rgba(255, 138, 101, 0.08); }
+  .dac-colours__card.is-current { border-color: #000000; box-shadow: 0 0 0 1px #000000; }
+  .dac-colours__thumb { border-radius: 6px; }
+  .dac-colours__card.is-current .dac-colours__thumb { box-shadow: none; }
+  .dac-colours__card.is-current .dac-colours__thumb img { padding: 0; }
+  .dac-colours__details { position: static; display: flex; flex-direction: column; align-items: center; gap: 4px; width: auto; height: auto; clip: auto; line-height: normal; }
+  .dac-colours__name { max-width: 100%; overflow: hidden; color: #44403C; font-size: clamp(13px, calc(13px + (100vw - 1025px) * 3 / 895), 16px); font-weight: 500; text-overflow: ellipsis; }
+  .dac-colours__card:hover .dac-colours__name { color: #1C1917; font-weight: 600; }
+  .dac-colours__prices { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: center; column-gap: 4px; }
+  .dac-colours__price { color: #D12442; font-size: clamp(12px, calc(12px + (100vw - 1025px) * 2 / 895), 14px); font-weight: 600; }
+  .dac-colours__compare { color: #A8A29E; font-size: clamp(11px, calc(11px + (100vw - 1025px) * 1 / 895), 12px); }
+}
+
 /* Sticky add to bag. Hidden until the main Add to bag scrolls away (is-visible). */
 .dac-pdp__blocks > .shopify-block:has(> .dac-sticky) { display: contents; }
 .dac-visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
