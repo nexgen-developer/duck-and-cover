@@ -40,6 +40,9 @@
     {%- if bs.button_label != blank -%}
       {%- if bs.button_link != blank -%}
         <a class="dac-signup__button" href="{{ bs.button_link }}">{{ bs.button_label | escape }}</a>
+      {%- elsif bs.button_action == 'popup' -%}
+        {%- comment -%} The popup app opens on a click on .dac-signup-popup (OptiMonk "On click to a specific area"). The button holds text only, because OptiMonk ignores clicks on child elements. {%- endcomment -%}
+        <button type="button" class="dac-signup__button dac-signup-popup">{{ bs.button_label | escape }}</button>
       {%- else -%}
         <button type="button" class="dac-signup__button" data-dac-signup-scroll>{{ bs.button_label | escape }}</button>
       {%- endif -%}
@@ -71,10 +74,21 @@
       "default": "Sign up"
     },
     {
+      "type": "select",
+      "id": "button_action",
+      "label": "Button action",
+      "options": [
+        { "value": "scroll", "label": "Scroll to the footer sign up" },
+        { "value": "popup", "label": "Open a popup app" }
+      ],
+      "default": "popup",
+      "info": "For a popup, add .dac-signup-popup as the CSS selector in the popup app's click trigger. In OptiMonk that's \"On click to a specific area\"."
+    },
+    {
       "type": "url",
       "id": "button_link",
       "label": "Button link",
-      "info": "Leave empty to scroll to the newsletter sign up in the footer."
+      "info": "Takes the place of the button action. Leave empty to use the action above."
     },
     {
       "type": "text",
