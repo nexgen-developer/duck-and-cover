@@ -256,6 +256,7 @@
       "block_order": [
         "image_AUMAk9"
       ],
+      "disabled": true,
       "name": "Clearance",
       "settings": {
         "show_slideshow": true,
@@ -339,6 +340,7 @@
       "block_order": [
         "b99e69ec-5153-469d-93c9-9e8ce3f8787e"
       ],
+      "disabled": true,
       "name": "BF WEEK Promo",
       "settings": {
         "show_slideshow": true,
@@ -422,6 +424,7 @@
       "block_order": [
         "image_RgXGQj"
       ],
+      "disabled": true,
       "name": "BF WEEK - Sign up",
       "settings": {
         "show_slideshow": true,
@@ -542,14 +545,14 @@
         "image_y93ahV": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/DAC-BF-SIGN-UP-DESKTOP.jpg",
-            "mobile_image": "shopify://shop_images/DAC-BF-SIGN-UP-MOB.jpg",
+            "image": "shopify://shop_images/DAC-BF-sign-up-desktop_0e6e5e74-2891-455c-b681-e75beed36124.jpg",
+            "mobile_image": "shopify://shop_images/DAC-BF-sign-up-mobile.jpg",
             "title": "",
             "subtitle": "",
             "text": "",
             "btn": "2",
             "btn_text": "",
-            "link": "",
+            "link": "shopify://pages/subscribe",
             "container_content": "1570",
             "position": "left",
             "alignment": "left",
@@ -589,7 +592,6 @@
       "block_order": [
         "image_y93ahV"
       ],
-      "disabled": true,
       "name": "BF MONTH - Sign up",
       "settings": {
         "show_slideshow": true,
