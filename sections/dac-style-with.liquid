@@ -21,7 +21,7 @@
 -%}
 
 <section
-  class="dac-style{% if look != blank %} dac-style--has-look{% endif %}"
+  class="dac-style{% if look != blank %} dac-style--has-look{% endif %}{% unless s.show_rating %} dac-cards--no-rating{% endunless %}"
   data-dac-style
   data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit={{ s.products_count }}&intent=complementary"
   data-product-handle="{{ product.handle }}"
@@ -29,7 +29,7 @@
   {% unless request.design_mode %}hidden{% endunless %}
   style="
     --dac-sw-count: {{ s.products_count }};
-    --dac-sw-title: {{ s.title_size }}px;
+    --dac-sw-title: clamp({{ s.title_size_mobile }}px, calc(100vw * {{ s.title_size }} / 1920), {{ s.title_size }}px);
     --dac-sw-title-m: {{ s.title_size_mobile }}px;
     --dac-sw-title-color: {{ s.title_color }};
     --dac-sw-badge-bg: {{ s.badge_bg }};
@@ -124,6 +124,13 @@
     },
     {
       "type": "checkbox",
+      "id": "show_rating",
+      "label": "Show star rating",
+      "info": "Judge.me rating and review count under the product name.",
+      "default": false
+    },
+    {
+      "type": "checkbox",
       "id": "show_badge",
       "label": "Show sale badge",
       "default": true
@@ -174,6 +181,7 @@
       "type": "range",
       "id": "title_size",
       "label": "Heading size, desktop",
+      "info": "On a 1920px screen. Narrower screens scale it down in proportion, never below the mobile size.",
       "min": 20,
       "max": 60,
       "step": 1,
@@ -208,7 +216,7 @@
       "max": 100,
       "step": 2,
       "unit": "px",
-      "default": 0
+      "default": 40
     },
     {
       "type": "range",
@@ -218,7 +226,7 @@
       "max": 100,
       "step": 2,
       "unit": "px",
-      "default": 30
+      "default": 32
     },
     {
       "type": "range",

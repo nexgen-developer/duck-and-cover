@@ -779,6 +779,8 @@
 .dac-card__size[aria-pressed="true"] { font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
 .dac-card__info { display: flex; flex-direction: column; gap: 8px; }
 .dac-card__rating { --dac-star-color: #121212; display: flex; align-items: center; gap: 3px; color: #808080; font-size: 11px; line-height: 15px; }
+/* Style with and Why not add hide the card rating unless "Show star rating" is on. */
+.dac-cards--no-rating .dac-card__rating { display: none; }
 .dac-card__rating .dac-rating__base,
 .dac-card__rating .dac-rating__fill { gap: 1px; }
 .dac-card__rating .dac-icon { flex: 0 0 auto; width: calc(11px * 19 / 18); height: 11px; overflow: visible; }

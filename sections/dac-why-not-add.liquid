@@ -16,7 +16,7 @@
 -%}
 
 <section
-  class="dac-wna"
+  class="dac-wna{% unless s.show_rating %} dac-cards--no-rating{% endunless %}"
   data-dac-wna
   data-url="{{ routes.root_url }}collections/all?sort_by=best-selling&section_id=dac-best-sellers"
   data-exclude="{{ exclude | escape }}"
@@ -27,7 +27,7 @@
   data-error="{{ s.error_text | escape }}"
   data-badge="{% if s.show_badge %}{{ s.badge_text | escape }}{% endif %}"
   style="
-    --dac-sw-title: {{ s.title_size }}px;
+    --dac-sw-title: clamp({{ s.title_size_mobile }}px, calc(100vw * {{ s.title_size }} / 1920), {{ s.title_size }}px);
     --dac-sw-title-m: {{ s.title_size_mobile }}px;
     --dac-sw-title-color: {{ s.title_color }};
     --dac-sw-badge-bg: {{ s.badge_bg }};
@@ -119,6 +119,13 @@
     },
     {
       "type": "checkbox",
+      "id": "show_rating",
+      "label": "Show star rating",
+      "info": "Judge.me rating and review count under the product name.",
+      "default": false
+    },
+    {
+      "type": "checkbox",
       "id": "show_badge",
       "label": "Show sale badge",
       "default": true
@@ -180,6 +187,7 @@
       "type": "range",
       "id": "title_size",
       "label": "Heading size, desktop",
+      "info": "On a 1920px screen. Narrower screens scale it down in proportion, never below the mobile size.",
       "min": 20,
       "max": 60,
       "step": 1,
@@ -214,7 +222,7 @@
       "max": 100,
       "step": 2,
       "unit": "px",
-      "default": 0
+      "default": 32
     },
     {
       "type": "range",
@@ -224,7 +232,7 @@
       "max": 100,
       "step": 2,
       "unit": "px",
-      "default": 20
+      "default": 32
     },
     {
       "type": "range",
