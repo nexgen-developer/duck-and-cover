@@ -461,8 +461,8 @@
         "image_f7Gpew": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/DAC-BF-WD-PROMO-DESKTOP.jpg",
-            "mobile_image": "shopify://shop_images/DAC-BF-WD-PROMO-MOB.jpg",
+            "image": "shopify://shop_images/DAC-BF-PROMO-WD-DESKTOP_4e91cbf9-9e7f-4596-a024-d342d52dfdd8.jpg",
+            "mobile_image": "shopify://shop_images/DAC-BF-PROMO-WD-MOBILE_11642eba-7121-48e8-98f9-c5653cf29f44.jpg",
             "title": "",
             "subtitle": "",
             "text": "",
@@ -508,7 +508,6 @@
       "block_order": [
         "image_f7Gpew"
       ],
-      "disabled": true,
       "name": "BF MONTH Promo",
       "settings": {
         "show_slideshow": true,
