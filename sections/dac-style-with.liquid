@@ -1,7 +1,8 @@
 {%- comment -%}
   Style with: products picked for each product in Shopify's Search & Discovery app (Complementary products).
   The cards load after the page through the Product Recommendations API. A product with none picked
-  keeps the section hidden on the store. The large look photo is one of the product's own images.
+  shows the section's fallback list instead, or keeps the section hidden when that list is empty.
+  The large look photo is one of the product's own images.
 {%- endcomment -%}
 {{ 'dac-pdp.css' | asset_url | stylesheet_tag }}
 <script src="{{ 'dac-pdp.js' | asset_url }}" defer="defer"></script>
@@ -23,6 +24,8 @@
   class="dac-style{% if look != blank %} dac-style--has-look{% endif %}"
   data-dac-style
   data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit={{ s.products_count }}&intent=complementary"
+  data-product-handle="{{ product.handle }}"
+  data-count="{{ s.products_count }}"
   {% unless request.design_mode %}hidden{% endunless %}
   style="
     --dac-sw-count: {{ s.products_count }};
@@ -50,6 +53,12 @@
       {%- if recommendations.performed? and recommendations.products_count > 0 -%}
         {%- for recommended in recommendations.products -%}
           {% render 'dac-style-card', product: recommended, s: s, section_id: section.id %}
+        {%- endfor -%}
+      {%- elsif recommendations.performed? and s.fallback_products.count > 0 -%}
+        {%- comment -%} One extra card, the script drops the product being viewed and trims to the count. {%- endcomment -%}
+        {%- assign fallback_limit = s.products_count | plus: 1 -%}
+        {%- for fallback in s.fallback_products limit: fallback_limit -%}
+          {% render 'dac-style-card', product: fallback, s: s, section_id: section.id %}
         {%- endfor -%}
       {%- elsif request.design_mode -%}
         <p class="dac-editor-note">{{ s.empty_note | escape }}</p>
@@ -85,6 +94,13 @@
       "max": 4,
       "step": 1,
       "default": 3
+    },
+    {
+      "type": "product_list",
+      "id": "fallback_products",
+      "label": "Products when none are picked",
+      "info": "Shown on products with no Complementary products in Search & Discovery. The product being viewed is left out. Leave empty to hide the section on those products.",
+      "limit": 6
     },
     {
       "type": "range",

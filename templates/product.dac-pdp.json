@@ -218,7 +218,13 @@
     },
     "style_with": {
       "type": "dac-style-with",
-      "settings": {}
+      "settings": {
+        "fallback_products": [
+          "moreshore-chino-shorts-navy",
+          "kelvyn-relaxed-fit-jeans-mid-wash",
+          "brammers-v2-hoodie-raisin"
+        ]
+      }
     },
     "why_not_add": {
       "type": "dac-why-not-add",

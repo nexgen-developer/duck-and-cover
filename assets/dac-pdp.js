@@ -649,7 +649,12 @@
       fetchSection(root.dataset.url)
         .then((doc) => {
           const cards = doc.querySelector('[data-dac-style-cards]');
-          if (!cards || !cards.querySelector('[data-dac-card]')) return;
+          if (!cards) return;
+          // The fallback list is the same on every product, so it can hold the product being viewed.
+          cards.querySelectorAll(`[data-dac-card][data-handle="${root.dataset.productHandle}"]`).forEach((card) => card.remove());
+          const found = Array.from(cards.querySelectorAll('[data-dac-card]'));
+          if (!found.length) return;
+          found.slice(Number(root.dataset.count) || found.length).forEach((card) => card.remove());
           root.querySelector('[data-dac-style-cards]').replaceChildren(...cards.childNodes);
           root.hidden = false;
         })
