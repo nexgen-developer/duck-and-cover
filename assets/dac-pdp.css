@@ -917,7 +917,8 @@
     transition: box-shadow 0.2s ease;
   }
   .dac-colours__card:hover { box-shadow: 0 4px 5px rgba(255, 138, 101, 0.08); }
-  .dac-colours__card.is-current { border-color: #000000; box-shadow: 0 0 0 1px #000000; }
+  /* The 2px ring sits inside the card. The scrolling track clips anything drawn outside it. */
+  .dac-colours__card.is-current { border-color: #000000; box-shadow: inset 0 0 0 1px #000000; }
   .dac-colours__thumb { border-radius: 6px; }
   .dac-colours__card.is-current .dac-colours__thumb { box-shadow: none; }
   .dac-colours__card.is-current .dac-colours__thumb img { padding: 0; }
