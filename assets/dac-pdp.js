@@ -466,8 +466,9 @@
       this.sheet = this.root.querySelector('[data-dac-sheet]');
       // The root reaches far below the screen, so the button only stops intersecting once it is above the screen.
       // A jump from below the fold straight past the button (anchor link, restored scroll) still fires.
+      // Browsers ignore rootMargin inside a cross-origin frame (the theme editor preview), hence the position check.
       new IntersectionObserver(([entry]) => {
-        const show = !entry.isIntersecting;
+        const show = !entry.isIntersecting && entry.boundingClientRect.bottom < 0;
         bar.classList.toggle('is-visible', show);
         bar.inert = !show;
       }, { rootMargin: '0px 0px 10000px 0px' }).observe(mainAtc);
