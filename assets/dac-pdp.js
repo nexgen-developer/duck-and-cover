@@ -445,16 +445,21 @@
       });
     }
 
-    /* Sticky details. CSS needs the theme header height, and how far down the column Add to bag ends, to pick where to stick. */
+    /* Sticky columns. CSS needs the theme header height, how far down the details Add to bag ends, and the gallery
+       height, to pick where each column sticks. */
     initSticky() {
       const info = this.root.querySelector('.dac-pdp__info');
       if (!info || !this.root.classList.contains('dac-pdp--sticky-info') || !('ResizeObserver' in window)) return;
       const header = document.querySelector('.shopify-section-header');
       const atc = info.querySelector('[data-dac-atc]');
-      new ResizeObserver(() => {
+      const media = this.root.querySelector('.dac-pdp__media');
+      const observer = new ResizeObserver(() => {
         if (atc) info.style.setProperty('--dac-atc-end', `${atc.getBoundingClientRect().bottom - info.getBoundingClientRect().top}px`);
+        if (media) media.style.setProperty('--dac-media-h', `${media.offsetHeight}px`);
         if (header) this.root.style.setProperty('--dac-header-h', `${header.offsetHeight}px`);
-      }).observe(info);
+      });
+      observer.observe(info);
+      if (media) observer.observe(media);
     }
 
     /* Sticky add to bag. Shows once the main button has scrolled up out of view, and drives the main picker and button. */

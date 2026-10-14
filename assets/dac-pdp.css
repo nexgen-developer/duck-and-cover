@@ -579,6 +579,15 @@
   /* Halo slides the header away while scrolling down (body.scroll-down) and back on scroll up, in 0.15s.
      The details follow it, so the gap above them stays 20px either way. */
   body.scroll-down .dac-pdp--sticky-info .dac-pdp__info { --dac-header-h: 0px; }
+  /* The gallery sticks too, for products with few photos where the details are the longer column. A grid item only
+     sticks inside its own row, so the longer column always scrolls normally. A gallery taller than the screen sticks
+     by its bottom edge, so every photo still scrolls into view first. */
+  .dac-pdp--sticky-info .dac-pdp__media {
+    position: sticky;
+    top: min(var(--dac-header-h, 0px), calc(100vh - var(--dac-media-h, 0px)));
+    transition: top 0.15s ease-out;
+  }
+  body.scroll-down .dac-pdp--sticky-info .dac-pdp__media { --dac-header-h: 0px; }
   .dac-block { margin-top: var(--dac-mt, 0px); }
 
   .dac-gallery { padding: 0; }
@@ -920,9 +929,11 @@
   .dac-colours { gap: 16px; padding: clamp(10px, calc(10px + (100vw - 1025px) * 5 / 895), 15px); border: 1px solid #CCCCCC; border-radius: 5px; background: #FFFFFF; }
   .dac-colours__label { font-size: 14px; line-height: 1; letter-spacing: 0; }
   .dac-colours__sep { color: #808080; }
-  .dac-colours__track { gap: clamp(8px, calc(8px + (100vw - 1025px) * 8 / 895), 16px); }
+  .dac-colours__track { --dac-colours-gap: clamp(8px, calc(8px + (100vw - 1025px) * 8 / 895), 16px); gap: var(--dac-colours-gap); }
+  /* A card is always a quarter of the row, as in the four colour design, so one to three colours keep that size.
+     Five or more shrink to fit, down to the min width. */
   .dac-colours__card {
-    flex: 1 0 0;
+    flex: 0 1 calc((100% - 3 * var(--dac-colours-gap)) / 4);
     gap: clamp(6px, calc(6px + (100vw - 1025px) * 4 / 895), 10px);
     min-width: 72px;
     padding: clamp(6px, calc(6px + (100vw - 1025px) * 4 / 895), 10px);
