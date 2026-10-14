@@ -16,6 +16,14 @@
     endif
   endif
   if show_badge
+    capture flags
+      render 'dac-promo-flags', product: product
+    endcapture
+    if flags contains 'no-save'
+      assign show_badge = false
+    endif
+  endif
+  if show_badge
     assign half_compare = badge_variant.compare_at_price | divided_by: 2
     assign save_percent = badge_variant.compare_at_price | minus: badge_variant.price | times: 100 | plus: half_compare | divided_by: badge_variant.compare_at_price
     assign badge_text = s.sale_badge_text | replace: '[percent]', save_percent

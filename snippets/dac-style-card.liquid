@@ -13,6 +13,16 @@
     assign half_compare = compare | divided_by: 2
     assign save_percent = compare | minus: card_variant.price | times: 100 | plus: half_compare | divided_by: compare
   endif
+  assign show_save = false
+  if on_sale and s.show_badge
+    assign show_save = true
+    capture flags
+      render 'dac-promo-flags', product: product
+    endcapture
+    if flags contains 'no-save'
+      assign show_save = false
+    endif
+  endif
   assign pick_size = false
   if product.has_only_default_variant == false and product.options.size == 1
     assign pick_size = true
@@ -30,7 +40,7 @@
     </a>
     {%- if badge != blank -%}
       <span class="dac-card__badge">{{ badge | escape }}</span>
-    {%- elsif on_sale and s.show_badge -%}
+    {%- elsif show_save -%}
       <span class="dac-card__badge" data-save="{{ save_percent }}">{{ s.badge_text | replace: '[percent]', save_percent | escape }}</span>
     {%- endif -%}
     {%- if pick_size -%}

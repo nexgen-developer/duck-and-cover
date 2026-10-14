@@ -1,6 +1,7 @@
 {%- comment -%}
   Sign up offer. Shows only when the code discount on this product is lower than the
-  sign up discount, so the two offers never undercut each other.
+  sign up discount, so the two offers never undercut each other. Clearance products show the
+  Clearance block instead.
 {%- endcomment -%}
 {%- liquid
   assign p = closest.product | default: product
@@ -23,6 +24,13 @@
       assign offer_blocked = true
     endif
   endfor
+
+  capture flags
+    render 'dac-promo-flags', product: p
+  endcapture
+  if flags contains 'clearance'
+    assign offer_blocked = true
+  endif
 
   assign active_percent = 0
   if ss.show_code_price and code != blank and code_percent > 0
@@ -94,7 +102,7 @@
       "type": "text",
       "id": "hidden_note",
       "label": "Note shown in the editor when the block is hidden",
-      "default": "Hidden on this product because the code discount is equal or higher than the sign up discount."
+      "default": "Hidden on this product. The offer only shows when the code discount is lower than the sign up discount, and never on clearance products."
     },
     {
       "type": "header",

@@ -44,6 +44,10 @@
           "type": "dac-signup",
           "settings": {}
         },
+        "clearance": {
+          "type": "dac-clearance",
+          "settings": {}
+        },
         "colours": {
           "type": "shopify://apps/linkify-product-colors/blocks/app-block/1fdc741b-f4ed-4b8c-aee7-aa5e4ad76aa8",
           "settings": {
@@ -166,6 +170,7 @@
         "title",
         "price",
         "signup",
+        "clearance",
         "colours",
         "variant_picker",
         "buy_buttons",

@@ -5821,5 +5821,34 @@
         "content": "t:settings_schema.app_partner.settings.paragraph__3.content"
       }
     ]
+  },
+  {
+    "name": "Clearance and Save badges",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "Used by the new product page (dac-pdp) and its product cards."
+      },
+      {
+        "type": "text",
+        "id": "dac_clearance_tags",
+        "label": "Clearance tags",
+        "info": "Products with one of these tags count as clearance. They show the Clearance block instead of the sign up offer, and no Save badge. Separate tags with commas.",
+        "default": "VendorClearance"
+      },
+      {
+        "type": "checkbox",
+        "id": "dac_clearance_hide_code",
+        "label": "Hide the price with code on clearance products",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "dac_no_save_vendors",
+        "label": "Vendors without Save badges",
+        "info": "Save badges are also hidden for these vendors. Separate vendors with commas.",
+        "default": "Clearance"
+      }
+    ]
   }
 ]

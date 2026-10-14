@@ -282,6 +282,10 @@
   background: var(--dac-bg);
 }
 .dac-signup__text { color: var(--dac-color); font-size: var(--dac-fs-m); font-weight: 500; line-height: 1.35; }
+/* Clearance notice, the sign up box with a heading over one line of text. */
+.dac-clearance { flex-direction: column; align-items: flex-start; justify-content: center; gap: 2px; }
+.dac-clearance__title { color: var(--dac-title-color); font-size: var(--dac-title-fs-m); font-weight: 700; line-height: 1.2; }
+@media (min-width: 1025px) { .dac-clearance__title { font-size: var(--dac-title-fs); } }
 .dac-signup__button {
   flex: 0 0 auto;
   display: inline-flex;

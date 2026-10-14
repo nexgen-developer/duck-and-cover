@@ -23,6 +23,14 @@
         assign code_on = false
       endif
     endfor
+    if settings.dac_clearance_hide_code
+      capture flags
+        render 'dac-promo-flags', product: p
+      endcapture
+      if flags contains 'clearance'
+        assign code_on = false
+      endif
+    endif
   endif
 
   assign keep_percent = 100 | minus: code_percent

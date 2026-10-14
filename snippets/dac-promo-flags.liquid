@@ -1,0 +1,34 @@
+{%- comment -%}
+  Prints "clearance" and "no-save" for a product, from Theme settings > Clearance and Save badges.
+  Clearance products show the Clearance block instead of the sign up offer and never show a Save badge.
+  Usage: {% capture flags %}{% render 'dac-promo-flags', product: p %}{% endcapture %}, then `flags contains 'clearance'`.
+{%- endcomment -%}
+{%- liquid
+  assign clearance = false
+  assign no_save = false
+
+  assign clearance_tags = settings.dac_clearance_tags | split: ','
+  for tag in clearance_tags
+    assign tag_clean = tag | strip
+    if tag_clean != blank and product.tags contains tag_clean
+      assign clearance = true
+      assign no_save = true
+    endif
+  endfor
+
+  assign vendor_key = product.vendor | downcase | strip
+  assign no_save_vendors = settings.dac_no_save_vendors | downcase | split: ','
+  for no_save_vendor in no_save_vendors
+    assign vendor_clean = no_save_vendor | strip
+    if vendor_clean != blank and vendor_clean == vendor_key
+      assign no_save = true
+    endif
+  endfor
+
+  if clearance
+    echo 'clearance '
+  endif
+  if no_save
+    echo 'no-save'
+  endif
+-%}
