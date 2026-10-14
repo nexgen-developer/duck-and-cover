@@ -1,4 +1,6 @@
-<div class="product-item" data-product-id="{{ product.id }}" data-json-product='{"title": {{ product.title | json | escape }}, "id": {{ product.id }}, "url": {{ product.url | json }}, "price_min": {{ product.price_min | json }},  "handle": "{{ product.handle }}", "media": {{ product.media | json }}, "variants": {{ product.variants | json | escape }}}'>
+{%- comment -%} DAC: clearance and no-save classes for the collection card rules in dac-collection.css. {%- endcomment -%}
+{%- capture dac_flags -%}{% render 'dac-promo-flags', product: product %}{%- endcapture -%}
+<div class="product-item{% if dac_flags contains 'clearance' %} dac-card-clearance{% endif %}{% if dac_flags contains 'no-save' %} dac-card-no-save{% endif %}" data-product-id="{{ product.id }}" data-json-product='{"title": {{ product.title | json | escape }}, "id": {{ product.id }}, "url": {{ product.url | json }}, "price_min": {{ product.price_min | json }},  "handle": "{{ product.handle }}", "media": {{ product.media | json }}, "variants": {{ product.variants | json | escape }}}'>
     <div class="card style-1">
         <div class="card-product{% if product.featured_media == nil %} card--text-only card--soft{% endif %}">
             <div class="card-product__wrapper">

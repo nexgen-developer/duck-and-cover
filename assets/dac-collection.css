@@ -1,0 +1,5 @@
+/* Collection cards (Andrew, 13 Oct). Only clearance keeps the red sale price. Other sale prices are grey like the
+   compare at price, without the line. Products marked no-save in Theme settings > Clearance and Save badges drop the
+   -X% badge. The classes come from product-card-style-1 and globo.filter.product (dac-promo-flags). */
+.product-item:not(.dac-card-clearance) .card-price .price-item--sale { color: #808080; }
+.product-item.dac-card-no-save .halo-productBadges .sale-badge { display: none; }

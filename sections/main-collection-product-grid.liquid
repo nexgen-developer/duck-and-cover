@@ -1,5 +1,7 @@
 {{ 'component-grid.css' | asset_url | stylesheet_tag }}
 {{ 'component-product-listing.css' | asset_url | stylesheet_tag }}
+{%- comment -%} DAC: grey sale prices outside clearance and no -X% badge on no-save products. {%- endcomment -%}
+{{ 'dac-collection.css' | asset_url | stylesheet_tag }}
 
 {%- liquid
     assign colors_bg = section.settings.colors_bg
