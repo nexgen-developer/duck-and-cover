@@ -136,9 +136,10 @@
   line-height: 15px;
   pointer-events: none;
 }
+/* Left aligned with a 6px gap. space-between spread products with only a few photos across the whole width. */
 .dac-gallery__thumbs {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   gap: 6px;
   margin-top: 10px;
   overflow-x: auto;
