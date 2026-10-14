@@ -39,9 +39,18 @@
   {% endfor %}
 
 <li class="product">
-           {%- comment -%} DAC: same clearance and no-save classes as product-card-style-1, see dac-collection.css. {%- endcomment -%}
-           {%- capture dac_flags -%}{% render 'dac-promo-flags', product: product %}{%- endcapture -%}
-           <div class="product-item{% if dac_flags contains 'clearance' %} dac-card-clearance{% endif %}{% if dac_flags contains 'no-save' %} dac-card-no-save{% endif %}" data-product-id="{{ product.id }}" data-json-product='{"title": {{ product.title | json | escape }}, "id": {{ product.id }}, "url": {{ product.url | json }}, "price_min": {{ product.price_min | json }},  "handle": "{{ product.handle }}", "media": {{ product.media | json }}, "variants": {{ product.variants | json | escape }}}'>
+{% endraw %}{%- comment -%}
+  DAC: same clearance and no-save classes as product-card-style-1, see dac-collection.css. Globo renders this template
+  in the browser with its own data, so theme snippets can't run here. Shopify writes the tag and vendor lists from
+  Theme settings > Clearance and Save badges into the template as plain text, and Globo checks each product against them.
+{%- endcomment -%}
+{%- assign dac_tag_list = settings.dac_clearance_tags | split: ',' -%}
+{%- assign dac_vendor_list = settings.dac_no_save_vendors | downcase | split: ',' -%}
+{% raw %}{% assign dac_clearance = false %}{% assign dac_no_save = false %}{% assign dac_vendor = product.vendor | downcase %}{% endraw %}
+{%- for dac_tag in dac_tag_list -%}{%- assign dac_tag_clean = dac_tag | strip | remove: "'" -%}{%- if dac_tag_clean != blank -%}{% raw %}{% if product.tags contains '{% endraw %}{{ dac_tag_clean }}{% raw %}' %}{% assign dac_clearance = true %}{% assign dac_no_save = true %}{% endif %}{% endraw %}{%- endif -%}{%- endfor -%}
+{%- for dac_v in dac_vendor_list -%}{%- assign dac_v_clean = dac_v | strip | remove: "'" -%}{%- if dac_v_clean != blank -%}{% raw %}{% if dac_vendor == '{% endraw %}{{ dac_v_clean }}{% raw %}' %}{% assign dac_no_save = true %}{% endif %}{% endraw %}{%- endif -%}{%- endfor -%}
+{% raw %}
+           <div class="product-item{% if dac_clearance %} dac-card-clearance{% endif %}{% if dac_no_save %} dac-card-no-save{% endif %}" data-product-id="{{ product.id }}" data-json-product='{"title": {{ product.title | json | escape }}, "id": {{ product.id }}, "url": {{ product.url | json }}, "price_min": {{ product.price_min | json }},  "handle": "{{ product.handle }}", "media": {{ product.media | json }}, "variants": {{ product.variants | json | escape }}}'>
     <div class="card style-1">
         <div class="card-product{% if product.featured_media == nil %} card--text-only card--soft{% endif %}">
             <div class="card-product__wrapper">

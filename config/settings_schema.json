@@ -5834,7 +5834,7 @@
         "id": "dac_clearance_tags",
         "label": "Clearance tags",
         "info": "Products with one of these tags count as clearance. They show the Clearance block instead of the sign up offer, and no Save badge. Separate tags with commas.",
-        "default": "VendorClearance"
+        "default": "VendorClearance, VendorSpecialOffer"
       },
       {
         "type": "checkbox",
