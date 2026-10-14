@@ -99,7 +99,6 @@
         this.setVariantInput(null);
       }
       this.syncOptions();
-      this.updateNudge();
     }
 
     syncOptions() {
@@ -661,15 +660,12 @@
       if (!nudge) return;
       const threshold = Number(block.dataset.threshold || 0);
       if (!threshold) return;
-      const prices = this.product.variants.filter((v) => v.available).map((v) => v.price);
-      const itemPrice = this.variant ? this.variant.price : (prices.length ? Math.min(...prices) : 0);
       const root = (window.Shopify && window.Shopify.routes && window.Shopify.routes.root) || '/';
       fetch(`${root}cart.js`, { headers: { Accept: 'application/json' } })
         .then((response) => response.json())
         .then((cart) => {
-          // Count this item once: shown as if added, unless it is already in the cart.
-          const inCart = (cart.items || []).some((item) => (this.variant ? item.variant_id === this.variant.id : item.product_id === this.product.id));
-          const total = Number(cart.total_price || 0) + (inCart ? 0 : itemPrice);
+          // Only what is in the cart counts, so an empty cart shows the full amount and every product page agrees.
+          const total = Number(cart.total_price || 0);
           const remaining = threshold - total;
           const textEl = nudge.querySelector('[data-dac-nudge-text]');
           const bar = nudge.querySelector('[data-dac-nudge-bar]');

@@ -1,7 +1,7 @@
 {%- comment -%}
   Delivery estimate. The receive by date is worked out in the browser from the cut off,
   dispatch days, delivery working days and bank holidays below, in UK time.
-  The free delivery nudge reads the cart and adds the item on the page.
+  The free delivery nudge reads the cart total only and updates after every cart change.
 {%- endcomment -%}
 {%- liquid
   assign bs = block.settings
