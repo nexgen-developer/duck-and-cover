@@ -69,13 +69,17 @@
     Halo centres the header in its own container (1370px), so on wide screens the logo sat far in from the page.
     The PDP V1 Figma puts the logo and the header icons on the same 40px edge as this breadcrumb and the footer.
     The header takes the breadcrumb's left padding on both sides, desktop only, on this template only.
+    Past the 1920px Figma frame it stays 1920px wide in the middle, like the rest of the template (dac-pdp.css).
+    The paddings need !important because Halo's base.css forces 15px with !important from 2000px.
   {%- endcomment -%}
   <style>
     @media (min-width: 1025px) {
       .shopify-section-header :is(.header-top, .header-bottom) > .container {
-        max-width: none !important;
-        padding-left: clamp({{ left_min }}px, calc({{ left_min }}px + (100vw - 1025px) * {{ s.padding_left | minus: left_min }} / 895), {{ s.padding_left }}px);
-        padding-right: clamp({{ left_min }}px, calc({{ left_min }}px + (100vw - 1025px) * {{ s.padding_left | minus: left_min }} / 895), {{ s.padding_left }}px);
+        box-sizing: border-box;
+        max-width: 1920px !important;
+        margin-inline: auto;
+        padding-left: clamp({{ left_min }}px, calc({{ left_min }}px + (100vw - 1025px) * {{ s.padding_left | minus: left_min }} / 895), {{ s.padding_left }}px) !important;
+        padding-right: clamp({{ left_min }}px, calc({{ left_min }}px + (100vw - 1025px) * {{ s.padding_left | minus: left_min }} / 895), {{ s.padding_left }}px) !important;
       }
     }
   </style>

@@ -1100,3 +1100,12 @@ body:has(.dac-sticky.is-visible:not(.dac-sticky--no-mobile)) :is(.pushowl-simple
   .dac-sticky__select .dac-icon { position: absolute; top: 50%; right: 16px; width: 14px; height: 14px; color: #111111; pointer-events: none; transform: translateY(-50%); }
   .dac-sticky__atc { width: 240px; height: 56px; font-size: 13px; line-height: 18px; letter-spacing: 1.2px; }
 }
+
+/* Wide screens. The PDP V1 frame is 1920px wide. Past that the template keeps the 1920px layout in the middle of the
+   screen, instead of sitting on the left (the header follows, see dac-breadcrumb). Nothing changes up to 1920px. */
+@media (min-width: 1921px) {
+  .dac-crumbs,
+  .dac-style,
+  .dac-wna { box-sizing: border-box; max-width: 1920px; margin-inline: auto; }
+  .dac-pdp__inner { margin-inline: auto; }
+}
