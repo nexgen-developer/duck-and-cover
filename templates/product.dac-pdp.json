@@ -12,6 +12,9 @@
     "breadcrumb": {
       "type": "dac-breadcrumb",
       "settings": {
+        "home_label": "Home",
+        "parent_label": "",
+        "parent_link": "",
         "category_collections": [
           "all-t-shirts",
           "all-hoodies",
@@ -22,7 +25,22 @@
           "all-outerwear",
           "all-underwear",
           "all-knits"
-        ]
+        ],
+        "show_mid_mobile": false,
+        "aria_label": "Breadcrumb",
+        "text_size": 14,
+        "text_size_mobile": 11,
+        "text_color": "#000000",
+        "link_color_mobile": "#808080",
+        "separator_color_mobile": "#cccccc",
+        "current_color_mobile": "#121212",
+        "padding_top": 16,
+        "padding_bottom": 16,
+        "padding_left": 40,
+        "align_header": true,
+        "padding_top_mobile": 14,
+        "padding_bottom_mobile": 14,
+        "side_padding_mobile": 10
       }
     },
     "main": {
@@ -30,23 +48,95 @@
       "blocks": {
         "rating": {
           "type": "dac-rating",
-          "settings": {}
+          "settings": {
+            "label": "reviews",
+            "label_one": "review",
+            "anchor": "#judgeme_product_reviews",
+            "empty_note": "No reviews yet. This block stays hidden on the store until the product has a review.",
+            "star_size": 18,
+            "star_size_mobile": 14,
+            "star_color": "#111111",
+            "text_size": 14,
+            "text_size_mobile": 12,
+            "text_color": "#333333",
+            "spacing_top": 0,
+            "spacing_top_mobile": 0
+          },
+          "blocks": {}
         },
         "title": {
           "type": "dac-title",
-          "settings": {}
+          "settings": {
+            "tag": "h1",
+            "size": 40,
+            "size_mobile": 20,
+            "weight": "500",
+            "weight_mobile": "700",
+            "line_height": 100,
+            "line_height_mobile": 150,
+            "transform": "none",
+            "color": "#121212",
+            "spacing_top": -10,
+            "spacing_top_mobile": -10
+          },
+          "blocks": {}
         },
         "price": {
           "type": "dac-price",
-          "settings": {}
+          "settings": {
+            "without_code_label": "without code",
+            "chip_text": "when you use code [code] at checkout",
+            "copy_label": "copy",
+            "copied_label": "copied",
+            "helper_text": "Code isn't applied automatically, enter it at checkout",
+            "hero_size": 48,
+            "hero_size_mobile": 28,
+            "hero_weight": "900",
+            "hero_weight_mobile": "700",
+            "sale_color": "#d12442",
+            "regular_color": "#121212",
+            "small_size": 15,
+            "small_size_mobile": 14,
+            "muted_color": "#6b6b6b",
+            "spacing_top": 0,
+            "spacing_top_mobile": -10
+          },
+          "blocks": {}
         },
         "signup": {
           "type": "dac-signup",
-          "settings": {}
+          "settings": {
+            "text": "Sign up and get [percent]% off instead",
+            "button_label": "Sign up",
+            "button_action": "popup",
+            "button_link": "",
+            "hidden_note": "Hidden on this product. The offer only shows when the code discount is lower than the sign up discount, and never on clearance products.",
+            "background": "#f4f4f4",
+            "text_color": "#222222",
+            "text_size": 14,
+            "text_size_mobile": 13,
+            "spacing_top": -12,
+            "spacing_top_mobile": -10
+          },
+          "blocks": {}
         },
         "clearance": {
           "type": "dac-clearance",
-          "settings": {}
+          "settings": {
+            "heading": "Clearance",
+            "text": "Add a short clearance message in the theme editor.",
+            "hidden_note": "Hidden on this product because it isn't tagged as clearance.",
+            "background": "#f4f4f4",
+            "heading_color": "#222222",
+            "text_color": "#222222",
+            "heading_size": 24,
+            "heading_size_mobile": 18,
+            "text_size": 14,
+            "text_size_mobile": 13,
+            "spacing_top": -12,
+            "spacing_top_mobile": -10
+          },
+          "blocks": {}
         },
         "colours": {
           "type": "shopify://apps/linkify-product-colors/blocks/app-block/1fdc741b-f4ed-4b8c-aee7-aa5e4ad76aa8",
@@ -57,20 +147,29 @@
         "variant_picker": {
           "type": "dac-variant-picker",
           "settings": {
-            "size_guide_page": "size-guide"
-          }
-        },
-        "buy_buttons": {
-          "type": "dac-buy-buttons",
-          "settings": {}
-        },
-        "back_in_stock": {
-          "type": "shopify://apps/mailchimp-email-sms/blocks/mailchimp_for_shopify_bis/e3b67dce-fd41-4b61-b3cf-961c12344cde",
-          "settings": {
-            "button_text": "Notify me when available",
-            "button_bg_color": "#222222",
-            "button_text_color": "#ffffff"
-          }
+            "placeholder": "Select a [option]",
+            "error_text": "Please select a size",
+            "low_stock_threshold": 3,
+            "low_stock_text": "Only [count] left in [value]",
+            "size_option_name": "Size",
+            "size_guide_page": "size-guide",
+            "guide_label": "Size Guide",
+            "guide_title": "",
+            "close_label": "Close",
+            "show_model": true,
+            "model_text": "[name] is [height]cm and wears size [size]",
+            "swatch_size": 58,
+            "swatch_width_mobile": 68,
+            "swatch_height_mobile": 48,
+            "swatch_radius": 5,
+            "swatch_radius_mobile": 0,
+            "swatch_border": "#bdbdbd",
+            "swatch_active": "#121212",
+            "label_color": "#505050",
+            "spacing_top": 0,
+            "spacing_top_mobile": 0
+          },
+          "blocks": {}
         },
         "loyalty": {
           "type": "shopify://apps/smile-io/blocks/smile-points-on-product-page/2fae4e25-1841-4ea2-bc02-bd548478c4f6",
@@ -85,9 +184,46 @@
             "points_text_logged_out": "<p>[points_amount] earned on this product. Join our DAC League rewards program to earn.</p>"
           }
         },
+        "buy_buttons": {
+          "type": "dac-buy-buttons",
+          "settings": {
+            "atc_label": "Add to bag",
+            "sold_out_label": "Sold out",
+            "show_buy_now": true,
+            "buy_now_mobile": false,
+            "buy_now_label": "Buy now",
+            "height": 64,
+            "height_mobile": 54,
+            "text_size": 15,
+            "text_size_mobile": 14,
+            "letter_spacing": 0,
+            "letter_spacing_mobile": 1.2,
+            "atc_bg": "#000000",
+            "atc_color": "#ffffff",
+            "atc_hover": "#d12442",
+            "buy_now_color": "#111111",
+            "spacing_top": 0,
+            "spacing_top_mobile": 0
+          },
+          "blocks": {}
+        },
+        "back_in_stock": {
+          "type": "shopify://apps/mailchimp-email-sms/blocks/mailchimp_for_shopify_bis/e3b67dce-fd41-4b61-b3cf-961c12344cde",
+          "settings": {
+            "button_text": "Notify me when available",
+            "button_bg_color": "#222222",
+            "button_text_color": "#ffffff"
+          }
+        },
         "reassurance": {
           "type": "dac-usps",
-          "settings": {},
+          "settings": {
+            "title_color": "#121212",
+            "text_color": "#808080",
+            "icon_border": "#cccccc",
+            "spacing_top": 0,
+            "spacing_top_mobile": 0
+          },
           "blocks": {
             "usp_returns": {
               "type": "dac-usp",
@@ -95,7 +231,8 @@
                 "icon": "returns",
                 "title": "Easy returns",
                 "text": "30 days, tags still on"
-              }
+              },
+              "blocks": {}
             },
             "usp_delivery": {
               "type": "dac-usp",
@@ -103,15 +240,17 @@
                 "icon": "box",
                 "title": "Free UK delivery over £50",
                 "text": "Standard, 2 to 5 working days"
-              }
+              },
+              "blocks": {}
             },
             "usp_checkout": {
               "type": "dac-usp",
               "settings": {
                 "icon": "payment",
-                "title": "Secure checkout",
-                "text": "PayPal and Shop Pay accepted"
-              }
+                "title": "Pay in 3 with Klarna or PayPal",
+                "text": "Secure checkout · PayPal on orders £30+"
+              },
+              "blocks": {}
             }
           },
           "block_order": [
@@ -122,20 +261,59 @@
         },
         "delivery": {
           "type": "dac-delivery",
-          "settings": {}
+          "settings": {
+            "text_today": "Order before [cutoff] today and receive by [date]",
+            "text_later": "Order now and receive by [date]",
+            "text_fallback": "Standard UK delivery in 2 to 5 working days",
+            "cutoff_hour": 12,
+            "transit_days": 5,
+            "dispatch_mon": true,
+            "dispatch_tue": true,
+            "dispatch_wed": true,
+            "dispatch_thu": true,
+            "dispatch_fri": true,
+            "dispatch_sat": false,
+            "dispatch_sun": false,
+            "bank_holidays": "2026-12-25\n2026-12-28\n2027-01-01\n2027-03-26\n2027-03-29\n2027-05-03\n2027-05-31\n2027-08-30\n2027-12-27\n2027-12-28",
+            "show_nudge": true,
+            "free_threshold": 50,
+            "nudge_text": "Add [amount] more for free delivery",
+            "unlocked_text": "You've unlocked free UK delivery",
+            "rates": "<p>Standard 2 to 5 working days £3.99, free over £50. Express 1 to 3 days £4.99.</p>",
+            "background": "#f3f8f4",
+            "border": "#bfd8c2",
+            "accent": "#1f6b2f",
+            "track": "#d6e6d8",
+            "spacing_top": 0,
+            "spacing_top_mobile": 0
+          },
+          "blocks": {}
         },
         "details": {
           "type": "dac-accordion",
-          "settings": {},
+          "settings": {
+            "border": "#cccccc",
+            "title_color": "#121212",
+            "text_color": "#505050",
+            "spacing_top": 0,
+            "spacing_top_mobile": 0
+          },
           "blocks": {
             "row_description": {
               "type": "dac-accordion-row",
               "settings": {
                 "title": "Description",
                 "source": "description",
+                "page": "",
+                "page_2": "",
+                "text": "",
+                "open_desktop": false,
                 "open_mobile": false,
-                "read_more_mobile": false
-              }
+                "read_more_mobile": false,
+                "read_more_label": "Read more",
+                "read_less_label": "Read less"
+              },
+              "blocks": {}
             },
             "row_size_fit": {
               "type": "dac-accordion-row",
@@ -143,8 +321,16 @@
               "settings": {
                 "title": "Size & fit",
                 "source": "text",
-                "text": "<p>To see our size guide <a href=\"/pages/size-guide\" title=\"Size Guide\">click here.</a></p>"
-              }
+                "page": "",
+                "page_2": "",
+                "text": "<p>To see our size guide <a href=\"/pages/size-guide\" title=\"Size Guide\">click here.</a></p>",
+                "open_desktop": false,
+                "open_mobile": false,
+                "read_more_mobile": true,
+                "read_more_label": "Read more",
+                "read_less_label": "Read less"
+              },
+              "blocks": {}
             },
             "row_shipping": {
               "type": "dac-accordion-row",
@@ -152,8 +338,15 @@
                 "title": "Shipping, exchanges & returns",
                 "source": "page",
                 "page": "delivery",
-                "page_2": "returns"
-              }
+                "page_2": "returns",
+                "text": "",
+                "open_desktop": false,
+                "open_mobile": false,
+                "read_more_mobile": true,
+                "read_more_label": "Read more",
+                "read_less_label": "Read less"
+              },
+              "blocks": {}
             }
           },
           "block_order": [
@@ -164,7 +357,24 @@
         },
         "sticky_atc": {
           "type": "dac-sticky-atc",
-          "settings": {}
+          "settings": {
+            "show_desktop": true,
+            "show_mobile": true,
+            "atc_label": "Add to bag",
+            "sold_out_label": "Sold out",
+            "select_label": "Select size",
+            "sold_out_suffix": "(sold out)",
+            "pill_text": "With code [code]",
+            "sheet_title": "Select a size",
+            "guide_label": "Size Guide",
+            "with_code_text": "with code [code]",
+            "without_code_text": "without code",
+            "error_text": "Please select a size",
+            "button_bg": "#121212",
+            "sale_color": "#d12442",
+            "pill_bg": "#fce9ed"
+          },
+          "blocks": {}
         }
       },
       "block_order": [
@@ -183,7 +393,101 @@
         "details",
         "sticky_atc"
       ],
-      "settings": {}
+      "settings": {
+        "container_width": 1776,
+        "container_align": "left",
+        "media_width": 60,
+        "column_gap": 138,
+        "info_offset": 0,
+        "info_sticky": true,
+        "block_gap": 20,
+        "padding_top": 0,
+        "padding_bottom": 24,
+        "mobile_side_padding": 10,
+        "mobile_info_padding_top": 18,
+        "gallery_gap": 6,
+        "image_ratio": "portrait",
+        "image_fit": "cover",
+        "video_autoplay": true,
+        "show_mobile_counter": true,
+        "show_mobile_thumbs": true,
+        "colour_cards": true,
+        "show_sale_badge": true,
+        "sale_badge_vendor": "Clearance",
+        "sale_badge_text": "Save [percent]%",
+        "sale_badge_bg": "#d12442",
+        "sale_badge_color": "#ffffff",
+        "show_code_price": true,
+        "discount_code": "DAC20",
+        "code_percent": 20,
+        "code_hide_vendors": "Mystery",
+        "signup_percent": 25,
+        "best_price_label": "Best price"
+      }
+    },
+    "style_with": {
+      "type": "dac-style-with",
+      "settings": {
+        "heading": "Style with",
+        "products_count": 3,
+        "fallback_products": [
+          "moreshore-chino-shorts-navy",
+          "kelvyn-relaxed-fit-jeans-mid-wash",
+          "brammers-v2-hoodie-raisin"
+        ],
+        "look_image_position": 3,
+        "empty_note": "No complementary products picked for this product yet, so this section is hidden on the store. Pick them in Search & Discovery.",
+        "show_rating": false,
+        "show_badge": true,
+        "badge_text": "Save [percent]%",
+        "badge_bg": "#d12442",
+        "atc_label": "Add to bag",
+        "sold_out_label": "Sold out",
+        "options_label": "Choose options",
+        "error_text": "Please select a size",
+        "title_size": 40,
+        "title_size_mobile": 20,
+        "title_color": "#000000",
+        "padding_top": 40,
+        "padding_bottom": 32,
+        "padding_side": 40,
+        "padding_top_mobile": 28,
+        "padding_bottom_mobile": 28,
+        "side_padding_mobile": 10
+      }
+    },
+    "why_not_add": {
+      "type": "dac-why-not-add",
+      "settings": {
+        "heading": "Why not add",
+        "pinned_products": [
+          "mens-dac-mystery-box",
+          "mens-dac-mystery-jeans"
+        ],
+        "pinned_badge": "Surprise item",
+        "pinned_text": "A surprise Duck and Cover piece",
+        "show_sold_out_pinned": false,
+        "best_sellers_count": 8,
+        "show_rating": false,
+        "show_badge": true,
+        "badge_text": "Save [percent]%",
+        "badge_bg": "#d12442",
+        "atc_label": "Add to bag",
+        "sold_out_label": "Sold out",
+        "options_label": "Choose options",
+        "error_text": "Please select a size",
+        "prev_label": "Previous products",
+        "next_label": "Next products",
+        "title_size": 40,
+        "title_size_mobile": 20,
+        "title_color": "#0b0b0c",
+        "padding_top": 32,
+        "padding_bottom": 32,
+        "padding_side": 40,
+        "padding_top_mobile": 28,
+        "padding_bottom_mobile": 28,
+        "side_padding_mobile": 10
+      }
     },
     "recommendations": {
       "type": "apps",
@@ -222,25 +526,6 @@
         "judge_me_review_widget"
       ],
       "settings": {}
-    },
-    "style_with": {
-      "type": "dac-style-with",
-      "settings": {
-        "fallback_products": [
-          "moreshore-chino-shorts-navy",
-          "kelvyn-relaxed-fit-jeans-mid-wash",
-          "brammers-v2-hoodie-raisin"
-        ]
-      }
-    },
-    "why_not_add": {
-      "type": "dac-why-not-add",
-      "settings": {
-        "pinned_products": [
-          "mens-dac-mystery-box",
-          "mens-dac-mystery-jeans"
-        ]
-      }
     }
   },
   "order": [
