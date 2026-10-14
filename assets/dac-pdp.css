@@ -740,7 +740,7 @@
 .dac-style__look img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 
 .dac-card { display: flex; flex: 0 0 170px; flex-direction: column; gap: 8px; min-width: 0; scroll-snap-align: start; }
-.dac-card__media { position: relative; display: flex; flex-direction: column; aspect-ratio: 4 / 5; background: #F6F6F6; }
+.dac-card__media { position: relative; display: flex; flex-direction: column; aspect-ratio: 4 / 5; overflow: hidden; background: #F6F6F6; }
 .dac-card__image { position: relative; display: block; flex: 1 1 auto; min-height: 0; overflow: hidden; }
 .dac-card__image img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .dac-card__badge {
@@ -757,9 +757,14 @@
   letter-spacing: 0.6px;
   text-transform: uppercase;
 }
+/* Sizes sit over the bottom of the photo, hidden until Add to bag is pressed (is-picking, set in dac-pdp.js). */
 .dac-card__sizes {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
   display: flex;
-  flex: 0 0 26px;
+  height: 26px;
   align-items: center;
   justify-content: center;
   gap: 5px;
@@ -767,7 +772,12 @@
   overflow-x: auto;
   background: #F9F9F9;
   scrollbar-width: none;
+  visibility: hidden;
+  transform: translateY(100%);
+  transition: transform 0.25s ease, visibility 0.25s;
 }
+.dac-card.is-picking .dac-card__sizes { visibility: visible; transform: none; }
+@media (prefers-reduced-motion: reduce) { .dac-card__sizes { transition: none; } }
 .dac-card__size {
   padding: 0;
   border: 0;
@@ -833,7 +843,7 @@
   .dac-card { flex: none; }
   .dac-card { gap: 12px; }
   .dac-card__badge { top: 14px; left: 14px; padding: 6px 11px; font-size: 11px; line-height: 15px; letter-spacing: 0.8px; }
-  .dac-card__sizes { flex-basis: 34px; gap: 14px; background: #F6F6F6; }
+  .dac-card__sizes { height: 34px; gap: 14px; background: #F6F6F6; }
   .dac-card__size { color: #121212; font-size: 13px; line-height: 19.5px; }
   .dac-card__size:disabled { color: #808080; }
   .dac-card__info { gap: 4px; }

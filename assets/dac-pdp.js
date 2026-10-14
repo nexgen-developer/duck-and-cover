@@ -681,17 +681,26 @@
     }
   }
 
-  /* Product cards (Style with, Why not add). A size picks the variant, Add to bag waits for one. */
+  /* Product cards (Style with, Why not add). Sizes stay hidden so the photo shows in full. Add to bag raises them,
+     and picking a size adds that size. Every add asks for a size again, so nothing is added with an old choice. */
   const bindCards = (root) => {
     // Capture runs before the theme's add to cart handler, which would post an empty variant.
     root.addEventListener('click', (event) => {
       const button = event.target.closest('[data-dac-card-atc]');
       if (!button) return;
       const card = button.closest('[data-dac-card]');
-      if (card.querySelector('[data-dac-card-input]').value) return;
+      if (!card.querySelector('[data-dac-card-size]')) return; // One size, it adds straight away.
+      if (card.dataset.dacAdding) {
+        delete card.dataset.dacAdding; // A size was just picked, let the theme add it.
+        return;
+      }
       event.preventDefault();
       event.stopImmediatePropagation();
+      card.querySelectorAll('[data-dac-card-size]').forEach((size) => size.setAttribute('aria-pressed', 'false'));
+      card.classList.add('is-picking');
       card.querySelector('[data-dac-card-error]').hidden = false;
+      const first = card.querySelector('[data-dac-card-size]:not(:disabled)');
+      if (first) first.focus({ preventScroll: true });
     }, true);
     root.addEventListener('click', (event) => {
       const size = event.target.closest('[data-dac-card-size]');
@@ -700,6 +709,9 @@
       card.querySelectorAll('[data-dac-card-size]').forEach((button) => button.setAttribute('aria-pressed', String(button === size)));
       card.querySelector('[data-dac-card-input]').value = size.dataset.dacCardSize;
       card.querySelector('[data-dac-card-error]').hidden = true;
+      card.classList.remove('is-picking');
+      card.dataset.dacAdding = 'true';
+      card.querySelector('[data-dac-card-atc]').click();
     });
   };
 
