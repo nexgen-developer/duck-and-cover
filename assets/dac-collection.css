@@ -3,3 +3,12 @@
    -X% badge. The classes come from product-card-style-1 and globo.filter.product (dac-promo-flags). */
 .product-item:not(.dac-card-clearance) .card-price .price-item--sale { color: #808080; }
 .product-item.dac-card-no-save .halo-productBadges .sale-badge { display: none; }
+
+/* Flair "product card bottom" badges, such as NOW £12.80 WITH CODE: DAC20 (Andrew, 13 Oct). On mobile the Globo card
+   already sets them right under the photo (globo.filter.product, max-width 960px). Desktop matches it: no 20px gap from
+   the Flair layout, full width of the photo. Flair writes the gap inline, hence !important. */
+@media (min-width: 961px) {
+  .product-item .flair-badge-layout { margin: 0 !important; }
+  .product-item .flair-badge { display: flex !important; width: 100%; }
+  .product-item .flair-badge > div { text-align: center; }
+}
