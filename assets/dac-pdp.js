@@ -508,7 +508,8 @@
     }
 
     /* Colours. Linkify links each colour's product and draws plain swatches. The PDP V1 design shows cards with the
-       colour name and price, so the swatches Linkify renders are read and drawn again, and Linkify's own UI is hidden.
+       colour name (prices dropped at the client's request), so the swatches Linkify renders are read and drawn again,
+       and Linkify's own UI is hidden.
        The colour name is the end of the product title that the colours do not share ("... T-Shirt Light Sage"). */
     initColours() {
       const app = this.root.querySelector('webyze-product-colors-anchor, webyze-linkify-product-colors');
@@ -548,11 +549,9 @@
       const cards = products.map((p, i) => {
         const url = `${shopRoot}products/${p.handle}${view ? `?view=${encodeURIComponent(view)}` : ''}`;
         const image = p.featured_image ? `${p.featured_image}${p.featured_image.includes('?') ? '&' : '?'}width=300` : '';
-        const compare = p.compare_at_price > p.price ? `<s class="dac-colours__compare">${formatMoney(p.compare_at_price, this.format)}</s>` : '';
         return `<a class="dac-colours__card${i === currentIndex ? ' is-current' : ''}${p.available ? '' : ' is-sold-out'}" href="${escapeHtml(url)}"${i === currentIndex ? ' aria-current="page"' : ''}>`
           + `<span class="dac-colours__thumb">${image ? `<img src="${escapeHtml(image)}" alt="" width="300" height="375" loading="lazy">` : ''}</span>`
-          + `<span class="dac-colours__details"><span class="dac-colours__name">${escapeHtml(nameOf(i))}</span>`
-          + `<span class="dac-colours__prices"><span class="dac-colours__price">${formatMoney(p.price, this.format)}</span>${compare}</span></span>`
+          + `<span class="dac-colours__details"><span class="dac-colours__name">${escapeHtml(nameOf(i))}</span></span>`
           + '</a>';
       }).join('');
       const current = currentIndex > -1 ? `<span class="dac-colours__sep" aria-hidden="true">:</span><span class="dac-colours__current">${escapeHtml(nameOf(currentIndex))}</span>` : '';

@@ -133,11 +133,13 @@
               "settings": {
                 "title": "Description",
                 "source": "description",
-                "open_mobile": true
+                "open_mobile": false,
+                "read_more_mobile": false
               }
             },
             "row_size_fit": {
               "type": "dac-accordion-row",
+              "disabled": true,
               "settings": {
                 "title": "Size & fit",
                 "source": "text",
@@ -173,9 +175,9 @@
         "clearance",
         "colours",
         "variant_picker",
+        "loyalty",
         "buy_buttons",
         "back_in_stock",
-        "loyalty",
         "reassurance",
         "delivery",
         "details",

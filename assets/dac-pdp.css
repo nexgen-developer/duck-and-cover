@@ -930,9 +930,6 @@
   .dac-colours__details { position: static; display: flex; flex-direction: column; align-items: center; gap: 4px; width: auto; height: auto; clip: auto; line-height: normal; }
   .dac-colours__name { max-width: 100%; overflow: hidden; color: #44403C; font-size: clamp(13px, calc(13px + (100vw - 1025px) * 3 / 895), 16px); font-weight: 500; text-overflow: ellipsis; }
   .dac-colours__card:hover .dac-colours__name { color: #1C1917; font-weight: 600; }
-  .dac-colours__prices { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: center; column-gap: 4px; }
-  .dac-colours__price { color: #D12442; font-size: clamp(12px, calc(12px + (100vw - 1025px) * 2 / 895), 14px); font-weight: 600; }
-  .dac-colours__compare { color: #A8A29E; font-size: clamp(11px, calc(11px + (100vw - 1025px) * 1 / 895), 12px); }
 }
 
 /* Sticky add to bag. Hidden until the main Add to bag scrolls away (is-visible). */
