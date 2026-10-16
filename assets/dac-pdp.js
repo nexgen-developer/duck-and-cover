@@ -534,11 +534,11 @@
       if (block.dacColours) return;
       block.dacColours = true;
       const shopRoot = (window.Shopify && window.Shopify.routes && window.Shopify.routes.root) || '/';
-      let products;
-      try {
-        products = await Promise.all(handles.map((handle) => fetch(`${shopRoot}products/${handle}.js`)
-          .then((response) => (response.ok ? response.json() : Promise.reject(new Error(handle))))));
-      } catch (e) {
+      const results = await Promise.allSettled(handles.map((handle) => fetch(`${shopRoot}products/${handle}.js`)
+        .then((response) => (response.ok ? response.json() : Promise.reject(new Error(handle))))));
+      // A colour that isn't on the online store (404) is left out, the others still show as cards.
+      const products = results.filter((result) => result.status === 'fulfilled').map((result) => result.value);
+      if (!products.length) {
         block.classList.add('dac-colours-failed'); // Linkify's own swatches come back.
         return;
       }

@@ -39,7 +39,7 @@
         <span class="dac-acc__minus">{% render 'dac-icon', icon: 'close' %}</span>
       </span>
     </summary>
-    <div class="dac-acc__content rte{% if clamp %} dac-acc__content--clamp{% endif %}" data-dac-clamp>
+    <div class="dac-acc__content rte{% if clamp %} dac-acc__content--clamp{% endif %}{% if bs.source == 'page' %} dac-acc__content--page{% endif %}" data-dac-clamp>
       {{ row_content }}
     </div>
     {%- if clamp -%}

@@ -528,6 +528,10 @@
 .dac-acc__row[open]:not(.is-closing) .dac-acc__minus { display: flex; }
 .dac-acc__content { padding: 0 0 16px; color: var(--dac-muted); font-size: 13px; line-height: 20px; }
 .dac-acc__content p { margin: 0 0 10px; }
+/* Rows that pull a whole page (delivery and returns) scroll inside, so opening one doesn't stretch the page by thousands
+   of pixels and leave the gallery stuck beside it (Andrew, 15 Oct). Page tables keep to the column width. */
+.dac-acc__content--page { max-height: min(420px, 60vh); overflow-y: auto; overscroll-behavior: contain; padding-right: 8px; }
+.dac-acc__content table { width: 100% !important; max-width: 100%; }
 .dac-acc__content p:last-child { margin-bottom: 0; }
 .dac-acc__content--clamp:not(.is-expanded) {
   display: -webkit-box;
