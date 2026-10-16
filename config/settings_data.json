@@ -1853,7 +1853,23 @@
           "menu_3",
           "menu_4"
         ],
-        "settings": {}
+        "settings": {
+          "show_newsletter": true,
+          "newsletter_title": "Sign up for 25% off",
+          "newsletter_text": "Be first to hear about new drops, restocks and offers from Duck and Cover",
+          "placeholder": "Your email address...",
+          "button_label": "Submit",
+          "contact_heading": "Contact",
+          "address": "Knutsford, Cheshire WA16 8DX",
+          "email": "ask@duckandcover.co.uk",
+          "phone": "",
+          "copyright": "© [year] Duck and Cover. All rights reserved.",
+          "show_wordmark": true,
+          "background": "#000000",
+          "text_color": "#ffffff",
+          "muted_color": "#505050",
+          "padding_side": 40
+        }
       }
     },
     "content_for_index": [],
@@ -1920,6 +1936,11 @@
       },
       "6174324309569838175": {
         "type": "shopify://apps/smile-io/blocks/smile-shopify-app/2fae4e25-1841-4ea2-bc02-bd548478c4f6",
+        "disabled": false,
+        "settings": {}
+      },
+      "4252583770683550135": {
+        "type": "shopify://apps/redo/blocks/redo_app_embed/c613644b-6df4-4d11-b336-43a5c06745a1",
         "disabled": false,
         "settings": {}
       }
