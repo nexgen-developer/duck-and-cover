@@ -1,8 +1,9 @@
-/* Collection cards (Andrew, 13 Oct). Only clearance keeps the red sale price. Other sale prices are grey like the
-   compare at price, without the line. Products marked no-save in Theme settings > Clearance and Save badges drop the
-   -X% badge. The classes come from product-card-style-1 and globo.filter.product (dac-promo-flags). */
+/* Collection cards (Andrew, 13 and 15 Oct). Only clearance keeps the red sale price. Other sale prices are grey like the
+   compare at price, without the line. The -X% badge shows on every sale product, clearance and Special Offer included
+   (Beth, 15 Oct). The classes come from product-card-style-1 and globo.filter.product. */
 .product-item:not(.dac-card-clearance) .card-price .price-item--sale { color: #808080; }
-.product-item.dac-card-no-save .halo-productBadges .sale-badge { display: none; }
+/* Prices a little larger than Halo's calc(var(--font-size) + 2px) (Andrew, 15 Oct). */
+.product-item .card-price { font-size: calc(var(--font-size) + 4px); }
 
 /* Flair "product card bottom" badges, such as NOW £12.80 WITH CODE: DAC20 (Andrew, 13 Oct). On mobile the Globo card
    already sets them right under the photo (globo.filter.product, max-width 960px). Desktop matches it: no 20px gap from
