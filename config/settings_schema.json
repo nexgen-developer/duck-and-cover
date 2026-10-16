@@ -5833,7 +5833,7 @@
         "type": "text",
         "id": "dac_clearance_tags",
         "label": "Clearance tags",
-        "info": "Products with one of these tags count as clearance. They show the Clearance block instead of the sign up offer, and no Save badge. Separate tags with commas.",
+        "info": "Products with one of these tags count as clearance. They show the Clearance block instead of the sign up offer, and no Save badge on the product page. Separate tags with commas.",
         "default": "VendorClearance, VendorSpecialOffer"
       },
       {
@@ -5846,7 +5846,7 @@
         "type": "text",
         "id": "dac_no_save_vendors",
         "label": "Vendors without Save badges",
-        "info": "Save badges are also hidden for these vendors. Separate vendors with commas.",
+        "info": "The Save badge on the product page is also hidden for these vendors. Product cards and collection pages always show it. Separate vendors with commas.",
         "default": "Clearance"
       }
     ]

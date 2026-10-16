@@ -1,6 +1,7 @@
 {%- comment -%}
   Clearance notice. Takes the place of the sign up offer on clearance products, which are set by tag in
   Theme settings > Clearance and Save badges. A heading over one line of text, no button.
+  Special Offer products get their own heading and text (Andrew, 15 Oct).
 {%- endcomment -%}
 {%- liquid
   assign p = closest.product | default: product
@@ -8,6 +9,17 @@
   capture flags
     render 'dac-promo-flags', product: p
   endcapture
+
+  assign heading = bs.heading
+  assign text = bs.text
+  assign special_tags = bs.special_tags | split: ','
+  for special_tag in special_tags
+    assign special_clean = special_tag | strip
+    if special_clean != blank and p.tags contains special_clean
+      assign heading = bs.special_heading
+      assign text = bs.special_text
+    endif
+  endfor
 -%}
 {%- if flags contains 'clearance' -%}
   <div
@@ -15,11 +27,11 @@
     style="--dac-mt: {{ bs.spacing_top }}px; --dac-mt-m: {{ bs.spacing_top_mobile }}px; --dac-bg: {{ bs.background }}; --dac-color: {{ bs.text_color }}; --dac-title-color: {{ bs.heading_color }}; --dac-title-fs: {{ bs.heading_size }}px; --dac-title-fs-m: {{ bs.heading_size_mobile }}px; --dac-fs: {{ bs.text_size }}px; --dac-fs-m: {{ bs.text_size_mobile }}px;"
     {{ block.shopify_attributes }}
   >
-    {%- if bs.heading != blank -%}
-      <p class="dac-clearance__title">{{ bs.heading | escape }}</p>
+    {%- if heading != blank -%}
+      <p class="dac-clearance__title">{{ heading | escape }}</p>
     {%- endif -%}
-    {%- if bs.text != blank -%}
-      <p class="dac-signup__text">{{ bs.text | escape }}</p>
+    {%- if text != blank -%}
+      <p class="dac-signup__text">{{ text | escape }}</p>
     {%- endif -%}
   </div>
 {%- elsif request.design_mode -%}
@@ -35,6 +47,10 @@
       "content": "Shows only on clearance products, in place of the sign up offer. Clearance tags are set in Theme settings > Clearance and Save badges."
     },
     {
+      "type": "header",
+      "content": "Clearance products"
+    },
+    {
       "type": "text",
       "id": "heading",
       "label": "Heading",
@@ -45,6 +61,29 @@
       "id": "text",
       "label": "Text",
       "default": "Add a short clearance message in the theme editor."
+    },
+    {
+      "type": "header",
+      "content": "Special Offer products"
+    },
+    {
+      "type": "text",
+      "id": "special_tags",
+      "label": "Special Offer tags",
+      "info": "Products with one of these tags show this heading and text instead. Separate tags with commas.",
+      "default": "VendorSpecialOffer"
+    },
+    {
+      "type": "text",
+      "id": "special_heading",
+      "label": "Heading",
+      "default": "Special Offer"
+    },
+    {
+      "type": "text",
+      "id": "special_text",
+      "label": "Text",
+      "default": "Add a short Special Offer message in the theme editor."
     },
     {
       "type": "text",
