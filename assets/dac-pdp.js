@@ -393,6 +393,40 @@
           this.syncGallery();
         });
       }, { passive: true });
+      this.initLightbox();
+    }
+
+    /* Lightbox (Andrew, 15 Oct). A photo opens every photo full screen from that one. The modal dialog sits in the
+       top layer, above the sticky columns and Halo's header. Swipe, arrows, arrow keys, Escape, close button. */
+    initLightbox() {
+      const dialog = this.root.querySelector('[data-dac-lightbox]');
+      if (!dialog || typeof dialog.showModal !== 'function') return;
+      const track = dialog.querySelector('[data-dac-lightbox-track]');
+      const slides = Array.from(track.querySelectorAll('[data-dac-lightbox-slide]'));
+      const counter = dialog.querySelector('[data-dac-lightbox-counter]');
+      const current = () => Math.min(slides.length - 1, Math.max(0, Math.round(track.scrollLeft / (track.clientWidth || 1))));
+      const update = () => { if (counter) counter.textContent = `${current() + 1} / ${slides.length}`; };
+      const go = (index, smooth) => track.scrollTo({ left: index * track.clientWidth, behavior: smooth ? 'smooth' : 'auto' });
+      this.track.addEventListener('click', (event) => {
+        const item = event.target.closest('.dac-gallery__item--image');
+        const index = item ? slides.findIndex((slide) => slide.dataset.dacLightboxSlide === item.dataset.dacSlide) : -1;
+        if (index < 0) return;
+        dialog.showModal();
+        document.documentElement.classList.add('dac-lightbox-open');
+        go(index, false);
+        update();
+      });
+      track.addEventListener('scroll', update, { passive: true });
+      dialog.addEventListener('close', () => document.documentElement.classList.remove('dac-lightbox-open'));
+      dialog.addEventListener('click', (event) => {
+        if (event.target.closest('[data-dac-lightbox-close]') || event.target.matches('.dac-lightbox__slide, .dac-lightbox__img')) dialog.close();
+        else if (event.target.closest('[data-dac-lightbox-prev]')) go(Math.max(0, current() - 1), true);
+        else if (event.target.closest('[data-dac-lightbox-next]')) go(Math.min(slides.length - 1, current() + 1), true);
+      });
+      dialog.addEventListener('keydown', (event) => {
+        if (event.key === 'ArrowLeft') go(Math.max(0, current() - 1), true);
+        if (event.key === 'ArrowRight') go(Math.min(slides.length - 1, current() + 1), true);
+      });
     }
 
     syncGallery() {

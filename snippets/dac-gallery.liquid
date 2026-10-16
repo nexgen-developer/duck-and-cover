@@ -85,4 +85,29 @@
       </div>
     {%- endif -%}
   {%- endif -%}
+
+  {%- comment -%}
+    Lightbox (Andrew, 15 Oct). Clicking a photo opens every photo full screen, starting from that one.
+    Slides keep the gallery index (data-dac-lightbox-slide), videos stay in the gallery only. Opened by dac-pdp.js.
+  {%- endcomment -%}
+  {%- assign lightbox_images = product.media | where: 'media_type', 'image' -%}
+  {%- if lightbox_images.size > 0 -%}
+    <dialog class="dac-lightbox" data-dac-lightbox aria-label="{{ product.title | escape }}">
+      <div class="dac-lightbox__track" data-dac-lightbox-track>
+        {%- for media in product.media -%}
+          {%- if media.media_type == 'image' -%}
+            <div class="dac-lightbox__slide" data-dac-lightbox-slide="{{ forloop.index0 }}">
+              {{ media | image_url: width: 2000 | image_tag: widths: '800, 1200, 1600, 2000', sizes: '100vw', loading: 'lazy', alt: media.alt, class: 'dac-lightbox__img' }}
+            </div>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+      {%- if lightbox_images.size > 1 -%}
+        <span class="dac-lightbox__counter" data-dac-lightbox-counter aria-hidden="true"></span>
+        <button type="button" class="dac-lightbox__nav dac-lightbox__nav--prev" data-dac-lightbox-prev aria-label="Previous image">{% render 'dac-icon', icon: 'chevron-down' %}</button>
+        <button type="button" class="dac-lightbox__nav dac-lightbox__nav--next" data-dac-lightbox-next aria-label="Next image">{% render 'dac-icon', icon: 'chevron-down' %}</button>
+      {%- endif -%}
+      <button type="button" class="dac-lightbox__close" data-dac-lightbox-close aria-label="Close">{% render 'dac-icon', icon: 'close' %}</button>
+    </dialog>
+  {%- endif -%}
 </div>

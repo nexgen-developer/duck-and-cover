@@ -1125,3 +1125,27 @@ body:has(.dac-sticky.is-visible:not(.dac-sticky--no-mobile)) :is(.pushowl-simple
   .dac-wna { box-sizing: border-box; max-width: 1920px; margin-inline: auto; }
   .dac-pdp__inner { margin-inline: auto; }
 }
+
+/* Lightbox (Andrew, 15 Oct). Full screen, one photo at a time, swipe on mobile, arrows on desktop. */
+html.dac-lightbox-open { overflow: hidden; }
+.dac-gallery__item--image { cursor: zoom-in; }
+.dac-lightbox { width: 100vw; max-width: 100vw; height: 100dvh; max-height: 100dvh; margin: 0; padding: 0; border: 0; background: #FFFFFF; }
+.dac-lightbox::backdrop { background: rgba(0, 0, 0, 0.6); }
+.dac-lightbox__track { display: flex; height: 100%; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; }
+.dac-lightbox__track::-webkit-scrollbar { display: none; }
+.dac-lightbox__slide { display: flex; flex: 0 0 100%; align-items: center; justify-content: center; padding: 64px 16px 16px; scroll-snap-align: start; }
+.dac-lightbox__img { display: block; width: auto; max-width: 100%; height: auto; max-height: 100%; object-fit: contain; cursor: zoom-out; }
+.dac-lightbox__counter { position: absolute; top: 24px; left: 16px; color: #121212; font-size: 14px; line-height: 20px; }
+.dac-lightbox__close,
+.dac-lightbox__nav { position: absolute; display: grid; width: 44px; height: 44px; place-items: center; padding: 0; border: 0; border-radius: 50%; background: #F4F4F4; color: #121212; cursor: pointer; }
+.dac-lightbox__close { top: 12px; right: 12px; }
+.dac-lightbox__close .dac-icon,
+.dac-lightbox__nav .dac-icon { width: 18px; height: 18px; }
+.dac-lightbox__nav { top: 50%; transform: translateY(-50%); }
+.dac-lightbox__nav--prev { left: 16px; }
+.dac-lightbox__nav--prev .dac-icon { transform: rotate(90deg); }
+.dac-lightbox__nav--next { right: 16px; }
+.dac-lightbox__nav--next .dac-icon { transform: rotate(-90deg); }
+@media (max-width: 1024px) {
+  .dac-lightbox__nav { display: none; }
+}

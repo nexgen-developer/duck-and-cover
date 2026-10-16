@@ -44,6 +44,8 @@
     html.weekly-deals-cols-3 .section-product-code .container.container-1170 {
       padding-left: 0;
       padding-right: 0;
+      /* DAC: carries the row height down to .section-custom, so every deal box in a row is the same height. */
+      height: 100%;
     }
 
     html.weekly-deals-cols-2 .section-product-code,
@@ -51,6 +53,12 @@
     html.weekly-deals-cols-2 .section-custom,
     html.weekly-deals-cols-3 .section-custom {
       height: 100%;
+    }
+    /* DAC: one height for every deal box (Andrew, 15 Oct). A longer text still grows its row instead of being cut. */
+    html.weekly-deals-cols-2 .section-custom,
+    html.weekly-deals-cols-3 .section-custom {
+      box-sizing: border-box;
+      min-height: 300px;
     }
 
     html.weekly-deals-cols-2 .product-info h2 a,
