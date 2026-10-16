@@ -934,11 +934,11 @@
   .dac-colours { gap: 16px; padding: clamp(10px, calc(10px + (100vw - 1025px) * 5 / 895), 15px); border: 1px solid #CCCCCC; border-radius: 5px; background: #FFFFFF; }
   .dac-colours__label { font-size: 14px; line-height: 1; letter-spacing: 0; }
   .dac-colours__sep { color: #808080; }
-  .dac-colours__track { --dac-colours-gap: clamp(8px, calc(8px + (100vw - 1025px) * 8 / 895), 16px); gap: var(--dac-colours-gap); }
-  /* A card is always a quarter of the row, as in the four colour design, so one to three colours keep that size.
-     Five or more shrink to fit, down to the min width. */
+  .dac-colours__track { --dac-colours-gap: clamp(8px, calc(8px + (100vw - 1025px) * 8 / 895), 16px); flex-wrap: wrap; gap: var(--dac-colours-gap); overflow: visible; }
+  /* A card is always a quarter of the row, as in the four colour design. Five or more colours wrap onto the next row,
+     so every colour stays reachable without a scrollbar and the names keep their width. */
   .dac-colours__card {
-    flex: 0 1 calc((100% - 3 * var(--dac-colours-gap)) / 4);
+    flex: 0 0 calc((100% - 3 * var(--dac-colours-gap)) / 4);
     gap: clamp(6px, calc(6px + (100vw - 1025px) * 4 / 895), 10px);
     min-width: 72px;
     padding: clamp(6px, calc(6px + (100vw - 1025px) * 4 / 895), 10px);
