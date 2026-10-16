@@ -150,19 +150,6 @@
         "description": "Upgrade your denim rotation with Elix straight leg jeans for just £18.90! A timeless fit that works with anything. Use code ELIXDEAL at checkout - don’t miss out!"
       }
     },
-    "weekly_deal_YDVHfG": {
-      "type": "weekly-deal",
-      "name": "3PK Boxer Deal",
-      "settings": {
-        "image": "shopify://shop_images/3PK-BOXERS-tile.gif",
-        "title": "3PK Boxers",
-        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">NOW £9.50</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
-        "button1": "Get Deal",
-        "url": "shopify://collections/3pk-boxer-deal",
-        "CustomCode": "3PKDEAL",
-        "description": "Stock up on everyday essentials with 3PK Boxers for just £9.50! Comfortable, practical and great value. Use code 3PKDEAL at checkout and grab the deal!"
-      }
-    },
     "halo_slideshow_ntNC8f": {
       "type": "halo-slideshow",
       "blocks": {
@@ -711,7 +698,6 @@
     "weekly_deal_iDiiCj",
     "weekly_deal_pATLmh",
     "weekly_deal_MJpb7p",
-    "weekly_deal_YDVHfG",
     "halo_slideshow_ntNC8f",
     "weekly_deal_pmhwQp",
     "weekly_deal_CnQjac",
