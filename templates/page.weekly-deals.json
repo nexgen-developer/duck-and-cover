@@ -150,19 +150,6 @@
         "description": "Upgrade your denim rotation with Elix straight leg jeans for just £18.90! A timeless fit that works with anything. Use code ELIXDEAL at checkout - don’t miss out!"
       }
     },
-    "weekly_deal_JXpkmF": {
-      "type": "weekly-deal",
-      "name": "Everett Chinos",
-      "settings": {
-        "image": "shopify://shop_images/DAC-everett-tile.gif",
-        "title": "Everett Chinos",
-        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">NOW £18</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label>40% oFF</label>",
-        "button1": "Get Deal",
-        "url": "shopify://collections/everett-chinos",
-        "CustomCode": "EVERETT",
-        "description": "40% Off Everett Chino Trousers! Get yours for just £18 - smart, versatile and perfect for everyday style. Use code EVERETT at checkout."
-      }
-    },
     "weekly_deal_YDVHfG": {
       "type": "weekly-deal",
       "name": "3PK Boxer Deal",
@@ -270,58 +257,6 @@
         "url": "shopify://products/sherborn-bundle",
         "CustomCode": "NO CODE NEEDED",
         "description": "30% OFF Jeans! Upgrade your denim for less with 30% OFF selected jeans. Use code DENIM30 at checkout and save!"
-      }
-    },
-    "weekly_deal_XM6RQ9": {
-      "type": "weekly-deal",
-      "name": "Sherborn Bundle",
-      "settings": {
-        "image": "shopify://shop_images/DAC-SHERBORN-BUNDLE-TILE.jpg",
-        "title": "SHERBORN BUNDLE",
-        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">FROM £17.49</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
-        "button1": "Get Deal",
-        "url": "shopify://products/sherborn-bundle",
-        "CustomCode": "NO CODE NEEDED",
-        "description": "Get summer sorted with our Sherborn Bundles—Tee & Shorts for just £17.49 or Polo & Shorts for £19.59. With 30% OFF, it's the perfect time to refresh your warm-weather wardrobe. No code needed! Just add the selected products to your bundle to save!"
-      }
-    },
-    "weekly_deal_PF8J66": {
-      "type": "weekly-deal",
-      "name": "WRENTHAM POLO",
-      "settings": {
-        "image": "shopify://shop_images/DAC-WRENTHAM-POLO-TILE.jpg",
-        "title": "WRENTHAM POLO",
-        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">FOR £10</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
-        "button1": "Get Deal",
-        "url": "shopify://collections/wrentham-polo",
-        "CustomCode": "POLODEAL",
-        "description": "Upgrade your summer style with the Wrentham Polo for just £10! Smart, comfortable, and perfect for any occasion. Use code POLODEAL at checkout to grab yours."
-      }
-    },
-    "weekly_deal_nCEwdV": {
-      "type": "weekly-deal",
-      "name": "Tee & Denim Shorts Bundle",
-      "settings": {
-        "image": "shopify://shop_images/DAC-TEE-SHORT-TILE.gif",
-        "title": "DENIM SHORTS & T-SHIRT BUNDLE",
-        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">FROM £19.99</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
-        "button1": "Get Deal",
-        "url": "shopify://products/denim-short-t-shirt-bundle",
-        "CustomCode": "NO CODE NEEDED",
-        "description": "Refresh your summer wardrobe with our Denim Shorts & T-Shirt Bundle for just £19.99! An easy, everyday outfit at an unbeatable price. No code needed - just add to basket and save."
-      }
-    },
-    "weekly_deal_rEnB9G": {
-      "type": "weekly-deal",
-      "name": "Mystery Box",
-      "settings": {
-        "image": "shopify://shop_images/DUCK_COVER_-_WEEKLY_DEAL_-_Mystery_Box.jpg",
-        "title": "MYSTERY BOX",
-        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">£5.00</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
-        "button1": "Get Deal",
-        "url": "shopify://collections/mystery-item",
-        "CustomCode": "",
-        "description": "Feeling lucky? Grab a £5.00 Duck & Cover Mystery Box. Choose your size and we’ll take care of the rest."
       }
     },
     "weekly_deal_CnQjac": {
@@ -776,14 +711,9 @@
     "weekly_deal_iDiiCj",
     "weekly_deal_pATLmh",
     "weekly_deal_MJpb7p",
-    "weekly_deal_JXpkmF",
     "weekly_deal_YDVHfG",
     "halo_slideshow_ntNC8f",
     "weekly_deal_pmhwQp",
-    "weekly_deal_XM6RQ9",
-    "weekly_deal_PF8J66",
-    "weekly_deal_nCEwdV",
-    "weekly_deal_rEnB9G",
     "weekly_deal_CnQjac",
     "weekly_deal_xfeYix",
     "weekly_deal_78RRYA",
