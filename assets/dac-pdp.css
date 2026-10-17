@@ -42,6 +42,8 @@
 .dac-pdp__blocks > .shopify-app-block:has(.back-in-stock-btn--hidden) { display: none; }
 /* Mailchimp also shows "Notify me" while no variant is chosen, and here nothing is chosen until the shopper picks a size. */
 .dac-pdp:not(.has-variant):not(.dac-pdp--editor) .dac-pdp__blocks > .shopify-app-block:has(.mailchimp-for-shopify-product-block) { display: none; }
+/* Its button adds a 12px top margin on top of the block gap, which left Notify me sitting low (Andrew, 17 Oct). */
+.dac-pdp__blocks > .shopify-app-block .back-in-stock-btn { margin-top: 0; }
 .dac-block { margin-top: var(--dac-mt-m, 0px); }
 
 /* Breadcrumb. Mobile shows Home and the product only, unless the section turns the middle levels on. */

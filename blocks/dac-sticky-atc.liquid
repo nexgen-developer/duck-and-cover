@@ -12,6 +12,13 @@
   assign compare = variant.compare_at_price | default: 0
   assign code = ss.discount_code | strip
   assign code_percent = ss.code_percent | default: 0
+  if ss.code2_collection != blank and ss.code2 != blank
+    assign collection_handles = p.collections | map: 'handle'
+    if collection_handles contains ss.code2_collection.handle
+      assign code = ss.code2 | strip
+      assign code_percent = ss.code2_percent
+    endif
+  endif
   assign code_on = false
   if ss.show_code_price and code != blank and code_percent > 0 and p.gift_card? == false
     assign code_on = true
