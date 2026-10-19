@@ -1883,11 +1883,6 @@
         "disabled": false,
         "settings": {}
       },
-      "13309252322759772734": {
-        "type": "shopify://apps/collection-merchandiser-syncd/blocks/app-embed/5176d6ef-993f-4869-ba24-87a0a6bedcf9",
-        "disabled": false,
-        "settings": {}
-      },
       "5419279292971490355": {
         "type": "shopify://apps/flair-product-labels-badges/blocks/init/51d5ae10-f90f-4540-9ec6-f09f14107bf4",
         "disabled": false,
@@ -1946,6 +1941,11 @@
       "2200952712151285029": {
         "type": "shopify://apps/microsoft-clarity/blocks/brandAgents_js/31c3d126-8116-4b4a-8ba1-baeda7c4aeea",
         "disabled": true,
+        "settings": {}
+      },
+      "4252583770683550135": {
+        "type": "shopify://apps/redo/blocks/redo_app_embed/c613644b-6df4-4d11-b336-43a5c06745a1",
+        "disabled": false,
         "settings": {}
       }
     }
