@@ -1864,7 +1864,7 @@
           "email": "ask@duckandcover.co.uk",
           "phone": "",
           "copyright": "© [year] Duck and Cover. All rights reserved.",
-          "show_wordmark": true,
+          "show_wordmark": false,
           "background": "#000000",
           "text_color": "#ffffff",
           "muted_color": "#505050",
@@ -1881,11 +1881,6 @@
       },
       "6610233760104865948": {
         "type": "shopify://apps/pushowl-web-push-notifications/blocks/pushowl-app-embed-3d2ff2b5/fa20c3ba-38bf-43e0-ba5c-431f6ae07d95",
-        "disabled": false,
-        "settings": {}
-      },
-      "13309252322759772734": {
-        "type": "shopify://apps/collection-merchandiser-syncd/blocks/app-embed/5176d6ef-993f-4869-ba24-87a0a6bedcf9",
         "disabled": false,
         "settings": {}
       },
