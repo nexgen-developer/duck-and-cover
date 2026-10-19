@@ -378,6 +378,10 @@
             "pill_bg": "#fce9ed"
           },
           "blocks": {}
+        },
+        "wiser_ai_upsell_cross_sell_wiser_fbt_Lq3hgD": {
+          "type": "shopify://apps/wiser-ai-upsell-cross-sell/blocks/wiser_fbt/3f966edc-9a4a-465c-a4df-436d2a39160d",
+          "settings": {}
         }
       },
       "block_order": [
@@ -394,7 +398,8 @@
         "reassurance",
         "delivery",
         "details",
-        "sticky_atc"
+        "sticky_atc",
+        "wiser_ai_upsell_cross_sell_wiser_fbt_Lq3hgD"
       ],
       "settings": {
         "container_width": 1776,
@@ -433,6 +438,7 @@
     },
     "style_with": {
       "type": "dac-style-with",
+      "disabled": true,
       "settings": {
         "heading": "Style with",
         "products_count": 3,
@@ -513,6 +519,7 @@
         "wiser_featured",
         "wiser_recent"
       ],
+      "disabled": true,
       "settings": {}
     },
     "reviews": {
