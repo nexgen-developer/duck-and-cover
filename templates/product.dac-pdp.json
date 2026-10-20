@@ -340,8 +340,8 @@
               "settings": {
                 "title": "Shipping, exchanges & returns",
                 "source": "page",
-                "page": "delivery",
-                "page_2": "returns",
+                "page": "delivery-returns-product-page-information",
+                "page_2": "",
                 "text": "",
                 "open_desktop": false,
                 "open_mobile": false,
