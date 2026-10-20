@@ -839,6 +839,7 @@
     },
     "halo_newsletter_wbbCq3": {
       "type": "halo-newsletter",
+      "disabled": true,
       "custom_css": [
         ".halo-block-header .desc {color: white;}",
         ".halo-block-header {position: relative; margin: 0 0 1px;}"
