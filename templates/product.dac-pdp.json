@@ -426,11 +426,6 @@
         "sale_badge_bg": "#d12442",
         "sale_badge_color": "#ffffff",
         "show_code_price": true,
-        "discount_code": "DAC20",
-        "code_percent": 20,
-        "code2_collection": "jeans-promotion",
-        "code2": "DENIM30",
-        "code2_percent": 30,
         "code_hide_vendors": "Mystery",
         "signup_percent": 25,
         "best_price_label": "Best price"
