@@ -10,38 +10,30 @@
   assign variant = p.selected_variant | default: p.selected_or_first_available_variant
   assign price = variant.price
   assign compare = variant.compare_at_price | default: 0
-  assign code = ss.discount_code | strip
-  assign code_percent = ss.code_percent | default: 0
-  if ss.code2_collection != blank and ss.code2 != blank
-    assign collection_handles = p.collections | map: 'handle'
-    if collection_handles contains ss.code2_collection.handle
-      assign code = ss.code2 | strip
-      assign code_percent = ss.code2_percent
-    endif
-  endif
+  assign code = ''
+  assign code_percent = 0
+  assign code_price = 0
+  assign code_base = price
+  capture flair_offer
+    render 'dac-flair-offer', dac_product: p
+  endcapture
+  assign flair_offer = flair_offer | strip
   assign code_on = false
-  if ss.show_code_price and code != blank and code_percent > 0 and p.gift_card? == false
-    assign code_on = true
-    assign vendor_key = p.vendor | downcase | strip
-    assign hide_list = ss.code_hide_vendors | downcase | split: ','
-    for hide_vendor in hide_list
-      assign hide_clean = hide_vendor | strip
-      if hide_clean != blank and hide_clean == vendor_key
-        assign code_on = false
-      endif
-    endfor
-    if settings.dac_clearance_hide_code
-      capture flags
-        render 'dac-promo-flags', product: p
-      endcapture
-      if flags contains 'clearance'
-        assign code_on = false
-      endif
+  if ss.show_code_price and flair_offer != blank
+    assign flair_bits = flair_offer | split: '|'
+    assign code = flair_bits[0] | strip
+    assign code_price = flair_bits[1] | plus: 0
+    assign code_percent = flair_bits[2] | plus: 0
+    assign code_base = flair_bits[3] | plus: 0
+    if code != blank
+      assign code_on = true
     endif
   endif
-  assign keep_percent = 100 | minus: code_percent
   assign shown_price = price
-  if code_on
+  if code_on and code_price > 0
+    assign shown_price = code_price
+  elsif code_on and code_percent > 0
+    assign keep_percent = 100 | minus: code_percent
     assign shown_price = price | times: keep_percent | plus: 50 | divided_by: 100
   endif
   assign on_sale = false
@@ -71,7 +63,7 @@
       {%- endif -%}
       <div class="dac-sticky__info">
         <p class="dac-sticky__title">{{ p.title | escape }}</p>
-        <div class="dac-sticky__price" data-dac-price data-code-on="{{ code_on }}" data-code-percent="{{ code_percent }}">
+        <div class="dac-sticky__price" data-dac-price data-code-on="{{ code_on }}" data-code-percent="{{ code_percent }}" data-code-price="{{ code_price }}" data-code-base="{{ code_base }}">
           <span class="dac-sticky__now{% if on_sale %} is-sale{% endif %}" data-dac-now>{{ shown_price | money }}</span>
           <s class="dac-sticky__was" data-dac-compare{% unless compare > price %} hidden{% endunless %}>{{ compare | money }}</s>
           {%- if code_on and bs.pill_text != blank -%}
@@ -135,7 +127,7 @@
       {%- endfor -%}
     </div>
     <p class="dac-sheet__error" data-dac-sheet-error hidden>{{ bs.error_text | escape }}</p>
-    <p class="dac-sheet__price" data-dac-price data-code-on="{{ code_on }}" data-code-percent="{{ code_percent }}" data-without-code="{{ bs.without_code_text | escape }}">
+    <p class="dac-sheet__price" data-dac-price data-code-on="{{ code_on }}" data-code-percent="{{ code_percent }}" data-code-price="{{ code_price }}" data-code-base="{{ code_base }}" data-without-code="{{ bs.without_code_text | escape }}">
       <span data-dac-now>{{ shown_price | money }}</span>
       {%- if code_on -%}
         {{ ' ' }}{{ bs.with_code_text | replace: '[code]', code | escape }} · <span data-dac-regular>{{ price | money }} {{ bs.without_code_text | escape }}</span>

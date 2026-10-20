@@ -1,0 +1,53 @@
+{%- comment -%}
+  Live Flair product badge for this product.
+  Prints code|price_cents|percent|base_price when a published badge says "WITH CODE:".
+  Prints nothing when Flair has no code for this product.
+  price_cents is the "NOW" amount in that badge. percent is that amount against the current variant,
+  so other variants can use the same rate.
+{%- endcomment -%}
+{%- liquid
+  assign dac_product = dac_product | default: product
+  assign flair_code = ''
+  assign flair_cents = 0
+  assign flair_percent = 0
+  assign flair_base = 0
+
+  capture flair_html
+    render 'flair-product-badges', product: dac_product
+  endcapture
+
+  assign flair_text = flair_html | strip_html | split: '<!--' | first
+  assign flair_marker = ''
+  if flair_text contains 'WITH CODE:'
+    assign flair_marker = 'WITH CODE:'
+  elsif flair_text contains 'with code:'
+    assign flair_marker = 'with code:'
+  endif
+
+  if flair_marker != blank
+    assign flair_parts = flair_text | split: flair_marker
+    assign flair_before = flair_parts[0]
+    assign flair_after = flair_parts[1] | strip | split: ' ' | first | strip
+    assign flair_code = flair_after | remove: '.' | remove: ',' | remove: ':' | remove: ';' | strip
+
+    if flair_before contains 'NOW'
+      assign flair_now = flair_before | split: 'NOW' | last | strip | split: ' ' | first | strip
+      assign money_prefix = shop.money_format | split: '{' | first
+      if money_prefix != blank
+        assign flair_now = flair_now | remove: money_prefix
+      endif
+      assign flair_now = flair_now | remove: '£' | remove: ',' | remove: ' ' | strip
+      if flair_now != blank
+        assign flair_cents = flair_now | times: 100 | round
+      endif
+    endif
+
+    assign flair_variant = dac_product.selected_or_first_available_variant
+    assign flair_base = flair_variant.price | default: 0
+    if flair_cents > 0 and flair_base > flair_cents
+      assign flair_saved = flair_base | minus: flair_cents
+      assign flair_percent = flair_saved | times: 100.0 | divided_by: flair_base | round
+    endif
+  endif
+-%}
+{%- if flair_code != blank -%}{{ flair_code }}|{{ flair_cents }}|{{ flair_percent }}|{{ flair_base }}{%- endif -%}

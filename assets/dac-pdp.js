@@ -156,6 +156,8 @@
       this.root.querySelectorAll('[data-dac-price]').forEach((block) => {
         const codeOn = block.dataset.codeOn === 'true';
         const percent = Number(block.dataset.codePercent || 0);
+        const basePrice = Number(block.dataset.codeBase || 0);
+        const dealPrice = Number(block.dataset.codePrice || 0);
         const price = variant.price;
         const compare = variant.compare_at_price || 0;
         const compareEl = block.querySelector('[data-dac-compare]');
@@ -168,7 +170,12 @@
         }
         if (regularEl) regularEl.textContent = `${formatMoney(price, this.format)} ${block.dataset.withoutCode || ''}`.trim();
         if (nowEl) {
-          const shown = codeOn ? Math.round((price * (100 - percent)) / 100) : price;
+          let shown = price;
+          if (codeOn && basePrice > 0 && dealPrice > 0) {
+            shown = price === basePrice ? dealPrice : Math.round((price * dealPrice) / basePrice);
+          } else if (codeOn && percent) {
+            shown = Math.round((price * (100 - percent)) / 100);
+          }
           nowEl.textContent = formatMoney(shown, this.format);
           nowEl.classList.toggle('is-sale', codeOn || compare > price);
         }

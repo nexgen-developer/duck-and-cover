@@ -8,14 +8,16 @@
   assign bs = block.settings
   assign ss = section.settings
 
-  assign code = ss.discount_code | strip
-  assign code_percent = ss.code_percent | default: 0
-  if ss.code2_collection != blank and ss.code2 != blank
-    assign collection_handles = p.collections | map: 'handle'
-    if collection_handles contains ss.code2_collection.handle
-      assign code = ss.code2 | strip
-      assign code_percent = ss.code2_percent
-    endif
+  assign code = ''
+  assign code_percent = 0
+  capture flair_offer
+    render 'dac-flair-offer', dac_product: p
+  endcapture
+  assign flair_offer = flair_offer | strip
+  if flair_offer != blank
+    assign flair_bits = flair_offer | split: '|'
+    assign code = flair_bits[0] | strip
+    assign code_percent = flair_bits[2] | plus: 0
   endif
 
   comment

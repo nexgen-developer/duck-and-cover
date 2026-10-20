@@ -1,6 +1,6 @@
 {%- comment -%}
   Price block. Compare at price, price without code, price with code, a copyable code chip
-  and a helper line. Discount code settings live on the section so other blocks share them.
+  and a helper line. The code and the price with code come from the live Flair product badge.
 {%- endcomment -%}
 {%- liquid
   assign p = closest.product | default: product
@@ -10,38 +10,29 @@
   assign price = variant.price
   assign compare = variant.compare_at_price | default: 0
 
-  assign code = ss.discount_code | strip
-  assign code_percent = ss.code_percent | default: 0
-  if ss.code2_collection != blank and ss.code2 != blank
-    assign collection_handles = p.collections | map: 'handle'
-    if collection_handles contains ss.code2_collection.handle
-      assign code = ss.code2 | strip
-      assign code_percent = ss.code2_percent
-    endif
-  endif
+  assign code = ''
+  assign code_percent = 0
+  assign code_price = 0
+  assign code_base = price
+  capture flair_offer
+    render 'dac-flair-offer', dac_product: p
+  endcapture
+  assign flair_offer = flair_offer | strip
   assign code_on = false
-  if ss.show_code_price and code != blank and code_percent > 0 and p.gift_card? == false
-    assign code_on = true
-    assign vendor_key = p.vendor | downcase | strip
-    assign hide_list = ss.code_hide_vendors | downcase | split: ','
-    for hide_vendor in hide_list
-      assign hide_clean = hide_vendor | strip
-      if hide_clean != blank and hide_clean == vendor_key
-        assign code_on = false
-      endif
-    endfor
-    if settings.dac_clearance_hide_code
-      capture flags
-        render 'dac-promo-flags', product: p
-      endcapture
-      if flags contains 'clearance'
-        assign code_on = false
-      endif
+  if ss.show_code_price and flair_offer != blank
+    assign flair_bits = flair_offer | split: '|'
+    assign code = flair_bits[0] | strip
+    assign code_price = flair_bits[1] | plus: 0
+    assign code_percent = flair_bits[2] | plus: 0
+    assign code_base = flair_bits[3] | plus: 0
+    if code != blank
+      assign code_on = true
     endif
   endif
-
-  assign keep_percent = 100 | minus: code_percent
-  assign code_price = price | times: keep_percent | plus: 50 | divided_by: 100
+  if code_on and code_price <= 0 and code_percent > 0
+    assign keep_percent = 100 | minus: code_percent
+    assign code_price = price | times: keep_percent | plus: 50 | divided_by: 100
+  endif
 
   assign best_price_on = false
   if code_on and code_percent >= ss.signup_percent and ss.best_price_label != blank
@@ -56,6 +47,8 @@
   data-dac-price
   data-code-on="{{ code_on }}"
   data-code-percent="{{ code_percent }}"
+  data-code-price="{{ code_price }}"
+  data-code-base="{{ code_base }}"
   data-without-code="{{ bs.without_code_label | escape }}"
   style="--dac-mt: {{ bs.spacing_top }}px; --dac-mt-m: {{ bs.spacing_top_mobile }}px; --dac-hero: {{ bs.hero_size }}px; --dac-hero-m: {{ bs.hero_size_mobile }}px; --dac-hero-fw: {{ bs.hero_weight }}; --dac-hero-fw-m: {{ bs.hero_weight_mobile }}; --dac-sale: {{ bs.sale_color }}; --dac-regular: {{ bs.regular_color }}; --dac-fs: {{ bs.small_size }}px; --dac-fs-m: {{ bs.small_size_mobile }}px; --dac-muted: {{ bs.muted_color }};"
   {{ block.shopify_attributes }}
@@ -96,7 +89,7 @@
   "settings": [
     {
       "type": "paragraph",
-      "content": "The code and its discount are set on the Product information section, under Discount code."
+      "content": "The code and the price with code come from the live Flair product badge, the line that says WITH CODE. The chip stays hidden when Flair has no code for this product."
     },
     {
       "type": "text",
