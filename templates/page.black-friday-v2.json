@@ -32,20 +32,20 @@
         "padding_bottom_mobile": 40
       }
     },
-    "25bcb4cf-3aa4-4cb5-b78f-4074368db4a6": {
+    "halo_slideshow_jwzfYd": {
       "type": "halo-slideshow",
       "blocks": {
-        "template--16854807609594__25bcb4cf-3aa4-4cb5-b78f-4074368db4a6-image-1": {
+        "image_L4Kmty": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/PAGE_-_Weekly_Deals_Desktop_23d552fb-0432-41e4-ba5d-dceb7ae29cd7.jpg",
-            "mobile_image": "shopify://shop_images/PAGE_-_Weekly_Deals_Mobile_6c862242-ea76-4bd5-a4d9-71ad80275664.jpg",
+            "image": "shopify://shop_images/DAC-BF-DEALS-DESKTOP_81df53d8-3e6f-412e-8351-0868aaae509b.jpg",
+            "mobile_image": "shopify://shop_images/DAC-BF-DEALS-MOBILE.jpg",
             "title": "",
             "subtitle": "",
             "text": "",
             "btn": "2",
             "btn_text": "",
-            "link": "",
+            "link": "shopify://pages/black-friday",
             "container_content": "1570",
             "position": "left",
             "alignment": "left",
@@ -83,21 +83,22 @@
         }
       },
       "block_order": [
-        "template--16854807609594__25bcb4cf-3aa4-4cb5-b78f-4074368db4a6-image-1"
+        "image_L4Kmty"
       ],
       "custom_css": [
         ".text {font-size: 18px; padding-top: 3px;}"
       ],
+      "name": "BF Deals Header",
       "settings": {
         "show_slideshow": true,
         "container": "full",
         "padding_top": 30,
-        "padding_bottom": 26,
+        "padding_bottom": 30,
         "padding_top_tablet": 0,
         "padding_bottom_tablet": 0,
         "padding_top_mobile": 30,
         "padding_bottom_mobile": 0,
-        "block_title": "WEEKLY DEALS",
+        "block_title": "BLACK FRIDAY DEALS",
         "block_text": "",
         "block_title_align": "center",
         "block_layout": "1",
@@ -157,272 +158,14 @@
         "description": "40% Off Everett Chino Trousers! Get yours for just £18 - smart, versatile and perfect for everyday style. Use code EVERETT at checkout."
       }
     },
-    "weekly_deal_YDVHfG": {
-      "type": "weekly-deal",
-      "name": "3PK Boxer Deal",
-      "settings": {
-        "image": "shopify://shop_images/3PK-BOXERS-tile.gif",
-        "title": "3PK Boxers",
-        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">NOW £9.50</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
-        "button1": "Get Deal",
-        "url": "shopify://collections/3pk-boxer-deal",
-        "CustomCode": "3PKDEAL",
-        "description": "Stock up on everyday essentials with 3PK Boxers for just £9.50! Comfortable, practical and great value. Use code 3PKDEAL at checkout and grab the deal!"
-      }
-    },
-    "halo_slideshow_ntNC8f": {
+    "halo_slideshow_nmhbth": {
       "type": "halo-slideshow",
       "blocks": {
-        "image_E9jg8b": {
+        "image_JwReDR": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/DAC-bundle-page-desktop-banner_1.gif",
-            "mobile_image": "shopify://shop_images/DAC-bundle-page-mob-banner-2.gif",
-            "title": "",
-            "subtitle": "",
-            "text": "",
-            "btn": "2",
-            "btn_text": "",
-            "link": "shopify://collections/duck-and-cover-bundles",
-            "container_content": "1570",
-            "position": "left",
-            "alignment": "left",
-            "lookbook": false,
-            "product_1": "",
-            "point_x_1": 10,
-            "point_y_1": 10,
-            "product_2": "",
-            "point_x_2": 10,
-            "point_y_2": 10,
-            "product_3": "",
-            "point_x_3": 10,
-            "point_y_3": 10,
-            "product_4": "",
-            "point_x_4": 10,
-            "point_y_4": 10,
-            "product_5": "",
-            "point_x_5": 10,
-            "point_y_5": 10,
-            "show_background_overlay": false,
-            "transparent_button": false,
-            "background_color": "",
-            "background_overlay": "#000000",
-            "text_color": "#ffffff",
-            "title_color": "#ffffff",
-            "title_font": "font_2",
-            "title_font_size": 26,
-            "title_mobile_font_size": 20,
-            "title_font_weight": "700",
-            "title_text_transform": "none",
-            "text_font_size": 14,
-            "text_font_weight": "600",
-            "text_text_transform": "uppercase"
-          }
-        }
-      },
-      "block_order": [
-        "image_E9jg8b"
-      ],
-      "name": "Bundle Page",
-      "settings": {
-        "show_slideshow": true,
-        "container": "full",
-        "padding_top": 30,
-        "padding_bottom": 30,
-        "padding_top_tablet": 0,
-        "padding_bottom_tablet": 0,
-        "padding_top_mobile": 30,
-        "padding_bottom_mobile": 0,
-        "block_title": "",
-        "block_text": "",
-        "block_title_align": "center",
-        "block_layout": "1",
-        "block_content": "absolute",
-        "block_content_style": "1",
-        "block_fade": true,
-        "block_autoplay": true,
-        "block_autoplay_time": 5,
-        "block_dots": false,
-        "block_dots_bg": "",
-        "block_dots_color": "",
-        "block_dots_border": "",
-        "block_arrows": true,
-        "block_arrows_bg": "",
-        "block_arrows_color": "",
-        "block_arrows_border": "",
-        "lookbook_style": "1"
-      }
-    },
-    "weekly_deal_pmhwQp": {
-      "type": "weekly-deal",
-      "name": "30% OFF Jeans",
-      "settings": {
-        "image": "shopify://shop_images/DAC-SS24-Weekly-Deals-jean-tile_8218869a-c419-4e20-b5f5-ea5a393667d7.jpg",
-        "title": "30% OFF JEANS",
-        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">FROM £20</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
-        "button1": "Get Deal",
-        "url": "shopify://products/sherborn-bundle",
-        "CustomCode": "NO CODE NEEDED",
-        "description": "30% OFF Jeans! Upgrade your denim for less with 30% OFF selected jeans. Use code DENIM30 at checkout and save!"
-      }
-    },
-    "weekly_deal_XM6RQ9": {
-      "type": "weekly-deal",
-      "name": "Sherborn Bundle",
-      "settings": {
-        "image": "shopify://shop_images/DAC-SHERBORN-BUNDLE-TILE.jpg",
-        "title": "SHERBORN BUNDLE",
-        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">FROM £17.49</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
-        "button1": "Get Deal",
-        "url": "shopify://products/sherborn-bundle",
-        "CustomCode": "NO CODE NEEDED",
-        "description": "Get summer sorted with our Sherborn Bundles—Tee & Shorts for just £17.49 or Polo & Shorts for £19.59. With 30% OFF, it's the perfect time to refresh your warm-weather wardrobe. No code needed! Just add the selected products to your bundle to save!"
-      }
-    },
-    "weekly_deal_PF8J66": {
-      "type": "weekly-deal",
-      "name": "WRENTHAM POLO",
-      "settings": {
-        "image": "shopify://shop_images/DAC-WRENTHAM-POLO-TILE.jpg",
-        "title": "WRENTHAM POLO",
-        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">FOR £10</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
-        "button1": "Get Deal",
-        "url": "shopify://collections/wrentham-polo",
-        "CustomCode": "POLODEAL",
-        "description": "Upgrade your summer style with the Wrentham Polo for just £10! Smart, comfortable, and perfect for any occasion. Use code POLODEAL at checkout to grab yours."
-      }
-    },
-    "weekly_deal_nCEwdV": {
-      "type": "weekly-deal",
-      "name": "Tee & Denim Shorts Bundle",
-      "settings": {
-        "image": "shopify://shop_images/DAC-TEE-SHORT-TILE.gif",
-        "title": "DENIM SHORTS & T-SHIRT BUNDLE",
-        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">FROM £19.99</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
-        "button1": "Get Deal",
-        "url": "shopify://products/denim-short-t-shirt-bundle",
-        "CustomCode": "NO CODE NEEDED",
-        "description": "Refresh your summer wardrobe with our Denim Shorts & T-Shirt Bundle for just £19.99! An easy, everyday outfit at an unbeatable price. No code needed - just add to basket and save."
-      }
-    },
-    "weekly_deal_rEnB9G": {
-      "type": "weekly-deal",
-      "name": "Mystery Box",
-      "settings": {
-        "image": "shopify://shop_images/DUCK_COVER_-_WEEKLY_DEAL_-_Mystery_Box.jpg",
-        "title": "MYSTERY BOX",
-        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">£5.00</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
-        "button1": "Get Deal",
-        "url": "shopify://collections/mystery-item",
-        "CustomCode": "",
-        "description": "Feeling lucky? Grab a £5.00 Duck & Cover Mystery Box. Choose your size and we’ll take care of the rest."
-      }
-    },
-    "weekly_deal_CnQjac": {
-      "type": "weekly-deal",
-      "disabled": true,
-      "name": "BOGOF - Chinos",
-      "settings": {
-        "image": "shopify://shop_images/DAC-CHINO-TILE.gif",
-        "title": "BUY ONE GET ONE FREE - CHINOS",
-        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">£30.99</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
-        "button1": "Get Deal",
-        "url": "shopify://collections/moretor",
-        "CustomCode": "CHINOBOGOF",
-        "description": "Double up on style with our Buy One Get One Free chinos deal - 2 pairs for just £30.99! Perfect for upgrading your everyday wardrobe. Use code CHINOBOGOF at checkout while the offer lasts!"
-      }
-    },
-    "weekly_deal_xfeYix": {
-      "type": "weekly-deal",
-      "name": "T-Shirt & Jean Bundle",
-      "settings": {
-        "image": "shopify://shop_images/Tee-_-Jean-Tile.jpg",
-        "title": "T-SHIRT & JEAN BUNDLE",
-        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">£28.99</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
-        "button1": "Get Deal",
-        "url": "shopify://products/t-shirt-and-jean-bundle",
-        "CustomCode": "NO CODE NEEDED",
-        "description": "Upgrade your everyday essentials with our T-Shirt & Jean Bundle for just £28.99! The perfect combination of comfort and style at an unbeatable price. No code needed - just add the items to your bundle add to save."
-      }
-    },
-    "weekly_deal_78RRYA": {
-      "type": "weekly-deal",
-      "disabled": true,
-      "name": "2PK Boxers",
-      "settings": {
-        "image": "shopify://shop_images/DAC-2PK-BOXER-TILE.gif",
-        "title": "2PK BOXERS",
-        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">£5 WITH CODE</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
-        "button1": "Get Deal",
-        "url": "shopify://collections/2pk-boxers",
-        "CustomCode": "2PKBOXER",
-        "description": "Stock up on essentials with 2PK boxers for just £5! Everyday comfort at an unbeatable price. Use code 2PKBOXER at checkout."
-      }
-    },
-    "weekly_deal_8TnA9V": {
-      "type": "weekly-deal",
-      "disabled": true,
-      "name": "Tames Joggers",
-      "settings": {
-        "image": "shopify://shop_images/Tile_cfb97a84-623f-4cd6-87c6-daea790f8114.gif",
-        "title": "TAMES JOGGERS",
-        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">£13.50 WITH CODE</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
-        "button1": "Get Deal",
-        "url": "shopify://collections/tames-jogger",
-        "CustomCode": "TAMESJOGGER",
-        "description": "3 colours to choose from. Tames Joggers for just £13.50. Just use the code TAMESJOGGER at the checkout."
-      }
-    },
-    "weekly_deal_EVKQ7T": {
-      "type": "weekly-deal",
-      "disabled": true,
-      "name": "Jeans",
-      "settings": {
-        "image": "shopify://shop_images/Tile.jpg",
-        "title": "JEANS SAVING DEAL",
-        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">£16.50 WITH CODE</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
-        "button1": "Get Deal",
-        "url": "shopify://collections/tranfold",
-        "CustomCode": "JEANSAVING",
-        "description": "Upgrade your everyday denim with Duck & Cover jeans, now just £16.50 when you use code JEANSAVING."
-      }
-    },
-    "weekly_deal_8mNUCp": {
-      "type": "weekly-deal",
-      "disabled": true,
-      "name": "2 FOR 1 T-SHIRTS",
-      "settings": {
-        "image": "shopify://shop_images/WEEKLY-DEALS---Tile.gif",
-        "title": "2 FOR 1 ON T-SHIRTS",
-        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">\n£16 for 2</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
-        "button1": "Get Deal",
-        "url": "shopify://collections/2-for-1-t-shirt-deal",
-        "CustomCode": "2FOR1",
-        "description": "2 T-Shirts for £16 from Duck and Cover — just use code 2FOR1. That’s only £8 per tee. Time to refresh your T-shirt rotation."
-      }
-    },
-    "weekly_deal_6tPR9e": {
-      "type": "weekly-deal",
-      "disabled": true,
-      "name": " BUY ONE GET ONE FREE CHINO",
-      "settings": {
-        "image": "shopify://shop_images/TILE_8f9123cf-b94f-4908-b7ab-c9d25b955c73.gif",
-        "title": "BUY ONE GET ONE FREE CHINO",
-        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">\n£30.99 for 2</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
-        "button1": "Get Deal",
-        "url": "shopify://collections/moretor",
-        "CustomCode": "CHINOBOGOF",
-        "description": "Double up with Duck & Cover Chinos – 2 for £30.99. Use code CHINOBOGOF at checkout."
-      }
-    },
-    "halo_slideshow_FtAeWB": {
-      "type": "halo-slideshow",
-      "blocks": {
-        "image_WWeGWc": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/WEEKLY_DEAL_-_Desktop_August_Pay_Day_copy.png",
-            "mobile_image": "shopify://shop_images/WEEKLY_DEAL_-_Mobile_August_Pay_Day_copy.png",
+            "image": "shopify://shop_images/DAC-BF-PROMO-WD-DESKTOP_4e91cbf9-9e7f-4596-a024-d342d52dfdd8.jpg",
+            "mobile_image": "shopify://shop_images/DAC-BF-PROMO-WD-MOBILE_11642eba-7121-48e8-98f9-c5653cf29f44.jpg",
             "title": "",
             "subtitle": "",
             "text": "",
@@ -466,10 +209,9 @@
         }
       },
       "block_order": [
-        "image_WWeGWc"
+        "image_JwReDR"
       ],
-      "disabled": true,
-      "name": "Pay Day (26th September)",
+      "name": "BF MONTH Promo",
       "settings": {
         "show_slideshow": true,
         "container": "full",
@@ -499,114 +241,20 @@
         "lookbook_style": "1"
       }
     },
-    "7c7325b7-36f5-4b92-b68d-b75e26234dee": {
+    "halo_slideshow_VQD7j3": {
       "type": "halo-slideshow",
       "blocks": {
-        "659f475b-6c7e-4820-a19c-4856e4e97f69": {
+        "image_dmhwzV": {
           "type": "image",
-          "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/March-Payday-dac-Wd-desktop.jpg",
-            "mobile_image": "shopify://shop_images/March-Payday-DAC-WB-MOB.jpg",
+            "image": "shopify://shop_images/DAC-BF-sign-up-desktop_0e6e5e74-2891-455c-b681-e75beed36124.jpg",
+            "mobile_image": "shopify://shop_images/DAC-BF-sign-up-mobile.jpg",
             "title": "",
             "subtitle": "",
             "text": "",
             "btn": "2",
             "btn_text": "",
-            "link": "shopify://collections/new-in",
-            "container_content": "1570",
-            "position": "left",
-            "alignment": "left",
-            "lookbook": false,
-            "product_1": "",
-            "point_x_1": 10,
-            "point_y_1": 10,
-            "product_2": "",
-            "point_x_2": 10,
-            "point_y_2": 10,
-            "product_3": "",
-            "point_x_3": 10,
-            "point_y_3": 10,
-            "product_4": "",
-            "point_x_4": 10,
-            "point_y_4": 10,
-            "product_5": "",
-            "point_x_5": 10,
-            "point_y_5": 10,
-            "show_background_overlay": false,
-            "transparent_button": false,
-            "background_color": "",
-            "background_overlay": "#000000",
-            "text_color": "#ffffff",
-            "title_color": "#ffffff",
-            "title_font": "font_2",
-            "title_font_size": 26,
-            "title_mobile_font_size": 20,
-            "title_font_weight": "700",
-            "title_text_transform": "none",
-            "text_font_size": 14,
-            "text_font_weight": "600",
-            "text_text_transform": "uppercase"
-          }
-        },
-        "image_VFrAza": {
-          "type": "image",
-          "disabled": true,
-          "settings": {
-            "image": "shopify://shop_images/Artboard_35.png",
-            "mobile_image": "shopify://shop_images/Artboard_36.png",
-            "title": "",
-            "subtitle": "",
-            "text": "",
-            "btn": "2",
-            "btn_text": "",
-            "link": "shopify://collections/new-in",
-            "container_content": "1570",
-            "position": "left",
-            "alignment": "left",
-            "lookbook": false,
-            "product_1": "",
-            "point_x_1": 10,
-            "point_y_1": 10,
-            "product_2": "",
-            "point_x_2": 10,
-            "point_y_2": 10,
-            "product_3": "",
-            "point_x_3": 10,
-            "point_y_3": 10,
-            "product_4": "",
-            "point_x_4": 10,
-            "point_y_4": 10,
-            "product_5": "",
-            "point_x_5": 10,
-            "point_y_5": 10,
-            "show_background_overlay": false,
-            "transparent_button": false,
-            "background_color": "",
-            "background_overlay": "#000000",
-            "text_color": "#ffffff",
-            "title_color": "#ffffff",
-            "title_font": "font_2",
-            "title_font_size": 26,
-            "title_mobile_font_size": 20,
-            "title_font_weight": "700",
-            "title_text_transform": "none",
-            "text_font_size": 14,
-            "text_font_weight": "600",
-            "text_text_transform": "uppercase"
-          }
-        },
-        "image_y3HMC6": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/WEEKLY_DEAL_-_Desktop_August_Pay_Day.png",
-            "mobile_image": "shopify://shop_images/WEEKLY_DEAL_-_Mobile_August_Pay_Day.png",
-            "title": "",
-            "subtitle": "",
-            "text": "",
-            "btn": "2",
-            "btn_text": "",
-            "link": "",
+            "link": "shopify://pages/subscribe",
             "container_content": "1570",
             "position": "left",
             "alignment": "left",
@@ -644,96 +292,9 @@
         }
       },
       "block_order": [
-        "659f475b-6c7e-4820-a19c-4856e4e97f69",
-        "image_VFrAza",
-        "image_y3HMC6"
+        "image_dmhwzV"
       ],
-      "disabled": true,
-      "settings": {
-        "show_slideshow": true,
-        "container": "full",
-        "padding_top": 30,
-        "padding_bottom": 30,
-        "padding_top_tablet": 0,
-        "padding_bottom_tablet": 0,
-        "padding_top_mobile": 30,
-        "padding_bottom_mobile": 0,
-        "block_title": "",
-        "block_text": "",
-        "block_title_align": "center",
-        "block_layout": "1",
-        "block_content": "absolute",
-        "block_content_style": "1",
-        "block_fade": true,
-        "block_autoplay": true,
-        "block_autoplay_time": 5,
-        "block_dots": false,
-        "block_dots_bg": "",
-        "block_dots_color": "",
-        "block_dots_border": "",
-        "block_arrows": true,
-        "block_arrows_bg": "",
-        "block_arrows_color": "",
-        "block_arrows_border": "",
-        "lookbook_style": "1"
-      }
-    },
-    "halo_slideshow_ECKMHA": {
-      "type": "halo-slideshow",
-      "blocks": {
-        "image_xHaEHG": {
-          "type": "image",
-          "disabled": true,
-          "settings": {
-            "image": "shopify://shop_images/DAC-CLEARANCE-DESKTOP_2656e479-4060-40f2-8165-4d7ea922d0b9.jpg",
-            "mobile_image": "shopify://shop_images/DAC-CLEARANCE-MOBILE_dd4798da-ccee-41c1-ae41-6ee2cc51d7e8.jpg",
-            "title": "",
-            "subtitle": "",
-            "text": "",
-            "btn": "2",
-            "btn_text": "",
-            "link": "shopify://collections/clearance",
-            "container_content": "1570",
-            "position": "left",
-            "alignment": "left",
-            "lookbook": false,
-            "product_1": "",
-            "point_x_1": 10,
-            "point_y_1": 10,
-            "product_2": "",
-            "point_x_2": 10,
-            "point_y_2": 10,
-            "product_3": "",
-            "point_x_3": 10,
-            "point_y_3": 10,
-            "product_4": "",
-            "point_x_4": 10,
-            "point_y_4": 10,
-            "product_5": "",
-            "point_x_5": 10,
-            "point_y_5": 10,
-            "show_background_overlay": false,
-            "transparent_button": false,
-            "background_color": "",
-            "background_overlay": "#000000",
-            "text_color": "#ffffff",
-            "title_color": "#ffffff",
-            "title_font": "font_2",
-            "title_font_size": 26,
-            "title_mobile_font_size": 20,
-            "title_font_weight": "700",
-            "title_text_transform": "none",
-            "text_font_size": 14,
-            "text_font_weight": "600",
-            "text_text_transform": "uppercase"
-          }
-        }
-      },
-      "block_order": [
-        "image_xHaEHG"
-      ],
-      "disabled": true,
-      "name": "Clearance",
+      "name": "BF MONTH - Sign up",
       "settings": {
         "show_slideshow": true,
         "container": "full",
@@ -767,26 +328,11 @@
   "order": [
     "weekly_deals_columns",
     "main",
-    "25bcb4cf-3aa4-4cb5-b78f-4074368db4a6",
+    "halo_slideshow_jwzfYd",
     "weekly_deal_pATLmh",
     "weekly_deal_MJpb7p",
     "weekly_deal_JXpkmF",
-    "weekly_deal_YDVHfG",
-    "halo_slideshow_ntNC8f",
-    "weekly_deal_pmhwQp",
-    "weekly_deal_XM6RQ9",
-    "weekly_deal_PF8J66",
-    "weekly_deal_nCEwdV",
-    "weekly_deal_rEnB9G",
-    "weekly_deal_CnQjac",
-    "weekly_deal_xfeYix",
-    "weekly_deal_78RRYA",
-    "weekly_deal_8TnA9V",
-    "weekly_deal_EVKQ7T",
-    "weekly_deal_8mNUCp",
-    "weekly_deal_6tPR9e",
-    "halo_slideshow_FtAeWB",
-    "7c7325b7-36f5-4b92-b68d-b75e26234dee",
-    "halo_slideshow_ECKMHA"
+    "halo_slideshow_nmhbth",
+    "halo_slideshow_VQD7j3"
   ]
 }
