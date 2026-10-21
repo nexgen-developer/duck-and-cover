@@ -145,7 +145,7 @@
           "type": "dac-bundle-note",
           "settings": {
             "tag": "BUNDLE",
-            "text": "Please note this item is part of a bundle. All items must be returned together for a refund.",
+            "text": "Please note this product is part of a bundle. All items must be returned together for a refund.",
             "hidden_note": "Hidden on this product because it isn't tagged bundle.",
             "background": "#f4f4f4",
             "text_color": "#222222",
