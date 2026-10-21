@@ -171,6 +171,22 @@
           },
           "blocks": {}
         },
+        "dac_mystery_note_rRpFXe": {
+          "type": "dac-mystery-note",
+          "name": "Underwear Note",
+          "settings": {
+            "tag": "Underwear",
+            "text": "Please note Underwear is non refundable / non returnable",
+            "hidden_note": "Hidden on this product because it isn't tagged underwear.",
+            "background": "#f4f4f4",
+            "text_color": "#222222",
+            "text_size": 14,
+            "text_size_mobile": 13,
+            "spacing_top": -12,
+            "spacing_top_mobile": -10
+          },
+          "blocks": {}
+        },
         "colours": {
           "type": "shopify://apps/linkify-product-colors/blocks/app-block/1fdc741b-f4ed-4b8c-aee7-aa5e4ad76aa8",
           "settings": {
@@ -422,6 +438,7 @@
         "clearance",
         "bundle_note",
         "mystery_note",
+        "dac_mystery_note_rRpFXe",
         "colours",
         "variant_picker",
         "loyalty",
