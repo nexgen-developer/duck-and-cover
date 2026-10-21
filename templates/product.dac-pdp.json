@@ -397,6 +397,21 @@
             "spacing_top_mobile": -10
           },
           "blocks": {}
+        },
+        "mystery_note": {
+          "type": "dac-mystery-note",
+          "settings": {
+            "tag": "mystery",
+            "text": "Mystery items can't be returned or refunded.",
+            "hidden_note": "Hidden on this product because it isn't tagged mystery.",
+            "background": "#f4f4f4",
+            "text_color": "#222222",
+            "text_size": 14,
+            "text_size_mobile": 13,
+            "spacing_top": -12,
+            "spacing_top_mobile": -10
+          },
+          "blocks": {}
         }
       },
       "block_order": [
@@ -406,6 +421,7 @@
         "signup",
         "clearance",
         "bundle_note",
+        "mystery_note",
         "colours",
         "variant_picker",
         "loyalty",
