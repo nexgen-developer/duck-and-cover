@@ -159,7 +159,7 @@
         "mystery_note": {
           "type": "dac-mystery-note",
           "settings": {
-            "tag": "mystery",
+            "tag": "VendorMystery",
             "text": "Mystery items can't be returned or refunded.",
             "hidden_note": "Hidden on this product because it isn't tagged mystery.",
             "background": "#f4f4f4",
