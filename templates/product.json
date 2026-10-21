@@ -124,16 +124,31 @@
           "type": "dac-clearance",
           "settings": {
             "heading": "Clearance",
-            "text": "Add a short clearance message in the theme editor.",
+            "text": "This is the lowest price on our site - no further discounts can be used with this product",
             "special_tags": "VendorSpecialOffer",
             "special_heading": "Special Offer",
-            "special_text": "Add a short Special Offer message in the theme editor.",
+            "special_text": "This is the lowest price on our site - no further discounts can be used with this product.",
             "hidden_note": "Hidden on this product because it isn't tagged as clearance.",
             "background": "#f4f4f4",
             "heading_color": "#222222",
             "text_color": "#222222",
             "heading_size": 24,
             "heading_size_mobile": 18,
+            "text_size": 14,
+            "text_size_mobile": 13,
+            "spacing_top": -12,
+            "spacing_top_mobile": -10
+          },
+          "blocks": {}
+        },
+        "bundle_note": {
+          "type": "dac-bundle-note",
+          "settings": {
+            "tag": "BUNDLE",
+            "text": "Please note this item is part of a bundle. All items must be returned together for a refund.",
+            "hidden_note": "Hidden on this product because it isn't tagged bundle.",
+            "background": "#f4f4f4",
+            "text_color": "#222222",
             "text_size": 14,
             "text_size_mobile": 13,
             "spacing_top": -12,
@@ -382,21 +397,6 @@
         "wiser_ai_upsell_cross_sell_wiser_fbt_Lq3hgD": {
           "type": "shopify://apps/wiser-ai-upsell-cross-sell/blocks/wiser_fbt/3f966edc-9a4a-465c-a4df-436d2a39160d",
           "settings": {}
-        },
-        "bundle_note": {
-          "type": "dac-bundle-note",
-          "settings": {
-            "tag": "bundle",
-            "text": "To return one item, the whole bundle has to be returned together.",
-            "hidden_note": "Hidden on this product because it isn't tagged bundle.",
-            "background": "#f4f4f4",
-            "text_color": "#222222",
-            "text_size": 14,
-            "text_size_mobile": 13,
-            "spacing_top": -12,
-            "spacing_top_mobile": -10
-          },
-          "blocks": {}
         }
       },
       "block_order": [
