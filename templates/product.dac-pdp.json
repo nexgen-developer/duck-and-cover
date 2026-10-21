@@ -382,6 +382,21 @@
         "wiser_ai_upsell_cross_sell_wiser_fbt_Lq3hgD": {
           "type": "shopify://apps/wiser-ai-upsell-cross-sell/blocks/wiser_fbt/3f966edc-9a4a-465c-a4df-436d2a39160d",
           "settings": {}
+        },
+        "bundle_note": {
+          "type": "dac-bundle-note",
+          "settings": {
+            "tag": "bundle",
+            "text": "To return one item, the whole bundle has to be returned together.",
+            "hidden_note": "Hidden on this product because it isn't tagged bundle.",
+            "background": "#f4f4f4",
+            "text_color": "#222222",
+            "text_size": 14,
+            "text_size_mobile": 13,
+            "spacing_top": -12,
+            "spacing_top_mobile": -10
+          },
+          "blocks": {}
         }
       },
       "block_order": [
@@ -390,6 +405,7 @@
         "price",
         "signup",
         "clearance",
+        "bundle_note",
         "colours",
         "variant_picker",
         "loyalty",

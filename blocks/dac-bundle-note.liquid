@@ -1,0 +1,118 @@
+{%- comment -%}
+  Bundle return note. Shows only when the product is tagged bundle.
+{%- endcomment -%}
+{%- liquid
+  assign p = closest.product | default: product
+  assign bs = block.settings
+  assign wanted = bs.tag | default: 'bundle' | downcase | strip
+  assign show_note = false
+  for tag in p.tags
+    assign tag_key = tag | downcase | strip
+    if tag_key == wanted
+      assign show_note = true
+      break
+    endif
+  endfor
+-%}
+{%- if show_note and bs.text != blank -%}
+  <div
+    class="dac-block dac-signup dac-clearance"
+    style="--dac-mt: {{ bs.spacing_top }}px; --dac-mt-m: {{ bs.spacing_top_mobile }}px; --dac-bg: {{ bs.background }}; --dac-color: {{ bs.text_color }}; --dac-fs: {{ bs.text_size }}px; --dac-fs-m: {{ bs.text_size_mobile }}px;"
+    {{ block.shopify_attributes }}
+  >
+    <p class="dac-signup__text">{{ bs.text | escape }}</p>
+  </div>
+{%- elsif request.design_mode -%}
+  <div class="dac-block dac-editor-note" {{ block.shopify_attributes }}>{{ bs.hidden_note }}</div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Bundle note",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "Shows only when the product has the tag below. The tag match ignores capital letters."
+    },
+    {
+      "type": "text",
+      "id": "tag",
+      "label": "Product tag",
+      "default": "bundle"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Text",
+      "default": "To return one item, the whole bundle has to be returned together."
+    },
+    {
+      "type": "text",
+      "id": "hidden_note",
+      "label": "Note shown in the editor when the block is hidden",
+      "default": "Hidden on this product because it isn't tagged bundle."
+    },
+    {
+      "type": "header",
+      "content": "Style"
+    },
+    {
+      "type": "color",
+      "id": "background",
+      "label": "Background",
+      "default": "#F4F4F4"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text colour",
+      "default": "#222222"
+    },
+    {
+      "type": "range",
+      "id": "text_size",
+      "label": "Text size, desktop",
+      "min": 10,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "text_size_mobile",
+      "label": "Text size, mobile",
+      "min": 10,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 13
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "spacing_top",
+      "label": "Space above, desktop",
+      "min": -20,
+      "max": 40,
+      "step": 1,
+      "unit": "px",
+      "default": -12
+    },
+    {
+      "type": "range",
+      "id": "spacing_top_mobile",
+      "label": "Space above, mobile",
+      "min": -20,
+      "max": 40,
+      "step": 1,
+      "unit": "px",
+      "default": -10
+    }
+  ],
+  "presets": [{ "name": "Bundle note" }]
+}
+{% endschema %}
