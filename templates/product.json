@@ -176,7 +176,7 @@
           "name": "Underwear Note",
           "settings": {
             "tag": "Underwear",
-            "text": "Please note Underwear is non refundable / non returnable",
+            "text": "Please note all underwear is non refundable / non returnable",
             "hidden_note": "Hidden on this product because it isn't tagged underwear.",
             "background": "#f4f4f4",
             "text_color": "#222222",
