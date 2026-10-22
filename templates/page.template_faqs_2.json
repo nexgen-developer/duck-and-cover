@@ -95,9 +95,9 @@
           "settings": {
             "title": "RETURNS AND EXCHANGES",
             "question_1": "HOW DO I RETURN MY ORDER?",
-            "answer_1": "<p>Unwanted items can be returned within 28 days of purchase for a refund or exchange. All items should be returned in their original condition, unworn and unused, with tags attached. Underwear cannot be returned due to hygiene reasons.\n\nYou can download a returns form from the website or simply use the delivery note that came with your order. The returns form/delivery note should be included with any items you are returning. Please indicate clearly your customer reference number, what you are returning and why, and if you are looking for a refund or an exchange. All exchanges are subject to stock availability. If we cannot process an exchange due to a lack of stock, we will arrange a refund or contact you to offer an alternative.\n\nIt is recommended that you use a tracked delivery service to return items. Please note, we do not pay the return postage.</p>",
-            "question_2": "WHY DO YOU CHARGE FOR RETURNS?",
-            "answer_2": "<p>As a business, our priority is to keep our costs down so that we can keep prices as low as possible for our customers. Fortunately, our sizing guide on the website is very comprehensive so you can be sure you are ordering the right size for yourself. If an item is received which is outside of the advertised guidelines, then we would cover the cost of returning the defective product for a replacement or refund.</p>",
+            "answer_1": "<p>Unwanted items can be returned within 30 days of placing your order for a refund, exchange or store credit. All items should be returned in their original condition, unworn and unused, with tags attached. Underwear cannot be returned due to hygiene reasons.\n\nTo start a return, visit our Returns Portal at duckandcover.co.uk/apps/redo/returns-portal and enter your order number and email address. Select the items you're returning, choose a refund, exchange or store credit, and follow the instructions to get your returns label. You don't need to include a returns form.\n\nAll exchanges are subject to stock availability. If we cannot process an exchange due to a lack of stock, we will arrange a refund instead.</p>",
+            "question_2": "DO I HAVE TO PAY FOR RETURNS?",
+            "answer_2": "<p>If you added Checkout+ when placing your order, your return or exchange is free and your returns label is covered.\n\nIf you didn't add Checkout+, you can still return through our Returns Portal, but a return shipping fee will apply. You'll see the fee in the portal before you confirm your return.\n\nIf you've received a faulty or incorrect item, please contact our Customer Services team before returning it. We'll cover the cost of the return.</p>",
             "question_3": "I’VE RECEIVED MY ITEM AND THERE IS A FAULT, WHAT DO I DO?",
             "answer_3": "<p>As soon as you notice the fault, please contact our Customer Services team by email who will be happy to help sort this out. You will need to send a photograph of the fault along with your customer reference number. Their email can be found at the bottom of these FAQs.\n\nThis must be done within 14 days of ordering.</p>",
             "question_4": "MY ITEM HAS DEVELOPED A FAULT AND I AM WITHIN 6 MONTHS OF THE PURCHASE DATE.",
@@ -107,11 +107,11 @@
             "question_6": "I AM MISSING AN ITEM. WHAT DO I DO?",
             "answer_6": "<p>As soon as you notice that an item is missing from your order, please contact our Customer Services team who will be happy to help sort this out. Their contact details can be found at the bottom of these FAQs.\n\nThis must be done within 30 days of ordering.</p>",
             "question_7": "HAVE YOU RECEIVED MY RETURNS BACK?",
-            "answer_7": "<p>If you have used a tracking service to send your returns back, then it is a good idea to check this first. We aim to process a return within 2-3 working days of receiving them although this may be longer during very busy periods. We will then issue a refund or arrange an exchange as per the request noted on the paperwork included with the return.</p>",
+            "answer_7": "<p>You'll receive email updates as your return is processed, and you can check its status at any time in our Returns Portal. We aim to process returns within 5 working days of receiving them, although this may be longer during very busy periods. We will then issue your refund, store credit or exchange, depending on the option you chose in the portal.</p>",
             "question_8": "WHEN WILL I GET MY REFUND?",
-            "answer_8": "<p>Once we receive your return, any refund due will be issued to the payment method you used to place your original order. This typically takes up to 7 working days depending on your payment provider.</p>",
-            "question_9": "",
-            "answer_9": "",
+            "answer_8": "<p>Once your return has been received, inspected and approved, any refund due will be issued to the payment method you used to place your original order. Please allow up to 5 working days for the refund to reach your account, depending on your payment provider. If you chose store credit, this will be available to use as soon as your return has been processed.</p>",
+            "question_9": "CAN I EXCHANGE MY ITEM FOR A DIFFERENT SIZE OR COLOUR?",
+            "answer_9": "<p>Yes. Choose \"Exchange\" in our Returns Portal. With an instant exchange we'll send your new item straight away, before your return reaches us (subject to stock availability).</p><p></p>",
             "question_10": "",
             "answer_10": ""
           }
