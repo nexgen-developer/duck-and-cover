@@ -17,12 +17,21 @@
 * Flair: https://apps.shopify.com/flair
 * Copyright Brainy Atom LLC, All Rights Reserved.
 *
-* Last updated: 2026-10-02T07:48:53Z
+* Last updated: 2026-10-23T09:45:10Z
 ************************************************************************
 {%- endcomment -%}
 {%- liquid
 assign flair_output = ""
-assign flair_config = shop.metafields["flair-app"].config
+assign flair_app_id = "1535265"
+assign flair_app_namespace = "app--" | append: flair_app_id
+assign flair_config_gen2 = shop.metafields[flair_app_namespace].config_gen2.value
+if flair_config_gen2
+  assign flair_config = flair_config_gen2.config
+  assign flair_mfs = flair_config_gen2.banners
+else
+  assign flair_config = shop.metafields["flair-app"].config
+  assign flair_mfs = shop.metafields["flair-banners"]
+endif
 assign flair_layout_config = blank
 assign flair_layout_default = blank
 if flair_page_type == blank
@@ -61,7 +70,6 @@ assign flair_banner_count = 0
 assign flair_collection_id_string = product.collections | map: "id" | join: "|" | prepend: "|" | append: "|"
 assign flair_product_tag_string = product.tags | join: "|" | prepend: "|" | append: "|" | downcase
 assign flair_customer_tag_string = customer.tags | join: "|" | prepend: "|" | append: "|" | downcase
-assign flair_mfs = shop.metafields["flair-banners"]
 for flair_mf_key in flair_config.banner_metafield_keys
   for flair_banner in flair_mfs[flair_mf_key]
     if flair_banner_count >= flair_layout_banner_max
@@ -333,13 +341,14 @@ endfor
 if flair_layout != blank
   assign flair_layout_attr = 'data-layout="' | append: flair_layout | append: '"'
 elsif flair_layout_config != blank
-  assign flair_layout_attr = 'data-layout-auto="' | append: flair_layout_config.name | append: '"'
+  assign flair_layout_name = flair_layout_config.name | escape
+  assign flair_layout_attr = 'data-layout-auto="' | append: flair_layout_name | append: '"'
 endif
 -%}
-<div class="flair-banner-layout" data-flair-banner {{ flair_layout_attr }}{% if flair_output != "" %} style="{{ flair_layout_css }}"{% endif %}>
+<div class="flair-banner-layout" data-flair-banner {{ flair_layout_attr }}{% if flair_output != "" %} style="{{ flair_layout_css | escape }}"{% endif %}>
   {%- if flair_output != "" -%}{{ flair_output }}{%- endif -%}
 </div>
 {%- liquid
 assign flair_layout = blank
 -%}
-<!-- generated: {{ "now" | date: "%F %T %z" }} -->
+<!-- generated: {{ "now" | date: "%F %T %z" }} {% if flair_config_gen2 %}mfapp{% else %}mfleg{% endif %} -->
