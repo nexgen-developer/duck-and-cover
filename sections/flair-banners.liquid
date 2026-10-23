@@ -9,7 +9,7 @@
 *
 * Copyright Brainy Atom LLC, All Rights Reserved.
 *
-* Last updated: 2026-10-20T13:35:32Z
+* Last updated: 2026-10-23T07:48:29Z
 ************************************************************************
 {%- endcomment -%}
 {%- liquid
@@ -33,19 +33,6 @@
           assign flair_collection = collections[v]
         elsif k == '_lay'
           assign flair_layout = v | escape
-        elsif k == '_pag'
-          assign flair_page_type = v
-        endif
-      endfor
-    else
-      for t in flair_terms
-        assign kv = t | split: ':'
-        assign k = kv[0] | url_decode
-        assign v = kv[1] | url_decode
-        if k == '_col'
-          assign flair_collection = collections[v]
-        elsif k == '_lay'
-          assign flair_layout = v | remove: '&quot;'
         elsif k == '_pag'
           assign flair_page_type = v
         endif
