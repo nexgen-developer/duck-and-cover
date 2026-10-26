@@ -155,12 +155,12 @@
       "type": "weekly-deal",
       "name": "Deal 2 - Merchell",
       "settings": {
-        "image": "shopify://shop_images/DAC-CONSENZA-TILE.gif",
-        "title": "Consenza Knit £13.34",
-        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">£13.34</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
+        "image": "shopify://shop_images/DAC-BF-merchell-TILE.gif",
+        "title": "Merchell Tracksuit",
+        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">£24.50</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
         "button1": "Get Deal",
-        "url": "https://www.duckandcover.co.uk/collections/consenza-knit",
-        "CustomCode": "KNITDEAL",
+        "url": "shopify://collections/merchell-jog-set",
+        "CustomCode": "TRACKSUITOFFER",
         "description": "Get your off-duty look sorted with the Merchell Tracksuit for just £24.50! Perfect for laid-back days, comfy fits and everyday style. Use code TRACKSUITOFFER at checkout to grab this deal."
       }
     },
