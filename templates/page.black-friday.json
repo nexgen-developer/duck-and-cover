@@ -116,26 +116,26 @@
       "type": "weekly-deal",
       "name": "Deal 5 - 7PK Boxers",
       "settings": {
-        "image": "shopify://shop_images/DAC-KREMES-TILE.gif",
-        "title": "Kremes Trainers £16",
-        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">£16</div>\n   <div class=\"price-item price-item--regular\">£55</div>\n</div>\n<label></label>",
+        "image": "shopify://shop_images/DAC-BF-BOXER-TILE.gif",
+        "title": "7PK BOXERS",
+        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">£16.99</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
         "button1": "Get Deal",
-        "url": "shopify://collections/kremes",
-        "CustomCode": "KREMES",
-        "description": "Grab some fresh trainers for £16! Perfect for a gift idea or a treat for yourself this Black Friday!"
+        "url": "shopify://collections/duck-and-cover-7pk-boxers",
+        "CustomCode": "BOXEROFFER",
+        "description": "Stock up on everyday essentials with 7PK Anvilli Boxers for just £16.99! That's a fresh pair for every day of the week, all for one great price. Use code BOXEROFFER at checkout to grab the deal!"
       }
     },
     "weekly_deal_KqekLd": {
       "type": "weekly-deal",
       "name": "Deal 4 - Hoodies",
       "settings": {
-        "image": "shopify://shop_images/DAC-HOODIE-TILE.jpg",
-        "title": "60% OFF Selected Hoodies",
-        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\"></div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
+        "image": "shopify://shop_images/DAC-BF-HOODIE-TILE.jpg",
+        "title": "HOODIE DEAL",
+        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">£14</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
         "button1": "Get Deal",
-        "url": "shopify://collections/hoodie-deal",
-        "CustomCode": "HOODIE60",
-        "description": "Perfect for layering up in style. Use code HOODIE60 at checkout - don’t miss this limited-time offer!"
+        "url": "https://www.duckandcover.co.uk/collections/hoodie-offer",
+        "CustomCode": "HOODIEOFFER",
+        "description": "Your next wardrobe favourite is waiting! Pick up a hoodie for just £14 this Black Friday - perfect for layering up and keeping cosy. Use code HOODIEOFFER at checkout and save!"
       }
     },
     "weekly_deal_BhWGkE": {
