@@ -142,13 +142,13 @@
       "type": "weekly-deal",
       "name": "Deal 3 - Elix Jeans",
       "settings": {
-        "image": "shopify://shop_images/DAC-MORETOR-CHINO-TILE.gif",
-        "title": "Moretor Chinos £14.40",
-        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">£14.40</div>\n   <div class=\"price-item price-item--regular\">£60</div>\n</div>\n<label></label>",
+        "image": "shopify://shop_images/DAC-ELIX-TILE_2397d16f-4245-458a-9f74-e224c1e8a37d.gif",
+        "title": "ELIX JEANS",
+        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">£18</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
         "button1": "Get Deal",
-        "url": "shopify://collections/moretor",
-        "CustomCode": "CHINODEAL",
-        "description": "Moretor Chinos for just £14.40, smart, versatile, and perfect for any occasion. Use code CHINODEAL at checkout to save now!"
+        "url": "shopify://collections/elix-jean",
+        "CustomCode": "ELIX",
+        "description": "Fresh denim for less! Grab the Elix Jeans for just £18 this Black Friday and give your wardrobe an easy upgrade. Use code JEANOFFER at checkout and bag yourself a bargain!"
       }
     },
     "weekly_deal_X9ejcT": {
@@ -156,7 +156,7 @@
       "name": "Deal 2 - Merchell",
       "settings": {
         "image": "shopify://shop_images/DAC-BF-merchell-TILE.gif",
-        "title": "Merchell Tracksuit",
+        "title": "MERCHELL TRACKSUIT",
         "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">£24.50</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
         "button1": "Get Deal",
         "url": "shopify://collections/merchell-jog-set",
@@ -169,7 +169,7 @@
       "name": "Deal 1 - Chinos",
       "settings": {
         "image": "shopify://shop_images/DAC-BF-CHINO-TILE.gif",
-        "title": "Chino Deal",
+        "title": "CHINO DEAL",
         "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">£15.50</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
         "button1": "Get Deal",
         "url": "shopify://collections/chino-offer",
