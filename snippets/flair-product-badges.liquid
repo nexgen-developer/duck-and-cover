@@ -16,7 +16,7 @@
 * Flair: https://apps.shopify.com/flair
 * Copyright Brainy Atom LLC, All Rights Reserved.
 *
-* Last updated: 2026-10-23T09:45:10Z
+* Last updated: 2026-10-30T09:23:58Z
 ************************************************************************
 {%- endcomment -%}
 {%- liquid
@@ -24,13 +24,8 @@ assign flair_output = ""
 assign flair_app_id = "1535265"
 assign flair_app_namespace = "app--" | append: flair_app_id
 assign flair_config_gen2 = shop.metafields[flair_app_namespace].config_gen2.value
-if flair_config_gen2
-  assign flair_config = flair_config_gen2.config
-  assign flair_mfs = flair_config_gen2.badges
-else
-  assign flair_config = shop.metafields["flair-app"].config
-  assign flair_mfs = shop.metafields["flair-badges"]
-endif
+assign flair_config = flair_config_gen2.config
+assign flair_mfs = flair_config_gen2.badges
 assign flair_layout_config = blank
 assign flair_layout_default = blank
 if flair_page_type == blank
@@ -591,4 +586,4 @@ endif
 assign flair_layout = blank
 assign flair_variant = blank
 -%}
-<!-- generated: {{ "now" | date: "%F %T %z" }} {% if flair_config_gen2 %}mfapp{% else %}mfleg{% endif %} -->
+<!-- generated: {{ "now" | date: "%F %T %z" }} mfapp -->
