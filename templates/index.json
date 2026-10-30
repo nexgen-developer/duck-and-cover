@@ -46,7 +46,6 @@
         "image_BEMhMn": {
           "type": "image",
           "name": "30th Oct - Halloween/Payday",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/DAC-BF-halloween-desktop.jpg",
             "mobile_image": "shopify://shop_images/DAC-BF-halloween-mobile.jpg",
@@ -94,6 +93,7 @@
         "image_c3Wjie": {
           "type": "image",
           "name": "Jacket Season 20% Off",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/SCROLLER_-_Desktop_e6c3937b-1e96-4c7a-81e2-7596a130eefd.jpg",
             "mobile_image": "shopify://shop_images/SCROLLER_-_Mobile_a68e5522-0d82-4f26-aba9-13f46d226ddd.jpg",
@@ -505,6 +505,25 @@
     "f0a1f009-f7e3-4ad1-9307-9fcf06cf17a4": {
       "type": "halo-image-gallery",
       "blocks": {
+        "template--16937253765370__f0a1f009-f7e3-4ad1-9307-9fcf06cf17a4-image-1": {
+          "type": "image",
+          "name": "Black Friday",
+          "settings": {
+            "image": "shopify://shop_images/DAC-BF-QL.jpg",
+            "btn_text": "",
+            "link": "shopify://pages/weekly-deals"
+          }
+        },
+        "image_Mh6yDz": {
+          "type": "image",
+          "name": "Weekly Deals",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/QUICK_LINK_-_Weekly_Deals_d6380cf0-84a5-4e6c-8f79-6e383556290e.jpg",
+            "btn_text": "",
+            "link": "shopify://pages/weekly-deals"
+          }
+        },
         "image_QxVyVG": {
           "type": "image",
           "name": "DAC League",
@@ -512,15 +531,6 @@
             "image": "shopify://shop_images/QUICK_LINK_-_DAC_League_068afad6-db04-4c63-b0b8-85be9ec17bda.jpg",
             "btn_text": "",
             "link": "https://shopify.com/15431853/account/pages/daacc659-e05e-4631-8c8a-09c6370fe146"
-          }
-        },
-        "template--16937253765370__f0a1f009-f7e3-4ad1-9307-9fcf06cf17a4-image-1": {
-          "type": "image",
-          "name": "Weekly Deals",
-          "settings": {
-            "image": "shopify://shop_images/QUICK_LINK_-_Weekly_Deals_d6380cf0-84a5-4e6c-8f79-6e383556290e.jpg",
-            "btn_text": "",
-            "link": "shopify://pages/weekly-deals"
           }
         },
         "template--16937253765370__f0a1f009-f7e3-4ad1-9307-9fcf06cf17a4-image-3": {
@@ -534,8 +544,9 @@
         }
       },
       "block_order": [
-        "image_QxVyVG",
         "template--16937253765370__f0a1f009-f7e3-4ad1-9307-9fcf06cf17a4-image-1",
+        "image_Mh6yDz",
+        "image_QxVyVG",
         "template--16937253765370__f0a1f009-f7e3-4ad1-9307-9fcf06cf17a4-image-3"
       ],
       "name": "Quick Links",
