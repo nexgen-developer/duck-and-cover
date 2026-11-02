@@ -133,7 +133,6 @@
     },
     "weekly_deal_CgPErN": {
       "type": "weekly-deal",
-      "disabled": true,
       "name": "Mystery Item",
       "settings": {
         "image": "shopify://shop_images/Screenshot_2026-11-02_at_10.08.20.png",
