@@ -124,11 +124,7 @@
                         %}
                     </div>
                 {%- if settings.show_compare and settings.product_compare_type == 'default' -%}
-                    {% render 'product-compare'.
-                        product: product,
-                        sectionId: sectionId,
-                        class: 'card-compare card-grid__hidden'
-                    %}
+                    {% render 'product-compare', product: product, sectionId: sectionId, class: 'card-compare card-grid__hidden' %}
                     </div>
                 {%- endif -%}
 
@@ -163,12 +159,7 @@
                     {%- endif -%}
                     {%- if settings.show_compare and settings.product_compare_type == 'default' -%}
                         {% assign sectionId = sectionId | append: '-list' %}
-                        {% render 'product-compare'.
-                            product: product,
-                            sectionId: sectionId,
-                            icon_compare: '1',
-                            class: 'card-compare'
-                        %}
+                        {% render 'product-compare', product: product, sectionId: sectionId, icon_compare: '1', class: 'card-compare' %}
                     {%- endif -%}
                 </div>
             {%- endif -%}
@@ -199,4 +190,22 @@
             {%- endif -%}
         </div>
     </div>
-</div>
+</div>{%- comment -%}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{% render 'product-compare'.\r\n                        product: product,\r\n
+    \                       sectionId: sectionId,\r\n                        class:
+    'card-compare card-grid__hidden'\r\n                    %}"
+  to: "{% render 'product-compare', product: product, sectionId: sectionId, class:
+    'card-compare card-grid__hidden' %}"
+  position: 6867..6978
+- from: "{% render 'product-compare'.\r\n                            product: product,\r\n
+    \                           sectionId: sectionId,\r\n                            icon_compare:
+    '1',\r\n                            class: 'card-compare'\r\n                        %}"
+  to: "{% render 'product-compare', product: product, sectionId: sectionId, icon_compare:
+    '1', class: 'card-compare' %}"
+  position: 8544..8656
+{%- endcomment -%}

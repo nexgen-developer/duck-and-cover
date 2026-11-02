@@ -1,11 +1,37 @@
-<div class="card-attr {{ class }}">
+{% if section and section.location != blank %}Liquid syntax error (snippets/product-attribute line 6): Expected end_of_string but found colon in "product_attribute_text = settings.product_attribute_text | replace: '[option]' : product_attribute_option"{% else %}<div class="card-attr {{ class }}">
 	{% capture product_attribute_option %}{{ settings.product_attribute_option }}{% endcapture %}
 	{%- liquid
 		assign variant_size = product.options_by_name[product_attribute_option].values | size
 		assign product_attribute_option = product_attribute_option | append: 's'
-		assign product_attribute_text = settings.product_attribute_text | replace: '[option]' : product_attribute_option
+		assign product_attribute_text = settings.product_attribute_text | replace: '[option]', product_attribute_option
 	-%}
     {%- if variant_size > 0 -%}
         <span class="text">{{ product_attribute_text }}</span>
     {%- endif -%}
 </div>
+{% endif %}{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "<div class=\"card-attr {{ class }}\">\r\n\t{% capture product_attribute_option
+    %}{{ settings.product_attribute_option }}{% endcapture %}\r\n\t{%- liquid\r\n\t\tassign
+    variant_size = product.options_by_name[product_attribute_option].values | size\r\n\t\tassign
+    product_attribute_option = product_attribute_option | append: 's'\r\n\t\tassign
+    product_attribute_text = settings.product_attribute_text | replace: '[option]'
+    : product_attribute_option\r\n\t-%}\r\n    {%- if variant_size > 0 -%}\r\n        <span
+    class=\"text\">{{ product_attribute_text }}</span>\r\n    {%- endif -%}\r\n</div>\r\n"
+  to: "{% if section and section.location != blank %}Liquid syntax error (snippets/product-attribute
+    line 6): Expected end_of_string but found colon in \"product_attribute_text =
+    settings.product_attribute_text | replace: '[option]' : product_attribute_option\"{%
+    else %}<div class=\"card-attr {{ class }}\">\r\n\t{% capture product_attribute_option
+    %}{{ settings.product_attribute_option }}{% endcapture %}\r\n\t{%- liquid\r\n\t\tassign
+    variant_size = product.options_by_name[product_attribute_option].values | size\r\n\t\tassign
+    product_attribute_option = product_attribute_option | append: 's'\r\n\t\tassign
+    product_attribute_text = settings.product_attribute_text | replace: '[option]',
+    product_attribute_option\n\t-%}\r\n    {%- if variant_size > 0 -%}\r\n        <span
+    class=\"text\">{{ product_attribute_text }}</span>\r\n    {%- endif -%}\r\n</div>\r\n{%
+    endif %}"
+  position: 0..828
+{% endcomment %}
