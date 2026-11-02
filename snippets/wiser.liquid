@@ -5,17 +5,17 @@
 {% assign wiser_view_products = "4" %}
 {% assign wiser_template = template %}
 {% assign wiser_recom_load = "0" %}
-{% if  wiser_template == 'index' and shop.metafields.evmWiser.index == "true" %}
+{% if wiser_template == 'index' and shop.metafields.evmWiser.index == "true" %}
 {% assign wiser_recom_load = "1" %}
 {% elsif wiser_template contains "product" %}
 {% assign wiser_recom_load = "1" %}
-{% elsif  wiser_template contains 'collection' and shop.metafields.evmWiser.collection== "true" %}
+{% elsif wiser_template contains 'collection' and shop.metafields.evmWiser.collection %}
 {% assign wiser_recom_load = "1" %}
-{% elsif  wiser_template contains 'cart' and shop.metafields.evmWiser.cart == "true" %}
+{% elsif wiser_template contains 'cart' and shop.metafields.evmWiser.cart == "true" %}
 {% assign wiser_recom_load = "1" %}
-{% elsif  wiser_template == '404' and shop.metafields.evmWiser.notfound == "true" %}
+{% elsif wiser_template == '404' and shop.metafields.evmWiser.notfound == "true" %}
 {% assign wiser_recom_load = "1" %}
-{% elsif  wiser_template == 'search' and shop.metafields.evmWiser.search == "true" %}
+{% elsif wiser_template == 'search' and shop.metafields.evmWiser.search == "true" %}
 {% assign wiser_recom_load = "1" %}
 {% else %}
 {% if shop.metafields.evmWiser.other == "true" %}
@@ -224,4 +224,35 @@ if(!window.jQuery){
 {% endif %}
 </script>
 {% endif %}
- 
+ {%- comment -%}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: '{% if  wiser_template == ''index'' and shop.metafields.evmWiser.index ==
+    "true" %}'
+  to: '{% if wiser_template == ''index'' and shop.metafields.evmWiser.index == "true"
+    %}'
+  position: 287..366
+- from: '{% elsif  wiser_template contains ''collection'' and shop.metafields.evmWiser.collection==
+    "true" %}'
+  to: "{% elsif wiser_template contains 'collection' and shop.metafields.evmWiser.collection
+    %}"
+  position: 485..573
+- from: '{% elsif  wiser_template contains ''cart'' and shop.metafields.evmWiser.cart
+    == "true" %}'
+  to: '{% elsif wiser_template contains ''cart'' and shop.metafields.evmWiser.cart
+    == "true" %}'
+  position: 610..696
+- from: '{% elsif  wiser_template == ''404'' and shop.metafields.evmWiser.notfound
+    == "true" %}'
+  to: '{% elsif wiser_template == ''404'' and shop.metafields.evmWiser.notfound ==
+    "true" %}'
+  position: 733..816
+- from: '{% elsif  wiser_template == ''search'' and shop.metafields.evmWiser.search
+    == "true" %}'
+  to: '{% elsif wiser_template == ''search'' and shop.metafields.evmWiser.search ==
+    "true" %}'
+  position: 853..937
+{%- endcomment -%}
