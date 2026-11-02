@@ -131,6 +131,20 @@
         "description": "Mystery Jeans just £8.99! Pick your size and we’ll handle the rest. You won’t know which style you’re getting until they arrive - perfect for a surprise bargain!\n\nPlease note: Mystery Jeans are non-returnable and non-refundable."
       }
     },
+    "weekly_deal_CgPErN": {
+      "type": "weekly-deal",
+      "disabled": true,
+      "name": "Mystery Item",
+      "settings": {
+        "image": "shopify://shop_images/Screenshot_2026-11-02_at_10.08.20.png",
+        "title": "MYSTERY ITEM",
+        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">£5</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
+        "button1": "Get Deal",
+        "url": "shopify://products/mens-dac-mystery-box",
+        "CustomCode": "NO CODE NEEDED",
+        "description": "Fancy a surprise steal? Choose your size and leave the style to us! We'll pick the product, pack it up and send it your way.\n\nNo code needed – just £5!\n\nPlease note: Mystery Items are non-returnable and non-refundable."
+      }
+    },
     "weekly_deal_MJpb7p": {
       "type": "weekly-deal",
       "disabled": true,
@@ -373,6 +387,7 @@
     "main",
     "halo_slideshow_jwzfYd",
     "weekly_deal_pATLmh",
+    "weekly_deal_CgPErN",
     "weekly_deal_MJpb7p",
     "weekly_deal_JXpkmF",
     "weekly_deal_N4cMTQ",
