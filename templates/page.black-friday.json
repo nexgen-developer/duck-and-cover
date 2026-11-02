@@ -159,6 +159,48 @@
         "description": "40% Off Everett Chino Trousers! Get yours for just £18 - smart, versatile and perfect for everyday style. Use code EVERETT at checkout."
       }
     },
+    "weekly_deal_N4cMTQ": {
+      "type": "weekly-deal",
+      "disabled": true,
+      "name": "Merchell Tracksuit",
+      "settings": {
+        "image": "shopify://shop_images/DAC-BF-merchell-TILE_935dcb07-5f63-4a68-bed9-cf76639b3701.gif",
+        "title": "Merchell Tracksuit",
+        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">£24.50</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
+        "button1": "Get Deal",
+        "url": "shopify://collections/merchell-jog-set",
+        "CustomCode": "TRACKSUITOFFER",
+        "description": "Get your off-duty look sorted with the Merchell Tracksuit for just £24.50! Perfect for laid-back days, comfy fits and everyday style. Use code TRACKSUITOFFER at checkout to grab this deal."
+      }
+    },
+    "weekly_deal_Y49gaG": {
+      "type": "weekly-deal",
+      "disabled": true,
+      "name": "Hoodies",
+      "settings": {
+        "image": "shopify://shop_images/DAC-everett-tile.gif",
+        "title": "Everett Chinos",
+        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">NOW £18</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label>40% oFF</label>",
+        "button1": "Get Deal",
+        "url": "shopify://collections/everett-chinos",
+        "CustomCode": "EVERETT",
+        "description": "40% Off Everett Chino Trousers! Get yours for just £18 - smart, versatile and perfect for everyday style. Use code EVERETT at checkout."
+      }
+    },
+    "weekly_deal_ztBcLz": {
+      "type": "weekly-deal",
+      "disabled": true,
+      "name": "7PK Boxers",
+      "settings": {
+        "image": "shopify://shop_images/DAC-everett-tile.gif",
+        "title": "Everett Chinos",
+        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">NOW £18</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label>40% oFF</label>",
+        "button1": "Get Deal",
+        "url": "shopify://collections/everett-chinos",
+        "CustomCode": "EVERETT",
+        "description": "40% Off Everett Chino Trousers! Get yours for just £18 - smart, versatile and perfect for everyday style. Use code EVERETT at checkout."
+      }
+    },
     "halo_slideshow_nmhbth": {
       "type": "halo-slideshow",
       "blocks": {
@@ -333,6 +375,9 @@
     "weekly_deal_pATLmh",
     "weekly_deal_MJpb7p",
     "weekly_deal_JXpkmF",
+    "weekly_deal_N4cMTQ",
+    "weekly_deal_Y49gaG",
+    "weekly_deal_ztBcLz",
     "halo_slideshow_nmhbth",
     "halo_slideshow_VQD7j3"
   ]
