@@ -151,7 +151,7 @@
       "name": "Chinos",
       "settings": {
         "image": "shopify://shop_images/DAC-BF-CHINO-TILE_d8c657d6-5c97-444e-9043-7f170a2aabfd.gif",
-        "title": "Chinos",
+        "title": "CHINO OFFER",
         "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">£15.50</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
         "button1": "Get Deal",
         "url": "shopify://collections/chino-offer",
@@ -165,7 +165,7 @@
       "name": "Merchell Tracksuit",
       "settings": {
         "image": "shopify://shop_images/DAC-BF-merchell-TILE_935dcb07-5f63-4a68-bed9-cf76639b3701.gif",
-        "title": "Merchell Tracksuit",
+        "title": "MERCHELL TRACKSUIT",
         "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">£24.50</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
         "button1": "Get Deal",
         "url": "shopify://collections/merchell-jog-set",
@@ -179,7 +179,7 @@
       "name": "Hoodies",
       "settings": {
         "image": "shopify://shop_images/DAC-BF-HOODIE-TILE_a16f270d-97ed-4ea4-8802-c87dc7b0135d.jpg",
-        "title": "Hoodie Deal",
+        "title": "HOODIE DEAL",
         "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">£14</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
         "button1": "Get Deal",
         "url": "shopify://collections/hoodie-offer",
@@ -192,13 +192,13 @@
       "disabled": true,
       "name": "7PK Boxers",
       "settings": {
-        "image": "shopify://shop_images/DAC-everett-tile.gif",
-        "title": "Everett Chinos",
-        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">NOW £18</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label>40% oFF</label>",
+        "image": "shopify://shop_images/DAC-BF-BOXER-TILE_4148af94-fb29-4790-9ae1-be3935ab39ee.gif",
+        "title": "7PK BOXERS",
+        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">£16.99</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
         "button1": "Get Deal",
-        "url": "shopify://collections/everett-chinos",
-        "CustomCode": "EVERETT",
-        "description": "40% Off Everett Chino Trousers! Get yours for just £18 - smart, versatile and perfect for everyday style. Use code EVERETT at checkout."
+        "url": "shopify://collections/duck-and-cover-7pk-boxers",
+        "CustomCode": "BOXEROFFER",
+        "description": "Stock up on everyday essentials with 7PK Anvilli Boxers for just £16.99! That's a fresh pair for every day of the week, all for one great price. Use code BOXEROFFER at checkout to grab the deal!"
       }
     },
     "halo_slideshow_nmhbth": {
