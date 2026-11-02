@@ -178,13 +178,13 @@
       "disabled": true,
       "name": "Hoodies",
       "settings": {
-        "image": "shopify://shop_images/DAC-everett-tile.gif",
-        "title": "Everett Chinos",
-        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">NOW £18</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label>40% oFF</label>",
+        "image": "shopify://shop_images/DAC-BF-HOODIE-TILE_a16f270d-97ed-4ea4-8802-c87dc7b0135d.jpg",
+        "title": "Hoodie Deal",
+        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">£14</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
         "button1": "Get Deal",
-        "url": "shopify://collections/everett-chinos",
-        "CustomCode": "EVERETT",
-        "description": "40% Off Everett Chino Trousers! Get yours for just £18 - smart, versatile and perfect for everyday style. Use code EVERETT at checkout."
+        "url": "shopify://collections/hoodie-offer",
+        "CustomCode": "HOODIEOFFER",
+        "description": "Your next wardrobe favourite is waiting! Pick up a hoodie for just £14 this Black Friday - perfect for layering up and keeping cosy. Use code HOODIEOFFER at checkout and save!"
       }
     },
     "weekly_deal_ztBcLz": {
