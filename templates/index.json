@@ -142,7 +142,6 @@
         "image_tpQAMJ": {
           "type": "image",
           "name": "2nd Nov - Bonfire Night",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/DAC-BF-BONFIRE-NIGHT-DESKTOP_057f76bf-d4b7-464f-8bde-8cb4fc7e1a30.jpg",
             "mobile_image": "shopify://shop_images/DAC-BF-BONFIRE-NIGHT-MOBILE_bdc6370b-a60b-436f-b240-b3a79ee92804.jpg",
@@ -190,6 +189,7 @@
         "image_H3qxNz": {
           "type": "image",
           "name": "30th Oct - Halloween/Payday",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/DAC-BF-halloween-desktop.jpg",
             "mobile_image": "shopify://shop_images/DAC-BF-halloween-mobile.jpg",
