@@ -25,17 +25,7 @@
                                 endif
                             -%}
                             <div class="product{% if is_search_bundle %} product--search-bundle{% endif %}">
-                                {% render 'product-card',
-                                    product_card_product: product,
-                                    media_size: media_size,
-                                    portrait_aspect_ratio: portrait_aspect_ratio,
-                                    show_add_to_cart: is_search_bundle == false,
-                                    serial: forloop.index,
-                                    sectionId: section.id,
-                                    show_list: true,
-                                    wishlist_add: false,
-                                    loading: true
-                                %}
+                                {% render 'product-card', product_card_product: product, media_size: media_size, portrait_aspect_ratio: portrait_aspect_ratio, show_add_to_cart: is_search_bundle, serial: forloop.index, sectionId: section.id, show_list: true, wishlist_add: false, loading: true %}
                             </div>
                         {%- endfor -%}
                         {%- if settings.show_search_product_view_all -%}
@@ -73,4 +63,27 @@
             </div>
         </div>
     </div>
-{%- endif -%}
+{%- endif -%}{%- comment -%}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: |-
+    {% render 'product-card',
+                                        product_card_product: product,
+                                        media_size: media_size,
+                                        portrait_aspect_ratio: portrait_aspect_ratio,
+                                        show_add_to_cart: is_search_bundle == false,
+                                        serial: forloop.index,
+                                        sectionId: section.id,
+                                        show_list: true,
+                                        wishlist_add: false,
+                                        loading: true
+                                    %}
+  to: "{% render 'product-card', product_card_product: product, media_size: media_size,
+    portrait_aspect_ratio: portrait_aspect_ratio, show_add_to_cart: is_search_bundle,
+    serial: forloop.index, sectionId: section.id, show_list: true, wishlist_add: false,
+    loading: true %}"
+  position: 2164..2427
+{%- endcomment -%}
