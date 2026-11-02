@@ -146,7 +146,6 @@
     },
     "weekly_deal_MJpb7p": {
       "type": "weekly-deal",
-      "disabled": true,
       "name": "Elix Jeans",
       "settings": {
         "image": "shopify://shop_images/DAC-ELIX-TILE.gif",
@@ -160,7 +159,6 @@
     },
     "weekly_deal_JXpkmF": {
       "type": "weekly-deal",
-      "disabled": true,
       "name": "Chinos",
       "settings": {
         "image": "shopify://shop_images/DAC-BF-CHINO-TILE_d8c657d6-5c97-444e-9043-7f170a2aabfd.gif",
@@ -174,7 +172,6 @@
     },
     "weekly_deal_N4cMTQ": {
       "type": "weekly-deal",
-      "disabled": true,
       "name": "Merchell Tracksuit",
       "settings": {
         "image": "shopify://shop_images/DAC-BF-merchell-TILE_935dcb07-5f63-4a68-bed9-cf76639b3701.gif",
@@ -188,7 +185,6 @@
     },
     "weekly_deal_Y49gaG": {
       "type": "weekly-deal",
-      "disabled": true,
       "name": "Hoodies",
       "settings": {
         "image": "shopify://shop_images/DAC-BF-HOODIE-TILE_a16f270d-97ed-4ea4-8802-c87dc7b0135d.jpg",
@@ -202,7 +198,6 @@
     },
     "weekly_deal_ztBcLz": {
       "type": "weekly-deal",
-      "disabled": true,
       "name": "7PK Boxers",
       "settings": {
         "image": "shopify://shop_images/DAC-BF-BOXER-TILE_4148af94-fb29-4790-9ae1-be3935ab39ee.gif",
@@ -385,14 +380,14 @@
     "weekly_deals_columns",
     "main",
     "halo_slideshow_jwzfYd",
-    "weekly_deal_pATLmh",
-    "weekly_deal_CgPErN",
-    "weekly_deal_MJpb7p",
     "weekly_deal_JXpkmF",
     "weekly_deal_N4cMTQ",
+    "weekly_deal_MJpb7p",
     "weekly_deal_Y49gaG",
-    "weekly_deal_ztBcLz",
     "halo_slideshow_nmhbth",
+    "weekly_deal_ztBcLz",
+    "weekly_deal_pATLmh",
+    "weekly_deal_CgPErN",
     "halo_slideshow_VQD7j3"
   ]
 }
