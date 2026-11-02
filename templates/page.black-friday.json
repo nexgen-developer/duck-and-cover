@@ -138,11 +138,11 @@
       "settings": {
         "image": "shopify://shop_images/DAC-ELIX-TILE.gif",
         "title": "ELIX JEANS",
-        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">£18.90</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
+        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">£18</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
         "button1": "Get Deal",
         "url": "shopify://collections/elix-jean",
-        "CustomCode": "ELIXDEAL",
-        "description": "Upgrade your denim rotation with Elix straight leg jeans for just £18.90! A timeless fit that works with anything. Use code ELIXDEAL at checkout - don’t miss out!"
+        "CustomCode": "JEANOFFER",
+        "description": "Fresh denim for less! Grab the Elix Jeans for just £18 this Black Friday and give your wardrobe an easy upgrade. Use code JEANOFFER at checkout and bag yourself a bargain!"
       }
     },
     "weekly_deal_JXpkmF": {
