@@ -148,15 +148,15 @@
     "weekly_deal_JXpkmF": {
       "type": "weekly-deal",
       "disabled": true,
-      "name": "Everett Chinos",
+      "name": "Chinos",
       "settings": {
-        "image": "shopify://shop_images/DAC-everett-tile.gif",
-        "title": "Everett Chinos",
-        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">NOW £18</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label>40% oFF</label>",
+        "image": "shopify://shop_images/DAC-BF-CHINO-TILE_d8c657d6-5c97-444e-9043-7f170a2aabfd.gif",
+        "title": "Chinos",
+        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">£15.50</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
         "button1": "Get Deal",
-        "url": "shopify://collections/everett-chinos",
-        "CustomCode": "EVERETT",
-        "description": "40% Off Everett Chino Trousers! Get yours for just £18 - smart, versatile and perfect for everyday style. Use code EVERETT at checkout."
+        "url": "shopify://collections/chino-offer",
+        "CustomCode": "CHINOOFFER",
+        "description": "Smart style for less this Black Friday! Grab your go-to chinos for just £15.50. Perfect for dressing up or keeping it casual. Use code CHINOOFFER at checkout and save!"
       }
     },
     "weekly_deal_N4cMTQ": {
