@@ -171,6 +171,22 @@
           },
           "blocks": {}
         },
+        "dac_mystery_note_mJVBDn": {
+          "type": "dac-mystery-note",
+          "name": "Deal note",
+          "settings": {
+            "tag": "VendorDeal",
+            "text": "<a href=\"https://www.duckandcover.co.uk/pages/black-friday\">This item is featured in our Black Friday Deals. Click here to see more!</a>",
+            "hidden_note": "Hidden on this product because it isn't tagged mystery.",
+            "background": "#f4f4f4",
+            "text_color": "#222222",
+            "text_size": 14,
+            "text_size_mobile": 13,
+            "spacing_top": -12,
+            "spacing_top_mobile": -10
+          },
+          "blocks": {}
+        },
         "dac_mystery_note_rRpFXe": {
           "type": "dac-mystery-note",
           "name": "Underwear Note",
@@ -223,8 +239,8 @@
         "loyalty": {
           "type": "shopify://apps/smile-io/blocks/smile-points-on-product-page/2fae4e25-1841-4ea2-bc02-bd548478c4f6",
           "settings": {
-            "primary_colour": "#121212",
             "secondary_colour": "#ffffff",
+            "primary_colour": "#121212",
             "preview_scenario": "customer_can_earn_points",
             "should_show_icon": true,
             "custom_image_height": 40,
@@ -438,6 +454,7 @@
         "clearance",
         "bundle_note",
         "mystery_note",
+        "dac_mystery_note_mJVBDn",
         "dac_mystery_note_rRpFXe",
         "colours",
         "variant_picker",
