@@ -20,7 +20,7 @@
     style="--dac-mt: {{ bs.spacing_top }}px; --dac-mt-m: {{ bs.spacing_top_mobile }}px; --dac-bg: {{ bs.background }}; --dac-color: {{ bs.text_color }}; --dac-fs: {{ bs.text_size }}px; --dac-fs-m: {{ bs.text_size_mobile }}px;"
     {{ block.shopify_attributes }}
   >
-    <p class="dac-signup__text">{{ bs.text | escape }}</p>
+    <p class="dac-signup__text">{{ bs.text}}</p>
   </div>
 {%- elsif request.design_mode -%}
   <div class="dac-block dac-editor-note" {{ block.shopify_attributes }}>{{ bs.hidden_note }}</div>
