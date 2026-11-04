@@ -181,8 +181,8 @@
         "image_DRnjkV": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/DAC-BF-PROMO-WD-MOBILE_11642eba-7121-48e8-98f9-c5653cf29f44.jpg",
-            "mobile_image": "shopify://shop_images/DAC_BF_COLLECTION_BANNER_MOB.gif",
+            "image": "shopify://shop_images/Artboard_1_bc77c84e-98bf-4d82-8f72-0ca0f383a51b.png",
+            "mobile_image": "shopify://shop_images/Artboard_2_1def106c-794d-4950-9cd8-c6597efb1016.png",
             "title": "",
             "subtitle": "",
             "text": "",
@@ -228,7 +228,6 @@
       "block_order": [
         "image_DRnjkV"
       ],
-      "disabled": true,
       "settings": {
         "show_slideshow": true,
         "container": "full",
