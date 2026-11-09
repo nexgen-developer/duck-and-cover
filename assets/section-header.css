@@ -774,7 +774,7 @@
     .mobileMenu-toggle__Icon::before,
     .mobileMenu-toggle__Icon::after {
         content: "";
-        display: block;
+        display: block !important;
         height: 2px;
         width: 100%;
         position: absolute;
