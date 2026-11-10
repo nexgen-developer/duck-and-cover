@@ -38,8 +38,8 @@
         "image_L4Kmty": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/DAC-BF-DEALS-DESKTOP_81df53d8-3e6f-412e-8351-0868aaae509b.jpg",
-            "mobile_image": "shopify://shop_images/DAC-BF-DEALS-MOBILE.jpg",
+            "image": "shopify://shop_images/Artboard_1_copy.png",
+            "mobile_image": "shopify://shop_images/Artboard_3.png",
             "title": "",
             "subtitle": "",
             "text": "",
@@ -118,45 +118,6 @@
         "lookbook_style": "1"
       }
     },
-    "weekly_deal_pATLmh": {
-      "type": "weekly-deal",
-      "name": "Mystery Jeans",
-      "settings": {
-        "image": "shopify://shop_images/DAC-mystery-jean-tile.jpg",
-        "title": "MYSTERY JEANS",
-        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">£8.99</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
-        "button1": "Get Deal",
-        "url": "",
-        "CustomCode": "NO CODE NEEDED",
-        "description": "Mystery Jeans just £8.99! Pick your size and we’ll handle the rest. You won’t know which style you’re getting until they arrive - perfect for a surprise bargain!\n\nPlease note: Mystery Jeans are non-returnable and non-refundable."
-      }
-    },
-    "weekly_deal_CgPErN": {
-      "type": "weekly-deal",
-      "name": "Mystery Item",
-      "settings": {
-        "image": "shopify://shop_images/Screenshot_2026-11-02_at_10.08.20.png",
-        "title": "MYSTERY ITEM",
-        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">£5</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
-        "button1": "Get Deal",
-        "url": "shopify://products/mens-dac-mystery-box",
-        "CustomCode": "NO CODE NEEDED",
-        "description": "Fancy a surprise steal? Choose your size and leave the style to us! We'll pick the product, pack it up and send it your way.\n\nNo code needed – just £5!\n\nPlease note: Mystery Items are non-returnable and non-refundable."
-      }
-    },
-    "weekly_deal_MJpb7p": {
-      "type": "weekly-deal",
-      "name": "Elix Jeans",
-      "settings": {
-        "image": "shopify://shop_images/DAC-ELIX-TILE.gif",
-        "title": "ELIX JEANS",
-        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">£18</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
-        "button1": "Get Deal",
-        "url": "shopify://collections/elix-jean",
-        "CustomCode": "JEANOFFER",
-        "description": "Fresh denim for less! Grab the Elix Jeans for just £18 this Black Friday and give your wardrobe an easy upgrade. Use code JEANOFFER at checkout and bag yourself a bargain!"
-      }
-    },
     "weekly_deal_JXpkmF": {
       "type": "weekly-deal",
       "name": "Chinos",
@@ -183,6 +144,19 @@
         "description": "Get your off-duty look sorted with the Merchell Tracksuit for just £24.50! Perfect for laid-back days, comfy fits and everyday style. Use code TRACKSUITOFFER at checkout to grab this deal."
       }
     },
+    "weekly_deal_MJpb7p": {
+      "type": "weekly-deal",
+      "name": "Elix Jeans",
+      "settings": {
+        "image": "shopify://shop_images/DAC-ELIX-TILE.gif",
+        "title": "ELIX JEANS",
+        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">£18</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
+        "button1": "Get Deal",
+        "url": "shopify://collections/elix-jean",
+        "CustomCode": "JEANOFFER",
+        "description": "Fresh denim for less! Grab the Elix Jeans for just £18 this Black Friday and give your wardrobe an easy upgrade. Use code JEANOFFER at checkout and bag yourself a bargain!"
+      }
+    },
     "weekly_deal_Y49gaG": {
       "type": "weekly-deal",
       "name": "Hoodies",
@@ -194,19 +168,6 @@
         "url": "shopify://collections/hoodie-offer",
         "CustomCode": "HOODIEOFFER",
         "description": "Your next wardrobe favourite is waiting! Pick up a hoodie for just £14 this Black Friday - perfect for layering up and keeping cosy. Use code HOODIEOFFER at checkout and save!"
-      }
-    },
-    "weekly_deal_ztBcLz": {
-      "type": "weekly-deal",
-      "name": "7PK Boxers",
-      "settings": {
-        "image": "shopify://shop_images/DAC-BF-BOXER-TILE_4148af94-fb29-4790-9ae1-be3935ab39ee.gif",
-        "title": "7PK BOXERS",
-        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">£16.99</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
-        "button1": "Get Deal",
-        "url": "shopify://collections/duck-and-cover-7pk-boxers",
-        "CustomCode": "BOXEROFFER",
-        "description": "Stock up on everyday essentials with 7PK Anvilli Boxers for just £16.99! That's a fresh pair for every day of the week, all for one great price. Use code BOXEROFFER at checkout to grab the deal!"
       }
     },
     "halo_slideshow_nmhbth": {
@@ -290,6 +251,45 @@
         "block_arrows_color": "",
         "block_arrows_border": "",
         "lookbook_style": "1"
+      }
+    },
+    "weekly_deal_ztBcLz": {
+      "type": "weekly-deal",
+      "name": "7PK Boxers",
+      "settings": {
+        "image": "shopify://shop_images/DAC-BF-BOXER-TILE_4148af94-fb29-4790-9ae1-be3935ab39ee.gif",
+        "title": "7PK BOXERS",
+        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">£16.99</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
+        "button1": "Get Deal",
+        "url": "shopify://collections/duck-and-cover-7pk-boxers",
+        "CustomCode": "BOXEROFFER",
+        "description": "Stock up on everyday essentials with 7PK Anvilli Boxers for just £16.99! That's a fresh pair for every day of the week, all for one great price. Use code BOXEROFFER at checkout to grab the deal!"
+      }
+    },
+    "weekly_deal_pATLmh": {
+      "type": "weekly-deal",
+      "name": "Mystery Jeans",
+      "settings": {
+        "image": "shopify://shop_images/DAC-mystery-jean-tile.jpg",
+        "title": "MYSTERY JEANS",
+        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">£8.99</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
+        "button1": "Get Deal",
+        "url": "",
+        "CustomCode": "NO CODE NEEDED",
+        "description": "Mystery Jeans just £8.99! Pick your size and we’ll handle the rest. You won’t know which style you’re getting until they arrive - perfect for a surprise bargain!\n\nPlease note: Mystery Jeans are non-returnable and non-refundable."
+      }
+    },
+    "weekly_deal_CgPErN": {
+      "type": "weekly-deal",
+      "name": "Mystery Item",
+      "settings": {
+        "image": "shopify://shop_images/Screenshot_2026-11-02_at_10.08.20.png",
+        "title": "MYSTERY ITEM",
+        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">£5</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
+        "button1": "Get Deal",
+        "url": "shopify://products/mens-dac-mystery-box",
+        "CustomCode": "NO CODE NEEDED",
+        "description": "Fancy a surprise steal? Choose your size and leave the style to us! We'll pick the product, pack it up and send it your way.\n\nNo code needed – just £5!\n\nPlease note: Mystery Items are non-returnable and non-refundable."
       }
     },
     "halo_slideshow_VQD7j3": {
