@@ -94,7 +94,6 @@
         "image_3KGb4e": {
           "type": "image",
           "name": "9th Nov - Week 3",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/DAC-BF-W3-DESKTOP_73c55ba2-c2a9-4c10-b5bb-2464919f54d9.jpg",
             "mobile_image": "shopify://shop_images/DAC-BF-W3-MOBILE_41463168-b458-4579-8f15-7c88d51534d2.jpg",
@@ -142,6 +141,7 @@
         "image_tpQAMJ": {
           "type": "image",
           "name": "2nd Nov - Bonfire Night",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/DAC-BF-BONFIRE-NIGHT-DESKTOP_057f76bf-d4b7-464f-8bde-8cb4fc7e1a30.jpg",
             "mobile_image": "shopify://shop_images/DAC-BF-BONFIRE-NIGHT-MOBILE_bdc6370b-a60b-436f-b240-b3a79ee92804.jpg",
@@ -1087,15 +1087,15 @@
       "type": "apps",
       "blocks": {
         "adb716b0-f6ce-4dac-b39e-48cfaf6bd1b5": {
-          "type": "shopify://apps/wiser-ai-upsell-cross-sell/blocks/wiser_browsing/3f966edc-9a4a-465c-a4df-436d2a39160d",
+          "type": "shopify://apps/wiser-upsell-cross-sell/blocks/wiser_browsing/3f966edc-9a4a-465c-a4df-436d2a39160d",
           "settings": {}
         },
         "97b2dfad-59ed-45b7-9549-1d2ceeb83560": {
-          "type": "shopify://apps/wiser-ai-upsell-cross-sell/blocks/wiser_newarrivals/3f966edc-9a4a-465c-a4df-436d2a39160d",
+          "type": "shopify://apps/wiser-upsell-cross-sell/blocks/wiser_newarrivals/3f966edc-9a4a-465c-a4df-436d2a39160d",
           "settings": {}
         },
         "5857a8f4-96de-4d4f-b7e9-ace36a9f269e": {
-          "type": "shopify://apps/wiser-ai-upsell-cross-sell/blocks/wiser_recent/3f966edc-9a4a-465c-a4df-436d2a39160d",
+          "type": "shopify://apps/wiser-upsell-cross-sell/blocks/wiser_recent/3f966edc-9a4a-465c-a4df-436d2a39160d",
           "settings": {}
         }
       },
