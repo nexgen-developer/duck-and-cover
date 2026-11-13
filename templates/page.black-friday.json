@@ -120,6 +120,20 @@
     },
     "weekly_deal_JXpkmF": {
       "type": "weekly-deal",
+      "disabled": true,
+      "name": "Loungewear",
+      "settings": {
+        "image": "shopify://shop_images/Duck-And-Cover-Tile.gif",
+        "title": "LOUNGEWEAR SETS",
+        "CustomPrice": "<div class=\"price  price--on-sale \">\n   <div class=\"price-item price-item--sale\">£15.48</div>\n   <div class=\"price-item price-item--regular\"></div>\n</div>\n<label></label>",
+        "button1": "Get Deal",
+        "url": "https://www.duckandcover.co.uk/collections/loungewear",
+        "CustomCode": "LOUNGEDEAL",
+        "description": "Get cosy for less! Shop selected loungewear sets for just **£15.48** with code **LOUNGEDEAL**. Your new off-duty favourites are calling."
+      }
+    },
+    "weekly_deal_Aehxde": {
+      "type": "weekly-deal",
       "name": "Chinos",
       "settings": {
         "image": "shopify://shop_images/DAC-BF-CHINO-TILE_d8c657d6-5c97-444e-9043-7f170a2aabfd.gif",
@@ -381,6 +395,7 @@
     "main",
     "halo_slideshow_jwzfYd",
     "weekly_deal_JXpkmF",
+    "weekly_deal_Aehxde",
     "weekly_deal_N4cMTQ",
     "weekly_deal_MJpb7p",
     "weekly_deal_Y49gaG",
