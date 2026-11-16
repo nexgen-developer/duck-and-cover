@@ -94,7 +94,6 @@
         "image_YkHTEB": {
           "type": "image",
           "name": "16th Nov - Week 4",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/DAC-BF-W4-DESKTOP.jpg",
             "mobile_image": "shopify://shop_images/DAC-BF-W4-MOBILE.jpg",
@@ -142,6 +141,7 @@
         "image_3KGb4e": {
           "type": "image",
           "name": "9th Nov - Week 3",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/DAC-BF-W3-DESKTOP_73c55ba2-c2a9-4c10-b5bb-2464919f54d9.jpg",
             "mobile_image": "shopify://shop_images/DAC-BF-W3-MOBILE_41463168-b458-4579-8f15-7c88d51534d2.jpg",
