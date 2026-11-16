@@ -303,7 +303,7 @@
               "type": "dac-usp",
               "settings": {
                 "icon": "box",
-                "title": "Free UK delivery over £50",
+                "title": "Free UK delivery over £40",
                 "text": "Standard, 2 to 5 working days"
               },
               "blocks": {}
@@ -341,10 +341,10 @@
             "dispatch_sun": false,
             "bank_holidays": "2026-12-25\n2026-12-28\n2027-01-01\n2027-03-26\n2027-03-29\n2027-05-03\n2027-05-31\n2027-08-30\n2027-12-27\n2027-12-28",
             "show_nudge": true,
-            "free_threshold": 50,
+            "free_threshold": 40,
             "nudge_text": "Add [amount] more for free delivery",
             "unlocked_text": "You've unlocked free UK delivery",
-            "rates": "<p>Standard 2 to 5 working days £3.99, free over £50. Express 1 to 3 days £4.99.</p>",
+            "rates": "<p>Standard 2 to 5 working days £3.99, free over £40. Express 1 to 3 days £4.99.</p>",
             "background": "#f3f8f4",
             "border": "#bfd8c2",
             "accent": "#1f6b2f",
@@ -442,7 +442,7 @@
           "blocks": {}
         },
         "wiser_ai_upsell_cross_sell_wiser_fbt_Lq3hgD": {
-          "type": "shopify://apps/wiser-ai-upsell-cross-sell/blocks/wiser_fbt/3f966edc-9a4a-465c-a4df-436d2a39160d",
+          "type": "shopify://apps/wiser-upsell-cross-sell/blocks/wiser_fbt/3f966edc-9a4a-465c-a4df-436d2a39160d",
           "settings": {}
         }
       },
@@ -566,13 +566,13 @@
       "type": "apps",
       "blocks": {
         "wiser_featured": {
-          "type": "shopify://apps/wiser-ai-upsell-cross-sell/blocks/wiser_featured/3f966edc-9a4a-465c-a4df-436d2a39160d",
+          "type": "shopify://apps/wiser-upsell-cross-sell/blocks/wiser_featured/3f966edc-9a4a-465c-a4df-436d2a39160d",
           "settings": {
             "collection": ""
           }
         },
         "wiser_recent": {
-          "type": "shopify://apps/wiser-ai-upsell-cross-sell/blocks/wiser_recent/3f966edc-9a4a-465c-a4df-436d2a39160d",
+          "type": "shopify://apps/wiser-upsell-cross-sell/blocks/wiser_recent/3f966edc-9a4a-465c-a4df-436d2a39160d",
           "settings": {}
         }
       },
