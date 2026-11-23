@@ -237,6 +237,7 @@
       "block_order": [
         "image_JwReDR"
       ],
+      "disabled": true,
       "name": "BF MONTH Promo",
       "settings": {
         "show_slideshow": true,
@@ -320,7 +321,6 @@
       "block_order": [
         "image_dQqgwg"
       ],
-      "disabled": true,
       "name": "BF WEEK Promo",
       "settings": {
         "show_slideshow": true,
@@ -443,6 +443,7 @@
       "block_order": [
         "image_dmhwzV"
       ],
+      "disabled": true,
       "name": "BF MONTH - Sign up",
       "settings": {
         "show_slideshow": true,
@@ -526,7 +527,6 @@
       "block_order": [
         "image_iAgKYY"
       ],
-      "disabled": true,
       "name": "BF WEEK - Sign up",
       "settings": {
         "show_slideshow": true,
