@@ -106,7 +106,7 @@
         "signup": {
           "type": "dac-signup",
           "settings": {
-            "text": "Sign up and get [percent]% off instead",
+            "text": "Sign up and get [30]% off instead",
             "button_label": "Sign up",
             "button_action": "popup",
             "button_link": "",
