@@ -493,7 +493,7 @@
         "sale_badge_color": "#ffffff",
         "show_code_price": true,
         "code_hide_vendors": "Mystery",
-        "signup_percent": 25,
+        "signup_percent": 30,
         "best_price_label": "Best price"
       }
     },
